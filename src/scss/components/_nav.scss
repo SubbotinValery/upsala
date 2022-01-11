@@ -1,0 +1,43 @@
+.nav__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  @include flex-v-center;
+}
+
+.nav__item {
+  position: relative;
+  margin-right: 2.5rem;
+  &:last-child {
+    margin-right: 0;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -0.6rem;
+    left: 0;
+    width: 0;
+    height: 0.1rem;
+    background-color: #9c8c8c;
+    transition: 0.2s;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.nav__link {
+  color: $nav-text-color;
+  text-decoration: none;
+}
+
+.octagram {
+  position: relative;
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+  }
+}

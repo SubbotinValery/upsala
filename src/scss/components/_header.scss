@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 3.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__service {
+  display: flex;
+  align-items: center;
+  & * {
+    margin-right: 1.6rem;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
