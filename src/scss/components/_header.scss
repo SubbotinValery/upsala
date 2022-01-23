@@ -6,14 +6,23 @@
   top: 3.2rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 999;
 }
 .header__service {
   display: flex;
   align-items: center;
-  & * {
+  .header__logo {
     margin-right: 1.6rem;
   }
-  &:last-child {
-    margin-right: 0;
+}
+
+.header {
+  @include tablet {
+    display: block;
+  }
+}
+.header__service {
+  @include tablet {
+    justify-content: space-between;
   }
 }

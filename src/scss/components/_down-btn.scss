@@ -1,0 +1,20 @@
+.down {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  .down__btn {
+    position: relative;
+    cursor: pointer;
+    margin-right: 1.6rem;
+    .down__border {
+    }
+    .down__arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .down__text {
+  }
+}

@@ -1,0 +1,26 @@
+.smi-o-nas-section {
+  .container {
+    img {
+      position: relative;
+      left: 0;
+      top: 0;
+      right: 0;
+      width: 100%;
+    }
+  }
+}
+
+.smi-o-nas__bottom {
+  height: 80rem;
+}
+
+.smi-o-nas-zaglushka {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: -2rem;
+  z-index: -10 !important;
+  img {
+    width: 100%;
+  }
+}

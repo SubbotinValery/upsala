@@ -1,8 +1,6 @@
 .nav__list {
   display: flex;
   align-items: center;
-  padding: 0;
-  list-style: none;
   @include flex-v-center;
 }
 
@@ -28,16 +26,12 @@
 }
 
 .nav__link {
-  color: $nav-text-color;
+  color: $text-color;
   text-decoration: none;
 }
 
-.octagram {
-  position: relative;
-  &__text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%);
+.nav {
+  @include tablet {
+    display: none;
   }
 }

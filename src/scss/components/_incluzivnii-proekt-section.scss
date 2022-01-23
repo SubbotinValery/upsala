@@ -1,0 +1,23 @@
+.incluzivnii-proekt-section {
+  margin-top: 20vh;
+}
+
+.incluzivnii-proekt-content {
+  &-1 {
+    margin-top: 10rem;
+  }
+}
+.inclizivnii-proekt__bottom {
+  height: 115rem;
+}
+
+.inclizivnii-proekt-zaglushka {
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+  right: 0;
+  z-index: -10 !important;
+  img {
+    width: 100%;
+  }
+}

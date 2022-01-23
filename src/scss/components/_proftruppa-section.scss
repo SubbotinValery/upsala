@@ -1,0 +1,21 @@
+.proftruppa-section {
+  margin-top: 20vh;
+}
+
+.proftruppa-content {
+  &-1 {
+    margin-top: 10rem;
+  }
+}
+
+.proftruppa__bottom {
+  height: 60rem;
+}
+
+.proftruppa-zaglushka {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10 !important;
+}

@@ -1,0 +1,25 @@
+.nasha-istoria-section {
+  margin-top: 20vh;
+  padding-top: 27rem;
+  padding-bottom: 5rem;
+  .title {
+    position: absolute;
+    top: 2rem;
+    white-space: nowrap;
+    color: #131313;
+  }
+  .container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      position: relative;
+      left: 0;
+      top: 0;
+      right: 0;
+      width: 100%;
+    }
+  }
+}

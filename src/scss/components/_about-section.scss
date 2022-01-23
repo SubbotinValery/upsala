@@ -1,0 +1,35 @@
+.about-content {
+  width: 70%;
+  &-1 {
+    margin-top: 18.4rem;
+    margin-bottom: 50vh;
+  }
+  &-2 {
+    margin-top: 25.8rem;
+  }
+  &-3 {
+    margin-top: 18.4rem;
+  }
+}
+.about__padding-block {
+  height: 30vh;
+}
+
+.jumper__wrapper {
+  z-index: 40;
+  height: 50rem;
+  width: 22rem;
+  transition: 0.2s;
+  overflow: visible;
+  .jumper {
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    .jumper__img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      overflow: visible;
+    }
+  }
+}

@@ -6,20 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#111111" />
     <title>App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/css/splide.min.css"
+    />
     <link rel="stylesheet" href="css/vendor.css" />
     <link rel="stylesheet" href="css/main.css" />
     <script defer src="js/main.js"></script>
   </head>
 
   <body>
-    @include('partials/header.html')
-    <div class="container">
-      <p>Тут вам <span>не</span> цирк</p>
-      <div>
-        <img src="../img/svg/down-btn.svg" />
-        <p>Листайте вниз, знакомьтесь с цирком</p>
-      </div>
-    </div>
-    <div class="container">@include('partials/footer.html')</div>
+    @include('partials/header.html') @include('partials/ne-cirk-section.html')
+    @include('partials/video-section.html')
+    @include('partials/about-section.html')
+    @include('partials/iz-chego-sostit-section.html')
+    <!-- готово -->
+    @include('partials/huliganskii-proekt-section.html')
+    @include('partials/proftruppa-section.html')
+    @include('partials/incluzivnii-proekt-section.html')
+    <!-- демо -->
+    @include('partials/chto-v-rezultate-section.html')
+    @include('partials/kulturnii-producti-section.html')
+    @include('partials/demo-smi-o-nas.html')
+    @include('partials/demo-a-chto-proishodit.html')
+    @include('partials/demo-nasha-istoria.html')
+    @include('partials/demo-contact.html') @include('partials/demo-footer.html')
+    @include('partials/clouds.html') @include('partials/star.html')
+    @include('partials/juggler.html')
   </body>
 </html>

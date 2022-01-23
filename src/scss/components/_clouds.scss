@@ -1,0 +1,54 @@
+.clouds {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 10rem;
+}
+
+.clouds__side {
+  position: absolute;
+  display: flex;
+  width: 50rem;
+  height: 10rem;
+  z-index: 20;
+  &-left {
+    left: 0;
+  }
+  &-right {
+    right: 0;
+  }
+  .clouds__item {
+    position: absolute;
+    z-index: 30;
+    &-1 {
+      left: -10vw;
+      bottom: -5vh;
+    }
+    &-2 {
+      transform: scale(0.9);
+      left: 3vw;
+      bottom: -6vh;
+    }
+    &-3 {
+      transform: scale(0.6);
+      left: 17vw;
+      bottom: -10vh;
+    }
+    &-4 {
+      transform: scale(0.9) rotateY(180deg);
+      right: 3vw;
+      bottom: -6vh;
+    }
+    &-5 {
+      transform: scale(0.6) rotateY(180deg);
+      right: 17vw;
+      bottom: -10vh;
+    }
+    &-6 {
+      transform: rotateY(180deg);
+      right: -10vw;
+      bottom: -5vh;
+    }
+  }
+}

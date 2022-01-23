@@ -1,0 +1,39 @@
+.ne-cirk__section {
+  .container {
+    .title__wrapper {
+      top: 12.8rem;
+      width: 100%;
+      .section__title {
+        margin-bottom: 6rem;
+      }
+    }
+  }
+}
+
+.ne-cirk-girl__wrapper {
+  transition: 1s;
+  z-index: -10;
+  transform: translate(50%, -50%);
+  .ne-cirk-girl {
+    width: 144.8rem;
+    height: 238.1rem;
+    &__img {
+      transition: 1s;
+    }
+  }
+}
+
+.ne-cirk-hand__wrapper {
+  transition: 1s;
+  z-index: -20;
+  transform: translate(50%, 50%);
+  right: 46%;
+  .ne-cirk-hand {
+    width: 67.5rem;
+    height: 77.7rem;
+    &__img {
+      transition: 1s;
+      transform: scale(0.7);
+    }
+  }
+}
