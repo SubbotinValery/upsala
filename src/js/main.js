@@ -7,4 +7,4 @@ import "./components/_clouds";
 import "./components/_star";
 import "./components/_juggler";
 import "./components/_jumper";
-import "./components/_slider";
+import "./components/_chto-v-resultate-slider";
