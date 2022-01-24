@@ -1,0 +1,19 @@
+.octagram {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+  }
+  &-support {
+    &::after {
+      height: 5.6rem;
+      width: 18.6rem;
+      background-image: url("../../img/svg/octagram-support.svg");
+    }
+  }
+}

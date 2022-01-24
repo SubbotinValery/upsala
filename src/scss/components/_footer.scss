@@ -1,0 +1,63 @@
+.footer {
+  height: 47.4rem;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .nav__item {
+      margin-bottom: 2.2rem;
+      margin-right: 3.2rem;
+    }
+  }
+}
+
+.footer__contact {
+  .phone {
+    margin-top: -1rem;
+  }
+  .mail {
+    margin-top: 1.6rem;
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+  }
+  .social {
+    margin-top: 7.8rem;
+    margin-bottom: 9.4rem;
+    display: flex;
+    height: 100%;
+    &__item {
+      margin-right: 0.8rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      padding: 4.6rem;
+      border: 1px solid rgb(200, 200, 200, 0.5);
+      border-radius: 1.6rem;
+      transition: 0.2s;
+      &:hover {
+        background-color: $contrast;
+        border-color: $contrast;
+      }
+    }
+  }
+  .copyright__block {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    &-oferta {
+      color: $contrast;
+      border-bottom: 1px solid $contrast;
+      text-decoration: none;
+      margin-right: 2.3rem;
+    }
+    &-copyright {
+      color: #9c8c8c;
+    }
+  }
+}
