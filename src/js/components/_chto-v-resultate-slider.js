@@ -8,22 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
   next = document.querySelector("#chtoVRezultateSlider .next-button");
 
   splide = new Splide(".splide", {
-    gap: "15px",
+    gap: "3rem",
     arrows: false,
-    perPage: 1,
+    perPage: 2,
     type: "loop",
     pagination: true,
     keyboard: false,
     slideFocus: false,
-
-    // breakpoints: {
-    //   575: {
-    //     perPage: 2,
-    //   },
-    //   375: {
-    //     perPage: 1,
-    //   },
-    // },
   }).mount();
 
   splide.on("move", function () {
