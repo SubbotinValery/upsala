@@ -8,3 +8,4 @@ import "./components/_star";
 import "./components/_juggler";
 import "./components/_jumper";
 import "./components/_chto-v-resultate-slider";
+import "./components/_kulturnii-producti-slider";

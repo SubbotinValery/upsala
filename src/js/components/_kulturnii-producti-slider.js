@@ -4,13 +4,13 @@ let splide;
 let prev, next;
 
 document.addEventListener("DOMContentLoaded", function () {
-  prev = document.querySelector("#chtoVRezultateSlider .previous-button");
-  next = document.querySelector("#chtoVRezultateSlider .next-button");
+  prev = document.querySelector("#kulturniiProductiSlider .previous-button");
+  next = document.querySelector("#kulturniiProductiSlider .next-button");
 
-  splide = new Splide("#chtoVRezultateSlider .splide", {
+  splide = new Splide("#kulturniiProductiSlider .splide", {
     gap: "3rem",
     arrows: false,
-    perPage: 2,
+    perPage: 1,
     type: "loop",
     pagination: true,
     keyboard: false,
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   splide.on("move", function () {
     var slides = document.querySelectorAll(
-      "#chtoVRezultateSlider .splide .splide__slide"
+      "#kulturniiProductiSlider .splide .splide__slide"
     );
 
     slides.forEach(function (slide) {
