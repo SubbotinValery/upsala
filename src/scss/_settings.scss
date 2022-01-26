@@ -269,36 +269,21 @@ section.main-item {
   }
 }
 
-.text-field__wrapper {
-  position: relative;
-  .placeholder {
-    position: absolute;
-    left: 4.2rem;
-    top: 50%;
-    transform: translateY(-80%);
-  }
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
 }
 
-.text-field {
-  padding: 1.5rem 4.2rem;
-  font-size: 1.4rem;
-  line-height: 1.9rem;
-  color: $text-color;
-  border: 1px solid rgb(200, 200, 200, 0.5);
-  border-radius: 4.8rem;
-  background-color: transparent;
-  width: 100%;
+button:active {
+  border: none;
   outline: none;
-  transition: 0.2s;
-  margin-bottom: 1.1rem;
-  &:focus {
-    outline: none;
-    border: 1px solid rgb(200, 200, 200, 1);
-  }
-  &:active {
-    outline: none;
-    border: 1px solid rgb(200, 200, 200, 1);
-  }
+}
+
+button:focus {
+  border: none;
+  outline: none;
 }
 
 input[type="checkbox"] {
@@ -376,4 +361,9 @@ fieldset {
   &:active {
     outline: none;
   }
+}
+
+.hr {
+  height: 1px;
+  border: 1px solid rgb(200, 200, 200, 0.2);
 }

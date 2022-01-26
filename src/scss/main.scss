@@ -4,28 +4,21 @@
 @import "mixins";
 @import "settings";
 
-// подключения компонентов страницы
+//common
 @import "./components/header";
 @import "./components/footer";
 @import "./components/contact.scss";
-
+//sections
 @import "./components/ne-cirk-section";
 @import "./components/down-btn";
-
 @import "./components/video-section";
-
 @import "./components/about-section";
-
 @import "./components/iz-chego-sostoit-section";
-
 @import "./components/chto-v-rezultate-section";
-
 @import "./components/kulturnii-producti-section";
-
-@import "./components/slider";
-@import "./components/clouds";
-@import "./components/star";
-@import "./components/juggler";
+@import "./components/smi-o-nas";
+@import "./components/chto-proishodit";
+@import "./components/nasha-istoria";
 
 @import "./components/huliganskii-proekt-section";
 
@@ -33,10 +26,10 @@
 
 @import "./components/incluzivnii-proekt-section";
 
-@import "./components/demo-nasha-istoria";
-
-@import "./components/demo-smi-o-nas";
-
-@import "./components/demo-a-chto-proishodit";
-
-@import "./components/octagram";
+//animations
+@import "./components/clouds";
+@import "./components/star";
+@import "./components/juggler";
+//slider
+@import "./components/slider";
+@import "./components/slider-btn";

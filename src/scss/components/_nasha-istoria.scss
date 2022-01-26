@@ -1,0 +1,112 @@
+.nasha-istoria-section {
+  padding-top: 19rem;
+  margin-top: 20vh;
+  background-color: $grey;
+  color: #131313;
+  min-height: 100vh;
+}
+
+.nasha-istoria__slider {
+  margin-top: 10rem;
+  padding-bottom: 30rem;
+  width: 100%;
+}
+
+.nasha-istoria-item {
+  padding: 0 6.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__img {
+    height: auto;
+    width: 48%;
+  }
+  &__content {
+    width: 45%;
+  }
+  &__title {
+    margin-bottom: 1.6rem;
+  }
+  &__descr {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+}
+
+.nasha-istoria__slider {
+  .splide__pagination {
+    bottom: -24rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100vw;
+      height: 0.1rem;
+      background-color: rgb(19, 19, 19, 0.5);
+    }
+  }
+  .splide__pagination li {
+    display: flex;
+    align-items: center;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .splide__pagination li button {
+    cursor: pointer;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0;
+    padding: 0;
+    background-color: #9c8c8c;
+    border: 1px solid #131313;
+    border-radius: 50%;
+    opacity: 1;
+    z-index: 10;
+  }
+
+  .splide__pagination li button[aria-current="true"] {
+    position: relative;
+    width: 13rem;
+    height: 13rem;
+    background-color: transparent;
+    border: none;
+    background-image: url("../../img/svg/nasha-istoria-controls-img.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+    transform-style: preserve-3d;
+    &::before {
+      position: absolute;
+      content: "";
+      cursor: default;
+      top: 0;
+      left: -6.4rem;
+      right: -6.4rem;
+      height: 14rem;
+      background-color: $grey;
+      transform: translateZ(-1px);
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0.6rem;
+      height: 0.6rem;
+      margin: 0;
+      padding: 0;
+      background-color: #9c8c8c;
+      border: 1px solid #131313;
+      border-radius: 50%;
+    }
+  }
+}
