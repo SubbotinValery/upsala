@@ -286,6 +286,38 @@ button:focus {
   outline: none;
 }
 
+.text-field__wrapper {
+  position: relative;
+  .placeholder {
+    position: absolute;
+    left: 4.2rem;
+    top: 50%;
+    transform: translateY(-80%);
+  }
+}
+
+.text-field {
+  padding: 1.5rem 4.2rem;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: $text-color;
+  border: 1px solid rgb(200, 200, 200, 0.5);
+  border-radius: 4.8rem;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  transition: 0.2s;
+  margin-bottom: 1.1rem;
+  &:focus {
+    outline: none;
+    border: 1px solid rgb(200, 200, 200, 1);
+  }
+  &:active {
+    outline: none;
+    border: 1px solid rgb(200, 200, 200, 1);
+  }
+}
+
 input[type="checkbox"] {
   visibility: hidden;
   display: none;
