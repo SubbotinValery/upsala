@@ -4,10 +4,17 @@
 }
 
 .smi-o-nas__text {
-  width: 50%;
+  width: 60%;
   margin-top: 6rem;
   font-size: 1.7rem;
   line-height: 2.6rem;
+}
+
+.smi-o-nas-star-line {
+  position: absolute;
+  left: 40%;
+  top: -10%;
+  z-index: -10;
 }
 
 .smi-o-nas__content {
