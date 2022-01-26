@@ -86,12 +86,12 @@
     &::before {
       position: absolute;
       content: "";
+      cursor: default;
       top: 0;
       left: -6.4rem;
       right: -6.4rem;
       height: 14rem;
       background-color: $grey;
-      z-index: -10;
       transform: translateZ(-1px);
     }
     &::after {
