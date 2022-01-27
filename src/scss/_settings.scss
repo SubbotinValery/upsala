@@ -368,6 +368,8 @@ fieldset {
 
 .btn {
   cursor: pointer;
+  display: block;
+  text-decoration: none;
   margin: 2.5rem 0;
   padding: 1.5rem 4.2rem;
   text-transform: uppercase;
