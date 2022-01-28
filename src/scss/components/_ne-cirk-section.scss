@@ -1,39 +1,106 @@
 .ne-cirk__section {
-  .container {
-    .title__wrapper {
-      top: 12.8rem;
+}
+
+.ne-cirk__content {
+  height: calc(100vh - $header-gap);
+  width: 100%;
+}
+
+.ne-cirk__title {
+  top: 50%;
+  left: 0;
+  transform: scale(1.4) translate(14%, -50%);
+  transition: $duration-fast;
+}
+
+.ne-cirk-btn__block {
+  display: none;
+}
+
+.ne-cirk__down {
+  top: 80%;
+  display: flex;
+  align-items: center;
+  .down__btn {
+    position: relative;
+    cursor: pointer;
+    height: 6.4rem;
+    width: 6.4rem;
+    margin-right: 1.6rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
       width: 100%;
-      .section__title {
-        margin-bottom: 6rem;
-      }
+      background-image: url("../../img/svg/down-btn.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
+    &:hover::before {
+      animation: rotate-360 3s linear infinite;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30%;
+      height: 30%;
+      background-image: url("../../img/svg/down-btn-arrow.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  transition: $duration-fast;
+}
+
+.ne-cirk__content {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
-.ne-cirk-girl__wrapper {
-  transition: 1s;
-  z-index: -10;
-  transform: translate(50%, -50%);
-  .ne-cirk-girl {
-    width: 144.8rem;
-    height: 238.1rem;
-    &__img {
-      transition: 1s;
-    }
+.ne-cirk__title {
+  @include tablet {
+    top: 40%;
+    transform: scale(1) translateY(-50%);
+  }
+  @include mobile {
+    position: static;
+    transform: scale(0.7);
+    margin-left: -8rem;
+  }
+}
+.ne-cirk-btn__block {
+  @include mobile {
+    display: block;
   }
 }
 
-.ne-cirk-hand__wrapper {
-  transition: 1s;
-  z-index: -20;
-  transform: translate(50%, 50%);
-  right: 46%;
-  .ne-cirk-hand {
-    width: 67.5rem;
-    height: 77.7rem;
-    &__img {
-      transition: 1s;
+.ne-cirk__down {
+  @include tablet {
+    top: 65%;
+  }
+  @include mobile {
+    position: static;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 2.2rem;
+  }
+  .down__btn {
+    @include mobile {
       transform: scale(0.7);
     }
   }
+}
+
+.girl__wrapper {
+  transform: translate(50%, -50%);
 }

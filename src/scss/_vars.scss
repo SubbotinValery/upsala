@@ -1,7 +1,13 @@
-$text-color: #c8c8c8;
-$bg-color: #131313;
-$contrast: #d24a43;
-$secondary: #43a0de;
+$dark: #131313;
+$red: #d24a43;
 $blue: #43a0de;
-$std-gap: 2.4rem;
 $grey: #c8c8c8;
+$dirty-grey: #9c8c8c;
+
+//transition
+$duration-fast: 0.2s;
+$duration-medium: 0.5s;
+$duration-slow: 1s;
+
+//gap
+$header-gap: 9.6rem;

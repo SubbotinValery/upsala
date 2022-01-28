@@ -1,0 +1,31 @@
+.running-line {
+  display: flex;
+  width: 100%;
+  * {
+    white-space: nowrap;
+    animation: running-line 40s -40s linear infinite;
+    will-change: transform;
+
+    &:nth-child(2) {
+      animation: running-line-2 40s -20s linear infinite;
+    }
+  }
+}
+
+@keyframes running-line {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes running-line-2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}

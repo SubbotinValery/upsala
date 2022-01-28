@@ -1,87 +1,60 @@
 import anime from "../vendor/anime.min";
 
-const neCirkGirlWrapper = document.querySelector(".ne-cirk-girl__wrapper");
-const neCirkGirl = document.querySelector(".ne-cirk-girl");
-const neCirkGirlImg = document.querySelector(".ne-cirk-girl__img");
+const girlWrapper = document.querySelector(".girl__wrapper");
+const girlInner = document.querySelector(".girl__inner");
+const girl = document.querySelector(".girl");
 
-const neCirkHandWrapper = document.querySelector(".ne-cirk-hand__wrapper");
-
-const clouds = document.querySelector(".clouds__wrapper");
-
-const neCirkGirlRotate = anime({
-  targets: neCirkGirl,
-  rotate: [-15, 15],
-  translateX: ["-3%", "3%"],
-  duration: 1500,
-  loop: true,
-  direction: "alternate",
-  easing: "easeInOutQuad",
-});
+const neCirkTitleRegular = document.querySelectorAll(
+  ".ne-cirk__title:not(.outline)"
+);
+const neCirkTitleOutline = document.querySelector(
+  ".ne-cirk__title .italic .outline"
+);
 
 const neCirkTimeline = anime
   .timeline({ autoplay: false })
   .add(
     {
-      targets: neCirkGirlWrapper,
-      top: ["65%", "50%"],
+      targets: girlWrapper,
+      top: ["60%", "50%"],
       right: ["30%", "50%"],
-      duration: 300,
-      autoplay: false,
+      duration: 400,
       easing: "linear",
     },
     0
   )
   .add(
     {
-      targets: neCirkGirlImg,
-      scale: ["1.2", "0.23"],
-      duration: 300,
-      autoplay: false,
+      targets: girl,
+      scale: [1.5, 0.25],
+      duration: 400,
       easing: "linear",
     },
     0
   )
   .add(
     {
-      targets: clouds,
-      bottom: ["-50%", "0%"],
-      duration: 300,
-      autoplay: false,
+      targets: neCirkTitleOutline,
+      translateX: 700,
+      duration: 400,
       easing: "linear",
     },
-    "-=200"
-  )
-  .add(
-    {
-      targets: neCirkHandWrapper,
-      bottom: ["-50%", "25%"],
-      duration: 300,
-      autoplay: false,
-      easing: "linear",
-    },
-    "-=200"
-  )
-  .add(
-    {
-      targets: neCirkGirlWrapper,
-      top: ["50%", "150%"],
-      duration: 100,
-      autoplay: false,
-      easing: "linear",
-    },
-    "+=400"
-  )
-  .add(
-    {
-      targets: neCirkHandWrapper,
-      bottom: ["25%", "-50%"],
-      duration: 100,
-      autoplay: false,
-      easing: "linear",
-    },
-    "-=100"
+    "-=300"
   );
 
-window.addEventListener("scroll", () => {
-  neCirkTimeline.seek(window.pageYOffset);
+document.addEventListener("DOMContentLoaded", function () {
+  console.log(neCirkTitleRegular);
+  const neCirkGirlRotate = anime({
+    targets: girlInner,
+    rotate: [-30, 30],
+    translateX: ["-5%", "5%"],
+    translateY: ["10", "-10"],
+    duration: 2000,
+    loop: true,
+    direction: "alternate",
+    easing: "easeInOutQuad",
+  });
+  window.addEventListener("scroll", () => {
+    neCirkTimeline.seek(window.pageYOffset);
+  });
 });
