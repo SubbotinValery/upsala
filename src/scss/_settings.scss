@@ -58,6 +58,12 @@ section.main-item {
 
 .section__title {
   white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .italic {
+    display: flex;
+  }
 }
 
 .title {
@@ -66,7 +72,7 @@ section.main-item {
   font-family: "Spektra";
   font-weight: 700;
   text-transform: uppercase;
-
+  transition: $duration-fast;
   &-1 {
     font-size: 19.2rem;
     line-height: 15.8rem;
