@@ -244,28 +244,19 @@ section.main-item {
   }
 }
 
-.nav {
-  display: flex;
-
-  .nav__link {
-    position: relative;
-    transition: 0.2s;
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: -0.6rem;
-      left: 0;
-      height: 0.1rem;
-      width: 0%;
-      background-color: $grey;
-      transition: 0.2s;
-    }
-    &:hover::before {
-      width: 100%;
-    }
-    &.octagram::before {
-      width: 0;
-    }
+.nav__link:not(.primary-btn) {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: $dirty-grey;
+    transition: $duration-fast;
+  }
+  &:hover::before {
+    width: 100%;
   }
 }
 
@@ -366,4 +357,36 @@ fieldset {
 .hr {
   height: 1px;
   border: 1px solid rgb(200, 200, 200, 0.2);
+}
+
+.text-field__wrapper {
+  position: relative;
+  .placeholder {
+    position: absolute;
+    left: 4.2rem;
+    top: 50%;
+    transform: translateY(-80%);
+  }
+}
+
+.text-field {
+  padding: 1.5rem 4.2rem;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: $text-color;
+  border: 1px solid rgb(200, 200, 200, 0.5);
+  border-radius: 4.8rem;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  transition: 0.2s;
+  margin-bottom: 1.1rem;
+  &:focus {
+    outline: none;
+    border: 1px solid rgb(200, 200, 200, 1);
+  }
+  &:active {
+    outline: none;
+    border: 1px solid rgb(200, 200, 200, 1);
+  }
 }

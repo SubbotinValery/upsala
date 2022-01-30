@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#111111" />
+    <title>Что-то пошло не так</title>
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body>
+    @include('partials/header.html')
+    <section class="not-found-section height-100">
+      <div class="container relative">
+        <div class="not-found-content">
+          <div class="message">Что-то пошло не так</div>
+          <a href="./index.html" class="back-btn octagram octagram-na-glavnuy">
+            На главную
+          </a>
+        </div>
+
+        <div class="not-found__bg">
+          <div class="ups-block relative">
+            <div class="star__wrapper">
+              <img class="star" src="./img/star.png" alt="" />
+            </div>
+            <div class="ups-text title title-main">
+              <div class="ups-text-u">У</div>
+              <div class="ups-text-p">П</div>
+              <div class="ups-text-s">С</div>
+              <div class="ups-text-exclamation">!</div>
+            </div>
+          </div>
+
+          <div class="clouds-block relative">
+            <div class="clouds__wrapper">
+              <img
+                class="clouds__item clouds__item-1"
+                src="./img/cloud.png"
+                alt=""
+              />
+              <img
+                class="clouds__item clouds__item-2"
+                src="./img/cloud.png"
+                alt=""
+              />
+              <div class="wrapper" id="notFoundJuggler">
+                <img class="juggler" src="./img/juggler.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

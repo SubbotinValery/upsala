@@ -11,3 +11,4 @@ import "./components/_chto-v-resultate-slider";
 import "./components/_kulturnii-producti-slider";
 import "./components/_chto-proishodit-slider";
 import "./components/_nasha-istoria-slider";
+import "./components/_lica-cirka-slider";

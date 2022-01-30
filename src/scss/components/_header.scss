@@ -1,28 +1,73 @@
 .header {
   position: fixed;
+  top: 3.2rem;
+  left: 50%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 3.2rem;
-  left: 50%;
   transform: translateX(-50%);
   z-index: 999;
 }
-.header__service {
+
+.header__side-left {
   display: flex;
   align-items: center;
   .header__logo {
+    display: block;
+    height: 6.4rem;
+    width: 6.4rem;
     margin-right: 1.6rem;
+    background-image: url("../../img/svg/logo.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .account__link {
+    display: block;
+    height: 6.4rem;
+    width: 6.4rem;
+    background-image: url("../../img/svg/primary-btn-circle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
-.header {
-  @include tablet {
-    display: block;
+.header__side-right {
+  display: flex;
+  align-items: center;
+  .menu {
+    display: none;
+    @include tablet {
+      display: block;
+    }
   }
-}
-.header__service {
-  @include tablet {
-    justify-content: space-between;
+  .header__nav {
+    display: flex;
+    align-items: center;
+    .nav__item {
+      position: relative;
+      margin-right: 1.6rem;
+      &:last-child {
+        margin-right: 0;
+        margin-left: 2.2rem;
+      }
+      .nav__link:not(.primary-btn) {
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -0.5rem;
+          left: 0;
+          height: 1px;
+          width: 0;
+          background-color: $dirty-grey;
+          transition: $duration-fast;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+    @include tablet {
+      display: none;
+    }
   }
 }
