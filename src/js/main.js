@@ -11,4 +11,9 @@ import "./components/_chto-v-resultate-slider";
 import "./components/_kulturnii-producti-slider";
 import "./components/_chto-proishodit-slider";
 import "./components/_nasha-istoria-slider";
+<<<<<<< HEAD
 import "./components/_lica-cirka-slider";
+=======
+
+import "./components/_not-found";
+>>>>>>> 4d8d9a96d2e90c9dfc4d36380148bd31b48aaa2d
