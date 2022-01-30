@@ -1,5 +1,5 @@
 .oferta-section {
-  margin-top: 20vh;
+  padding-top: calc($header-gap + 3rem);
   .container {
     display: flex;
     justify-content: space-between;
@@ -37,27 +37,29 @@
   }
   .oferta__right-side {
     width: 60%;
+    .oferta__download {
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      color: $grey;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      margin-bottom: 2.2rem;
+      margin-left: 1.8rem;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -1.8rem;
+        height: 1.2rem;
+        width: 0.9rem;
+        background-image: url("../../img/svg/file-ico.svg");
+      }
+    }
     .oferta__content {
       margin-top: 1.5rem;
       font-size: 1.7rem;
       line-height: 2.6rem;
-      .oferta__download {
-        position: relative;
-        cursor: pointer;
-        font-size: 1.2rem;
-        line-height: 1.6rem;
-        margin-bottom: 2.2rem;
-        margin-left: 1.8rem;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -1.8rem;
-          height: 1.2rem;
-          width: 0.9rem;
-          background-image: url("../../img/svg/file-ico.svg");
-        }
-      }
     }
   }
 }
@@ -98,6 +100,15 @@
     }
     .oferta__right-side {
       width: 100%;
+    }
+  }
+}
+
+@include mobile {
+  .oferta__left-side {
+    .title {
+      font-size: 4.8rem;
+      margin-bottom: 3rem !important;
     }
   }
 }
