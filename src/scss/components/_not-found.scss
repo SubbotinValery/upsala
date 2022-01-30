@@ -10,7 +10,7 @@
 
 .not-found-content {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -24,21 +24,11 @@
 
   .back-btn {
     text-decoration: none;
-    color: $text-color;
+    color: $grey;
     text-transform: lowercase;
     font-size: 1.6rem;
     line-height: 2.4rem;
     z-index: 1;
-    transition: 0.2s;
-    &:hover {
-      font-size: 2rem;
-    }
-    &::after {
-      transition: 0.2s;
-    }
-    &:hover::after {
-      transform: scale(1.2) translate(-40%, -40%);
-    }
   }
 }
 
@@ -53,13 +43,15 @@
     justify-content: center;
     .star__wrapper {
       position: absolute;
-      top: 55% !important;
-      left: 45% !important;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      min-width: 50rem;
-      min-height: 50rem;
-      height: 60rem;
-      width: 60rem;
+      .star {
+        min-width: 50rem;
+        min-height: 50rem;
+        height: 60rem;
+        width: 60rem;
+      }
     }
     .ups-text {
       color: #fff;
@@ -130,7 +122,7 @@
           width: 40rem;
         }
       }
-      .wrapper {
+      .juggler__wrapper {
         width: 100%;
         height: 100%;
         z-index: 3;
@@ -139,15 +131,13 @@
           filter: grayscale(100%);
           position: absolute;
           width: 70rem;
-          height: 120%;
-          bottom: 0%;
-          left: 45%;
+          bottom: -175%;
+          left: 44%;
           transform: translateX(-50%);
           object-position: top;
           @include mobile {
             transition: 0.5s;
-            width: 70rem;
-            bottom: -10%;
+            width: 60rem;
           }
         }
       }
