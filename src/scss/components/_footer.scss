@@ -1,5 +1,5 @@
 .footer {
-  height: 47.4rem;
+  margin: 7rem 0;
   background-color: transparent;
   width: 100%;
   display: flex;
@@ -9,10 +9,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    .nav__item {
-      margin-bottom: 2.2rem;
-      margin-right: 3.2rem;
-    }
+  }
+}
+
+.footer__nav {
+  align-items: flex-start !important;
+  .nav__item {
+    margin-bottom: 2.2rem;
+    margin-right: 3.2rem;
   }
 }
 
@@ -42,22 +46,98 @@
       border-radius: 1.6rem;
       transition: 0.2s;
       &:hover {
-        background-color: $contrast;
-        border-color: $contrast;
+        background-color: $red;
+        border-color: $red;
       }
     }
   }
   .copyright__block {
     font-size: 1.4rem;
     line-height: 1.9rem;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
     &-oferta {
-      color: $contrast;
-      border-bottom: 1px solid $contrast;
+      color: $red;
+      border-bottom: 1px solid $red;
       text-decoration: none;
       margin-right: 2.3rem;
+      transition: $duration-fast;
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
     }
     &-copyright {
-      color: #9c8c8c;
+      color: $dirty-grey;
+      margin-top: 3rem;
+    }
+  }
+}
+
+.footer-mobile {
+  display: none;
+}
+
+@include tablet {
+  .footer {
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .footer__wrapper {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__nav {
+    margin-bottom: 4rem;
+  }
+}
+
+@include mobile {
+  .footer {
+    display: none;
+  }
+  .footer-mobile {
+    margin: 5rem 0;
+    display: block;
+    .footer__contact {
+      .phone {
+        margin-bottom: 1.2rem;
+      }
+      .mail {
+        margin-bottom: 3.2rem;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        color: $dirty-grey;
+      }
+      .social {
+        &__link {
+          padding: 2.8rem;
+        }
+      }
+      .copyright__block {
+        flex-direction: column;
+        align-items: flex-start;
+        .copyright__block-oferta {
+        }
+        .copyright__block-copyright {
+          margin-top: 3rem;
+        }
+      }
+    }
+
+    .footer__nav {
+      flex-direction: column;
+      margin-bottom: 5.5rem;
+      .nav__link.primary-btn {
+        display: block;
+        width: 120%;
+        height: 120%;
+        text-align: center;
+      }
     }
   }
 }

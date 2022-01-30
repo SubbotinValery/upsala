@@ -128,7 +128,7 @@ section.main-item {
 .align__container-left {
   display: flex;
   justify-content: flex-start;
-  * > {
+  & > * {
     flex-basis: 50%;
   }
 }
@@ -282,5 +282,26 @@ button:focus {
   }
   &:active {
     outline: none;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  .nav__link:not(.primary-btn) {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      height: 1px;
+      width: 0;
+      background-color: $dirty-grey;
+      transition: $duration-fast;
+    }
+    &:hover::before {
+      width: 100%;
+    }
   }
 }
