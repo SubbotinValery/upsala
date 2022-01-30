@@ -64,11 +64,13 @@
     background-image: url("../../img/svg/account-ico.svg");
   }
 
-  &.menu::after {
+  .header__nav.close ~ &.menu-btn::after {
     background-image: url("../../img/svg/menu-ico.svg");
   }
-  &.menu:hover::after {
-    transform: rotate(30deg) translate(-60%, -20%);
+  .header__nav.open ~ &.menu-btn::after {
+    background-image: url("../../img/svg/close-ico.svg");
+    background-position: center;
+    background-size: 60%;
   }
 }
 
