@@ -4,7 +4,9 @@ import "./_vendor";
 import "./components/_burger";
 import "./components/_star";
 import "./components/_clouds";
-import "./components/_juggler";
 
-//
+//index.html
 import "./components/_ne-cirk-section";
+
+//komnda.html
+import "./components/_komanda-slider";
