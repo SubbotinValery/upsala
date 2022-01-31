@@ -1,0 +1,279 @@
+.repertuar-section {
+  padding-top: calc($header-gap + 6.2rem);
+}
+
+.repertuar-timetable {
+  margin-top: 4rem;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+
+  td {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    border: 1px solid rgb(200, 200, 200, 0.5);
+  }
+  tr:first-child td {
+    border-top: 0;
+  }
+  tr td:first-child {
+    border-left: 0;
+  }
+  tr:last-child td {
+    border-bottom: 0;
+  }
+  tr td:last-child {
+    border-right: 0;
+    border-left: 0;
+  }
+
+  tr td:nth-child(3) {
+    border-right: 0;
+  }
+
+  tr > td:not(.repertuar-timetable__btn) {
+    font-size: 2.4rem;
+    line-height: 4.8rem;
+    font-family: "Spektra";
+    text-transform: uppercase;
+  }
+
+  td:first-child {
+    text-align: start;
+  }
+  td:last-child {
+    text-align: end;
+  }
+
+  .repertuar-timetable__btn {
+    .btn {
+      display: inline-block;
+      width: fit-content;
+      margin-right: 0;
+    }
+  }
+}
+
+.repertuar-main-img-block {
+  position: relative;
+  margin-bottom: 9.6rem;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgb(19, 19, 19);
+    background: linear-gradient(
+      360deg,
+      rgba(19, 19, 19, 1) 0%,
+      rgba(19, 19, 19, 0) 100%
+    );
+    z-index: 10;
+  }
+  .repertuar-main-img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.repertuar-main-title-block {
+  position: relative;
+  text-align: center;
+  min-height: 74rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .title-2 {
+    margin-bottom: 1.6rem;
+  }
+  .repertuar-main-title-block__img {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    bottom: 0%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    background: rgb(19, 19, 19);
+    background: linear-gradient(
+      360deg,
+      rgba(19, 19, 19, 1) 0%,
+      rgba(19, 19, 19, 0) 100%
+    );
+    z-index: -1;
+  }
+}
+
+.repertuar-about {
+  margin-top: -8rem;
+  margin-bottom: 13rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  &__star {
+    width: 42%;
+  }
+  &__content {
+    width: 50%;
+    margin-right: 10rem;
+  }
+  &__title {
+    font-size: 2.4;
+    line-height: 3.3rem;
+    color: $dirty-grey;
+    text-transform: uppercase;
+    margin-bottom: 3.2rem;
+  }
+  &__descr {
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+  }
+}
+
+.timetable-mobile {
+  display: none;
+  margin-top: 4rem;
+  min-height: 50rem;
+  &-pre {
+    position: relative;
+    &__outline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  &-item {
+    margin-top: 10rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4.8rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: rgb(200, 200, 200, 0.5);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4.8rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: rgb(200, 200, 200, 0.5);
+    }
+    &__title {
+      margin-bottom: 1rem;
+    }
+
+    &__info {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      & > *:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+    &__date {
+      display: flex;
+      flex-direction: column;
+      .label {
+        color: $dirty-grey;
+      }
+    }
+    &__time {
+      display: flex;
+      flex-direction: column;
+      .label {
+        color: $dirty-grey;
+      }
+    }
+    &__address {
+      display: flex;
+      flex-direction: column;
+      .label {
+        color: $dirty-grey;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .repertuar-about {
+    &__content {
+      width: 50%;
+      margin-right: 0;
+    }
+    &__title {
+      font-size: 2.4;
+      line-height: 3.3rem;
+      color: $dirty-grey;
+      text-transform: uppercase;
+      margin-bottom: 3.2rem;
+    }
+    &__descr {
+      font-size: 1.7rem;
+      line-height: 2.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .repertuar-timetable {
+    display: none;
+  }
+  .timetable-mobile {
+    display: block;
+  }
+}
+
+@include mobile {
+  .repertuar-section {
+    padding-top: calc($header-gap + 30rem);
+    .title-2 {
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+    }
+  }
+  .repertuar-main-img-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .repertuar-about {
+    margin-top: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__star {
+      margin-bottom: 5rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 40rem;
+      }
+    }
+    & > * {
+      width: 100%;
+    }
+  }
+}
