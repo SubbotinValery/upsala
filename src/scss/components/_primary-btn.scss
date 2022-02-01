@@ -1,79 +1,52 @@
 .primary-btn {
-  position: relative;
   cursor: pointer;
-  &::before {
-    content: "";
+  position: relative;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: $duration-fast;
+}
+
+.primary-btn.elips {
+  background-image: url("../../img/svg/primary-btn-elips.svg");
+  & > * {
+    padding: 1.6rem 2rem;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.primary-btn.circle {
+  height: 6.4rem;
+  width: 6.4rem;
+  background-image: url("../../img/svg/primary-btn-circle.svg");
+  & > * {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 140%;
-    height: 300%;
-    background-image: url("../../img/svg/primary-btn.svg");
+    height: 3rem;
+    width: 3rem;
+
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    transition: $duration-fast;
-    z-index: -1;
-  }
-  &:hover::before {
-    transform: scale(1.1) translate(-45%, -45%);
-  }
-}
 
-.primary-btn-cirle {
-  position: relative;
-  cursor: pointer;
-  height: 6.4rem;
-  width: 6.4rem;
-  z-index: 0;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../../img/svg/primary-btn-circle.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     transition: $duration-fast;
-    z-index: -1;
   }
-  &:hover::before {
-    animation: rotate-360 3s linear infinite;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: $duration-fast;
-    z-index: 1;
-  }
-
-  &.account::after {
+  & > .account-btn {
     background-image: url("../../img/svg/account-ico.svg");
   }
-
-  .header__nav.close ~ &.menu-btn::after {
-    background-image: url("../../img/svg/menu-ico.svg");
+  & > .burger-btn {
+    .header__side.close ~ & {
+      background-image: url("../../img/svg/burger-ico.svg");
+    }
+    .header__side.open ~ & {
+      height: 2rem;
+      width: 2rem;
+      background-image: url("../../img/svg/burger-ico-close.svg");
+    }
   }
-  .header__nav.open ~ &.menu-btn::after {
-    background-image: url("../../img/svg/close-ico.svg");
-    background-position: center;
-    background-size: 60%;
-  }
-}
-
-.girl__wrapper {
-  z-index: -1;
 }

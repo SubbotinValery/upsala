@@ -1,7 +1,7 @@
 import "./_vendor";
 
 //common
-import "./components/_burger";
+import "./components/_header";
 import "./components/_accordion";
 import "./components/_clouds";
 import "./components/tree";
