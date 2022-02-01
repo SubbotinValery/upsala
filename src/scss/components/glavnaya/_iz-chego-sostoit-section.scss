@@ -49,6 +49,7 @@
     left: 50%;
     transform: translate(-50%, -50%) rotate(0deg);
     width: 0%;
+    opacity: 0;
     transition: $duration-medium;
   }
 }
