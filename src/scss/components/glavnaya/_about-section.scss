@@ -1,35 +1,22 @@
-.about-content {
-  width: 70%;
-  &-1 {
-    margin-top: 18.4rem;
-    margin-bottom: 50vh;
-  }
-  &-2 {
-    margin-top: 25.8rem;
-  }
-  &-3 {
-    margin-top: 18.4rem;
-  }
-}
-.about__padding-block {
-  height: 30vh;
+.about-section {
 }
 
-.jumper__wrapper {
-  z-index: 40;
-  height: 50rem;
-  width: 22rem;
-  transition: 0.2s;
-  overflow: visible;
-  .jumper {
-    height: 100%;
-    width: 100%;
-    overflow: visible;
-    .jumper__img {
-      display: block;
-      height: 100%;
-      width: 100%;
-      overflow: visible;
+.about-content {
+  width: 80%;
+  margin-top: 70vh;
+  transition: $duration-medium;
+  &-1 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+  }
+  &-2,
+  &-3 {
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+    .title {
+      margin-left: -20vw;
+      margin-bottom: 4.8rem;
     }
   }
 }

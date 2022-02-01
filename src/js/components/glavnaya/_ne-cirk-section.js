@@ -5,7 +5,7 @@ const girl = document.querySelector(".girl");
 
 const handInner = document.querySelector(".hand__inner");
 
-const cloudBlock = document.querySelector(".cloud__inner");
+const cloudInner = document.querySelector(".cloud__inner");
 
 const titleRegular = document.querySelectorAll(
   ".ne-cirk__title > * > *:not(.outline)"
@@ -50,24 +50,22 @@ const neCirkTimeline = anime
   .add(
     {
       targets: handInner,
-      top: ["130%", "75%"],
+      top: ["150%", "78%"],
       left: ["53%", "53%"],
       translateX: ["-50%", "-50%"],
       translateY: ["-50%", "-50%"],
       scale: [0.65, 0.65],
       duration: 300,
-      autoplay: false,
       easing: "linear",
     },
     500
   )
   .add(
     {
-      targets: cloudBlock,
-      bottom: ["-30%", "0%"],
+      targets: cloudInner,
+      bottom: ["-50%", "0%"],
       left: ["0%", "0%"],
       duration: 200,
-      autoplay: false,
       easing: "linear",
     },
     600
@@ -75,9 +73,8 @@ const neCirkTimeline = anime
   .add(
     {
       targets: girlInner,
-      top: "-30%",
+      top: "-50%",
       duration: 100,
-      autoplay: false,
       easing: "linear",
     },
     1000
@@ -85,9 +82,8 @@ const neCirkTimeline = anime
   .add(
     {
       targets: handInner,
-      top: "130%",
+      top: "150%",
       duration: 100,
-      autoplay: false,
       easing: "linear",
     },
     1000

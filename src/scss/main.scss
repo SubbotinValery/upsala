@@ -5,6 +5,7 @@
 @import "settings";
 
 //common
+@import "./components/animations";
 @import "./components/header";
 @import "./components/footer";
 @import "./components/primary-btn";
@@ -16,10 +17,14 @@
 @import "./components/animation/girl";
 @import "./components/animation/hand";
 @import "./components/animation/cloud";
+@import "./components/animation/juggler";
+@import "./components/animation/star";
+@import "./components/animation/jumper";
 
 //index.html
 @import "./components/glavnaya/ne-cirk-section";
 @import "./components/glavnaya/video-section";
+@import "./components/glavnaya/about-section";
 // @import "./components/video-section";
 // @import "./components/about-section";
 // @import "./components/iz-chego-sostoit-section";
@@ -31,6 +36,7 @@
 // @import "./components/smi-o-nas";
 // @import "./components/chto-proishodit";
 // @import "./components/nasha-istoria";
+
 //komanda.html
 @import "./components/komanda";
 
