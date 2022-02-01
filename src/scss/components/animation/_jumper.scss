@@ -1,13 +1,5 @@
 .jumper__wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  * {
-    transition: $duration-medium;
-  }
-  .jumper__inner {
-    position: absolute;
-  }
+  transition: $duration-medium;
+  z-index: 10 !important;
 }

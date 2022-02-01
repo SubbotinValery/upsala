@@ -1,10 +1,10 @@
 import anime from "../../vendor/anime.min";
 
-const jugglerInner = document.querySelector(".juggler__inner");
+const jugglerWrapper = document.querySelector(".juggler__wrapper");
 
-const starInner = document.querySelector(".star__inner");
+const starWrapper = document.querySelector(".star__wrapper");
 
-const jumpers = document.querySelectorAll(".jumper__inner");
+const jumpers = document.querySelectorAll(".jumper__wrapper");
 const jumper1 = jumpers[0];
 const jumper2 = jumpers[1];
 
@@ -18,7 +18,7 @@ const aboutTimeline = anime
   .timeline({ autoplay: false })
   .add({
     delay: 2500,
-    targets: jugglerInner,
+    targets: jugglerWrapper,
     bottom: ["-50%", "40%"],
     left: ["25%", "25%"],
     translateX: ["-50%", "-50%"],
@@ -29,7 +29,7 @@ const aboutTimeline = anime
   })
   .add(
     {
-      targets: starInner,
+      targets: starWrapper,
       bottom: ["-50%", "60%"],
       left: ["25%", "25%"],
       translateX: ["-50%", "-50%"],
@@ -42,7 +42,7 @@ const aboutTimeline = anime
   )
   .add(
     {
-      targets: jugglerInner,
+      targets: jugglerWrapper,
       bottom: "-50%",
       duration: 500,
       easing: "linear",
