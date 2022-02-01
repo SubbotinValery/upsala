@@ -87,6 +87,15 @@ const neCirkTimeline = anime
       easing: "linear",
     },
     1000
+  )
+  .add(
+    {
+      targets: cloudWrapper,
+      bottom: "-50%",
+      duration: 300,
+      easing: "linear",
+    },
+    6000
   );
 
 document.addEventListener("DOMContentLoaded", function () {

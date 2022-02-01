@@ -8,7 +8,7 @@ const jumpers = document.querySelectorAll(".jumper__wrapper");
 const jumper1 = jumpers[0];
 const jumper2 = jumpers[1];
 
-const clouds = document.querySelector(".clouds__wrapper");
+const cloudWrapper = document.querySelector(".cloud__wrapper");
 
 const aboutContent1 = document.querySelector(".about-content-1");
 const aboutContent2 = document.querySelector(".about-content-2");

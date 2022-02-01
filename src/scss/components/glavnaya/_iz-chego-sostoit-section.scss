@@ -1,53 +1,78 @@
-.iz-chego-sostoit {
-  display: flex;
-  justify-content: space-between;
-  padding: 8.8rem 0;
-  & * {
-    flex-basis: 45%;
-  }
+.iz-chego-sostoit-section {
+  margin-top: 20vh;
 }
 
-.iz-chego-sostoit__list {
-  li {
-    cursor: pointer;
-    position: relative;
-    border-bottom: 1px solid #9c8c8c;
-    padding-bottom: 2.4rem;
-    padding-top: 1em;
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: -1px;
-      left: 0;
-      height: 2px;
-      width: 0;
-      transition: 0.5s;
-      background-color: $contrast;
+.iz-chego-sostoit__content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8.8rem 0;
+  & > * {
+    width: 45%;
+  }
+
+  .cloud__item {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    &-1 {
+      top: 50%;
+      left: -10%;
+      width: 18vw;
+      height: 9vw;
     }
-    &:hover::before {
-      width: 100%;
+    &-2 {
+      top: 15%;
+      left: 35%;
+      width: 16vw;
+      height: 8vw;
+    }
+    &-3 {
+      top: 80%;
+      left: 29%;
+      width: 14vw;
+      height: 7vw;
     }
   }
 }
 
 .iz-chego-sostoit__preview {
-  position: relative;
-  .clouds__item {
+  width: 100%;
+  height: 100%;
+  .preview__item {
+    width: 100%;
+  }
+  img {
     position: absolute;
-    &-1 {
-      top: 0%;
-      left: -20%;
-      width: 18vw;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 0%;
+    transition: $duration-medium;
+  }
+}
+
+.iz-chego-sostoit__list {
+  width: 100%;
+  li {
+    cursor: pointer;
+    position: relative;
+    border-bottom: 0.1rem solid #9c8c8c;
+    padding-bottom: 2.4rem;
+    padding-top: 1em;
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -0.1rem;
+      left: 0;
+      height: 0.2rem;
+      width: 0;
+      transition: $duration-medium;
+      background-color: $red;
     }
-    &-2 {
-      top: 50%;
-      left: -5%;
-      width: 16vw;
-    }
-    &-3 {
-      top: 20%;
-      left: 90%;
-      width: 14vw;
+    &:hover::before {
+      width: 100%;
     }
   }
 }
