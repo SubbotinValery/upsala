@@ -8,14 +8,29 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/primary-btn";
-@import "./components/star";
 @import "./components/slider";
 @import "./components/slider-btn";
 @import "./components/accordion";
 
-//index.html
-@import "./components/ne-cirk-section";
+//animation
+@import "./components/animation/girl";
+@import "./components/animation/hand";
+@import "./components/animation/cloud";
 
+//index.html
+@import "./components/glavnaya/ne-cirk-section";
+@import "./components/glavnaya/video-section";
+// @import "./components/video-section";
+// @import "./components/about-section";
+// @import "./components/iz-chego-sostoit-section";
+// @import "./components/huliganskii-proekt-section";
+// @import "./components/proftruppa-section";
+// @import "./components/incluzivnii-proekt-section";
+// @import "./components/chto-v-rezultate-section";
+// @import "./components/kulturnii-producti-section";
+// @import "./components/smi-o-nas";
+// @import "./components/chto-proishodit";
+// @import "./components/nasha-istoria";
 //komanda.html
 @import "./components/komanda";
 

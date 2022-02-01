@@ -1,0 +1,66 @@
+.cloud__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  * {
+    transition: $duration-medium;
+  }
+  .cloud__inner {
+    position: absolute;
+    height: 25rem;
+    width: 100%;
+    .cloud__item {
+      position: absolute;
+      &-1 {
+        height: max(14rem, 17vw);
+        width: max(28rem, 33vw);
+        bottom: -10%;
+        left: max(-10%, -26vw);
+      }
+      &-2 {
+        height: max(14rem, 14vw);
+        width: max(25rem, 30vw);
+        bottom: -15%;
+        left: max(3%, 20vw);
+      }
+      &-3 {
+        height: max(13rem, 13vw);
+        width: max(24rem, 26vw);
+        bottom: -12%;
+        left: max(4%, 10vw);
+      }
+
+      &-4 {
+        height: max(14rem, 17vw);
+        width: max(28rem, 33vw);
+        bottom: -10%;
+        right: max(-10%, -26vw);
+        transform: scaleX(-1);
+      }
+      &-5 {
+        height: max(14rem, 14vw);
+        width: max(25rem, 30vw);
+        bottom: -15%;
+        right: max(3%, 20vw);
+        transform: scaleX(-1);
+      }
+      &-6 {
+        height: max(13rem, 13vw);
+        width: max(24rem, 26vw);
+        bottom: -12%;
+        right: max(4%, 10vw);
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+
+.cloud__item {
+  background-image: url("../../../img/cloud.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

@@ -1,0 +1,27 @@
+.ne-cirk-section {
+}
+
+.ne-cirk__content {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.ne-cirk__title {
+  * {
+    transition: $duration-medium;
+  }
+  .italic {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.ne-cirk__down-btn {
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  .down-btn {
+    margin-right: 2rem;
+  }
+}

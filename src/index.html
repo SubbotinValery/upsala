@@ -5,15 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#111111" />
-    <title>App</title>
+    <title>Упсала-цирк</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
     <link rel="stylesheet" href="css/vendor.css" />
     <link rel="stylesheet" href="css/main.css" />
     <script defer src="js/main.js"></script>
   </head>
 
   <body>
+    <!-- header -->
     @include('partials/header.html')
     <!-- sections -->
-    @include('partials/ne-cirk-section.html')
+    @include('partials/glavnaya/ne-cirk-section.html')
+    @include('partials/glavnaya/video-section.html')
+    <!-- @include('partials/video-section.html')
+    @include('partials/about-section.html')
+    @include('partials/iz-chego-sostit-section.html')
+    @include('partials/huliganskii-proekt-section.html')
+    @include('partials/proftruppa-section.html')
+    @include('partials/incluzivnii-proekt-section.html')
+    @include('partials/chto-v-rezultate-section.html')
+    @include('partials/kulturnii-producti-section.html')
+    @include('partials/smi-o-nas.html')
+    @include('partials/chto-proishodit.html')
+    @include('partials/nasha-istoria.html') -->
+    <!-- footer -->
+    @include('partials/footer.html')
+    @include('partials/glavnaya/animations.html')
   </body>
 </html>

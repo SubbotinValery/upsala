@@ -12,7 +12,7 @@
       height: 0;
       border-top: 0.6rem solid transparent;
       border-bottom: 0.6rem solid transparent;
-      border-right: 1rem solid #131313;
+      border-right: 1rem solid $dark;
       transform: translate(calc(-50% - 0.2rem), -50%);
     }
     &:hover .arrow {
@@ -45,14 +45,14 @@
   width: 6.4rem;
   height: 3.8rem;
   background-color: transparent;
-  border: 1px solid rgb(19, 19, 19);
+  border: 1px solid $dark;
   border-radius: 0.5rem;
   border-top: none;
   border-bottom: none;
   transition: 0s;
   &:hover {
-    background-color: #d24a43;
-    border-color: #d24a43;
+    background-color: $red;
+    border-color: $red;
   }
   .arrow {
     z-index: 10;
