@@ -1,0 +1,60 @@
+.tree__wrapper {
+  position: fixed;
+  height: 50rem;
+  width: 100%;
+  transition: $duration-medium;
+  .tree__item {
+    transition: $duration-medium;
+    &-1 {
+      position: absolute;
+      height: 35vw;
+      width: 30vw;
+      bottom: -10%;
+      left: -10vw;
+    }
+    &-2 {
+      position: absolute;
+      height: 32vw;
+      width: 27vw;
+      bottom: -5%;
+      left: 5vw;
+    }
+    &-3 {
+      position: absolute;
+      height: 37vw;
+      width: 33vw;
+      bottom: -10%;
+      left: 25vw;
+    }
+
+    &-4 {
+      position: absolute;
+      height: 35vw;
+      width: 30vw;
+      bottom: -15%;
+      left: 45vw;
+      z-index: 1;
+    }
+    &-5 {
+      position: absolute;
+      height: 39vw;
+      width: 34vw;
+      bottom: -40%;
+      left: 60vw;
+    }
+    &-6 {
+      position: absolute;
+      height: 32vw;
+      width: 28vw;
+      bottom: -5%;
+      left: 80vw;
+    }
+  }
+}
+
+.tree__item {
+  background-image: url("../../../img/tree.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
