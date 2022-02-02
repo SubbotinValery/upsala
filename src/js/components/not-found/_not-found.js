@@ -1,6 +1,6 @@
-import anime from "../vendor/anime.min";
+import anime from "../../vendor/anime.min";
 
-const juggler = document.getElementById("notFoundJuggler");
+const jugglerWrapper = document.querySelector(".not-found-section .juggler");
 
 const uSymbol = document.querySelector(".not-found-section .ups-text-u");
 const pSymbol = document.querySelector(".not-found-section .ups-text-p");
@@ -12,7 +12,7 @@ const exclamationSymbol = document.querySelector(
 document.addEventListener("DOMContentLoaded", function () {
   const jugglerAnimation = anime
     .timeline({
-      targets: juggler,
+      targets: jugglerWrapper,
       delay: 400,
       duration: 1,
       loop: true,

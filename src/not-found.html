@@ -13,44 +13,34 @@
 
   <body>
     @include('partials/header.html')
-    <section class="not-found-section height-100">
-      <div class="container relative">
-        <div class="not-found-content">
-          <div class="message">Что-то пошло не так</div>
-          <a href="/" class="back-btn primary-btn"> На главную </a>
-        </div>
-
-        <div class="not-found__bg">
-          <div class="ups-block relative">
-            <div class="star__wrapper">
-              <img class="star" src="./img/star.png" alt="" />
-            </div>
-            <div class="ups-text title title-main">
-              <div class="ups-text-u">У</div>
-              <div class="ups-text-p">П</div>
-              <div class="ups-text-s">С</div>
-              <div class="ups-text-exclamation">!</div>
-            </div>
-          </div>
-
-          <div class="clouds-block relative">
-            <div class="clouds__wrapper">
-              <img
-                class="clouds__item clouds__item-1"
-                src="./img/cloud.png"
-                alt=""
-              />
-              <img
-                class="clouds__item clouds__item-2"
-                src="./img/cloud.png"
-                alt=""
-              />
-              <div class="juggler__wrapper" id="notFoundJuggler">
-                <img class="juggler" src="./img/juggler.png" alt="" />
-              </div>
-            </div>
+    <section class="not-found-section relative height-100">
+      <div class="not-found__bg">
+        <div class="ups-block relative">
+          <div class="ups-text title title-main">
+            <div class="ups-text-u">У</div>
+            <div class="ups-text-p">П</div>
+            <div class="ups-text-s">С</div>
+            <div class="ups-text-exclamation">!</div>
           </div>
         </div>
+      </div>
+
+      <div class="not-found-content">
+        <div class="message">Что-то пошло не так</div>
+        <a href="/" class="back-btn primary-btn elips"
+          ><div>На главную</div>
+        </a>
+      </div>
+
+      <div class="star__wrapper">
+        <img class="star" src="./img/star.png" alt="" />
+      </div>
+
+      <img class="clouds__item clouds__item-1" src="./img/cloud.png" alt="" />
+      <img class="clouds__item clouds__item-2" src="./img/cloud.png" alt="" />
+
+      <div class="juggler__wrapper" id="notFoundJuggler">
+        <img class="juggler" src="./img/juggler.png" alt="" />
       </div>
     </section>
   </body>
