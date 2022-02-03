@@ -234,28 +234,12 @@
   }
 }
 
-@media screen and (max-width: 930px) {
+@include tablet {
   .repertuar-timetable {
     display: none;
   }
   .timetable-mobile {
     display: block;
-  }
-}
-
-@include mobile {
-  .repertuar-section {
-    padding-top: calc($header-gap + 30rem);
-    .title-2 {
-      font-size: 4.8rem;
-      line-height: 4.8rem;
-    }
-  }
-  .repertuar-main-img-block {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
   }
   .repertuar-about {
     margin-top: 5rem;
@@ -275,5 +259,36 @@
     & > * {
       width: 100%;
     }
+  }
+}
+
+@include small-tablet {
+  .repertuar-accordion {
+    .accordion__item {
+      padding-bottom: 1.5rem;
+    }
+    .accordion__control {
+      padding: 1.5rem 0;
+      .title-2 {
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .repertuar-section {
+    padding-top: calc($header-gap + 30rem);
+    .title-2 {
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+    }
+  }
+  .repertuar-main-img-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 }
