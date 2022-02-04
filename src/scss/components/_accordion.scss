@@ -60,3 +60,12 @@
     }
   }
 }
+
+@include mobile {
+  .accordion__btn {
+    transform: scale(0.7);
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
+}
