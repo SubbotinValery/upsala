@@ -45,8 +45,6 @@ expandVerticalBlocks.forEach((expandBlock) => {
   };
 
   btn.addEventListener("click", function () {
-    console.log("test", itemsHight);
-
     if (expandBlock.className.match(/\bclose\b/)) {
       expandBlock.classList.remove("close");
       expandBlock.classList.add("open");
