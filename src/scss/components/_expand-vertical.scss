@@ -1,0 +1,66 @@
+.expand-vertical-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: $duration-medium;
+  height: 100%;
+
+  .expand-btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: -2.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $red;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 0%;
+      height: 0.1rem;
+      background-color: $red;
+      transition: $duration-fast;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -2rem;
+      bottom: 0;
+      width: 1.3rem;
+      height: 1.3rem;
+      background-image: url("../../img/svg/expand-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  .expand-item {
+    width: 100%;
+    margin: 0;
+    transition: $duration-medium;
+    background-color: $dark;
+    z-index: 1;
+    &:not(:first-child) {
+      z-index: -1;
+      opacity: 0;
+      padding-top: 1rem;
+    }
+    &:last-child {
+      padding-top: 0;
+    }
+  }
+  .expand-item:not(:first-child) {
+    position: absolute;
+  }
+}

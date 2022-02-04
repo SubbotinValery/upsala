@@ -145,10 +145,10 @@
 
 .timetable-mobile {
   display: none;
-  margin-top: 4rem;
-  min-height: 50rem;
+  margin: 4rem 0;
   &-pre {
     position: relative;
+    margin-bottom: 10rem;
     &__outline {
       position: absolute;
       top: 0;
@@ -157,27 +157,10 @@
     }
   }
   &-item {
-    margin-top: 10rem;
+    margin-bottom: 3rem;
     position: relative;
+    border-bottom: 0.1rem solid rgb(200, 200, 200, 0.5);
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: -4.8rem;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      background-color: rgb(200, 200, 200, 0.5);
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -4.8rem;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      background-color: rgb(200, 200, 200, 0.5);
-    }
     &__title {
       margin-bottom: 1rem;
     }

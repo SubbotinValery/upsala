@@ -5,15 +5,15 @@ accordionItems.forEach((item) => {
   const content = item.querySelector(".accordion__content");
 
   if (item.className.match(/\bclose\b/)) {
-    const itemHeight = item.clientHeight;
+    const itemHeight = item.getBoundingClientRect().height;
     item.style.height = `${itemHeight}px`;
     content.style.opacity = 0;
     content.style.transform = `translateY(0px)`;
   }
 
   const show = () => {
-    const itemHeight = item.clientHeight;
-    const contentHeight = content.clientHeight;
+    const itemHeight = item.getBoundingClientRect().height;
+    const contentHeight = content.getBoundingClientRect().height;
 
     item.style.height = `${itemHeight + contentHeight}px`;
     content.style.opacity = 1;
@@ -23,8 +23,8 @@ accordionItems.forEach((item) => {
   };
 
   const hide = () => {
-    const itemHeight = item.clientHeight;
-    const contentHeight = content.clientHeight;
+    const itemHeight = item.getBoundingClientRect().height;
+    const contentHeight = content.getBoundingClientRect().height;
 
     item.style.height = `${itemHeight - contentHeight}px`;
     content.style.opacity = 0;
