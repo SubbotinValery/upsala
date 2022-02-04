@@ -5,10 +5,8 @@ const expandVerticalBlocks = document.querySelectorAll(
 expandVerticalBlocks.forEach((expandBlock) => {
   const btn = expandBlock.querySelector(".expand-btn");
   const items = expandBlock.querySelectorAll(".expand-item");
-
-  let itemsHight = 0;
-  for (let i = 0; i < items.length; i++) {
-    itemsHight += items[i].getBoundingClientRect().height;
+  if (items.length <= 1) {
+    btn.style.display = "none";
   }
 
   if (expandBlock.className.match(/\bclose\b/)) {
@@ -48,10 +46,12 @@ expandVerticalBlocks.forEach((expandBlock) => {
     if (expandBlock.className.match(/\bclose\b/)) {
       expandBlock.classList.remove("close");
       expandBlock.classList.add("open");
+      btn.innerHTML = "Скрыть";
       show();
     } else {
       expandBlock.classList.remove("open");
       expandBlock.classList.add("close");
+      btn.innerHTML = "Показать";
       hide();
     }
   });
