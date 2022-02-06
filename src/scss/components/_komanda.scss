@@ -1,15 +1,15 @@
 .komanda-section {
   margin-top: calc($header-gap + 3rem);
-  .clouds__item {
+  .cloud__item {
     position: absolute;
     &-1 {
       width: 18rem;
-      top: -1%;
+      top: 3%;
       right: 2%;
     }
     &-2 {
       width: 14rem;
-      top: -6%;
+      top: -2%;
       right: 37%;
     }
   }
@@ -52,12 +52,17 @@
   }
 }
 
-.komanda-block {
-  margin-top: 7rem;
-  margin-bottom: 8rem;
+.komanda-block__wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.komanda-block {
+  display: flex;
+  width: auto;
   flex-wrap: wrap;
+  justify-content: center;
+  margin: 4.4rem 0;
 }
 
 .komanda-item {
@@ -67,15 +72,20 @@
   width: 35rem;
   height: 43rem;
   border-radius: 1.6rem;
-  border: 1px solid lighten($dark, 50%);
+  border: 1px solid rgb(200, 200, 200, 0.5);
+  transition: $duration-fast;
   &__img {
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(100% - 2px);
+    height: 100%;
     width: 100%;
     box-sizing: border-box;
     z-index: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   &__content {
     position: absolute;
@@ -93,23 +103,64 @@
     padding-top: 6.2rem;
     padding-bottom: 2.3rem;
     transition: $duration-fast;
+  }
 
-    .komanda-item__name {
-      margin-bottom: 0.4rem;
+  &__name {
+    margin-bottom: 0.4rem;
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+  }
+  &__descr {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+  &__email {
+    position: absolute;
+    bottom: 2.3rem;
+    left: 3.2rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.komanda-item-info {
+  display: flex;
+  background-color: $grey;
+  color: $dark;
+  border-radius: 2.4rem;
+  padding: 6rem 7.4rem 7.4rem 4.5rem;
+  .komanda-item-info-bio {
+    width: 24rem;
+    .komanda-item-info-avatar {
+      width: 24rem;
+      height: 23rem;
+      margin-bottom: 1.8rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .komanda-item-info-name {
       font-size: 1.7rem;
       line-height: 2.6rem;
+      margin-bottom: 0.8rem;
+      margin-left: 0.9rem;
     }
-    .komanda-item__descr {
-      font-size: 1.4rem;
-      line-height: 1.9rem;
-    }
-    .komanda-item__email {
-      position: absolute;
-      bottom: 2.3rem;
-      left: 3.2rem;
+    .komanda-item-info-post {
       font-size: 1.2rem;
       line-height: 1.6rem;
+      margin-bottom: 0.8rem;
+      margin-left: 0.9rem;
     }
+  }
+  .komanda-item-info-descr {
+    margin-left: 5.4rem;
+    margin-top: 1.8rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
   }
 }
 
@@ -148,7 +199,7 @@
   }
 }
 
-@media screen and (max-width: 926px) {
+@include tablet {
   .komanda__slider {
     display: block;
     margin-bottom: 12rem;
@@ -156,9 +207,7 @@
   .komanda-block {
     display: none;
   }
-}
 
-@include tablet {
   .komanda-info-block {
     flex-direction: column-reverse;
     &__img {
@@ -182,7 +231,7 @@
 
 @include mobile {
   .komanda-section {
-    .clouds__item {
+    .cloud__item {
       display: none;
     }
     .star__wrapper {

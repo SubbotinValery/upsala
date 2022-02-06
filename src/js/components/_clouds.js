@@ -1,13 +1,15 @@
-import anime from "../vendor/anime.min";
+import anime, { random } from "../vendor/anime.min";
 
-const cloudItem = document.querySelectorAll(".cloud__item");
+const cloudItemAll = document.querySelectorAll(".cloud__item");
 
-anime({
-  targets: cloudItem,
-  translateY: ["-4%", "4%"],
-  duration: 1500,
-  loop: true,
-  autoplay: true,
-  direction: "alternate",
-  easing: "easeInOutQuad",
+cloudItemAll.forEach((cloud) => {
+  anime({
+    targets: cloud,
+    translateY: `${anime.random(3, 7)}%`,
+    duration: anime.random(1000, 2000),
+    loop: true,
+    autoplay: true,
+    direction: "alternate",
+    easing: "easeInOutQuad",
+  });
 });

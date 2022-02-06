@@ -50,7 +50,7 @@ const neCirkTimeline = anime
       duration: 400,
       easing: "linear",
     },
-    7800
+    7600
   )
   .add(
     {
@@ -59,7 +59,7 @@ const neCirkTimeline = anime
       duration: 400,
       easing: "linear",
     },
-    7800
+    7600
   )
   .add(
     {
@@ -109,7 +109,7 @@ const neCirkTimeline = anime
   .add(
     {
       targets: unicycleProfileGirlWrapper,
-      bottom: ["0%", "69%"],
+      bottom: ["-20%", "69%"],
       left: ["16%", "16%"],
       translateY: ["50%", "50%"],
       translateX: ["-50%", "-50%"],
@@ -123,7 +123,7 @@ const neCirkTimeline = anime
   .add(
     {
       targets: unicycleProfileBoyWrapper,
-      bottom: ["-5%", "63.5%"],
+      bottom: ["-20%", "63.5%"],
       left: ["24%", "24%"],
       translateY: ["50%", "50%"],
       translateX: ["-50%", "-50%"],
@@ -182,33 +182,7 @@ const neCirkTimeline = anime
       easing: "linear",
     },
     9300
-  )
-  .add(
-    {
-      targets: unicycleProfileGirlWrapper,
-      bottom: {
-        value: "63%",
-        duration: 100,
-      },
-      left: {
-        value: "68%",
-        duration: 1000,
-      },
-
-      easing: "linear",
-    },
-    9300
   );
-
-// .add(
-//   {
-//     targets: panelkaWrapperRight,
-//     translateX: "-100%",
-//     duration: 400,
-//     easing: "linear",
-//   },
-//   8300
-// );
 
 document.addEventListener("DOMContentLoaded", function () {
   anime({
