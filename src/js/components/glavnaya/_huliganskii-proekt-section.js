@@ -1,25 +1,24 @@
 import anime from "../../vendor/anime.min";
 
-const unicycleWrapper = document.querySelector(".unicycle__wrapper");
-const unicycleInner = document.querySelector(".unicycle__inner");
-const unicycle = document.querySelector(".unicycle");
+const section = document.querySelector(".huliganskii-proekt-section");
 
-const unicycleProfileGirlWrapper = document.querySelector(
+const unicycleWrapper = section.querySelector(".unicycle__wrapper");
+const unicycleInner = section.querySelector(".unicycle__inner");
+const unicycle = section.querySelector(".unicycle");
+
+const unicycleProfileGirlWrapper = section.querySelector(
   ".unicycle-profile-girl__wrapper"
 );
-const unicycleProfileBoyWrapper = document.querySelector(
+const unicycleProfileBoyWrapper = section.querySelector(
   ".unicycle-profile-boy__wrapper"
 );
 
-const panelkaWrapperLeft = document.querySelector(".panelka__wrapper-left");
-const panelkaWrapperRight = document.querySelector(".panelka__wrapper-right");
+const panelkaWrapperLeft = section.querySelector(".panelka__wrapper-left");
+const panelkaWrapperRight = section.querySelector(".panelka__wrapper-right");
 
-const ropeWrapper = document.querySelector(".rope__wrapper");
-const elephantWrapper = document.querySelector(".elephant__wrapper");
-const childrensWrapper = document.querySelector(".childrens__wrapper");
-
-const treeWrapper = document.querySelector(".tree__wrapper");
-const yellowBgWrapper = document.querySelector(".yellow-bg__wrapper");
+const ropeWrapper = section.querySelector(".rope__wrapper");
+const elephantWrapper = section.querySelector(".elephant__wrapper");
+const childrensWrapper = section.querySelector(".childrens__wrapper");
 
 const titleRegular = document.querySelector(
   ".huliganskii-proekt__title > *:not(.italic)"
@@ -60,16 +59,6 @@ const neCirkTimeline = anime
       easing: "linear",
     },
     7600
-  )
-  .add(
-    {
-      targets: treeWrapper,
-      bottom: ["-150%", "-40%"],
-      left: ["0%", "0%"],
-      duration: 200,
-      easing: "linear",
-    },
-    8000
   )
   .add(
     {
@@ -133,15 +122,6 @@ const neCirkTimeline = anime
       easing: "linear",
     },
     8500
-  )
-  .add(
-    {
-      targets: treeWrapper,
-      bottom: "-150%",
-      duration: 200,
-      easing: "linear",
-    },
-    8800
   )
   .add(
     {

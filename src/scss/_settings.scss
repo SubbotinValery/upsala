@@ -353,3 +353,16 @@ button:focus {
     z-index: 1;
   }
 }
+
+.cloud__item {
+  background-image: url("../img/cloud.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.star__wrapper {
+  position: fixed;
+  z-index: -999;
+  transition: $duration-medium;
+}

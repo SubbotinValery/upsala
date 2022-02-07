@@ -1,11 +1,12 @@
 import anime from "../../vendor/anime.min";
 
-const girlWrapper = document.querySelector(".girl__wrapper");
-const girl = document.querySelector(".girl");
+const section = document.querySelector(".ne-cirk-section");
 
-const handWrapper = document.querySelector(".hand__wrapper");
+const sectionInfo = section.getBoundingClientRect();
 
-const cloudWrapper = document.querySelector(".cloud__wrapper");
+const girlWrapper = section.querySelector(".girl__wrapper");
+const girl = section.querySelector(".girl");
+const handWrapper = section.querySelector(".hand__wrapper");
 
 const titleRegular = document.querySelectorAll(
   ".ne-cirk__title > * > *:not(.outline)"
@@ -13,6 +14,10 @@ const titleRegular = document.querySelectorAll(
 const titleOutline = document.querySelectorAll(
   ".ne-cirk__title > * > .outline"
 );
+
+const getpercent = (value, precent) => {
+  return (value / 100) * precent;
+};
 
 const neCirkTimeline = anime
   .timeline({ autoplay: false })
@@ -62,16 +67,6 @@ const neCirkTimeline = anime
   )
   .add(
     {
-      targets: cloudWrapper,
-      bottom: ["-50%", "0%"],
-      left: ["0%", "0%"],
-      duration: 200,
-      easing: "linear",
-    },
-    600
-  )
-  .add(
-    {
       targets: girlWrapper,
       top: "-50%",
       duration: 100,
@@ -87,15 +82,6 @@ const neCirkTimeline = anime
       easing: "linear",
     },
     1000
-  )
-  .add(
-    {
-      targets: cloudWrapper,
-      bottom: "-50%",
-      duration: 300,
-      easing: "linear",
-    },
-    6000
   );
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -1,7 +1,10 @@
 import anime from "../../vendor/anime.min";
 
-const video = document.querySelector(".video-block");
-const videoText = document.querySelector(".video-block__text");
+const section = document.querySelector(".video__section");
+const sectionInfo = section.getBoundingClientRect();
+
+const video = section.querySelector(".video-block");
+const videoText = section.querySelector(".video-block__text");
 
 const videoTimeline = anime
   .timeline({ autoplay: false })

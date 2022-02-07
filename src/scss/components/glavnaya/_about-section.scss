@@ -1,4 +1,14 @@
 .about-section {
+  .jumper__wrapper {
+    position: fixed;
+    transition: $duration-medium;
+    z-index: 10 !important;
+  }
+  .juggler__wrapper {
+    position: fixed;
+    z-index: -10;
+    transition: $duration-medium;
+  }
 }
 
 .about-content {

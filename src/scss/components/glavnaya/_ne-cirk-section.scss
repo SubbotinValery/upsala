@@ -1,4 +1,14 @@
 .ne-cirk-section {
+  .girl__wrapper {
+    position: fixed;
+    transition: $duration-medium;
+    z-index: -10;
+  }
+  .hand__wrapper {
+    position: fixed;
+    transition: $duration-medium;
+    z-index: -20;
+  }
 }
 
 .ne-cirk__content {

@@ -1,5 +1,55 @@
 .huliganskii-proekt-section {
   margin-top: 20vh;
+  .unicycle__wrapper {
+    position: fixed;
+    transition: $duration-medium;
+  }
+
+  .unicycle-profile-girl__wrapper {
+    position: fixed;
+    transition: $duration-medium;
+  }
+
+  .unicycle-profile-boy__wrapper {
+    position: fixed;
+    transition: $duration-medium;
+  }
+
+  .panelka__wrapper-left {
+    position: fixed;
+    z-index: -10;
+    transition: $duration-medium;
+  }
+
+  .panelka__wrapper-right {
+    position: fixed;
+    z-index: -10;
+    transition: $duration-medium;
+  }
+
+  .elephant__wrapper {
+    position: fixed;
+    transition: $duration-medium;
+  }
+
+  .childrens__wrapper {
+    position: fixed;
+    transition: $duration-medium;
+  }
+
+  .rope__wrapper {
+    position: fixed;
+    bottom: 47%;
+    left: 25%;
+    right: 31%;
+    height: 5rem;
+    transform: translateY(50%);
+    transition: $duration-medium;
+    background-image: url("../../../img/rope.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 
 .huliganskii-proekt-content {
