@@ -72,6 +72,16 @@ const aboutTimeline = anime
       easing: "linear",
     },
     5400
+  )
+  .add(
+    {
+      targets: aboutContent3,
+      opacity: [0, 1],
+      translateX: ["100%", "0%"],
+      duration: 100,
+      easing: "linear",
+    },
+    "-=700"
   );
 
 document.addEventListener("DOMContentLoaded", function () {

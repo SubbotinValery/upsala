@@ -19,6 +19,8 @@ const panelkaWrapperRight = section.querySelector(".panelka__wrapper-right");
 const ropeWrapper = section.querySelector(".rope__wrapper");
 const elephantWrapper = section.querySelector(".elephant__wrapper");
 const childrensWrapper = section.querySelector(".childrens__wrapper");
+const yellowBgWrapper = section.querySelector(".yellow-bg__wrapper");
+const yellowBg = section.querySelector(".yellow-bg");
 
 const titleRegular = document.querySelector(
   ".huliganskii-proekt__title > *:not(.italic)"
@@ -72,8 +74,8 @@ const neCirkTimeline = anime
   .add(
     {
       targets: panelkaWrapperLeft,
-      bottom: ["-50%", "20%"],
-      left: ["13%", "13%"],
+      bottom: ["-65%", "20%"],
+      left: ["12%", "12%"],
       translateY: ["50%", "50%"],
       translateX: ["-50%", "-50%"],
       scale: [0.6, 0.6],
@@ -85,7 +87,7 @@ const neCirkTimeline = anime
   .add(
     {
       targets: panelkaWrapperRight,
-      bottom: ["-50%", "20%"],
+      bottom: ["-60%", "20%"],
       right: ["15%", "15%"],
       translateY: ["50%", "50%"],
       translateX: ["50%", "50%"],
@@ -125,6 +127,45 @@ const neCirkTimeline = anime
   )
   .add(
     {
+      targets: elephantWrapper,
+      bottom: ["-20%", "59%"],
+      right: ["15%", "15%"],
+      translateY: ["50%", "50%"],
+      translateX: ["50%", "50%"],
+      scale: [0.5, 0.5],
+      duration: 500,
+      easing: "linear",
+    },
+    8500
+  )
+  .add(
+    {
+      targets: yellowBgWrapper,
+      bottom: ["-30%", "15%"],
+      left: ["0%", "0%"],
+      right: ["0%", "0%"],
+      width: "100%",
+      translateY: ["50%", "50%"],
+      duration: 500,
+      easing: "linear",
+    },
+    8500
+  )
+  .add(
+    {
+      targets: childrensWrapper,
+      bottom: ["-30%", "18%"],
+      left: ["50%", "50%"],
+      translateX: ["-50%", "-50%"],
+      translateY: ["50%", "50%"],
+      scale: [0.5, 0.5],
+      duration: 500,
+      easing: "linear",
+    },
+    8500
+  )
+  .add(
+    {
       targets: ropeWrapper,
       opacity: [0, 1],
       duration: 200,
@@ -149,19 +190,133 @@ const neCirkTimeline = anime
   )
   .add(
     {
+      targets: unicycleProfileBoyWrapper,
+      left: "79%",
+      bottom: "71%",
+      duration: 300,
+      easing: "linear",
+    },
+    10300
+  )
+  .add(
+    {
+      targets: unicycleProfileBoyWrapper,
+      left: "110%",
+      bottom: "45%",
+      duration: 500,
+      easing: "linear",
+    },
+    10600
+  )
+  .add(
+    {
       targets: unicycleProfileGirlWrapper,
       bottom: {
         value: "63%",
         duration: 100,
       },
       left: {
-        value: "68%",
-        duration: 1000,
+        value: "60.5%",
+        duration: 900,
       },
 
       easing: "linear",
     },
     9300
+  )
+  .add(
+    {
+      targets: unicycleProfileGirlWrapper,
+      left: "67%",
+      duration: 100,
+      easing: "linear",
+    },
+    10300
+  )
+  .add(
+    {
+      targets: unicycleProfileGirlWrapper,
+      left: "79%",
+      bottom: "71%",
+      duration: 200,
+      easing: "linear",
+    },
+    10500
+  )
+  .add(
+    {
+      targets: unicycleProfileGirlWrapper,
+      left: "110%",
+      bottom: "47%",
+      duration: 500,
+      easing: "linear",
+    },
+    10750
+  )
+  .add(
+    {
+      targets: elephantWrapper,
+      bottom: "71%",
+      right: "19%",
+      easing: "linear",
+      duration: 100,
+    },
+    10600
+  )
+  .add(
+    {
+      targets: elephantWrapper,
+      bottom: "45%",
+      right: "-20%",
+      easing: "linear",
+      duration: 500,
+    },
+    10750
+  )
+  .add(
+    {
+      targets: ropeWrapper,
+      opacity: 0,
+      duration: 200,
+      easing: "linear",
+    },
+    10400
+  )
+  .add(
+    {
+      targets: childrensWrapper,
+      bottom: "-30%",
+      duration: 500,
+      easing: "linear",
+    },
+    11000
+  )
+  .add(
+    {
+      targets: panelkaWrapperRight,
+      bottom: "-60%",
+      duration: 500,
+      easing: "linear",
+    },
+    11300
+  )
+  .add(
+    {
+      targets: panelkaWrapperLeft,
+      bottom: "-65%",
+      duration: 500,
+      easing: "linear",
+    },
+    11500
+  )
+  .add(
+    {
+      targets: yellowBgWrapper,
+      bottom: "-30%",
+      duration: 500,
+      easing: "linear",
+    },
+    11500
   );
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -179,6 +334,15 @@ document.addEventListener("DOMContentLoaded", function () {
     rotate: [-5, 10],
     translateX: ["-3%", "3%"],
     duration: 1500,
+    loop: true,
+    direction: "alternate",
+    easing: "easeInOutQuad",
+  });
+  anime({
+    targets: yellowBg,
+
+    translateY: ["5%", "-5%"],
+    duration: 2000,
     loop: true,
     direction: "alternate",
     easing: "easeInOutQuad",

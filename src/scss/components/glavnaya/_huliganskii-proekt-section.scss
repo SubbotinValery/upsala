@@ -37,10 +37,16 @@
     transition: $duration-medium;
   }
 
+  .yellow-bg__wrapper {
+    z-index: -20;
+    position: fixed;
+    transition: $duration-medium;
+  }
+
   .rope__wrapper {
     position: fixed;
     bottom: 47%;
-    left: 25%;
+    left: 24%;
     right: 31%;
     height: 5rem;
     transform: translateY(50%);
