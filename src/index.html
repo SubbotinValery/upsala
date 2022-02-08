@@ -17,7 +17,7 @@
     <script defer src="js/main.js"></script>
   </head>
 
-  <body>
+  <body class="glavnaya">
     <!-- header -->
     @include('partials/header.html')
     <!-- sections -->
@@ -26,6 +26,7 @@
     @include('partials/glavnaya/about-section.html')
     @include('partials/glavnaya/iz-chego-sostoit-section.html')
     @include('partials/glavnaya/huliganskii-proekt-section.html')
+    @include('partials/glavnaya/proftruppa-section.html')
 
     <!-- @include('partials/video-section.html')
     @include('partials/about-section.html')
@@ -40,5 +41,8 @@
     @include('partials/nasha-istoria.html') -->
     <!-- footer -->
     @include('partials/footer.html')
+    <div class="star__wrapper">
+      <img class="star" src="./img/star.png" alt="" />
+    </div>
   </body>
 </html>
