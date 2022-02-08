@@ -46,6 +46,11 @@
       }
     }
   }
+  .cloud__wrapper {
+    position: fixed;
+    z-index: -10;
+    transition: $duration-medium;
+  }
 }
 
 .proftruppa-content {

@@ -22,6 +22,10 @@ const childrensWrapper = section.querySelector(".childrens__wrapper");
 const yellowBgWrapper = section.querySelector(".yellow-bg__wrapper");
 const yellowBg = section.querySelector(".yellow-bg");
 
+const cloudWrapper1 = section.querySelector(".cloud__wrapper-1");
+const cloudWrapper2 = section.querySelector(".cloud__wrapper-2");
+const cloudWrapper3 = section.querySelector(".cloud__wrapper-3");
+
 const titleRegular = document.querySelector(
   ".huliganskii-proekt__title > *:not(.italic)"
 );
@@ -304,6 +308,15 @@ const neCirkTimeline = anime
     {
       targets: panelkaWrapperLeft,
       bottom: "-65%",
+      duration: 500,
+      easing: "linear",
+    },
+    11500
+  )
+  .add(
+    {
+      targets: yellowBgWrapper,
+      bottom: "-30%",
       duration: 500,
       easing: "linear",
     },
