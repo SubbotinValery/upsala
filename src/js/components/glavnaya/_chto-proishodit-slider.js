@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   next = document.querySelector("#chtoProishoditSlider .next-button");
 
   splide = new Splide("#chtoProishoditSlider .splide", {
-    gap: "2rem",
+    gap: "5rem",
     arrows: false,
     perPage: 3,
     type: "loop",

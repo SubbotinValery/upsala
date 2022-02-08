@@ -141,7 +141,7 @@ const incluzivniiProektTimeline = anime
   .add(
     {
       targets: panelkaBlockWrapper,
-      bottom: ["-20%", "20%"],
+      bottom: ["-25%", "20%"],
       right: ["35%", "35%"],
       translateX: ["50%", "50%"],
       translateY: ["50%", "50%"],
@@ -154,7 +154,7 @@ const incluzivniiProektTimeline = anime
   .add(
     {
       targets: panelkaBlockWrapper,
-      bottom: ["-20%", "20%"],
+      bottom: ["-25%", "20%"],
       right: ["35%", "35%"],
       translateX: ["50%", "50%"],
       translateY: ["50%", "50%"],
