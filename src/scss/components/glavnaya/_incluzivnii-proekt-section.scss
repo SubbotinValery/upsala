@@ -1,10 +1,53 @@
 .incluzivnii-proekt-section {
+  height: 500vh;
   margin-top: 20vh;
+  .mountain__wrapper {
+    z-index: 10;
+    position: fixed;
+    transition: $duration-medium;
+  }
+  .boy-on-ball__wrapper {
+    z-index: 30;
+    position: fixed;
+    transition: $duration-medium;
+  }
+  .giraffe__wrapper {
+    z-index: 20;
+    position: fixed;
+    transition: $duration-medium;
+  }
+  .panelka-block__wrapper {
+    z-index: 50;
+    position: fixed;
+    transition: $duration-medium;
+  }
+  .panelka-back__wrapper {
+    z-index: 40;
+    position: fixed;
+    transition: $duration-medium;
+  }
+  .girl-on-hoduli__wrapper {
+    z-index: 45;
+    position: fixed;
+    transition: $duration-medium;
+  }
 }
 
 .incluzivnii-proekt-content {
+  font-size: 1.7rem;
+  line-height: 2.6rem;
+  margin-top: 20vh;
+  width: 70%;
   &-1 {
-    margin-top: 10rem;
+  }
+  &-2 {
+    margin-top: 120vh;
+  }
+  &-3 {
+    margin-top: 40vh;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
   }
 }
 .inclizivnii-proekt__bottom {

@@ -15,6 +15,7 @@ import "./components/glavnaya/_about-section";
 import "./components/glavnaya/_iz-chego-sostoit-section";
 import "./components/glavnaya/_huliganskii-proekt-section";
 import "./components/glavnaya/_proftruppa-section";
+import "./components/glavnaya/_incluzivnii-proekt-section";
 
 //komnda.html
 import "./components/_komanda-slider";
