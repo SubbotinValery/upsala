@@ -4,6 +4,8 @@
 .chto-v-rezultate-content {
   height: 80vh;
   margin-top: 25rem;
+  font-size: 1.7rem;
+  line-height: 2.6rem;
 }
 
 .chto-v-rezultate__text-bg {
@@ -15,7 +17,7 @@
 
 .chto-v-rezultate-section {
   .container {
-    .clouds__item {
+    .cloud__item {
       position: absolute;
       &-1 {
         top: 15%;

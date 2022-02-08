@@ -17,7 +17,12 @@ import "./components/glavnaya/_huliganskii-proekt-section";
 import "./components/glavnaya/_proftruppa-section";
 import "./components/glavnaya/_incluzivnii-proekt-section";
 
-//komnda.html
+import "./components/glavnaya/_chto-v-resultate-slider";
+import "./components/glavnaya/_kulturnii-producti-slider";
+import "./components/glavnaya/_chto-proishodit-slider";
+import "./components/glavnaya/_nasha-istoria-slider";
+
+//komanda.html
 import "./components/_komanda-slider";
 
 //not-found.html

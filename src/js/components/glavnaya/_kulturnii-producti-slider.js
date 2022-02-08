@@ -1,16 +1,14 @@
-import Splide from "../vendor/splide.min";
-
 let splide;
 let prev, next;
 
 document.addEventListener("DOMContentLoaded", function () {
-  prev = document.querySelector("#chtoProishoditSlider .previous-button");
-  next = document.querySelector("#chtoProishoditSlider .next-button");
+  prev = document.querySelector("#kulturniiProductiSlider .previous-button");
+  next = document.querySelector("#kulturniiProductiSlider .next-button");
 
-  splide = new Splide("#chtoProishoditSlider .splide", {
-    gap: "4.8rem",
+  splide = new Splide("#kulturniiProductiSlider .splide", {
+    gap: "3rem",
     arrows: false,
-    perPage: 3,
+    perPage: 1,
     type: "loop",
     pagination: true,
     keyboard: false,
@@ -19,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   splide.on("move", function () {
     var slides = document.querySelectorAll(
-      "#chtoProishoditSlider .splide .splide__slide"
+      "#kulturniiProductiSlider .splide .splide__slide"
     );
 
     slides.forEach(function (slide) {

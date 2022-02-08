@@ -1,16 +1,14 @@
-import Splide from "../vendor/splide.min";
-
 let splide;
 let prev, next;
 
 document.addEventListener("DOMContentLoaded", function () {
-  prev = document.querySelector("#chtoVRezultateSlider .previous-button");
-  next = document.querySelector("#chtoVRezultateSlider .next-button");
+  prev = document.querySelector("#chtoProishoditSlider .previous-button");
+  next = document.querySelector("#chtoProishoditSlider .next-button");
 
-  splide = new Splide("#chtoVRezultateSlider .splide", {
-    gap: "3rem",
+  splide = new Splide("#chtoProishoditSlider .splide", {
+    gap: "2rem",
     arrows: false,
-    perPage: 2,
+    perPage: 3,
     type: "loop",
     pagination: true,
     keyboard: false,
@@ -19,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   splide.on("move", function () {
     var slides = document.querySelectorAll(
-      "#chtoVRezultateSlider .splide .splide__slide"
+      "#chtoProishoditSlider .splide .splide__slide"
     );
 
     slides.forEach(function (slide) {

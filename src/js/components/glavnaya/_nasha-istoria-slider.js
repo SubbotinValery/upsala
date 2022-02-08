@@ -1,5 +1,3 @@
-import Splide from "../vendor/splide.min";
-
 let splide;
 
 document.addEventListener("DOMContentLoaded", function () {

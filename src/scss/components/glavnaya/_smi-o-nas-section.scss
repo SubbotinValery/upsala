@@ -1,6 +1,5 @@
 .smi-o-nas-section {
-  margin-top: 20vh;
-  height: 150vh;
+  margin-top: 40vh;
 }
 
 .smi-o-nas__text {
@@ -37,10 +36,14 @@
   }
   .secondary {
     margin-left: 7rem;
-    display: flex;
-    .statia-link {
-      margin-right: 3.8rem;
-    }
+  }
+}
+
+.statia-block {
+  display: flex;
+  flex-wrap: wrap;
+  .statia-link {
+    margin-right: 3.8rem;
   }
 }
 
@@ -49,6 +52,14 @@
   width: 23rem;
   min-height: 28rem;
   border-radius: 1.6rem;
+  background-image: url("../../../img/statia-img.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 120%;
+  transition: $duration-medium;
+  &:hover {
+    background-size: 140%;
+  }
   .statia-item__img {
     position: absolute;
     top: 0;

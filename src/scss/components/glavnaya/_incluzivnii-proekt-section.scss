@@ -1,5 +1,5 @@
 .incluzivnii-proekt-section {
-  height: 500vh;
+  height: 400vh;
   margin-top: 20vh;
   .mountain__wrapper {
     z-index: 10;
@@ -48,19 +48,5 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     text-transform: uppercase;
-  }
-}
-.inclizivnii-proekt__bottom {
-  height: 115rem;
-}
-
-.inclizivnii-proekt-zaglushka {
-  position: absolute;
-  bottom: 0%;
-  left: 5%;
-  right: 0;
-  z-index: -10 !important;
-  img {
-    width: 100%;
   }
 }
