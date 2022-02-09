@@ -32,6 +32,11 @@ const treeWrapperAll = document.querySelectorAll(
   ".proftruppa-section > .tree__wrapper"
 );
 
+const artistDropWrapper1 = section.querySelector(".artist-drop__wrapper-1");
+const artistDropWrapper2 = section.querySelector(".artist-drop__wrapper-2");
+const artistDropWrapper3 = section.querySelector(".artist-drop__wrapper-3");
+const artistDropAll = section.querySelectorAll(".artist-drop");
+
 const titleRegular = section.querySelector(".proftruppa__title");
 
 const proftruppaTimeline = anime
@@ -395,7 +400,75 @@ document.addEventListener("DOMContentLoaded", function () {
     direction: "alternate",
     easing: "easeInOutQuad",
   });
+
+  const artistDropBlockTimline = anime
+    .timeline({
+      loop: true,
+      autoplay: false,
+      direction: "normal",
+      duration: 2000,
+    })
+    .add(
+      {
+        targets: artistDropWrapper1,
+        scale: [0.5, 0.5],
+        translateX: ["-50%", "-50%"],
+        translateY: ["-50%", "-50%"],
+        top: ["-35%", "130%"],
+        left: ["20%", "20%"],
+        easing: "easeInSine",
+      },
+      0
+    )
+    .add(
+      {
+        targets: artistDropWrapper2,
+        scale: [0.5, 0.5],
+        translateX: ["-50%", "-50%"],
+        translateY: ["-50%", "-50%"],
+        top: ["-35%", "130%"],
+        left: ["50%", "50%"],
+        easing: "easeInSine",
+      },
+      1000
+    )
+    .add(
+      {
+        targets: artistDropWrapper3,
+        scale: [0.5, 0.5],
+        translateX: ["-50%", "-50%"],
+        translateY: ["-50%", "-50%"],
+        top: ["-35%", "130%"],
+        left: ["80%", "80%"],
+
+        easing: "easeInSine",
+      },
+      500
+    );
+
+  anime({
+    targets: artistDropAll,
+    rotate: [-35, 35],
+    duration: 1500,
+    easing: "linear",
+    autoplay: true,
+    loop: true,
+    direction: "alternate",
+  });
+
   window.addEventListener("scroll", () => {
+    if (window.pageYOffset < 12400) {
+      artistDropBlockTimline.restart();
+      artistDropBlockTimline.pause();
+    }
+    if (window.pageYOffset > 12400) {
+      artistDropBlockTimline.play();
+    }
+    if (window.pageYOffset >= 14300) {
+      artistDropBlockTimline.restart();
+      artistDropBlockTimline.pause();
+    }
+
     proftruppaTimeline.seek(window.pageYOffset);
   });
 });
