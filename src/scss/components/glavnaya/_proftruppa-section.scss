@@ -10,6 +10,7 @@
     height: 60vh;
     display: flex;
     justify-content: center;
+    margin-bottom: 60vh;
     .kacheli__inner {
       position: relative;
       width: 47rem;
@@ -51,6 +52,12 @@
     z-index: -10;
     transition: $duration-medium;
   }
+  .yellow-bg__wrapper {
+    position: fixed;
+  }
+  .tree__wrapper {
+    position: fixed;
+  }
 }
 
 .proftruppa-content {
@@ -58,7 +65,4 @@
   margin-top: 10rem;
   font-size: 1.7rem;
   line-height: 2.6rem;
-  &-2 {
-    margin-top: 60vh;
-  }
 }
