@@ -16,7 +16,8 @@ const aboutContent3 = section.querySelector(".about-content-3");
 function numberRange(start, end) {
   return new Array(end - start).fill().map((d, i) => i + start);
 }
-const jumperBlockRange = numberRange(4500, 4550);
+const jumperBlockRangeStart = numberRange(4500, 4550);
+const jumperBlockRangeEnd = numberRange(5150, 5200);
 
 const aboutTimeline = anime
   .timeline({ autoplay: false })
@@ -139,11 +140,15 @@ document.addEventListener("DOMContentLoaded", function () {
       jumperBlockCloudTimeline.restart();
       jumperBlockCloudTimeline.pause();
     }
-    if (jumperBlockRange.some((value) => value === window.pageYOffset)) {
+    if (jumperBlockRangeStart.some((value) => value === window.pageYOffset)) {
       jumperBlockTimeline.play();
       jumperBlockCloudTimeline.play();
     }
-    if (window.pageYOffset >= 5200) {
+    if (jumperBlockRangeEnd.some((value) => value === window.pageYOffset)) {
+      jumperBlockTimeline.play();
+      jumperBlockCloudTimeline.play();
+    }
+    if (window.pageYOffset > 5200) {
       jumperBlockTimeline.restart();
       jumperBlockTimeline.pause();
       jumperBlockCloudTimeline.restart();
