@@ -7,12 +7,12 @@
     transition: $duration-medium;
   }
   .boy-on-ball__wrapper {
-    z-index: 30;
+    z-index: 50;
     position: fixed;
     transition: $duration-medium;
   }
   .giraffe__wrapper {
-    z-index: 20;
+    z-index: 40;
     position: fixed;
     transition: $duration-medium;
   }
@@ -28,6 +28,16 @@
   }
   .girl-on-hoduli__wrapper {
     z-index: 45;
+    position: fixed;
+    transition: $duration-medium;
+  }
+
+  .cloud__wrapper {
+    position: fixed;
+  }
+
+  .yellow-bg__wrapper {
+    z-index: 35;
     position: fixed;
     transition: $duration-medium;
   }

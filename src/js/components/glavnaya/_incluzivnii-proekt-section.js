@@ -11,6 +11,9 @@ const panelkaBlockWrapper = section.querySelector(".panelka-block__wrapper");
 const panelkaBackWrapper = section.querySelector(".panelka-back__wrapper");
 const girlOnHoduliWrapper = section.querySelector(".girl-on-hoduli__wrapper");
 const girlOnHoduli = section.querySelector(".girl-on-hoduli");
+const yellowBgWrapper = section.querySelector(".yellow-bg__wrapper");
+const yellowBg = section.querySelector(".yellow-bg");
+const cloudWrapper = section.querySelector(".cloud__wrapper");
 
 const animations = [
   mountainWrapper,
@@ -19,6 +22,8 @@ const animations = [
   panelkaBlockWrapper,
   panelkaBackWrapper,
   girlOnHoduliWrapper,
+  yellowBgWrapper,
+  cloudWrapper,
 ];
 
 const content1 = section.querySelector(".incluzivnii-proekt-content-1");
@@ -77,6 +82,17 @@ const incluzivniiProektTimeline = anime
   )
   .add(
     {
+      targets: cloudWrapper,
+      bottom: ["15%", "15%"],
+      left: ["-50%", "20%"],
+      scale: [0.7, 0.7],
+      duration: 1000,
+      easing: "linear",
+    },
+    15800
+  )
+  .add(
+    {
       targets: boyOnBallWrapper,
       bottom: ["40%", "60%"],
       left: ["-30%", "25%"],
@@ -124,7 +140,19 @@ const incluzivniiProektTimeline = anime
     },
     16400
   )
-
+  .add(
+    {
+      targets: yellowBgWrapper,
+      bottom: ["-30%", "35%"],
+      right: ["43%", "43%"],
+      translateY: ["50%", "50%"],
+      translateX: ["50%", "50%"],
+      scale: [0.5, 0.5],
+      duration: 300,
+      easing: "linear",
+    },
+    16200
+  )
   .add(
     {
       targets: panelkaBackWrapper,
@@ -238,6 +266,14 @@ document.addEventListener("DOMContentLoaded", function () {
     rotate: [-10, 10],
     // translateX: ["20%", "-20%"],
     duration: 1500,
+    loop: true,
+    direction: "alternate",
+    easing: "easeInOutQuad",
+  });
+  anime({
+    targets: yellowBg,
+    translateY: ["5%", "-5%"],
+    duration: 2000,
     loop: true,
     direction: "alternate",
     easing: "easeInOutQuad",
