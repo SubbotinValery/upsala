@@ -5,13 +5,18 @@ const section = document.querySelector(".about-section");
 const jugglerWrapper = section.querySelector(".juggler__wrapper");
 
 const jumper1 = section.querySelector(".jumper__wrapper-1");
-const jumper2 = section.querySelector(".jumper__wrapper-2");
 
-const cloudWrapper = section.querySelector(".cloud__wrapper");
+const jumper2 = section.querySelector(".jumper__wrapper-2");
+const cloud = section.querySelector(".cloud__wrapper");
 
 const aboutContent1 = section.querySelector(".about-content-1");
 const aboutContent2 = section.querySelector(".about-content-2");
 const aboutContent3 = section.querySelector(".about-content-3");
+
+function numberRange(start, end) {
+  return new Array(end - start).fill().map((d, i) => i + start);
+}
+const jumperBlockRange = numberRange(4500, 4550);
 
 const aboutTimeline = anime
   .timeline({ autoplay: false })
@@ -84,35 +89,67 @@ const aboutTimeline = anime
   );
 
 document.addEventListener("DOMContentLoaded", function () {
-  let jumperBlock = anime({
-    targets: jumper2,
-    top: ["-170%", "250%"],
-    right: ["-20%", "60%"],
-    translateX: ["50%", "50%"],
-    translateY: ["-50%", "-50%"],
-    opacity: {
-      value: [0, 1],
-      duration: 200,
-    },
-    scale: [0.1, 0.1],
-    duration: 3000,
-    loop: true,
-    autoplay: false,
-    easing: "linear",
-    direction: "normal",
-  });
+  let jumperBlockTimeline = anime
+    .timeline({ loop: true, autoplay: false, direction: "normal" })
+    .add(
+      {
+        targets: jumper2,
+        scale: [0.1, 0.1],
+        translateX: ["50%", "50%"],
+        translateY: ["-50%", "-50%"],
+        top: ["-210%", "-140%"],
+        right: ["-40%", "-20%"],
+        duration: 1500,
+        easing: "easeInSine",
+      },
+      0
+    )
+    .add({
+      targets: jumper2,
+      top: "-150%",
+      right: "-10%",
+      duration: 500,
+      easing: "easeOutSine",
+    })
+    .add({
+      targets: jumper2,
+      top: "-80%",
+      right: "5%",
+      easing: "easeOutSine",
+    });
+
+  const jumperBlockCloudTimeline = anime
+    .timeline({ autoplay: false, loop: false })
+    .add({
+      targets: cloud,
+      scale: [0.5, 0.5],
+      translateX: ["50%", "50%"],
+      translateY: ["-50%", "-50%"],
+      top: ["50%", "50%"],
+      right: ["-20%", "12%"],
+      easing: "easeInSine",
+      duration: 1000,
+      loop: false,
+    });
 
   window.addEventListener("scroll", () => {
+    if (window.pageYOffset < 4500) {
+      jumperBlockTimeline.restart();
+      jumperBlockTimeline.pause();
+      jumperBlockCloudTimeline.restart();
+      jumperBlockCloudTimeline.pause();
+    }
+    if (jumperBlockRange.some((value) => value === window.pageYOffset)) {
+      jumperBlockTimeline.play();
+      jumperBlockCloudTimeline.play();
+    }
+    if (window.pageYOffset >= 5200) {
+      jumperBlockTimeline.restart();
+      jumperBlockTimeline.pause();
+      jumperBlockCloudTimeline.restart();
+      jumperBlockCloudTimeline.pause();
+    }
     console.log(window.pageYOffset);
-    if (window.pageYOffset >= 5000) {
-      jumperBlock.play();
-    }
-    if (window.pageYOffset >= 5300) {
-      jumperBlock.restart();
-    }
-    if (window.pageYOffset < 5000) {
-      jumperBlock.restart();
-    }
     aboutTimeline.seek(window.pageYOffset);
   });
 });
