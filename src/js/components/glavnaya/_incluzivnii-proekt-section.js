@@ -44,7 +44,7 @@ const incluzivniiProektTimeline = anime
       targets: content1,
       opacity: [0, 1],
       translateX: ["100%", "0%"],
-      duration: 100,
+      duration: 200,
       easing: "linear",
     },
     15100
@@ -197,17 +197,17 @@ const incluzivniiProektTimeline = anime
       targets: content2,
       opacity: [0, 1],
       translateX: ["100%", "0%"],
-      duration: 100,
+      duration: 200,
       easing: "linear",
     },
-    16800
+    16700
   )
   .add(
     {
       targets: content3,
       opacity: [0, 1],
       translateX: ["100%", "0%"],
-      duration: 100,
+      duration: 200,
       easing: "linear",
     },
     17300
