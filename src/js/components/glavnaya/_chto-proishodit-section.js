@@ -25,7 +25,7 @@ const chtoProishoditTimeline = anime
       duration: 400,
       easing: "linear",
     },
-    23400
+    24000
   )
   .add(
     {
@@ -34,7 +34,7 @@ const chtoProishoditTimeline = anime
       duration: 400,
       easing: "linear",
     },
-    23400
+    24000
   )
   .add(
     {
@@ -43,7 +43,7 @@ const chtoProishoditTimeline = anime
       duration: 400,
       easing: "linear",
     },
-    24000
+    24600
   )
   .add(
     {
@@ -52,7 +52,7 @@ const chtoProishoditTimeline = anime
       duration: 400,
       easing: "linear",
     },
-    24000
+    24600
   );
 
 document.addEventListener("DOMContentLoaded", function () {
