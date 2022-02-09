@@ -1,11 +1,11 @@
 import anime from "../vendor/anime.min";
 
-const cloudItemAll = document.querySelectorAll(".cloud__item");
+const treeItemAll = document.querySelectorAll(".tree__item");
 
-cloudItemAll.forEach((cloud) => {
+treeItemAll.forEach((tree) => {
   anime({
-    targets: cloud,
-    translateY: `${anime.random(3, 7)}%`,
+    targets: tree,
+    translateX: `${anime.random(3, 7)}%`,
     duration: anime.random(1000, 2000),
     loop: true,
     autoplay: true,

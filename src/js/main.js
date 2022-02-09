@@ -5,6 +5,7 @@ import "./components/_header";
 import "./components/_accordion";
 import "./components/_expand-vertical";
 import "./components/_clouds";
+import "./components/_tree";
 import "./components/_star";
 
 // index.html;
