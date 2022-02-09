@@ -18,6 +18,7 @@ import "./components/glavnaya/_proftruppa-section";
 import "./components/glavnaya/_incluzivnii-proekt-section";
 import "./components/glavnaya/_chto-v-rezultate-section";
 import "./components/glavnaya/_kulturnii-producti-section";
+import "./components/glavnaya/_smi-o-nas-section";
 
 import "./components/glavnaya/_chto-v-rezultate-slider";
 import "./components/glavnaya/_kulturnii-producti-slider";
