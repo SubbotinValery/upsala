@@ -1,5 +1,18 @@
 .smi-o-nas-section {
   margin-top: 40vh;
+  min-height: 150vh;
+  .yellow-bg__wrapper {
+    position: fixed;
+  }
+  .tree__wrapper {
+    position: fixed;
+    &-2 {
+      z-index: 1;
+    }
+    &-6 {
+      z-index: 1;
+    }
+  }
 }
 
 .smi-o-nas__text {
