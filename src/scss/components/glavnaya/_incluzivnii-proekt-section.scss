@@ -48,5 +48,9 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     text-transform: uppercase;
+    .primary-btn {
+      margin-top: 2rem;
+      text-transform: none;
+    }
   }
 }
