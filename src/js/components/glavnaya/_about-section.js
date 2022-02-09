@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
       translateX: ["50%", "50%"],
       translateY: ["-50%", "-50%"],
       top: ["50%", "50%"],
-      right: ["-20%", "12%"],
+      right: ["-30%", "12%"],
       easing: "easeInSine",
       duration: 1000,
       loop: false,
@@ -149,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
       jumperBlockCloudTimeline.restart();
       jumperBlockCloudTimeline.pause();
     }
-    console.log(window.pageYOffset);
     aboutTimeline.seek(window.pageYOffset);
   });
 });
