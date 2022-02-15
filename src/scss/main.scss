@@ -8,6 +8,8 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/primary-btn";
+@import "./components/inputs";
+@import "./components/qa";
 @import "./components/slider";
 @import "./components/slider-btn";
 @import "./components/accordion";
@@ -47,3 +49,6 @@
 
 //afisha-list
 @import "./components/afisha-list/index.scss";
+
+//profile
+@import "./components/profile/index.scss";

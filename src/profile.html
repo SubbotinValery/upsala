@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Личный кабинет</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body>
+    @include('partials/header.html')
+    <section class="profile__section">
+      <div class="container">
+        <div class="title title-2">Привет, Александр!</div>
+      </div>
+    </section>
+
+    <div class="profile-block__wrapper">
+      <div class="container">
+        <div class="profile__block">
+          <div class="profile__main">
+            <div class="subscription__block">
+              <div class="profile__title">у вас пока нет подписки</div>
+              <div class="subscription__btn btn btn-std">
+                оформить ежемесячный платеж
+              </div>
+            </div>
+
+            <div class="transaction__block">
+              <div class="profile__title">транзакции</div>
+
+              <div class="transaction__filter">
+                <div class="transaction__selection is-active">все</div>
+                <div class="transaction__selection">ежемесячные</div>
+                <div class="transaction__selection">разовые</div>
+              </div>
+
+              <div class="transaction__overall">
+                <div>Общая сумма всех платежей:</div>
+                <div>32320.00 ₽</div>
+              </div>
+
+              <div class="transaction__list">
+                <div class="transaction__item">
+                  <div>
+                    <div class="date">3 февраля</div>
+                    <div class="type">Ежемесячное пожертвование</div>
+                  </div>
+
+                  <div>
+                    <div class="amount">330.00 руб</div>
+                    <div class="result success">Успешно</div>
+                  </div>
+                </div>
+
+                <div class="transaction__item">
+                  <div>
+                    <div class="date">3 февраля</div>
+                    <div class="type">Ежемесячное пожертвование</div>
+                  </div>
+
+                  <div>
+                    <div class="amount">330.00 руб</div>
+                    <div class="result reject">Отмена</div>
+                  </div>
+                </div>
+
+                <div class="transaction__item">
+                  <div>
+                    <div class="date">3 февраля</div>
+                    <div class="type">Ежемесячное пожертвование</div>
+                  </div>
+
+                  <div>
+                    <div class="amount">330.00 руб</div>
+                    <div class="result success">Успешно</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile__data">
+            <div class="profile__title">данные профиля</div>
+            <form action="post">
+              <input class="name" type="text" placeholder="Имя*" />
+
+              <input
+                class="email"
+                type="text"
+                placeholder="example@domain.com*"
+              />
+              <input class="password" type="password" placeholder="Пароль" />
+
+              <div class="checkbox agree__checkbox">
+                <input type="checkbox" id="agree" />
+                <label for="agree"
+                  >Согласие на обработку персональных данных</label
+                >
+              </div>
+
+              <div class="btn btn-std">обновить данные</div>
+
+              <div class="agree__descr">
+                Нажимая кнопку «Обновить данные», я соглашаусь с условиями и
+                принимаю
+                <a class="oferta__link text-red" href="./oferta.html"
+                  >публичную оферту</a
+                >
+              </div>
+            </form>
+
+            <div class="contact">
+              <div>САМЫЕ ЧАСТЫЕ ВОПРОСЫ</div>
+              <div>Задать вопрос</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="profile__qa">
+        <div class="qa__block">
+          <div class="title title-2">Самые частые вопросы</div>
+
+          <div class="qa">
+            <div class="accordion">
+              <div class="accordion__item">
+                <div class="accordion__control">
+                  <div class="accordion__title">Вопрос 1</div>
+                  <div class="accordion__btn"></div>
+                </div>
+
+                <div class="accordion-content__wrapper">
+                  <div class="accordion-content">
+                    <div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                      soluta, veritatis eos optio? Ut neque quis nesciunt
+                      provident impedit fugit, architecto corrupti ipsam
+                      accusantium natus beatae aut sapiente numquam tempore. In
+                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                      accusantium doloremque nemo id?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <div class="accordion__control">
+                  <div class="accordion__title">Вопрос 2</div>
+                  <div class="accordion__btn"></div>
+                </div>
+
+                <div class="accordion-content__wrapper">
+                  <div class="accordion-content">
+                    <div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                      soluta, veritatis eos optio? Ut neque quis nesciunt
+                      provident impedit fugit, architecto corrupti ipsam
+                      accusantium natus beatae aut sapiente numquam tempore. In
+                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                      accusantium doloremque nemo id?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <div class="accordion__control">
+                  <div class="accordion__title">Вопрос 3</div>
+                  <div class="accordion__btn"></div>
+                </div>
+
+                <div class="accordion-content__wrapper">
+                  <div class="accordion-content">
+                    <div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                      soluta, veritatis eos optio? Ut neque quis nesciunt
+                      provident impedit fugit, architecto corrupti ipsam
+                      accusantium natus beatae aut sapiente numquam tempore. In
+                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                      accusantium doloremque nemo id?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <div class="accordion__control">
+                  <div class="accordion__title">Вопрос 4</div>
+                  <div class="accordion__btn"></div>
+                </div>
+
+                <div class="accordion-content__wrapper">
+                  <div class="accordion-content">
+                    <div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                      soluta, veritatis eos optio? Ut neque quis nesciunt
+                      provident impedit fugit, architecto corrupti ipsam
+                      accusantium natus beatae aut sapiente numquam tempore. In
+                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                      accusantium doloremque nemo id?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <div class="accordion__control">
+                  <div class="accordion__title">Вопрос 5</div>
+                  <div class="accordion__btn"></div>
+                </div>
+
+                <div class="accordion-content__wrapper">
+                  <div class="accordion-content">
+                    <div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                      soluta, veritatis eos optio? Ut neque quis nesciunt
+                      provident impedit fugit, architecto corrupti ipsam
+                      accusantium natus beatae aut sapiente numquam tempore. In
+                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                      accusantium doloremque nemo id?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <div class="accordion__control">
+                  <div class="accordion__title">Вопрос 6</div>
+                  <div class="accordion__btn"></div>
+                </div>
+
+                <div class="accordion-content__wrapper">
+                  <div class="accordion-content">
+                    <div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                      soluta, veritatis eos optio? Ut neque quis nesciunt
+                      provident impedit fugit, architecto corrupti ipsam
+                      accusantium natus beatae aut sapiente numquam tempore. In
+                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                      accusantium doloremque nemo id?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tree__block">
+      <img class="yellow-bg" src="./img/yellow-bg.png" alt="" />
+      <img class="tree tree-1" src="./img/tree.png" alt="" />
+      <img class="tree tree-2" src="./img/tree.png" alt="" />
+      <img class="tree tree-3" src="./img/tree.png" alt="" />
+      <img class="tree tree-4" src="./img/tree.png" alt="" />
+      <img class="tree tree-5" src="./img/tree.png" alt="" />
+    </div>
+
+    <img class="dog" src="./img/dog.png" alt="" />
+
+    @include('partials/footer.html')
+  </body>
+</html>

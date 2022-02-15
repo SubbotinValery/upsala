@@ -1,0 +1,139 @@
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+button:active {
+  border: none;
+  outline: none;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin: 2.5rem 0;
+  padding: 1.5rem 4.2rem;
+  border-radius: 4.8rem;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  transition: $duration-fast;
+
+  &-std {
+    background-color: $red;
+    border: 1px solid $red;
+    &:hover {
+      background-color: darken($red, 10%);
+      border-color: darken($red, 10%);
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    border: 1px solid $red;
+    &:hover {
+      background-color: darken($red, 10%);
+      border-color: darken($red, 10%);
+    }
+  }
+
+  &-disable {
+    pointer-events: none;
+    cursor: default;
+    background-color: #c4c4c4;
+    color: $dark;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+}
+
+input[type="text"],
+input[type="password"] {
+  display: inline-block;
+  width: 100%;
+  padding: 1.4rem 2.4rem;
+  border: 0.1rem solid rgb(19, 19, 19, 0.5);
+  border-radius: 4.8rem;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: $dark;
+  outline: none;
+  transition: $duration-fast;
+  margin-bottom: 0.8rem;
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    border: 0.1rem solid rgb(19, 19, 19);
+  }
+}
+
+.checkbox {
+  margin: 1.5rem 0;
+  input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+    margin-left: 3.4rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    opacity: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1.2rem;
+      width: 1.2rem;
+      top: 50%;
+      left: -2.4rem;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: 0.1rem solid $dark;
+      border-radius: 0.3rem;
+      opacity: 0.5;
+    }
+  }
+  input:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2.4rem;
+    transform: translateY(-50%);
+    height: 1.2rem;
+    width: 1.2rem;
+    background-image: url("../../img/svg/checkbox-ico.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 1;
+  }
+}
