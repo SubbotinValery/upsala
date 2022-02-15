@@ -2,44 +2,50 @@ const accordionItems = document.querySelectorAll(".accordion .accordion__item");
 
 accordionItems.forEach((item) => {
   const btn = item.querySelector(".accordion__control .accordion__btn");
-  const content = item.querySelector(".accordion__content");
 
-  if (item.className.match(/\bclose\b/)) {
-    const itemHeight = item.getBoundingClientRect().height;
-    item.style.height = `${itemHeight}px`;
-    content.style.opacity = 0;
-    content.style.transform = `translateY(0px)`;
-  }
+  const close = () => {
+    const control = item.querySelector(".accordion__control");
+    const contentWrapper = item.querySelector(".accordion-content__wrapper");
+    const content = item.querySelector(".accordion-content");
 
-  const show = () => {
-    const itemHeight = item.getBoundingClientRect().height;
-    const contentHeight = content.getBoundingClientRect().height;
+    const itemHeight = item.offsetHeight;
+    const itemBorderWidth = getComputedStyle(item, null).getPropertyValue(
+      "border-bottom-width"
+    );
+    const controlHeight = control.offsetHeight;
+    const contentWrapperHeight = contentWrapper.offsetHeight;
+    const contentHeight = content.offsetHeight;
 
-    item.style.height = `${itemHeight + contentHeight}px`;
-    content.style.opacity = 1;
-    content.style.transform = `translateY(${
-      itemHeight - parseInt(getComputedStyle(item).paddingBottom)
-    }px)`;
+    contentWrapper.style.opacity = 0;
+    contentWrapper.style.transform = `translateY(0%)`;
+    contentWrapper.style.height = "0px";
+    item.style.height = `calc(${controlHeight}px + ${itemBorderWidth} * 2)`;
   };
 
-  const hide = () => {
-    const itemHeight = item.getBoundingClientRect().height;
-    const contentHeight = content.getBoundingClientRect().height;
+  const open = () => {
+    const control = item.querySelector(".accordion__control");
+    const contentWrapper = item.querySelector(".accordion-content__wrapper");
+    const content = item.querySelector(".accordion-content");
 
-    item.style.height = `${itemHeight - contentHeight}px`;
-    content.style.opacity = 0;
-    content.style.transform = `translateY(0%)`;
+    const itemHeight = item.offsetHeight;
+    const controlHeight = control.offsetHeight;
+    const contentWrapperHeight = contentWrapper.offsetHeight;
+    const contentHeight = content.offsetHeight;
+
+    contentWrapper.style.opacity = 1;
+    contentWrapper.style.transform = `translateY(${controlHeight}px)`;
+    contentWrapper.style.height = `${controlHeight + contentHeight}px`;
+    item.style.height = `${controlHeight + contentHeight + 30}px`;
   };
 
+  close();
   btn.addEventListener("click", function () {
-    if (item.className.match(/\bclose\b/)) {
-      item.classList.remove("close");
-      item.classList.add("open");
-      show();
-    } else {
+    if (item.className.match(/\bopen\b/)) {
       item.classList.remove("open");
-      item.classList.add("close");
-      hide();
+      close();
+    } else {
+      item.classList.add("open");
+      open();
     }
   });
 });

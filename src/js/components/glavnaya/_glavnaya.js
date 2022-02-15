@@ -2,7 +2,7 @@ import anime from "../../vendor/anime.min";
 
 const glavnaya = document.querySelector(".glavnaya");
 
-const starWrapper = glavnaya.querySelector(".glavnaya > .star__wrapper");
+const starWrapper = document.querySelector(".glavnaya > .star__wrapper");
 const cloudWrapper1 = document.querySelector(".glavnaya > .cloud__wrapper-1");
 const cloudWrapper2 = document.querySelector(".glavnaya > .cloud__wrapper-2");
 const cloudWrapper3 = document.querySelector(".glavnaya > .cloud__wrapper-3");
