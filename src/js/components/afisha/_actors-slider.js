@@ -12,6 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: true,
     keyboard: false,
     slideFocus: false,
+    breakpoints: {
+      1024: {
+        perPage: 1,
+      },
+    },
   }).mount();
 
   splide.on("move", function () {

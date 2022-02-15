@@ -35,7 +35,7 @@ accordionItems.forEach((item) => {
     contentWrapper.style.opacity = 1;
     contentWrapper.style.transform = `translateY(${controlHeight}px)`;
     contentWrapper.style.height = `${controlHeight + contentHeight}px`;
-    item.style.height = `${controlHeight + contentHeight + 30}px`;
+    item.style.height = `${controlHeight + contentHeight + 30 + 60}px`;
   };
 
   close();
