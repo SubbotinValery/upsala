@@ -494,6 +494,40 @@
       }
     }
   }
+
+  .spectacl-about {
+    .align__container-right > * {
+      flex-basis: 100%;
+    }
+    .content-main > * {
+      width: 100% !important;
+    }
+    .content-main__wrapper {
+      margin-bottom: 2rem;
+    }
+
+    .content-history__descr {
+      flex-direction: column;
+      &-star {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 3rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      &-text {
+        width: 100%;
+        & > * {
+          width: 100%;
+        }
+      }
+    }
+
+    .content-history__img-block {
+      margin-bottom: 5rem;
+    }
+  }
 }
 
 @include small-tablet {
@@ -524,5 +558,11 @@
     top: 0;
     left: 0;
     width: 100%;
+  }
+
+  .spectacl-about {
+    .content-main {
+      margin-top: 10vw !important;
+    }
   }
 }
