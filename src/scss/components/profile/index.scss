@@ -44,10 +44,63 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 3.2rem;
+  .profile__title {
+    margin-bottom: 3.2rem;
+  }
   .subscription__btn {
     width: 90%;
     margin-top: 3.2rem;
     align-self: center;
+  }
+  .subscription__info {
+    padding: 2.4rem;
+    width: 100%;
+    border: 0.1rem solid rgb(19, 19, 19, 0.5);
+    border-radius: 2.4rem;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    color: $dark;
+    .main-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3.2rem;
+      & > * {
+        &:last-child {
+          text-align: right;
+        }
+      }
+      .type {
+        margin-bottom: 0.4rem;
+      }
+      .next-date {
+        margin-bottom: 1.6rem;
+        opacity: 0.6;
+      }
+
+      .balance {
+        margin-bottom: 1.4rem;
+      }
+
+      .reject-subscription,
+      .change-date {
+        display: inline-block;
+        cursor: pointer;
+        border-bottom: 0.1rem solid transparent;
+        transition: $duration-fast;
+        &:hover {
+          border-color: $red;
+        }
+      }
+    }
+    .more {
+      cursor: pointer;
+      border-bottom: 0.1rem solid transparent;
+      transition: $duration-fast;
+      &:hover {
+        border-color: $red;
+      }
+    }
   }
 }
 
