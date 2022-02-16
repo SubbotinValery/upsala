@@ -1,10 +1,9 @@
-let splide;
+let photoSplide;
 
 document.addEventListener("DOMContentLoaded", function () {
   splide = new Splide("#afishaPhotoSlider .splide", {
     arrows: false,
     perPage: 2,
-    type: "loop",
     pagination: true,
     keyboard: false,
     slideFocus: false,
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   }).mount();
 
-  splide.on("move", function () {
+  photoSplide.on("move", function () {
     var slides = document.querySelectorAll(
       "#afishaPhotoSlider .splide .splide__slide"
     );

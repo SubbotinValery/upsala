@@ -6,19 +6,17 @@
     transform: translate(-50%, 50%) scale(0.35);
     filter: grayscale(1);
   }
-  .clouds__item {
+  .cloud__item {
     position: fixed;
     width: max(30vw, 40rem);
-
+    z-index: 10;
     &-1 {
-      bottom: max(6%, 6vw);
-      left: max(37%, 23vw);
-      transform: translate(-50%, 50%);
+      bottom: -2%;
+      left: 50%;
     }
     &-2 {
-      bottom: max(6%, 6vw);
-      right: max(37%, 23vw);
-      transform: translate(50%, 50%) scaleX(-1);
+      bottom: -5%;
+      right: 44%;
     }
   }
 
@@ -31,6 +29,7 @@
 }
 
 .not-found-content {
+  z-index: 1000;
   position: fixed;
   top: 60%;
   left: 50%;
@@ -86,17 +85,20 @@
 }
 
 @include mobile {
-  .juggler__wrapper {
-  }
-  .not-found__bg {
-    width: 50rem;
-  }
-  .ups-text {
-    transition: 0.5s;
-    font-size: 24rem;
-    &-s {
-      left: 75%;
-      transform: rotate(12deg) !important;
+  .not-found-section {
+    .juggler__wrapper {
+      display: none;
+    }
+    .not-found__bg {
+      width: 50rem;
+    }
+    .ups-text {
+      transition: 0.5s;
+      font-size: 24rem;
+      &-s {
+        left: 75%;
+        transform: rotate(12deg) !important;
+      }
     }
   }
 }

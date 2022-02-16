@@ -1,11 +1,11 @@
-let splide;
-let prev, next;
+let komandaSplide;
+let komandaPrev, komandaNext;
 
 document.addEventListener("DOMContentLoaded", function () {
-  prev = document.querySelector("#licaCirkaSlider .previous-button");
-  next = document.querySelector("#licaCirkaSlider .next-button");
+  komandaPrev = document.querySelector("#licaCirkaSlider .previous-button");
+  komandaNext = document.querySelector("#licaCirkaSlider .next-button");
 
-  splide = new Splide("#licaCirkaSlider .splide", {
+  komandaSplide = new Splide("#licaCirkaSlider .splide", {
     gap: "3rem",
     arrows: false,
     perPage: 1,
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slideFocus: false,
   }).mount();
 
-  splide.on("move", function () {
+  komandaSplide.on("move", function () {
     var slides = document.querySelectorAll(
       "#licaCirkaSlider .splide .splide__slide"
     );
@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  prev.addEventListener("click", function (e) {
-    splide.go("<");
+  komandaPrev.addEventListener("click", function (e) {
+    komandaSplide.go("<");
   });
 
-  next.addEventListener("click", function (e) {
-    splide.go(">");
+  komandaNext.addEventListener("click", function (e) {
+    komandaSplide.go(">");
   });
 });

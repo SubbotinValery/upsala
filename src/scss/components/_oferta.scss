@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    .clouds__item {
+    .cloud__item {
       position: absolute;
       z-index: -1;
       &-1 {
@@ -24,11 +24,7 @@
       }
       &-4 {
         top: 75%;
-        left: 15%;
         width: 35rem;
-      }
-      @include small-tablet {
-        display: none;
       }
     }
   }
@@ -53,7 +49,7 @@
         left: -1.8rem;
         height: 1.2rem;
         width: 0.9rem;
-        background-image: url("../../img/svg/file-ico.svg");
+        background-image: url("..//img/svg/file-ico.svg");
       }
     }
     .oferta__content {
@@ -64,32 +60,13 @@
   }
 }
 
-@media screen and (max-width: 1080px) {
+@include tablet {
   .oferta-section {
     display: flex;
     .container {
       flex-direction: column;
-      .clouds__item {
-        &-1 {
-          top: 2%;
-          left: -12%;
-          width: 17rem;
-        }
-        &-2 {
-          top: 32%;
-          left: 93%;
-          width: 21rem;
-        }
-        &-3 {
-          top: 101%;
-          left: -14%;
-          width: 19rem;
-        }
-        &-4 {
-          top: 94%;
-          left: 80%;
-          width: 28rem;
-        }
+      .cloud__item {
+        display: none;
       }
     }
     .oferta__left-side {

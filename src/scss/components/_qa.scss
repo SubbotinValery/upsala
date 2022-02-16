@@ -22,7 +22,7 @@
     .accordion__btn {
       width: 2.4rem;
       height: 2.4rem;
-      background-image: url("../../../img/plus.png");
+      background-image: url("..//../img/plus.png");
       &:hover {
         transform: scale(1);
       }
@@ -31,7 +31,7 @@
 
   .accordion__item.open {
     .accordion__btn {
-      background-image: url("../../img/minus.png");
+      background-image: url("..//img/minus.png");
     }
   }
 }

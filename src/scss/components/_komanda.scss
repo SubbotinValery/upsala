@@ -95,7 +95,7 @@
     width: 100%;
     z-index: 10;
     border-radius: 1.6rem;
-    background-image: url("../../img/komanda-item-bg-img.png");
+    background-image: url("..//img/komanda-item-bg-img.png");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -189,6 +189,10 @@
         border-color: $red;
       }
     }
+  }
+
+  .splide__pagination {
+    width: 100%;
   }
 
   .splide__pagination li button {

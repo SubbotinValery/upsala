@@ -1,11 +1,11 @@
-let splide;
-let prev, next;
+let actorSplide;
+let actorPrev, actorNext;
 
 document.addEventListener("DOMContentLoaded", function () {
-  prev = document.querySelector("#afishaActorSlider .previous-button");
-  next = document.querySelector("#afishaActorSlider .next-button");
+  actorPrev = document.querySelector("#afishaActorSlider .previous-button");
+  actorNext = document.querySelector("#afishaActorSlider .next-button");
 
-  splide = new Splide("#afishaActorSlider .splide", {
+  actorSplide = new Splide("#afishaActorSlider .splide", {
     arrows: false,
     perPage: 2,
     type: "loop",
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   }).mount();
 
-  splide.on("move", function () {
+  actorSplide.on("move", function () {
     var slides = document.querySelectorAll(
       "#afishaActorSlider .splide .splide__slide"
     );
@@ -29,12 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  prev.addEventListener("click", function (e) {
-    splide.go("<");
+  actorPrev.addEventListener("click", function (e) {
+    actorSplide.go("<");
   });
 
-  next.addEventListener("click", function (e) {
-    splide.go(">");
+  actorNext.addEventListener("click", function (e) {
+    actorSplide.go(">");
   });
 
   const visibles = document.querySelectorAll(

@@ -18,7 +18,7 @@
 }
 
 .primary-btn.elips {
-  background-image: url("../../img/svg/primary-btn-elips.svg");
+  background-image: url("..//img/svg/primary-btn-elips.svg");
   & > * {
     padding: 1.6rem 2rem;
     text-align: center;
@@ -36,7 +36,7 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    background-image: url("../../img/svg/primary-btn-circle.svg");
+    background-image: url("..//img/svg/primary-btn-circle.svg");
     animation: 0.5s out linear;
   }
 
@@ -59,16 +59,16 @@
     transition: $duration-fast;
   }
   & > .account-btn {
-    background-image: url("../../img/svg/account-ico.svg");
+    background-image: url("..//img/svg/account-ico.svg");
   }
   & > .burger-btn {
     .header__side.close ~ & {
-      background-image: url("../../img/svg/burger-ico.svg");
+      background-image: url("..//img/svg/burger-ico.svg");
     }
     .header__side.open ~ & {
       height: 2rem;
       width: 2rem;
-      background-image: url("../../img/svg/burger-ico-close.svg");
+      background-image: url("..//img/svg/burger-ico-close.svg");
     }
   }
 }
