@@ -8,8 +8,51 @@
   }
 }
 
+.profile__enter {
+  max-width: 51rem;
+  color: $dark;
+  padding-top: 4.5rem;
+  padding-bottom: 14.5rem;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  .profile__title {
+    margin-bottom: 2.2rem;
+  }
+  .descr {
+    margin-bottom: 2.4rem;
+    .support__link {
+      display: inline-block;
+      border-bottom: 0.1rem solid transparent;
+      transition: $duration-fast;
+      &:hover {
+        border-color: $red;
+      }
+    }
+  }
+  form {
+    input[type="password"] {
+      margin-bottom: 0;
+    }
+    .password__reset {
+      .reset-password__btn {
+        display: inline-block;
+        border-bottom: 0.1rem solid transparent;
+        transition: $duration-fast;
+        &:hover {
+          border-color: $red;
+        }
+      }
+    }
+  }
+}
+
 .profile-block__wrapper {
   background-color: #fff;
+  .profile__title {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
 }
 
 .profile__block {
@@ -17,11 +60,6 @@
   display: flex;
   align-items: flex-start;
   color: $dark;
-  .profile__title {
-    text-transform: uppercase;
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-  }
 }
 
 .profile__main {
@@ -305,7 +343,7 @@
 
 .dog {
   position: absolute;
-  top: -10%;
+  top: -25rem;
   right: -40rem;
   transform: scale(0.3) rotate(-30deg) translate(50%, -50%);
   z-index: -1;

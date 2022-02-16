@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body>
+    @include('partials/header.html')
+    <section class="profile__section">
+      <div class="container">
+        <div class="title title-2">личный кабинет</div>
+      </div>
+    </section>
+
+    <!-- <div class="profile-block__wrapper">
+      <div class="container">
+        <div class="profile__enter">
+          <div class="profile__title">Войдите в свой профиль</div>
+          <div class="descr">
+            В личном кабинете вы можете управлять подпиской, узнавать информацию
+            о платежах. Профиль появляется автоматически, как только вы
+            <a href="" class="support__link text-red">поддерживаете проект.</a>
+          </div>
+          <form action="post">
+            <input
+              class="email"
+              type="text"
+              placeholder="example@domain.com*"
+            />
+            <input class="password" type="password" placeholder="*********" />
+
+            <div class="btn btn-std">Войти</div>
+
+            <div class="password__reset">
+              Забыли пароль?
+              <div class="reset-password__btn text-red">
+                Отправим его на почту
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="profile-block__wrapper">
+      <div class="container">
+        <div class="profile__enter">
+          <div class="profile__title">Мы отправили пароль на вашу почту</div>
+          <div class="descr">
+            В личном кабинете вы можете управлять подпиской, узнавать информацию
+            о платежах. Профиль появляется автоматически, как только вы
+            <a href="" class="support__link text-red">поддерживаете проект.</a>
+          </div>
+          <form action="post">
+            <input
+              class="email"
+              type="text"
+              placeholder="example@domain.com*"
+            />
+            <input class="password" type="password" placeholder="*********" />
+
+            <div class="btn btn-std">Войти</div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <img class="dog" src="./img/dog.png" alt="" />
+
+    @include('partials/footer.html')
+  </body>
+</html>
