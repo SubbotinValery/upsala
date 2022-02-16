@@ -19,8 +19,6 @@ const notify = require("gulp-notify");
 const image = require("gulp-imagemin");
 const { readFileSync } = require("fs");
 const typograf = require("gulp-typograf");
-const webp = require("gulp-webp");
-const avif = require("gulp-avif");
 const mainSass = gulpSass(sass);
 const webpackStream = require("webpack-stream");
 const plumber = require("gulp-plumber");
@@ -185,18 +183,6 @@ const images = () => {
     .pipe(dest(paths.buildImgFolder));
 };
 
-const webpImages = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
-    .pipe(webp())
-    .pipe(dest(paths.buildImgFolder));
-};
-
-const avifImages = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
-    .pipe(avif())
-    .pipe(dest(paths.buildImgFolder));
-};
-
 const htmlInclude = () => {
   return src([`${srcFolder}/**/**.html`])
     .pipe(
@@ -227,18 +213,13 @@ const watchFiles = () => {
   watch(`${srcFolder}/**/**.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif}`, images);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
   watch(paths.srcSvg, svgSprites);
 };
 
 const cache = () => {
-  return src(
-    `${buildFolder}/**/*.{css,js,svg,gif,png,jpg,jpeg,webp,avif,woff2}`,
-    {
-      base: buildFolder,
-    }
-  )
+  return src(`${buildFolder}/**/*.{css,js,svg,gif,png,jpg,jpeg,woff2}`, {
+    base: buildFolder,
+  })
     .pipe(rev())
     .pipe(revDel())
     .pipe(dest(buildFolder))
@@ -286,8 +267,6 @@ exports.default = series(
   styles,
   resources,
   images,
-  webpImages,
-  avifImages,
   svgSprites,
   watchFiles
 );
@@ -300,8 +279,6 @@ exports.build = series(
   styles,
   resources,
   images,
-  webpImages,
-  avifImages,
   svgSprites,
   htmlMinify
 );
