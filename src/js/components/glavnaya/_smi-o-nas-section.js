@@ -29,7 +29,7 @@ const smiONasTimeline = anime
       duration: 400,
       easing: "linear",
     },
-    22400
+    23100
   )
   .add(
     {
@@ -42,7 +42,7 @@ const smiONasTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    22700
+    23300
   )
   .add(
     {
@@ -54,7 +54,7 @@ const smiONasTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    22700
+    23300
   )
   .add(
     {
@@ -67,7 +67,7 @@ const smiONasTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    22700
+    23300
   )
   .add(
     {
@@ -79,7 +79,7 @@ const smiONasTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    22700
+    23300
   )
   .add(
     {
@@ -91,7 +91,7 @@ const smiONasTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    22700
+    23300
   )
   .add(
     {
@@ -104,7 +104,7 @@ const smiONasTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    22700
+    23300
   )
   .add(
     {
@@ -116,7 +116,7 @@ const smiONasTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    22700
+    23300
   )
   .add(
     {
@@ -129,7 +129,7 @@ const smiONasTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    22700
+    23300
   )
   .add(
     {
@@ -138,7 +138,7 @@ const smiONasTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    23100
+    23700
   )
   .add(
     {
@@ -147,7 +147,7 @@ const smiONasTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    23100
+    23700
   );
 
 document.addEventListener("DOMContentLoaded", function () {

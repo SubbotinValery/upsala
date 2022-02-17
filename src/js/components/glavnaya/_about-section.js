@@ -13,6 +13,8 @@ const aboutContent1 = section.querySelector(".about-content-1");
 const aboutContent2 = section.querySelector(".about-content-2");
 const aboutContent3 = section.querySelector(".about-content-3");
 
+const pin = document.querySelector(".pin");
+
 function numberRange(start, end) {
   return new Array(end - start).fill().map((d, i) => i + start);
 }
@@ -30,6 +32,13 @@ const aboutTimeline = anime
     translateY: ["50%", "50%"],
     scale: [0.8, 0.8],
     duration: 500,
+    easing: "linear",
+  })
+  .add({
+    targets: pin,
+    opacity: 0,
+    visability: "hidden",
+    duration: 100,
     easing: "linear",
   })
   .add(
