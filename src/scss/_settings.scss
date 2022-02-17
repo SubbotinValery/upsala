@@ -218,3 +218,17 @@ section.main-item {
   z-index: -999;
   transition: $duration-medium;
 }
+
+.yellow-bg__wrapper {
+  animation: yellow-bg-animation 3s alternate infinite linear;
+}
+
+@keyframes yellow-bg-animation {
+  from {
+    transform: translateX(2%);
+  }
+
+  to {
+    transform: translateX(-2%);
+  }
+}

@@ -31,5 +31,4 @@ import "./components/_komanda-slider";
 import "./components/not-found/_not-found";
 
 //afisha
-import "./components/afisha/_photo-slider";
-import "./components/afisha/_actors-slider";
+import "./components/afisha/_afisha";
