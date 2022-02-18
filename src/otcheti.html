@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Отчеты</title>
+
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body id="otcheti">
+    @include('partials/header.html')
+    <section class="otcheti__section">
+      <div class="container">
+        <div class="title title-2">отчеты</div>
+
+        <div class="btn btn-std">смотреть отчеты</div>
+
+        <div class="descr__block">
+          <div class="descr__img">
+            <img
+              class="women-with-case"
+              src="./img/women-with-case.png"
+              alt=""
+            />
+
+            <div class="cloud__block">
+              <div class="cloud__wrapper cloud__wrapper-1">
+                <img
+                  src="./img/cloud.png"
+                  class="cloud__item cloud__item-1"
+                  alt=""
+                />
+              </div>
+              <div class="cloud__wrapper cloud__wrapper-2">
+                <img
+                  src="./img/cloud.png"
+                  class="cloud__item cloud__item-2"
+                  alt=""
+                />
+              </div>
+              <div class="cloud__wrapper cloud__wrapper-3">
+                <img
+                  src="./img/cloud.png"
+                  class="cloud__item cloud__item-3"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="descr">
+            <div class="title title-3">
+              Мы работаем благодаря поддержке обычных людей, фондов и
+              коммерческих компаний
+            </div>
+
+            <div>
+              Упсала-Цирк — независимая некоммерческая организация, мы не
+              получаем финансирования от государства и субсидии из бюджета
+              Санкт-Петербурга.
+              <br />
+              <br />
+              На этой странице вы можете узнать, что происходит в цирке, из чего
+              состоит бюджет, найти годовые отчёты и официальные документы, тут
+              всё серьёзно.
+              <br />
+              <br />
+              Если у вас останется вопрос, задайте его Кате на почту
+              <a href="" class="email text-red">katerina@upsalacircus.ru.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+  </body>
+</html>
