@@ -11,76 +11,36 @@ html {
   padding: 0;
 }
 
+//container
 body {
-  position: relative;
   font-family: "GTWalsheimPro";
-  font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.4rem;
   background-color: $dark;
   color: $grey;
-  overflow-x: hidden;
+  overflow: hidden;
 }
-
-a {
-  text-decoration: none;
-  color: $grey;
-}
-
-.list-reset {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  * {
-    text-decoration: none;
-    color: $grey;
-  }
-}
-
 .container {
   width: 86vw;
   padding: 0 1rem;
   margin: 0 auto;
 }
 
-section.main-item {
-  position: relative;
+//font
+.font-Spektra {
+  font-family: "Spektra";
+}
+.font-GTWalsheimPro {
+  font-family: "GTWalsheimPro";
 }
 
-.height-50 {
-  height: 50vh;
-}
-
-.height-100 {
-  height: 100vh;
-}
-
-.height-200 {
-  height: 200vh;
-}
-
-.height-300 {
-  height: 300vh;
-}
-
-.section__title {
-  white-space: nowrap;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  .italic {
-    display: flex;
-  }
-}
-
+//title
 .title {
   margin: 0;
   padding: 0;
-  font-family: "Spektra";
   font-weight: 700;
   text-transform: uppercase;
-  transition: $duration-fast;
-
+  transition: $fast;
   &-1 {
     font-size: 19.2rem;
     line-height: 15.8rem;
@@ -103,123 +63,121 @@ section.main-item {
   }
 }
 
+//text-style
 .outline {
   -webkit-text-stroke: 1px rgba(200, 200, 200, 0.5);
   color: rgba(200, 200, 200, 0);
 }
-
 .italic {
   font-style: italic;
 }
-
-.text-red {
-  color: $red;
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 
-.text-blue {
-  color: $blue;
-}
-
+//text-color
 .text-dark {
   color: $dark;
 }
-
 .text-grey {
   color: $grey;
 }
-
-.align__container-right {
-  display: flex;
-  justify-content: flex-end;
-  & > * {
-    flex-basis: 50%;
-  }
+.text-color {
+  color: $grey-dirty;
+}
+.text-red {
+  color: $red;
+}
+.text-blue {
+  color: $blue;
+}
+.text-geen {
+  color: $green;
 }
 
-.align__container-left {
-  display: flex;
-  justify-content: flex-start;
-  & > * {
-    flex-basis: 50%;
-  }
+//text-size
+.text-tiny {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.text-small {
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+.text-medium {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.text-big {
+  font-size: 1.7rem;
+  line-height: 2.6rem;
 }
 
+//text-align
+.text-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+
+//flex
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.no-wrap {
+  flex-wrap: nowrap;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-self-start {
+  align-self: flex-start;
+}
+.align-self-center {
+  align-self: center;
+}
+.align-self-end {
+  align-self: flex-end;
+}
+
+//position
 .relative {
   position: relative;
 }
-
 .absolute {
   position: absolute;
 }
-
 .fixed {
   position: fixed;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  .nav__link:not(.primary-btn) {
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -0.5rem;
-      left: 0;
-      height: 1px;
-      width: 0;
-      background-color: $dirty-grey;
-      transition: $duration-fast;
-    }
-    &:hover::before {
-      width: 100%;
-    }
-  }
-}
-
-.down-btn {
-  cursor: pointer;
-  position: relative;
-  height: 6.4rem;
-  width: 6.4rem;
-  transition: $duration-fast;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: $duration-fast;
-  }
-  &::before {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url("../img/svg/down-btn.svg");
-  }
-  &::after {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 1.6rem;
-    width: 1.6rem;
-    background-image: url("../img/svg/down-btn-arrow.svg");
-    z-index: 1;
-  }
-}
-
-.cloud__item {
-  background-image: url("../img/cloud.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.star__wrapper {
-  position: fixed;
-  z-index: -999;
-  transition: $duration-medium;
 }
