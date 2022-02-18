@@ -60,6 +60,9 @@
   display: flex;
   align-items: flex-start;
   color: $dark;
+  &.mobile {
+    display: none;
+  }
 }
 
 .profile__main {
@@ -296,10 +299,6 @@
   }
 }
 
-.profile__qa {
-  margin-top: 10rem;
-}
-
 .tree__block {
   position: relative;
   width: 100%;
@@ -355,8 +354,36 @@
 
 .dog {
   position: absolute;
-  top: -25rem;
-  right: -40rem;
-  transform: scale(0.3) rotate(-30deg) translate(50%, -50%);
+  top: -30rem;
+  right: -50rem;
+  transform: scale(0.28) rotate(-38deg) translate(50%, -50%);
   z-index: -1;
+}
+
+@include tablet {
+  #profile {
+    .tree__block {
+      display: none;
+    }
+    .dog {
+      position: absolute;
+      top: -44rem;
+      right: -62rem;
+      transform: scale(0.2) rotate(-38deg) translate(50%, -50%);
+      z-index: -1;
+    }
+  }
+}
+
+@include mobile {
+  #profile {
+    .profile__section {
+      padding-top: 27rem;
+      .container > .title {
+        margin-bottom: 6rem;
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+      }
+    }
+  }
 }

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Личный кабинет</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body id="support">
+    @include('partials/header.html')
+    <section class="support__section">
+      <div class="container">
+        <div class="running-line">
+          <div class="title title-1">
+            &nbsp;Поддержать <span class="italic outline">Проект</span>&nbsp;
+            Поддержать <span class="italic outline">Проект</span>&nbsp;
+            Поддержать <span class="italic outline">Проект</span>&nbsp;
+          </div>
+
+          <div class="title title-1">
+            &nbsp;Поддержать <span class="italic outline">Проект</span>&nbsp;
+            Поддержать <span class="italic outline">Проект</span>&nbsp;
+            Поддержать <span class="italic outline">Проект</span>&nbsp;
+          </div>
+        </div>
+
+        <div class="support__block">
+          <div class="descr__block">
+            <div>
+              Упсала-Цирк — это современный цирк для детей и взрослых, где
+              соединяются акробатика, жонглирование, контемпорари, элементы
+              уличной культуры.
+              <br />
+              <br />
+              В стационарном шатре без животных и клоунов, в котором люди
+              смеются и плачут, перья летят, в офисе висит «Золотая маска», в
+              финале спектакля играет АукцЫон, пока дети на набережной
+              устраивают мексиканский карнавал смерти.
+            </div>
+            <br />
+            <div>
+              <a href="./profile.html" class="primary-btn elips">
+                <div>Личный кабинет</div>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <form class="form" action="post">
+              <div class="amount__block">
+                <div class="row-first">
+                  <div class="amount__item">
+                    <input
+                      type="radio"
+                      id="amount350"
+                      name="amountType"
+                      value="350"
+                      checked
+                    />
+                    <label for="amount350">350 ₽</label>
+
+                    <div class="descr">
+                      Столько стоит мяч для жонглирования, база
+                    </div>
+                  </div>
+
+                  <div class="amount__item">
+                    <input
+                      type="radio"
+                      id="amount850"
+                      name="amountType"
+                      value="850"
+                    />
+                    <label for="amount850">850 ₽</label>
+                    <div class="descr">
+                      Столько стоит день занятий для одного ребёнка в цирке
+                    </div>
+                  </div>
+
+                  <div class="amount__item">
+                    <input
+                      type="radio"
+                      id="amount1500"
+                      name="amountType"
+                      value="1500"
+                    />
+                    <label for="amount1500">1500 ₽</label>
+                    <div class="descr">
+                      Столько стоит мастер-класс с приглашённым тренером по
+                      новой для нас цирковой дисциплине
+                    </div>
+                  </div>
+
+                  <div class="amount__item">
+                    <input
+                      type="radio"
+                      id="amount2166"
+                      name="amountType"
+                      value="2166"
+                    />
+                    <label for="amount2166">2166 ₽</label>
+                    <div class="descr">
+                      Столько стоит ткань для одного костюма в последнем
+                      спектакле Рондо
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row-second">
+                  <div class="amount__item">
+                    <input
+                      type="radio"
+                      id="amount6005"
+                      name="amountType"
+                      value="6005"
+                    />
+                    <label for="amount6005">6005 ₽</label>
+                  </div>
+
+                  <div class="amount__item">
+                    <input
+                      type="radio"
+                      id="amount10605"
+                      name="amountType"
+                      value="10605"
+                    />
+                    <label for="amount10605">10605 ₽</label>
+                  </div>
+
+                  <div class="amount__item">
+                    <input
+                      type="radio"
+                      id="amountCustom"
+                      name="amountType"
+                      value="custom"
+                    />
+                    <label for="amountCustom"> Ваша сумма </label>
+                  </div>
+                </div>
+
+                <input
+                  type="number"
+                  class="amount__input"
+                  placeholder="Ваша сумма"
+                />
+              </div>
+
+              <input class="name" type="text" placeholder="Имя" />
+              <input
+                class="email"
+                type="text"
+                placeholder="example@domain.com*"
+              />
+
+              <div class="type__block">
+                <div class="checkbox agree__checkbox">
+                  <input
+                    type="radio"
+                    id="paypal"
+                    name="cardType"
+                    value="paypal"
+                    checked
+                  />
+                  <label for="paypal">Paypal</label>
+                </div>
+
+                <div class="checkbox agree__checkbox">
+                  <input type="radio" id="visa" name="cardType" value="visa" />
+                  <label for="visa">Visa</label>
+                </div>
+              </div>
+
+              <div class="support__btn btn btn-std">поддержать</div>
+
+              <div class="descr">
+                Вы выбрали регулярные пожертвования. Это значит, что раз в месяц
+                с вашей карты автоматически будет списана выбранная сумма.
+                Именно благодаря регулярной поддержке мы можем планировать
+                работу наперёд и осуществлять всё задуманное. Спасибо вам!
+              </div>
+
+              <div class="agree__descr">
+                Нажимая кнопку «Поддержать», я соглашаюсь с условиями и принимаю
+                <a class="oferta__link text-red" href="./oferta.html"
+                  >публичную оферту</a
+                >
+              </div>
+            </form>
+
+            <div class="options">
+              <div class="">Пожертвовать по реквизитам</div>
+              <div class="">Задать вопрос</div>
+              <div class="">Самые частые вопросы</div>
+            </div>
+          </div>
+
+          <div class="cloud__wrapper cloud__wrapper-1">
+            <img
+              src="./img/cloud.png"
+              class="cloud__item cloud__item-1"
+              alt=""
+            />
+          </div>
+          <div class="cloud__wrapper cloud__wrapper-2">
+            <img
+              src="./img/cloud.png"
+              class="cloud__item cloud__item-2"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="qa__block">
+        <div class="title title-2">Самые частые вопросы</div>
+
+        <div class="qa">
+          <div class="accordion">
+            <div class="accordion__item">
+              <div class="accordion__control">
+                <div class="accordion__title">Вопрос 1</div>
+                <div class="accordion__btn"></div>
+              </div>
+
+              <div class="accordion-content__wrapper">
+                <div class="accordion-content">
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                    soluta, veritatis eos optio? Ut neque quis nesciunt
+                    provident impedit fugit, architecto corrupti ipsam
+                    accusantium natus beatae aut sapiente numquam tempore. In
+                    sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                    accusantium doloremque nemo id?
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__control">
+                <div class="accordion__title">Вопрос 2</div>
+                <div class="accordion__btn"></div>
+              </div>
+
+              <div class="accordion-content__wrapper">
+                <div class="accordion-content">
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                    soluta, veritatis eos optio? Ut neque quis nesciunt
+                    provident impedit fugit, architecto corrupti ipsam
+                    accusantium natus beatae aut sapiente numquam tempore. In
+                    sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                    accusantium doloremque nemo id?
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__control">
+                <div class="accordion__title">Вопрос 3</div>
+                <div class="accordion__btn"></div>
+              </div>
+
+              <div class="accordion-content__wrapper">
+                <div class="accordion-content">
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                    soluta, veritatis eos optio? Ut neque quis nesciunt
+                    provident impedit fugit, architecto corrupti ipsam
+                    accusantium natus beatae aut sapiente numquam tempore. In
+                    sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                    accusantium doloremque nemo id?
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__control">
+                <div class="accordion__title">Вопрос 4</div>
+                <div class="accordion__btn"></div>
+              </div>
+
+              <div class="accordion-content__wrapper">
+                <div class="accordion-content">
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                    soluta, veritatis eos optio? Ut neque quis nesciunt
+                    provident impedit fugit, architecto corrupti ipsam
+                    accusantium natus beatae aut sapiente numquam tempore. In
+                    sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                    accusantium doloremque nemo id?
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__control">
+                <div class="accordion__title">Вопрос 5</div>
+                <div class="accordion__btn"></div>
+              </div>
+
+              <div class="accordion-content__wrapper">
+                <div class="accordion-content">
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                    soluta, veritatis eos optio? Ut neque quis nesciunt
+                    provident impedit fugit, architecto corrupti ipsam
+                    accusantium natus beatae aut sapiente numquam tempore. In
+                    sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                    accusantium doloremque nemo id?
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__control">
+                <div class="accordion__title">Вопрос 6</div>
+                <div class="accordion__btn"></div>
+              </div>
+
+              <div class="accordion-content__wrapper">
+                <div class="accordion-content">
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum quidem unde saepe minus deleniti eveniet ipsa
+                    soluta, veritatis eos optio? Ut neque quis nesciunt
+                    provident impedit fugit, architecto corrupti ipsam
+                    accusantium natus beatae aut sapiente numquam tempore. In
+                    sit reiciendis ab, ut delectus voluptatem eaque distinctio
+                    accusantium doloremque nemo id?
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tree__block">
+      <div class="yellow-bg__wrapper">
+        <img class="yellow-bg" src="./img/yellow-bg.png" alt="" />
+      </div>
+
+      <div class="tree__wrapper tree__wrapper-1">
+        <img class="tree__item tree__item-1" src="../img/tree.png" alt="" />
+      </div>
+      <div class="tree__wrapper tree__wrapper-2">
+        <img class="tree__item tree__item-2" src="../img/tree.png" alt="" />
+      </div>
+      <div class="tree__wrapper tree__wrapper-3">
+        <img class="tree__item tree__item-3" src="../img/tree.png" alt="" />
+      </div>
+      <div class="tree__wrapper tree__wrapper-4">
+        <img class="tree__item tree__item-4" src="../img/tree.png" alt="" />
+      </div>
+      <div class="tree__wrapper tree__wrapper-5">
+        <img class="tree__item tree__item-5" src="../img/tree.png" alt="" />
+      </div>
+      <div class="tree__wrapper tree__wrapper-6">
+        <img class="tree__item tree__item-6" src="../img/tree.png" alt="" />
+      </div>
+      <div class="tree__wrapper tree__wrapper-7">
+        <img class="tree__item tree__item-7" src="../img/tree.png" alt="" />
+      </div>
+    </div>
+
+    @include('partials/footer.html')
+  </body>
+</html>

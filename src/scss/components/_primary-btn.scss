@@ -6,7 +6,7 @@
   background-size: contain;
   background-position: center;
   transition: $duration-fast;
-
+  color: #fff;
   &::before {
     content: "";
     position: absolute;

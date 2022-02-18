@@ -80,21 +80,26 @@ section.main-item {
   font-weight: 700;
   text-transform: uppercase;
   transition: $duration-fast;
+
   &-1 {
     font-size: 19.2rem;
     line-height: 15.8rem;
+    letter-spacing: 0.2rem;
   }
   &-2 {
     font-size: 9.6rem;
     line-height: 8.8rem;
+    letter-spacing: 0.2rem;
   }
   &-3 {
     font-size: 4.8rem;
     line-height: 4.8rem;
+    letter-spacing: 0.1rem;
   }
   &-4 {
     font-size: 2.4rem;
     line-height: 3.2rem;
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -217,18 +222,4 @@ section.main-item {
   position: fixed;
   z-index: -999;
   transition: $duration-medium;
-}
-
-.yellow-bg__wrapper {
-  animation: yellow-bg-animation 3s alternate infinite linear;
-}
-
-@keyframes yellow-bg-animation {
-  from {
-    transform: translateX(2%);
-  }
-
-  to {
-    transform: translateX(-2%);
-  }
 }
