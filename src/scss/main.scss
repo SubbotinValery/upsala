@@ -1,5 +1,17 @@
+//common
 @import "fonts";
 @import "vars";
 @import "mixins";
 @import "reset";
 @import "settings";
+
+//dependencies
+@import "./components/inputs";
+@import "./components/nav";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/social-block.scss";
+@import "./components/copyright-block.scss";
+
+//pages
+@import "./components/support";

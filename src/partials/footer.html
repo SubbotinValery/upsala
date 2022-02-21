@@ -1,149 +1,86 @@
 <footer class="footer">
   <div class="container">
-    <div class="footer__wrapper">
-      <ul class="footer__nav nav list-reset">
-        <div>
-          <li class="nav__item">
-            <a href="" class="nav__link primary-btn">Поддержать&nbsp;проект</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link">Упсала&nbsp;-&nbsp;Цирк</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link">Спектакли</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link">Партнерам</a>
-          </li>
-          <li class="nav__item"><a href="" class="nav__link">Отчеты</a></li>
-        </div>
-
-        <div>
-          <li class="nav__item">
-            <a href="" class="nav__link">Онлайн-курсы</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link">Магазин</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link">Корпоративные события</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link">Как нас найти</a>
-          </li>
-          <li class="nav__item"><a href="" class="nav__link">Команда</a></li>
-        </div>
-      </ul>
-
-      <div class="footer__contact">
-        <div class="phone title title-3">+7 (812) 633-35-58</div>
-        <div class="mail">hello@upsalacircus.ru</div>
-        <ul class="social list-reset">
-          <li class="social__item">
-            <a href="" class="social__link">
-              <img src="./img/svg/vk-ico.svg" alt="" />
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><img src="./img/svg/instagram-ico.svg" alt=""
-            /></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><img src="./img/svg/facebook-ico.svg" alt=""
-            /></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><img src="./img/svg/tiktok-ico.svg" alt=""
-            /></a>
-          </li>
-        </ul>
-        <div class="copyright__block">
-          <div>
-            <a href="./oferta.html" class="copyright__block-oferta"
-              >Публичная оферта</a
+    <div class="footer-desktop flex space-between">
+      <div class="flex footer__nav">
+        <nav class="nav flex column">
+          <div class="nav__item">
+            <a href="./support.html" class="btn-primary elips nav__item"
+              >Поддержать проект</a
             >
           </div>
-
-          <div class="copyright__block-copyright">
-            © Упсала-Цирк, 2020 АНО Упсала-Цирк ОГРН 1087800004434
+          <div class="nav__item">
+            <a href="./index.html" class="nav__link">Упсала-Цирк</a>
           </div>
-        </div>
+          <div class="nav__item">
+            <a href="" class="nav__link">Спектакли</a>
+          </div>
+          <div class="nav__item">
+            <a href="" class="nav__link">Партнерам</a>
+          </div>
+          <div class="nav__item">
+            <a href="./otcheti.html" class="nav__link">Отчеты</a>
+          </div>
+        </nav>
+
+        <nav class="nav flex column">
+          <div class="nav__item">
+            <a href="" class="nav__link">Онлайн-курсы</a>
+          </div>
+          <div class="nav__item">
+            <a href="" class="nav__link">Магазин</a>
+          </div>
+          <div class="nav__item">
+            <a href="" class="nav__link">Корпоративные события</a>
+          </div>
+          <div class="nav__item">
+            <a href="" class="nav__link">Как нас найти</a>
+          </div>
+          <div class="nav__item">
+            <a href="" class="nav__link">Команда</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__contact">
+        <div class="phone title title-3 font-Spektra">+7 (812) 633-35-58</div>
+        <div class="email text-big">hello@upsalacircus.ru</div>
+        @include('./social-block.html') @include('./copyright-block.html')
       </div>
     </div>
-  </div>
-</footer>
 
-<footer class="footer-mobile">
-  <div class="container">
-    <div class="footer__contact">
-      <div class="phone title title-4">+7 (812) 633-35-58</div>
-      <div class="mail">hello@upsalacircus.ru</div>
+    <div class="footer-mobile flex column">
+      <div class="phone title title-4 font-Spektra">+7 (812) 633-35-58</div>
+      <div class="email text-big">hello@upsalacircus.ru</div>
+      @include('./social-block.html')
 
-      <ul class="social list-reset">
-        <li class="social__item">
-          <a href="" class="social__link">
-            <img src="./img/svg/vk-ico.svg" alt="" />
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="" class="social__link"
-            ><img src="./img/svg/instagram-ico.svg" alt=""
-          /></a>
-        </li>
-        <li class="social__item">
-          <a href="" class="social__link"
-            ><img src="./img/svg/facebook-ico.svg" alt=""
-          /></a>
-        </li>
-        <li class="social__item">
-          <a href="" class="social__link"
-            ><img src="./img/svg/tiktok-ico.svg" alt=""
-          /></a>
-        </li>
-      </ul>
-    </div>
-
-    <ul class="footer__nav nav list-reset">
-      <li class="nav__item">
-        <a href="" class="nav__link primary-btn">Магазин</a>
-      </li>
-      <li class="nav__item">
-        <a href="" class="nav__link">Поддержать проект</a>
-      </li>
-      <li class="nav__item">
-        <a href="" class="nav__link">Упсала</a>
-      </li>
-      <li class="nav__item">
-        <a href="" class="nav__link">Как найти</a>
-      </li>
-
-      <li class="nav__item"><a href="" class="nav__link">Онлайн-курсы</a></li>
-
-      <li class="nav__item">
-        <a href="" class="nav__link">Отчеты</a>
-      </li>
-      <li class="nav__item">
-        <a href="" class="nav__link">Партнерам</a>
-      </li>
-    </ul>
-
-    <div class="footer__contact">
-      <div class="copyright__block">
-        <div>
-          <a href="./oferta.html" class="copyright__block-oferta"
-            >Публичная оферта</a
-          >
+      <nav class="nav flex column">
+        <div class="nav__item">
+          <a href="" class="btn-primary elips nav__item">Магазин</a>
         </div>
-
-        <div class="copyright__block-copyright">
-          © Упсала-Цирк, 2020<br />
-          АНО Упсала-Цирк<br />
-          ОГРН 1087800004434
+        <div class="nav__item">
+          <a href="" class="nav__link">Спектакли</a>
         </div>
-      </div>
+        <div class="nav__item">
+          <a href="" class="nav__link">Поддержать проект</a>
+        </div>
+        <div class="nav__item">
+          <a href="" class="nav__link">Упсала</a>
+        </div>
+        <div class="nav__item">
+          <a href="" class="nav__link">Как найти</a>
+        </div>
+        <div class="nav__item">
+          <a href="" class="nav__link">Онлайн-курсы</a>
+        </div>
+        <div class="nav__item">
+          <a href="" class="nav__link">Отчеты</a>
+        </div>
+        <div class="nav__item">
+          <a href="" class="nav__link">Партнерам</a>
+        </div>
+      </nav>
+
+      @include('./copyright-block.html')
     </div>
   </div>
 </footer>

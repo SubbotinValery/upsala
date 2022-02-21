@@ -1,0 +1,32 @@
+.social__block {
+  display: flex;
+  .social__item {
+    position: relative;
+    width: 10vw;
+    min-width: 7.2rem;
+    max-width: 10.8rem;
+    height: 10vw;
+    min-height: 7.2rem;
+    max-height: 10.8rem;
+    border: 0.1rem solid rgb($grey, $opacity-thick);
+    border-radius: 1.6rem;
+    transition: $fast;
+    &:not(:last-child) {
+      margin-right: min(1rem, 1vw);
+    }
+    &:hover {
+      background-color: $red;
+      border-color: $red;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1.6rem;
+      height: 1.6rem;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}

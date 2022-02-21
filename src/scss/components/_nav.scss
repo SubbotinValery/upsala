@@ -1,0 +1,43 @@
+.nav {
+  .nav__item {
+    margin-right: $space-small;
+    &.btn-primary {
+      margin-left: $space-std;
+      margin-right: 0;
+    }
+  }
+  .nav__link {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    &::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      bottom: -0.1rem;
+      left: 0;
+      width: 0%;
+      height: 0.1rem;
+      background-color: rgb($grey, $opacity-thick);
+      transition: $fast;
+    }
+    &.btn-primary::after {
+      content: none;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  &.column {
+    .nav__item {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0.3rem;
+      .btn-primary {
+        margin-top: $space-small;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
