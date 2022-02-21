@@ -180,9 +180,16 @@
     margin-bottom: 2rem !important;
   }
 
-  .footer {
+  .header__footer {
     & > * {
-      margin-bottom: 3rem;
+      margin-bottom: $space-std;
+    }
+    .copyright__block {
+      text-align: center;
+      align-items: center;
+      .copyright {
+        align-items: center;
+      }
     }
   }
 }
