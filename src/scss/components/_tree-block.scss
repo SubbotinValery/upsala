@@ -1,0 +1,63 @@
+.tree__block {
+  position: relative;
+  width: 100%;
+  height: 55rem;
+  overflow: hidden;
+  margin-top: 10rem;
+  .yellow-bg__wrapper {
+    position: absolute;
+    z-index: -1;
+    left: -15%;
+    bottom: -2%;
+    animation: tree-block-bg 3s alternate infinite linear;
+    .yellow-bg {
+      width: 120%;
+      object-fit: cover;
+    }
+  }
+  .tree__wrapper {
+    position: absolute;
+    transform: scale(0.9);
+    &-1 {
+      left: -10%;
+      bottom: -22%;
+    }
+    &-2 {
+      left: 7%;
+      bottom: -34%;
+      transform: scale(0.8);
+      z-index: 1;
+    }
+    &-3 {
+      left: 17%;
+      bottom: -11%;
+    }
+    &-4 {
+      left: 35%;
+      bottom: -21%;
+    }
+    &-5 {
+      left: 52%;
+      bottom: -36%;
+    }
+    &-6 {
+      left: 67%;
+      bottom: -16%;
+      z-index: -1;
+    }
+    &-7 {
+      left: 80%;
+      bottom: -37%;
+      transform: scale(0.8);
+    }
+  }
+}
+
+@keyframes tree-block-bg {
+  from {
+    transform: translateX(-3%);
+  }
+  to {
+    transform: translateX(3%);
+  }
+}

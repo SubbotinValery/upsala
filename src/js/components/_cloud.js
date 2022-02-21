@@ -5,8 +5,8 @@ const cloudItemAll = document.querySelectorAll(".cloud__item");
 cloudItemAll.forEach((cloud) => {
   anime({
     targets: cloud,
-    translateY: `${anime.random(3, 7)}%`,
-    duration: anime.random(1000, 2000),
+    translateY: `${anime.random(4, 7)}%`,
+    duration: anime.random(1000, 1500),
     loop: true,
     autoplay: true,
     direction: "alternate",

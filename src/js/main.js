@@ -1,4 +1,6 @@
 import "./components/header";
+import "./components/_cloud";
+import "./components/_tree";
 // import "./components/_accordion";
 // import "./components/_expand-vertical";
 // import "./components/_clouds";
