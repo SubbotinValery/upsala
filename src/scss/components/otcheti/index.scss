@@ -76,38 +76,6 @@
       }
     }
   }
-  .progress__block {
-    margin-top: 16rem;
-    .progress__item {
-      position: relative;
-      max-width: 30rem;
-      margin-left: 9.6rem;
-      margin-bottom: max(5vw, 5rem);
-      .cifra {
-        position: absolute;
-        top: -3rem;
-        left: -2rem;
-        transform: translate(-50%, -50%);
-      }
-      img {
-        position: absolute;
-        top: -20rem;
-        height: 11rem;
-        object-fit: cover;
-        object-position: center;
-        &.end {
-          left: 5rem;
-        }
-        &.start {
-          left: -14rem;
-        }
-        &.center {
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-    }
-  }
   .running-line {
     margin-bottom: 8rem;
   }
@@ -166,6 +134,42 @@
         height: 100%;
         object-fit: contain;
         object-position: center;
+      }
+    }
+  }
+}
+
+.progress__block {
+  margin-top: 16rem;
+  .progress__item {
+    position: relative;
+    max-width: 30rem;
+    margin-left: 9.6rem;
+    margin-bottom: max(5vw, 5rem);
+    z-index: 10;
+    .cifra {
+      position: absolute;
+      top: -3rem;
+      left: -2rem;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    img {
+      position: absolute;
+      top: -20rem;
+      height: 11rem;
+      object-fit: cover;
+      object-position: center;
+      &.end {
+        left: 5rem;
+      }
+      &.start {
+        left: -14rem;
+      }
+      &.center {
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }

@@ -41,8 +41,14 @@ body {
 .width-70 {
   width: 70%;
 }
+.width-60 {
+  width: 60%;
+}
 .width-50 {
   width: 50%;
+}
+.width-40 {
+  width: 40%;
 }
 .height-100 {
   height: 100%;
@@ -53,10 +59,10 @@ body {
 
 //font
 .font-Spektra {
-  font-family: "Spektra";
+  font-family: "Spektra" !important;
 }
 .font-GTWalsheimPro {
-  font-family: "GTWalsheimPro";
+  font-family: "GTWalsheimPro" !important;
 }
 
 //title
@@ -226,8 +232,15 @@ body {
   position: fixed;
 }
 
+//background
+.bg-white {
+  background-color: #fff;
+  color: $dark;
+}
+
 //link
 .link {
+  cursor: pointer;
   position: relative;
   display: inline-block;
   width: fit-content;

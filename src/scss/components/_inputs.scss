@@ -87,6 +87,21 @@ input[type="number"] {
   }
 }
 
+textarea {
+  width: 100%;
+  padding: 0.9rem 2.4rem;
+  border: 0.1rem solid rgb($dark, $opacity-thick);
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  resize: none;
+  &:focus,
+  &:active {
+    outline: none;
+    border: 0.1rem solid $dark;
+  }
+}
+
 .checkbox {
   margin: 1.5rem 0;
   input {
