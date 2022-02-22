@@ -38,18 +38,26 @@
       cursor: pointer;
       text-decoration: none;
       color: $grey;
-      font-size: 1.2rem;
-      line-height: 1.6rem;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
       margin-bottom: 2.2rem;
-      margin-left: 1.8rem;
+      margin-left: $space-std;
+      transition: $fast;
       &::before {
         content: "";
         position: absolute;
         top: 0;
-        left: -1.8rem;
-        height: 1.2rem;
-        width: 0.9rem;
+        left: -3.4rem;
+        height: 2rem;
+        width: 2rem;
         background-image: url("..//img/svg/file-ico.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: $fast;
+      }
+      &:hover {
+        color: darken($grey, 30%);
       }
     }
     .oferta__content {

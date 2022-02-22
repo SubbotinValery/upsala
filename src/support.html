@@ -19,19 +19,21 @@
         <div class="container">
           <div class="running-line">
             <div class="title title-1 font-Spektra">
-              &nbsp;Поддержать <span class="italic outline">Проект</span>&nbsp;
-              Поддержать <span class="italic outline">Проект</span>&nbsp;
-              Поддержать <span class="italic outline">Проект</span>&nbsp;
+              &nbsp;Поддержать
+              <span class="italic outline">Проект</span>&nbsp; Поддержать
+              <span class="italic outline">Проект</span>&nbsp; Поддержать
+              <span class="italic outline">Проект</span>&nbsp;
             </div>
 
             <div class="title title-1 font-Spektra">
-              &nbsp;Поддержать <span class="italic outline">Проект</span>&nbsp;
-              Поддержать <span class="italic outline">Проект</span>&nbsp;
-              Поддержать <span class="italic outline">Проект</span>&nbsp;
+              &nbsp;Поддержать
+              <span class="italic outline">Проект</span>&nbsp; Поддержать
+              <span class="italic outline">Проект</span>&nbsp; Поддержать
+              <span class="italic outline">Проект</span>&nbsp;
             </div>
           </div>
 
-          <div class="support__block flex">
+          <div class="desktop support__block flex">
             <div class="descr__block width-50">
               <div>
                 Упсала-Цирк — это современный цирк для детей и взрослых, где
@@ -240,147 +242,191 @@
               />
             </div>
           </div>
-        </div>
-      </section>
-      @include('./partials/tree-block.html')
 
-      <!-- <div class="container">
-        <div class="qa__block">
-          <div class="title title-2">Самые частые вопросы</div>
-
-          <div class="qa">
-            <div class="accordion">
-              <div class="accordion__item">
-                <div class="accordion__control">
-                  <div class="accordion__title">Вопрос 1</div>
-                  <div class="accordion__btn"></div>
+          <div class="mobile support__block text-small">
+            <div class="form__block">
+              <form class="form" action="post">
+                <div class="toggle">
+                  <input
+                    type="radio"
+                    id="mobilePerMonth"
+                    name="type"
+                    value="perMonth"
+                    checked
+                  />
+                  <label for="mobilePerMonth">ЕЖЕМЕСяЧНО</label>
+                  <input
+                    type="radio"
+                    id="mobileOneTime"
+                    name="type"
+                    value="oneTime"
+                  />
+                  <label for="mobileOneTime">РАЗОВО</label>
+                  <div class="toggle-bar"></div>
                 </div>
 
-                <div class="accordion-content__wrapper">
-                  <div class="accordion-content">
-                    <div>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
-                      soluta, veritatis eos optio? Ut neque quis nesciunt
-                      provident impedit fugit, architecto corrupti ipsam
-                      accusantium natus beatae aut sapiente numquam tempore. In
-                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
-                      accusantium doloremque nemo id?
+                <div class="amount__block">
+                  <div class="row-first flex align-center">
+                    <div class="amount__item">
+                      <input
+                        type="radio"
+                        id="mobileAmount350"
+                        name="amountType"
+                        value="350"
+                        checked
+                      />
+                      <label for="mobileAmount350">350 ₽</label>
+
+                      <div class="descr">
+                        Столько стоит мяч для жонглирования, база
+                      </div>
+                    </div>
+                    <div class="amount__item">
+                      <input
+                        type="radio"
+                        id="mobileAmount850"
+                        name="amountType"
+                        value="850"
+                      />
+                      <label for="mobileAmount850">850 ₽</label>
+                      <div class="descr">
+                        Столько стоит день занятий для одного ребёнка в цирке
+                      </div>
+                    </div>
+                    <div class="amount__item">
+                      <input
+                        type="radio"
+                        id="mobileAmount1500"
+                        name="amountType"
+                        value="1500"
+                      />
+                      <label for="mobileAmount1500">1500 ₽</label>
+                      <div class="descr">
+                        Столько стоит мастер-класс с приглашённым тренером по
+                        новой для нас цирковой дисциплине
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              <div class="accordion__item">
-                <div class="accordion__control">
-                  <div class="accordion__title">Вопрос 2</div>
-                  <div class="accordion__btn"></div>
-                </div>
-
-                <div class="accordion-content__wrapper">
-                  <div class="accordion-content">
-                    <div>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
-                      soluta, veritatis eos optio? Ut neque quis nesciunt
-                      provident impedit fugit, architecto corrupti ipsam
-                      accusantium natus beatae aut sapiente numquam tempore. In
-                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
-                      accusantium doloremque nemo id?
+                  <div class="row-second flex align-center">
+                    <div class="amount__item">
+                      <input
+                        type="radio"
+                        id="mobileAmount2166"
+                        name="amountType"
+                        value="2166"
+                      />
+                      <label for="mobileAmount2166">2166 ₽</label>
+                      <div class="descr">
+                        Столько стоит ткань для одного костюма в последнем
+                        спектакле Рондо
+                      </div>
+                    </div>
+                    <div class="amount__item">
+                      <input
+                        type="radio"
+                        id="mobileAmount6005"
+                        name="amountType"
+                        value="6005"
+                      />
+                      <label for="mobileAmount6005">6005 ₽</label>
+                    </div>
+                    <div class="amount__item">
+                      <input
+                        type="radio"
+                        id="mobileAmount10605"
+                        name="amountType"
+                        value="10605"
+                      />
+                      <label for="mobileAmount10605">10605 ₽</label>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              <div class="accordion__item">
-                <div class="accordion__control">
-                  <div class="accordion__title">Вопрос 3</div>
-                  <div class="accordion__btn"></div>
-                </div>
-
-                <div class="accordion-content__wrapper">
-                  <div class="accordion-content">
-                    <div>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
-                      soluta, veritatis eos optio? Ut neque quis nesciunt
-                      provident impedit fugit, architecto corrupti ipsam
-                      accusantium natus beatae aut sapiente numquam tempore. In
-                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
-                      accusantium doloremque nemo id?
+                  <div class="row-third width-100">
+                    <div class="amount__item">
+                      <input
+                        type="radio"
+                        id="mobileAmountCustom"
+                        name="amountType"
+                        value="custom"
+                      />
+                      <label for="mobileAmountCustom"> Ваша сумма </label>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              <div class="accordion__item">
-                <div class="accordion__control">
-                  <div class="accordion__title">Вопрос 4</div>
-                  <div class="accordion__btn"></div>
+                  <input
+                    type="number"
+                    class="amount__input"
+                    placeholder="Ваша сумма"
+                  />
                 </div>
 
-                <div class="accordion-content__wrapper">
-                  <div class="accordion-content">
-                    <div>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
-                      soluta, veritatis eos optio? Ut neque quis nesciunt
-                      provident impedit fugit, architecto corrupti ipsam
-                      accusantium natus beatae aut sapiente numquam tempore. In
-                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
-                      accusantium doloremque nemo id?
-                    </div>
+                <div class="descr__block">
+                  Упсала-Цирк — это современный цирк для детей и взрослых, где
+                  соединяются акробатика, жонглирование, контемпорари, элементы
+                  уличной культуры.
+                </div>
+
+                <input class="name" type="text" placeholder="Имя" />
+                <input
+                  class="email"
+                  type="text"
+                  placeholder="example@domain.com*"
+                />
+
+                <div class="type__block">
+                  <div class="checkbox agree__checkbox">
+                    <input
+                      type="radio"
+                      id="mobilePaypal"
+                      name="cardType"
+                      value="paypal"
+                      checked
+                    />
+                    <label for="mobilePaypal">Paypal</label>
+                  </div>
+
+                  <div class="checkbox agree__checkbox">
+                    <input
+                      type="radio"
+                      id="mobileVisa"
+                      name="cardType"
+                      value="visa"
+                    />
+                    <label for="mobileVisa">Visa</label>
                   </div>
                 </div>
-              </div>
 
-              <div class="accordion__item">
-                <div class="accordion__control">
-                  <div class="accordion__title">Вопрос 5</div>
-                  <div class="accordion__btn"></div>
+                <div class="support__btn btn btn-std">поддержать</div>
+
+                <div class="descr text-small">
+                  Вы выбрали регулярные пожертвования. Это значит, что раз в
+                  месяц с вашей карты автоматически будет списана выбранная
+                  сумма. Именно благодаря регулярной поддержке мы можем
+                  планировать работу наперёд и осуществлять всё задуманное.
+                  Спасибо вам!
                 </div>
 
-                <div class="accordion-content__wrapper">
-                  <div class="accordion-content">
-                    <div>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
-                      soluta, veritatis eos optio? Ut neque quis nesciunt
-                      provident impedit fugit, architecto corrupti ipsam
-                      accusantium natus beatae aut sapiente numquam tempore. In
-                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
-                      accusantium doloremque nemo id?
-                    </div>
-                  </div>
+                <div class="text-small">
+                  Нажимая кнопку «Поддержать», я соглашаюсь с условиями и
+                  принимаю
+                  <a class="link text-red" href="./oferta.html"
+                    >публичную оферту</a
+                  >
                 </div>
-              </div>
-
-              <div class="accordion__item">
-                <div class="accordion__control">
-                  <div class="accordion__title">Вопрос 6</div>
-                  <div class="accordion__btn"></div>
-                </div>
-
-                <div class="accordion-content__wrapper">
-                  <div class="accordion-content">
-                    <div>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum quidem unde saepe minus deleniti eveniet ipsa
-                      soluta, veritatis eos optio? Ut neque quis nesciunt
-                      provident impedit fugit, architecto corrupti ipsam
-                      accusantium natus beatae aut sapiente numquam tempore. In
-                      sit reiciendis ab, ut delectus voluptatem eaque distinctio
-                      accusantium doloremque nemo id?
-                    </div>
-                  </div>
-                </div>
+              </form>
+              <div class="options text-small">
+                <div class="link">Пожертвовать по реквизитам</div>
+                <div class="link">Задать вопрос</div>
+                <div class="link">Самые частые вопросы</div>
               </div>
             </div>
           </div>
         </div>
-      </div> -->
+      </section>
 
-      @include('./partials/footer.html')
+      @include('./partials/tree-block.html')
+      @include('./partials/qa-block.html') @include('./partials/footer.html')
     </div>
   </body>
 </html>

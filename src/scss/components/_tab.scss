@@ -36,7 +36,7 @@
       width: 0%;
       height: 0.2rem;
       background-color: $red;
-      transition: $duration-fast;
+      transition: $fast;
     }
     &.open {
       &::after {
@@ -48,7 +48,7 @@
         width: 100%;
         height: 0.2rem;
         background-color: $red;
-        transition: $duration-fast;
+        transition: $fast;
       }
     }
   }
@@ -62,5 +62,5 @@
 
 .tab__item {
   width: 100%;
-  transition: $duration-medium;
+  transition: $medium;
 }

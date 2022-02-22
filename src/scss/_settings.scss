@@ -38,6 +38,9 @@ body {
 .width-100 {
   width: 100%;
 }
+.width-70 {
+  width: 70%;
+}
 .width-50 {
   width: 50%;
 }
@@ -58,6 +61,7 @@ body {
 
 //title
 .title {
+  font-family: "Spektra";
   margin: 0;
   padding: 0;
   font-weight: 700;
@@ -87,7 +91,7 @@ body {
 
 //text-style
 .outline {
-  -webkit-text-stroke: 1px rgba(200, 200, 200, 0.5);
+  -webkit-text-stroke: 0.1rem rgba($grey, $opacity-thick);
   color: rgba(200, 200, 200, 0);
 }
 .italic {
@@ -244,4 +248,8 @@ body {
   &:hover::after {
     background-color: $red;
   }
+}
+
+.star__wrapper {
+  z-index: $zLowest !important;
 }

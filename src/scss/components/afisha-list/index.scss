@@ -19,7 +19,7 @@
     border-radius: 50%;
     border: 0.1rem solid transparent;
     background-color: $dark;
-    transition: $duration-fast;
+    transition: $fast;
   }
   .filter__selection.is-active {
     border: 0.1rem solid $red;
@@ -52,10 +52,10 @@
   flex-direction: column;
   padding: 2.5rem 1.8rem 2rem 1.8rem;
   margin: 0.5rem;
-  width: 38rem;
+  width: 24%;
   min-width: 30rem;
   overflow: hidden;
-  transition: $duration-fast;
+  transition: $fast;
 
   & > * {
     width: 75%;
@@ -73,7 +73,7 @@
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
-    transition: $duration-fast;
+    transition: $fast;
     z-index: 0;
   }
 

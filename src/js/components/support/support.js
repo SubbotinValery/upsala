@@ -6,6 +6,7 @@ const amountInput = document.querySelector(".amount__input");
 if (radios !== null && amountInput !== null) {
   const hide = () => {
     amountInput.classList.remove("is-visible");
+    amountInput.value = "";
   };
 
   const show = () => {

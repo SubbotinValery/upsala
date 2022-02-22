@@ -1,16 +1,16 @@
 .accordion {
-  transition: $duration-medium;
+  transition: $medium;
   margin-bottom: 10rem;
   * {
-    transition: $duration-medium;
+    transition: $medium;
   }
 }
 .accordion__item {
   position: relative;
   width: 100%;
-  border-bottom: 0.1rem solid rgb(200, 200, 200, 0.5);
+  border-bottom: 0.1rem solid rgb($grey, $opacity-thick);
   &:first-child {
-    border-top: 0.1rem solid rgb(200, 200, 200, 0.5);
+    border-top: 0.1rem solid rgb($grey, $opacity-thick);
   }
 }
 
@@ -31,11 +31,11 @@
   cursor: pointer;
   width: 16.4rem;
   height: 8rem;
-  background-image: url("..//img/accordion-btn-open.png");
+  background-image: url("../img/accordion-btn-open.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  transition: $duration-fast;
+  transition: $fast;
   &:hover {
     transform: scale(1.1);
   }
@@ -43,7 +43,7 @@
 
 .accordion__item.open {
   .accordion__btn {
-    background-image: url("..//img/accordion-btn-close.png.png");
+    background-image: url("../img/accordion-btn-close.png.png");
   }
 }
 

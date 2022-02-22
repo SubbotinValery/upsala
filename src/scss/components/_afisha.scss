@@ -129,7 +129,7 @@
   &__title {
     font-size: 2.4;
     line-height: 3.3rem;
-    color: $dirty-grey;
+    color: $grey-dirty;
     text-transform: uppercase;
     margin-bottom: 3.2rem;
   }
@@ -175,21 +175,21 @@
       display: flex;
       flex-direction: column;
       .label {
-        color: $dirty-grey;
+        color: $grey-dirty;
       }
     }
     &__time {
       display: flex;
       flex-direction: column;
       .label {
-        color: $dirty-grey;
+        color: $grey-dirty;
       }
     }
     &__address {
       display: flex;
       flex-direction: column;
       .label {
-        color: $dirty-grey;
+        color: $grey-dirty;
       }
     }
   }
@@ -278,7 +278,7 @@
         margin-bottom: 6.4rem;
       }
       .content-main__title {
-        color: $dirty-grey;
+        color: $grey-dirty;
         font-size: 2.4rem;
         line-height: 3.2rem;
         text-transform: uppercase;
@@ -422,7 +422,7 @@
   .content {
     .subtitle {
       text-transform: uppercase;
-      color: $dirty-grey;
+      color: $grey-dirty;
       margin-bottom: 1.6rem;
       font-size: 2.5rem;
       line-height: 3.2rem;
@@ -466,7 +466,7 @@
     &__title {
       font-size: 2.4;
       line-height: 3.3rem;
-      color: $dirty-grey;
+      color: $grey-dirty;
       text-transform: uppercase;
       margin-bottom: 3.2rem;
     }

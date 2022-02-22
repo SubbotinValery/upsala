@@ -73,7 +73,7 @@
   height: 43rem;
   border-radius: 1.6rem;
   border: 1px solid rgb(200, 200, 200, 0.5);
-  transition: $duration-fast;
+  transition: $fast;
   &__img {
     position: absolute;
     top: 0;
@@ -102,7 +102,7 @@
     padding: 0 3.2rem;
     padding-top: 6.2rem;
     padding-bottom: 2.3rem;
-    transition: $duration-fast;
+    transition: $fast;
   }
 
   &__name {

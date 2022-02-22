@@ -21,7 +21,6 @@ accordionItems.forEach((item) => {
     contentWrapper.style.height = "0px";
     item.style.height = `calc(${controlHeight}px + ${itemBorderWidth} * 2)`;
   };
-
   const open = () => {
     const control = item.querySelector(".accordion__control");
     const contentWrapper = item.querySelector(".accordion-content__wrapper");
@@ -37,8 +36,21 @@ accordionItems.forEach((item) => {
     contentWrapper.style.height = `${controlHeight + contentHeight}px`;
     item.style.height = `${controlHeight + contentHeight + 30}px`;
   };
-
+  //init
   close();
+  //resize
+  window.addEventListener(
+    "resize",
+    function (event) {
+      if (item.className.match(/\bopen\b/)) {
+        open();
+      } else {
+        close();
+      }
+    },
+    true
+  );
+  //click
   btn.addEventListener("click", function () {
     if (item.className.match(/\bopen\b/)) {
       item.classList.remove("open");
