@@ -15,6 +15,7 @@
 }
 
 .accordion__control {
+  cursor: pointer;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -28,7 +29,6 @@
 }
 
 .accordion__btn {
-  cursor: pointer;
   width: 16.4rem;
   height: 8rem;
   background-image: url("../img/accordion-btn-open.png");

@@ -2,7 +2,7 @@
   .jumper__wrapper {
     position: fixed;
     &-1 {
-      transition: $duration-medium;
+      transition: medium;
       z-index: 10 !important;
     }
     &-2 {
@@ -12,20 +12,20 @@
   .juggler__wrapper {
     position: fixed;
     z-index: -10;
-    transition: $duration-medium;
+    transition: medium;
   }
 
   .cloud__wrapper {
     z-index: -15;
     position: fixed;
-    transition: $duration-medium;
+    transition: medium;
   }
 }
 
 .about-content {
   width: 80%;
   margin-top: 70vh;
-  transition: $duration-medium;
+  transition: medium;
   &-1 {
     font-size: 2.4rem;
     line-height: 3.2rem;

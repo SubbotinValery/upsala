@@ -89,10 +89,8 @@
       .text-medium {
         margin-bottom: 2.4rem;
       }
-      .otcheti__item:not(:last-child) {
-        margin-right: $space-small;
-      }
       .otcheti__item {
+        margin-right: $space-small;
         cursor: pointer;
         position: relative;
         border: 0.1rem solid rgb($grey, $opacity-thick);
@@ -137,6 +135,24 @@
       }
     }
   }
+  .otcheti__block-mobile {
+    display: none;
+    color: $dark;
+    .otcheti__item-wrapper {
+      padding: 0.5rem;
+      .otcheti__item {
+        margin-right: 0;
+        display: block;
+        min-width: 14.5rem;
+        max-width: 18rem;
+        padding: 0 5rem;
+        padding-bottom: 2.5rem;
+        text-align: center;
+        border: 0.1rem solid rgb($dark, $opacity-thick);
+        border-radius: 1.2rem;
+      }
+    }
+  }
 }
 
 .progress__block {
@@ -171,6 +187,87 @@
         left: 50%;
         transform: translateX(-50%);
       }
+    }
+  }
+}
+
+@include tablet {
+  .progress__block {
+    & > * {
+      justify-content: flex-start;
+    }
+    .progress__item {
+      margin-bottom: 12rem;
+    }
+    img {
+      display: none;
+    }
+  }
+  .otcheti__section {
+    padding-top: 27rem;
+    .container > .title {
+      margin-bottom: 0;
+    }
+    .otcheti-btn {
+      position: relative;
+      cursor: pointer;
+      color: $red;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      text-transform: capitalize;
+      background: transparent;
+      width: fit-content;
+      padding: 0;
+      border: none;
+      display: inline-block;
+      text-align: left;
+      margin-bottom: $space-std !important;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.1rem;
+        left: 0;
+        width: 100%;
+        height: 0.1rem;
+        background-color: rgb($red, $opacity-thick);
+        opacity: 0;
+        transition: $fast;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+    .descr__block {
+      margin-bottom: $space-big;
+      .descr__img {
+        position: absolute;
+        z-index: $zLow;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        .women-with-case {
+          position: absolute;
+          right: -30%;
+          top: -40%;
+          animation: none;
+        }
+        .cloud__wrapper {
+          display: none;
+        }
+      }
+      .descr {
+        width: 100%;
+      }
+    }
+    .otcheti__block {
+      display: none;
+    }
+    .otcheti__block-mobile {
+      display: block;
+    }
+    .otcheti__block-wrapper {
+      background-color: $grey;
     }
   }
 }

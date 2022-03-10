@@ -1,12 +1,12 @@
 .ne-cirk-section {
   .girl__wrapper {
     position: fixed;
-    transition: $duration-medium;
+    transition: medium;
     z-index: -10;
   }
   .hand__wrapper {
     position: fixed;
-    transition: $duration-medium;
+    transition: medium;
     z-index: -20;
   }
 }
@@ -19,7 +19,7 @@
 
 .ne-cirk__title {
   * {
-    transition: $duration-medium;
+    transition: medium;
   }
   .italic {
     display: flex;

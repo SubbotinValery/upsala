@@ -2,7 +2,7 @@
   margin-bottom: 40vh;
   .cirkcler__wrapper {
     position: fixed;
-    transition: $duration-medium;
+    transition: medium;
   }
   .kacheli__wrapper {
     margin-top: 30vh;
@@ -50,7 +50,7 @@
   .cloud__wrapper {
     position: fixed;
     z-index: -10;
-    transition: $duration-medium;
+    transition: medium;
   }
   .yellow-bg__wrapper {
     position: fixed;

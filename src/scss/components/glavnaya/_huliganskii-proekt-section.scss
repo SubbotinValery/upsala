@@ -2,45 +2,45 @@
   margin-top: 20vh;
   .unicycle__wrapper {
     position: fixed;
-    transition: $duration-medium;
+    transition: medium;
   }
 
   .unicycle-profile-girl__wrapper {
     position: fixed;
-    transition: $duration-medium;
+    transition: medium;
   }
 
   .unicycle-profile-boy__wrapper {
     position: fixed;
-    transition: $duration-medium;
+    transition: medium;
   }
 
   .panelka__wrapper-left {
     position: fixed;
     z-index: -10;
-    transition: $duration-medium;
+    transition: medium;
   }
 
   .panelka__wrapper-right {
     position: fixed;
     z-index: -10;
-    transition: $duration-medium;
+    transition: medium;
   }
 
   .elephant__wrapper {
     position: fixed;
-    transition: $duration-medium;
+    transition: medium;
   }
 
   .childrens__wrapper {
     position: fixed;
-    transition: $duration-medium;
+    transition: medium;
   }
 
   .yellow-bg__wrapper {
     z-index: -20;
     position: fixed;
-    transition: $duration-medium;
+    transition: medium;
   }
 
   .rope__wrapper {
@@ -50,7 +50,7 @@
     right: 31%;
     height: 5rem;
     transform: translateY(50%);
-    transition: $duration-medium;
+    transition: medium;
     background-image: url("..//../img/rope.png");
     background-repeat: no-repeat;
     background-position: center;

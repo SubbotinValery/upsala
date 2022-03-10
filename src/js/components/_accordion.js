@@ -1,7 +1,7 @@
 const accordionItems = document.querySelectorAll(".accordion .accordion__item");
 
 accordionItems.forEach((item) => {
-  const btn = item.querySelector(".accordion__control .accordion__btn");
+  const btn = item.querySelector(".accordion__control");
 
   const close = () => {
     const control = item.querySelector(".accordion__control");

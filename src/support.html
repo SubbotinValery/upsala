@@ -11,422 +11,240 @@
     <script defer src="js/main.js"></script>
   </head>
 
-  <body id="support">
-    <div class="flex column space-between height-100">
+  <body id="supportPage">
+    <div class="support__wrapper">
       @include('./partials/header.html')
 
-      <section class="support__section">
-        <div class="container">
-          <div class="running-line">
-            <div class="title title-1 font-Spektra">
-              &nbsp;Поддержать
-              <span class="italic outline">Проект</span>&nbsp; Поддержать
-              <span class="italic outline">Проект</span>&nbsp; Поддержать
-              <span class="italic outline">Проект</span>&nbsp;
-            </div>
-
-            <div class="title title-1 font-Spektra">
-              &nbsp;Поддержать
-              <span class="italic outline">Проект</span>&nbsp; Поддержать
-              <span class="italic outline">Проект</span>&nbsp; Поддержать
-              <span class="italic outline">Проект</span>&nbsp;
-            </div>
+      <div class="container">
+        <div class="running-line">
+          <div class="title title-1 font-Spektra">
+            &nbsp;Поддержать
+            <span class="italic outline">Проект</span>&nbsp; Поддержать
+            <span class="italic outline">Проект</span>&nbsp; Поддержать
+            <span class="italic outline">Проект</span>&nbsp;
           </div>
 
-          <div class="desktop support__block flex">
-            <div class="descr__block width-50">
-              <div>
-                Упсала-Цирк — это современный цирк для детей и взрослых, где
-                соединяются акробатика, жонглирование, контемпорари, элементы
-                уличной культуры.
-                <br />
-                <br />
-                В стационарном шатре без животных и клоунов, в котором люди
-                смеются и плачут, перья летят, в офисе висит «Золотая маска», в
-                финале спектакля играет АукцЫон, пока дети на набережной
-                устраивают мексиканский карнавал смерти.
-              </div>
-              <br />
-
-              <a href="./profile.html" class="btn-primary elips">
-                Личный кабинет
-              </a>
-            </div>
-
-            <div class="form__block width-50">
-              <form class="form" action="post">
-                <div class="toggle">
-                  <input
-                    type="radio"
-                    id="perMonth"
-                    name="type"
-                    value="perMonth"
-                    checked
-                  />
-                  <label for="perMonth">ЕЖЕМЕСяЧНО</label>
-                  <input
-                    type="radio"
-                    id="oneTime"
-                    name="type"
-                    value="oneTime"
-                  />
-                  <label for="oneTime">РАЗОВО</label>
-                  <div class="toggle-bar"></div>
-                </div>
-                <div class="amount__block">
-                  <div class="row-first flex align-center">
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="amount350"
-                        name="amountType"
-                        value="350"
-                        checked
-                      />
-                      <label for="amount350">350 ₽</label>
-
-                      <div class="descr">
-                        Столько стоит мяч для жонглирования, база
-                      </div>
-                    </div>
-
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="amount850"
-                        name="amountType"
-                        value="850"
-                      />
-                      <label for="amount850">850 ₽</label>
-                      <div class="descr">
-                        Столько стоит день занятий для одного ребёнка в цирке
-                      </div>
-                    </div>
-
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="amount1500"
-                        name="amountType"
-                        value="1500"
-                      />
-                      <label for="amount1500">1500 ₽</label>
-                      <div class="descr">
-                        Столько стоит мастер-класс с приглашённым тренером по
-                        новой для нас цирковой дисциплине
-                      </div>
-                    </div>
-
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="amount2166"
-                        name="amountType"
-                        value="2166"
-                      />
-                      <label for="amount2166">2166 ₽</label>
-                      <div class="descr">
-                        Столько стоит ткань для одного костюма в последнем
-                        спектакле Рондо
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row-second flex align-center">
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="amount6005"
-                        name="amountType"
-                        value="6005"
-                      />
-                      <label for="amount6005">6005 ₽</label>
-                    </div>
-
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="amount10605"
-                        name="amountType"
-                        value="10605"
-                      />
-                      <label for="amount10605">10605 ₽</label>
-                    </div>
-
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="amountCustom"
-                        name="amountType"
-                        value="custom"
-                      />
-                      <label for="amountCustom"> Ваша сумма </label>
-                    </div>
-                  </div>
-
-                  <input
-                    type="number"
-                    class="amount__input"
-                    placeholder="Ваша сумма"
-                  />
-                </div>
-
-                <input class="name" type="text" placeholder="Имя" />
-                <input
-                  class="email"
-                  type="text"
-                  placeholder="example@domain.com*"
-                />
-
-                <div class="type__block">
-                  <div class="checkbox agree__checkbox">
-                    <input
-                      type="radio"
-                      id="paypal"
-                      name="cardType"
-                      value="paypal"
-                      checked
-                    />
-                    <label for="paypal">Paypal</label>
-                  </div>
-
-                  <div class="checkbox agree__checkbox">
-                    <input
-                      type="radio"
-                      id="visa"
-                      name="cardType"
-                      value="visa"
-                    />
-                    <label for="visa">Visa</label>
-                  </div>
-                </div>
-
-                <div class="support__btn btn btn-std">поддержать</div>
-
-                <div class="descr text-small">
-                  Вы выбрали регулярные пожертвования. Это значит, что раз в
-                  месяц с вашей карты автоматически будет списана выбранная
-                  сумма. Именно благодаря регулярной поддержке мы можем
-                  планировать работу наперёд и осуществлять всё задуманное.
-                  Спасибо вам!
-                </div>
-
-                <div class="text-small">
-                  Нажимая кнопку «Поддержать», я соглашаюсь с условиями и
-                  принимаю
-                  <a class="link text-red" href="./oferta.html"
-                    >публичную оферту</a
-                  >
-                </div>
-              </form>
-
-              <div class="options text-small">
-                <div class="link">Пожертвовать по реквизитам</div>
-                <div class="link">Задать вопрос</div>
-                <div class="link">Самые частые вопросы</div>
-              </div>
-            </div>
-
-            <div class="cloud__wrapper cloud__wrapper-1">
-              <img
-                src="./img/cloud.png"
-                class="cloud__item cloud__item-1"
-                alt=""
-              />
-            </div>
-            <div class="cloud__wrapper cloud__wrapper-2">
-              <img
-                src="./img/cloud.png"
-                class="cloud__item cloud__item-2"
-                alt=""
-              />
-            </div>
-          </div>
-
-          <div class="mobile support__block text-small">
-            <div class="form__block">
-              <form class="form" action="post">
-                <div class="toggle">
-                  <input
-                    type="radio"
-                    id="mobilePerMonth"
-                    name="type"
-                    value="perMonth"
-                    checked
-                  />
-                  <label for="mobilePerMonth">ЕЖЕМЕСяЧНО</label>
-                  <input
-                    type="radio"
-                    id="mobileOneTime"
-                    name="type"
-                    value="oneTime"
-                  />
-                  <label for="mobileOneTime">РАЗОВО</label>
-                  <div class="toggle-bar"></div>
-                </div>
-
-                <div class="amount__block">
-                  <div class="row-first flex align-center">
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="mobileAmount350"
-                        name="amountType"
-                        value="350"
-                        checked
-                      />
-                      <label for="mobileAmount350">350 ₽</label>
-
-                      <div class="descr">
-                        Столько стоит мяч для жонглирования, база
-                      </div>
-                    </div>
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="mobileAmount850"
-                        name="amountType"
-                        value="850"
-                      />
-                      <label for="mobileAmount850">850 ₽</label>
-                      <div class="descr">
-                        Столько стоит день занятий для одного ребёнка в цирке
-                      </div>
-                    </div>
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="mobileAmount1500"
-                        name="amountType"
-                        value="1500"
-                      />
-                      <label for="mobileAmount1500">1500 ₽</label>
-                      <div class="descr">
-                        Столько стоит мастер-класс с приглашённым тренером по
-                        новой для нас цирковой дисциплине
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row-second flex align-center">
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="mobileAmount2166"
-                        name="amountType"
-                        value="2166"
-                      />
-                      <label for="mobileAmount2166">2166 ₽</label>
-                      <div class="descr">
-                        Столько стоит ткань для одного костюма в последнем
-                        спектакле Рондо
-                      </div>
-                    </div>
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="mobileAmount6005"
-                        name="amountType"
-                        value="6005"
-                      />
-                      <label for="mobileAmount6005">6005 ₽</label>
-                    </div>
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="mobileAmount10605"
-                        name="amountType"
-                        value="10605"
-                      />
-                      <label for="mobileAmount10605">10605 ₽</label>
-                    </div>
-                  </div>
-
-                  <div class="row-third width-100">
-                    <div class="amount__item">
-                      <input
-                        type="radio"
-                        id="mobileAmountCustom"
-                        name="amountType"
-                        value="custom"
-                      />
-                      <label for="mobileAmountCustom"> Ваша сумма </label>
-                    </div>
-                  </div>
-
-                  <input
-                    type="number"
-                    class="amount__input"
-                    placeholder="Ваша сумма"
-                  />
-                </div>
-
-                <div class="descr__block">
-                  Упсала-Цирк — это современный цирк для детей и взрослых, где
-                  соединяются акробатика, жонглирование, контемпорари, элементы
-                  уличной культуры.
-                </div>
-
-                <input class="name" type="text" placeholder="Имя" />
-                <input
-                  class="email"
-                  type="text"
-                  placeholder="example@domain.com*"
-                />
-
-                <div class="type__block">
-                  <div class="checkbox agree__checkbox">
-                    <input
-                      type="radio"
-                      id="mobilePaypal"
-                      name="cardType"
-                      value="paypal"
-                      checked
-                    />
-                    <label for="mobilePaypal">Paypal</label>
-                  </div>
-
-                  <div class="checkbox agree__checkbox">
-                    <input
-                      type="radio"
-                      id="mobileVisa"
-                      name="cardType"
-                      value="visa"
-                    />
-                    <label for="mobileVisa">Visa</label>
-                  </div>
-                </div>
-
-                <div class="support__btn btn btn-std">поддержать</div>
-
-                <div class="descr text-small">
-                  Вы выбрали регулярные пожертвования. Это значит, что раз в
-                  месяц с вашей карты автоматически будет списана выбранная
-                  сумма. Именно благодаря регулярной поддержке мы можем
-                  планировать работу наперёд и осуществлять всё задуманное.
-                  Спасибо вам!
-                </div>
-
-                <div class="text-small">
-                  Нажимая кнопку «Поддержать», я соглашаюсь с условиями и
-                  принимаю
-                  <a class="link text-red" href="./oferta.html"
-                    >публичную оферту</a
-                  >
-                </div>
-              </form>
-              <div class="options text-small">
-                <div class="link">Пожертвовать по реквизитам</div>
-                <div class="link">Задать вопрос</div>
-                <div class="link">Самые частые вопросы</div>
-              </div>
-            </div>
+          <div class="title title-1 font-Spektra">
+            &nbsp;Поддержать
+            <span class="italic outline">Проект</span>&nbsp; Поддержать
+            <span class="italic outline">Проект</span>&nbsp; Поддержать
+            <span class="italic outline">Проект</span>&nbsp;
           </div>
         </div>
-      </section>
+
+        <div class="support__block">
+          <div class="descr">
+            <div>
+              Упсала-Цирк — это современный цирк для детей и взрослых, где
+              соединяются акробатика, жонглирование, контемпорари, элементы
+              уличной культуры.
+              <br />
+              <br />
+              В стационарном шатре без животных и клоунов, в котором люди
+              смеются и плачут, перья летят, в офисе висит «Золотая маска», в
+              финале спектакля играет АукцЫон, пока дети на набережной
+              устраивают мексиканский карнавал смерти.
+            </div>
+            <br />
+
+            <a href="./profile.html" class="btn-primary elips">
+              Личный кабинет
+            </a>
+          </div>
+
+          <div class="form">
+            <form action="post">
+              <div class="toggle">
+                <input
+                  type="radio"
+                  id="perMonth"
+                  name="type"
+                  value="perMonth"
+                  checked
+                />
+                <label for="perMonth">ЕЖЕМЕСяЧНО</label>
+                <input type="radio" id="oneTime" name="type" value="oneTime" />
+                <label for="oneTime">РАЗОВО</label>
+                <div class="toggle-bar"></div>
+              </div>
+              <div class="amount__block">
+                <div class="amount__item">
+                  <input
+                    type="radio"
+                    id="amount350"
+                    name="amountType"
+                    value="350"
+                    checked
+                  />
+                  <label for="amount350">350 ₽</label>
+
+                  <div class="descr">
+                    Столько стоит мяч для жонглирования, база
+                  </div>
+                </div>
+
+                <div class="amount__item">
+                  <input
+                    type="radio"
+                    id="amount850"
+                    name="amountType"
+                    value="850"
+                  />
+                  <label for="amount850">850 ₽</label>
+                  <div class="descr">
+                    Столько стоит день занятий для одного ребёнка в цирке
+                  </div>
+                </div>
+
+                <div class="amount__item">
+                  <input
+                    type="radio"
+                    id="amount1500"
+                    name="amountType"
+                    value="1500"
+                  />
+                  <label for="amount1500">1500 ₽</label>
+                  <div class="descr">
+                    Столько стоит мастер-класс с приглашённым тренером по новой
+                    для нас цирковой дисциплине
+                  </div>
+                </div>
+
+                <div class="amount__item">
+                  <input
+                    type="radio"
+                    id="amount2166"
+                    name="amountType"
+                    value="2166"
+                  />
+                  <label for="amount2166">2166 ₽</label>
+                  <div class="descr">
+                    Столько стоит ткань для одного костюма в последнем спектакле
+                    Рондо
+                  </div>
+                </div>
+
+                <div class="amount__item">
+                  <input
+                    type="radio"
+                    id="amount6005"
+                    name="amountType"
+                    value="6005"
+                  />
+                  <label for="amount6005">6005 ₽</label>
+                </div>
+
+                <div class="amount__item">
+                  <input
+                    type="radio"
+                    id="amount10605"
+                    name="amountType"
+                    value="10605"
+                  />
+                  <label for="amount10605">10605 ₽</label>
+                </div>
+
+                <div class="amount__item amount-custom__wrapper">
+                  <input
+                    type="radio"
+                    id="amountCustom"
+                    name="amountType"
+                    value="custom"
+                  />
+                  <label for="amountCustom"> Ваша сумма </label>
+                </div>
+
+                <input
+                  type="number"
+                  class="amount__input"
+                  placeholder="Ваша сумма"
+                />
+              </div>
+
+              <input class="name" type="text" placeholder="Имя" />
+              <input
+                class="email"
+                type="text"
+                placeholder="example@domain.com*"
+              />
+
+              <div class="type__block">
+                <div class="checkbox agree__checkbox">
+                  <input
+                    type="radio"
+                    id="paypal"
+                    name="cardType"
+                    value="paypal"
+                    checked
+                  />
+                  <label for="paypal">Paypal</label>
+                </div>
+
+                <div class="checkbox agree__checkbox">
+                  <input type="radio" id="visa" name="cardType" value="visa" />
+                  <label for="visa">Visa</label>
+                </div>
+              </div>
+
+              <div class="support__btn btn btn-std modal__btn-success">
+                поддержать
+              </div>
+
+              <div class="descr text-small">
+                Вы выбрали регулярные пожертвования. Это значит, что раз в месяц
+                с вашей карты автоматически будет списана выбранная сумма.
+                Именно благодаря регулярной поддержке мы можем планировать
+                работу наперёд и осуществлять всё задуманное. Спасибо вам!
+              </div>
+
+              <div class="text-small">
+                Нажимая кнопку «Поддержать», я соглашаюсь с условиями и принимаю
+                <a class="link text-red" href="./oferta.html"
+                  >публичную оферту</a
+                >
+              </div>
+            </form>
+
+            <div class="options text-small">
+              <div class="link modal__btn-details">
+                Пожертвовать по реквизитам
+              </div>
+              <div class="link">Задать вопрос</div>
+              <div class="link">Самые частые вопросы</div>
+            </div>
+          </div>
+
+          <div class="cloud__wrapper cloud__wrapper-1">
+            <img
+              src="./img/cloud.png"
+              class="cloud__item cloud__item-1"
+              alt=""
+            />
+          </div>
+          <div class="cloud__wrapper cloud__wrapper-2">
+            <img
+              src="./img/cloud.png"
+              class="cloud__item cloud__item-2"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
 
       @include('./partials/tree-block.html')
       @include('./partials/qa-block.html') @include('./partials/footer.html')
+    </div>
+
+    <div class="modal">
+      <div class="modal__content-details">
+        @include('./partials/details-block.html')
+        <div class="modal__btn-close"></div>
+      </div>
+
+      <div class="modal__content-success">
+        @include('./partials/support-ty.html')
+        <div class="modal__btn-close"></div>
+      </div>
     </div>
   </body>
 </html>
