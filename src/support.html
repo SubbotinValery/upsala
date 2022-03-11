@@ -209,8 +209,8 @@
               <div class="link modal__btn-details">
                 Пожертвовать по реквизитам
               </div>
-              <div class="link">Задать вопрос</div>
-              <div class="link">Самые частые вопросы</div>
+              <div class="link modal__btn-additional-q">Задать вопрос</div>
+              <div class="link qa__block-trigger">Самые частые вопросы</div>
             </div>
           </div>
 
@@ -243,6 +243,11 @@
 
       <div class="modal__content-success">
         @include('./partials/support-ty.html')
+        <div class="modal__btn-close"></div>
+      </div>
+
+      <div class="modal__content-additional-q">
+        @include('./partials/additional-q-block.html')
         <div class="modal__btn-close"></div>
       </div>
     </div>

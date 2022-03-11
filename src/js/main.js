@@ -6,6 +6,7 @@ import "./components/_accordion";
 import "./components/_tab";
 import "./components/_expand-vertical";
 import "./components/_modal";
+import "./components/_input-mask";
 
 // komanda.html;
 // import "./components/_komanda-slider";

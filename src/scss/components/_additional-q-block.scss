@@ -1,0 +1,15 @@
+.additional-q__block {
+  color: $dark;
+  max-width: 60rem;
+  .additional-q__title {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    margin-bottom: $space-std;
+  }
+  .textarea__descr {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-bottom: 0.5rem;
+    margin-top: $space-std;
+  }
+}

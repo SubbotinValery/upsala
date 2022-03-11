@@ -88,17 +88,21 @@ input[type="number"] {
 }
 
 textarea {
+  font-family: "GTWalsheimPro" !important;
   width: 100%;
   padding: 0.9rem 2.4rem;
   border: 0.1rem solid rgb($dark, $opacity-thick);
   border-radius: 0.7rem;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   line-height: 1.6rem;
   resize: none;
   &:focus,
   &:active {
     outline: none;
     border: 0.1rem solid $dark;
+  }
+  &::placeholder {
+    color: rgb($grey, 0.8);
   }
 }
 

@@ -1,5 +1,14 @@
 const accordionItems = document.querySelectorAll(".accordion .accordion__item");
 
+const qaBlockTrigger = document.querySelector(".qa__block-trigger");
+const qaBlock = document.querySelector(".qa__block");
+
+if (qaBlockTrigger && qaBlock) {
+  qaBlockTrigger.addEventListener("click", function () {
+    window.scrollTo({ top: qaBlock.offsetTop - 120, behavior: "smooth" });
+  });
+}
+
 accordionItems.forEach((item) => {
   const btn = item.querySelector(".accordion__control");
 

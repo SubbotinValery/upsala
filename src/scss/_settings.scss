@@ -266,3 +266,11 @@ body {
 .star__wrapper {
   z-index: $zLowest !important;
 }
+
+@include small-tablet {
+  .options {
+    .qa__block-trigger {
+      display: none;
+    }
+  }
+}
