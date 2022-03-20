@@ -153,6 +153,35 @@
       }
     }
   }
+  .tab__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 0.5rem;
+    .otcheti__item {
+      position: relative;
+      padding: 2.5rem 0.5rem !important;
+      padding-top: 10rem !important;
+      width: 100%;
+      max-width: 100% !important;
+      white-space: nowrap;
+      &:hover {
+        background-color: darken($grey, 5%);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("../../../img/svg/file-ico.svg");
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4.8rem;
+        height: 6.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
 }
 
 .progress__block {
@@ -265,9 +294,24 @@
     }
     .otcheti__block-mobile {
       display: block;
+      .tab__item {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
     }
     .otcheti__block-wrapper {
       background-color: $grey;
+      padding: $space-std 0;
+    }
+  }
+}
+
+@include small-tablet {
+  .otcheti__section {
+    .otcheti__block-mobile {
+      display: block;
+      .tab__item {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
     }
   }
 }
