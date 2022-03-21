@@ -84,10 +84,17 @@
     .title {
       margin-bottom: 4.8rem;
     }
+    .otcheti__nav {
+      display: none;
+    }
     .otcheti__type {
       margin-bottom: 4.8rem;
       .text-medium {
         margin-bottom: 2.4rem;
+      }
+      .otcheti-type__block {
+        display: flex;
+        flex-wrap: wrap;
       }
       .otcheti__item {
         margin-right: $space-small;
@@ -102,7 +109,7 @@
         max-width: 27rem;
         max-height: $space-big;
         margin-bottom: $space-small;
-        transition: $fast;
+
         &::before {
           content: "";
           position: absolute;
@@ -132,53 +139,6 @@
         height: 100%;
         object-fit: contain;
         object-position: center;
-      }
-    }
-  }
-  .otcheti__block-mobile {
-    display: none;
-    color: $dark;
-    .otcheti__item-wrapper {
-      padding: 0.5rem;
-      .otcheti__item {
-        margin-right: 0;
-        display: block;
-        min-width: 14.5rem;
-        max-width: 18rem;
-        padding: 0 5rem;
-        padding-bottom: 2.5rem;
-        text-align: center;
-        border: 0.1rem solid rgb($dark, $opacity-thick);
-        border-radius: 1.2rem;
-      }
-    }
-  }
-  .tab__item {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-gap: 0.5rem;
-    .otcheti__item {
-      position: relative;
-      padding: 2.5rem 0.5rem !important;
-      padding-top: 10rem !important;
-      width: 100%;
-      max-width: 100% !important;
-      white-space: nowrap;
-      &:hover {
-        background-color: darken($grey, 5%);
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        background-image: url("../../../img/svg/file-ico.svg");
-        top: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 4.8rem;
-        height: 6.4rem;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
       }
     }
   }
@@ -289,29 +249,181 @@
         width: 100%;
       }
     }
-    .otcheti__block {
-      display: none;
-    }
-    .otcheti__block-mobile {
-      display: block;
-      .tab__item {
-        grid-template-columns: repeat(3, 1fr) !important;
-      }
-    }
     .otcheti__block-wrapper {
+      padding-top: $space-big !important;
       background-color: $grey;
       padding: $space-std 0;
+    }
+    .otcheti__block {
+      .title {
+        margin-bottom: 6rem !important;
+      }
+      .otcheti__nav {
+        display: block !important;
+        color: $dark;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        text-transform: uppercase !important;
+        font-size: 1.2rem !important;
+        line-height: 1.6rem !important;
+        padding-bottom: $space-small !important;
+        border-bottom: 0.1rem solid rgb($dark, $opacity-thick);
+        margin-bottom: $space-std !important;
+        .nav__item {
+          position: relative;
+          cursor: pointer;
+          &::after {
+            z-index: 10;
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            left: 0;
+            bottom: -1.7rem;
+          }
+          &:hover::after {
+            background-color: $red;
+          }
+          &.is-active::after {
+            background-color: $red;
+          }
+        }
+      }
+      .otcheti__type {
+        .text-medium {
+          color: $dark !important;
+          font-size: 2.4rem;
+          line-height: 3.2rem !important;
+        }
+      }
+      .otcheti-type__block {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+      }
+      .otcheti__item {
+        max-width: none !important;
+        max-height: none !important;
+        color: $dark;
+        border-color: rgb($dark, $opacity-thick) !important;
+        padding: 10rem 0.5rem 2.8rem 0.5rem !important;
+        margin: 0 !important;
+        text-align: center !important;
+        &:hover {
+          background-color: darken($grey, 5%);
+        }
+        &::before {
+          width: 4.8rem !important;
+          height: 6.4rem !important;
+          top: 2.4rem !important;
+          left: 50% !important;
+          transform: translateX(-50%) !important;
+        }
+      }
     }
   }
 }
 
-@include small-tablet {
-  .otcheti__section {
-    .otcheti__block-mobile {
-      display: block;
-      .tab__item {
-        grid-template-columns: repeat(2, 1fr) !important;
+.otcheti__slider {
+  z-index: 10;
+  padding: 3rem 0;
+  padding-bottom: 10rem;
+  width: 45rem;
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+  }
+  .otcheti-slider__item {
+    position: relative;
+    cursor: pointer;
+    width: 40rem;
+    height: 50rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    .slider__img {
+      position: absolute;
+      top: -10rem;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .slider__content {
+      text-transform: uppercase;
+      padding-top: $space-big;
+      font-family: "Spektra";
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      letter-spacing: 0.1rem;
+      position: absolute;
+      bottom: 0;
+      z-index: 10;
+      width: 100%;
+      height: 20rem;
+      color: $grey;
+      background-image: url("../../../img/chto-proishodit-img-bg-item.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+    }
+  }
+
+  .arrow-wrapper {
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60rem;
+    display: flex;
+    justify-content: space-between;
+    .is-control {
+      border-color: $grey;
+      &.previous-button {
+        .arrow {
+          border-right-color: $grey;
+        }
       }
+      &.next-button {
+        .arrow {
+          border-left-color: $grey;
+        }
+      }
+      &:hover {
+        border-color: $red;
+      }
+    }
+  }
+
+  .splide__pagination {
+    width: 100%;
+    bottom: -5rem;
+  }
+
+  .splide__pagination li button {
+    background-color: $grey;
+  }
+  .splide__pagination li button[aria-current="true"] {
+    background-color: $grey;
+  }
+}
+
+@include small-tablet {
+  .otcheti__slider {
+    padding-bottom: 3rem;
+    .arrow-wrapper {
+      z-index: 1;
+      width: auto;
+      position: static;
+    }
+    .splide__pagination {
+      bottom: -13.5rem;
+    }
+  }
+  .otcheti__block {
+    .otcheti-type__block {
+      grid-template-columns: repeat(2, 1fr) !important;
     }
   }
 }

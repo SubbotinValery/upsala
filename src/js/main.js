@@ -19,3 +19,6 @@ import "./components/not-found/_not-found";
 
 //support
 import "./components/support/support";
+
+//otcheti
+import "./components/otcheti/_otcheti";
