@@ -130,7 +130,7 @@
     }
     .star__wrapper {
       position: absolute;
-      right: -10rem;
+      right: 5vw;
       top: -20rem;
       width: 40rem !important;
       height: 40rem !important;
@@ -320,6 +320,9 @@
           left: 50% !important;
           transform: translateX(-50%) !important;
         }
+      }
+      .star__wrapper {
+        display: none;
       }
     }
   }
