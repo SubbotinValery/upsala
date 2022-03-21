@@ -278,14 +278,17 @@
             content: "";
             position: absolute;
             height: 2px;
-            width: 100%;
+            width: 0%;
             left: 0;
             bottom: -1.7rem;
+            transition: $fast;
           }
           &:hover::after {
+            width: 100%;
             background-color: $red;
           }
           &.is-active::after {
+            width: 100%;
             background-color: $red;
           }
         }

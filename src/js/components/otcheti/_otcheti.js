@@ -1,38 +1,42 @@
 let otchetiSplide;
 let otchetiPrev, otchetiNext;
 
-document.addEventListener("DOMContentLoaded", function () {
-  otchetiPrev = document.querySelector("#otchetiSlider .previous-button");
-  otchetiNext = document.querySelector("#otchetiSlider .next-button");
+const otchetiSlider = document.querySelector("#otchetiSlider");
 
-  otchetiSplide = new Splide("#otchetiSlider .splide", {
-    gap: "3rem",
-    arrows: false,
-    perPage: 1,
-    type: "loop",
-    pagination: true,
-    keyboard: false,
-    slideFocus: false,
-  }).mount();
+if (otchetiSlider !== null) {
+  document.addEventListener("DOMContentLoaded", function () {
+    otchetiPrev = document.querySelector("#otchetiSlider .previous-button");
+    otchetiNext = document.querySelector("#otchetiSlider .next-button");
 
-  otchetiSplide.on("move", function () {
-    var slides = document.querySelectorAll(
-      "#otchetiSlider .splide .splide__slide"
-    );
+    otchetiSplide = new Splide("#otchetiSlider .splide", {
+      gap: "3rem",
+      arrows: false,
+      perPage: 1,
+      type: "loop",
+      pagination: true,
+      keyboard: false,
+      slideFocus: false,
+    }).mount();
 
-    slides.forEach(function (slide) {
-      slide.classList.add("is-visible");
+    otchetiSplide.on("move", function () {
+      var slides = document.querySelectorAll(
+        "#otchetiSlider .splide .splide__slide"
+      );
+
+      slides.forEach(function (slide) {
+        slide.classList.add("is-visible");
+      });
+    });
+
+    otchetiPrev.addEventListener("click", function (e) {
+      otchetiSplide.go("<");
+    });
+
+    otchetiNext.addEventListener("click", function (e) {
+      otchetiSplide.go(">");
     });
   });
-
-  otchetiPrev.addEventListener("click", function (e) {
-    otchetiSplide.go("<");
-  });
-
-  otchetiNext.addEventListener("click", function (e) {
-    otchetiSplide.go(">");
-  });
-});
+}
 
 const otchetiNav = document.querySelectorAll(".otcheti__nav .nav__item");
 const otchetiTypes = document.querySelectorAll(
