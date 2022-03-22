@@ -20,6 +20,12 @@
 
       <div class="profile-block__wrapper">
         <div class="container">
+          <div class="profile__nav">
+            <div class="nav__item is-active">подписка</div>
+            <div class="nav__item">Данные профиля</div>
+            <div class="nav__item">Транзакции</div>
+          </div>
+
           <div class="profile__block">
             <!-- без подписки -->
             <!-- <div class="subscription__block">
@@ -250,15 +256,13 @@
           </div>
         </div>
       </div>
-    </section>
 
-    <img class="dog" src="./img/dog.png" alt="" />
-    @include('./partials/tree-block.html') @include('./partials/qa-block.html')
-    @include('partials/footer.html')
+      <img class="dog" src="./img/dog.png" alt="" />
+      @include('./partials/tree-block.html')
+      @include('./partials/qa-block.html') @include('partials/footer.html')
 
-    <div class="modal">
-      <div class="modal__content-reject-subscription">
-        <div class="profile-modal__wrapper">
+      <div class="modal">
+        <div class="modal__content-reject-subscription">
           <div class="text-big">
             Вы уверены, что хотите отменить пожертвование?
           </div>
@@ -274,10 +278,8 @@
             <div class="modal__btn-close pointer">Назад</div>
           </div>
         </div>
-      </div>
 
-      <div class="modal__content-reject-subscription-result">
-        <div class="profile-modal__wrapper">
+        <div class="modal__content-reject-subscription-result">
           <div class="text-big">
             Ежемесячная подписка отменена. Времена бывают разные, мы всё
             понимаем. Спасибо вам за поддержку!
@@ -285,6 +287,6 @@
           <div class="btn btn-std">хорошо</div>
         </div>
       </div>
-    </div>
+    </section>
   </body>
 </html>

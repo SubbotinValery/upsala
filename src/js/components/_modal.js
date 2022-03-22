@@ -49,6 +49,9 @@ if (modal !== null) {
       });
     }
     btn.addEventListener("click", function () {
+      if (currentContent !== null) {
+        currentContent.classList.remove("is-open");
+      }
       currentContent = getCurrentContent(btnType);
       modal.classList.add("is-open");
       currentContent.classList.add("is-open");

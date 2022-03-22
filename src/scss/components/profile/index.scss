@@ -51,6 +51,9 @@
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
+  .profile__nav {
+    display: none;
+  }
 }
 
 .profile__block {
@@ -294,7 +297,44 @@
 
 @include tablet {
   .profile__section {
+    .profile__nav {
+      padding-top: 4rem;
+      display: block;
+      color: $dark;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      padding-bottom: $space-small;
+      border-bottom: 0.1rem solid rgb($dark, $opacity-thick);
+      margin-bottom: $space-std;
+      .nav__item {
+        position: relative;
+        cursor: pointer;
+        &::after {
+          z-index: 10;
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 0%;
+          left: 0;
+          bottom: -1.7rem;
+          transition: $fast;
+        }
+        &:hover::after {
+          width: 100%;
+          background-color: $red;
+        }
+        &.is-active::after {
+          width: 100%;
+          background-color: $red;
+        }
+      }
+    }
     .profile__block {
+      padding-top: 0;
       grid-template-columns: 1fr;
 
       .transaction__block {
@@ -375,19 +415,20 @@
 
 #profilePage {
   *[class*="modal__content-"] {
-    padding: 0;
-    .profile-modal__wrapper {
-      width: 52rem;
-      background-color: #fff;
-      padding: 2.4rem;
-      padding-top: 3.2rem;
-      border-radius: 2.4rem;
-      border: 0.1rem solid rgb($dark, $opacity-thick);
-      text-align: center;
-      .modal__btn-close {
-        position: static;
-        pointer-events: none;
-        background-image: none;
+    max-width: 52rem;
+    background-color: #fff;
+    padding: 2.4rem;
+    padding-top: 3.2rem;
+    border-radius: 2.4rem;
+    border: 0.1rem solid rgb($dark, $opacity-thick);
+    text-align: center;
+    .modal__btn-close {
+      position: static;
+      background-image: none;
+      margin-left: 1.6rem;
+      width: fit-content;
+      &:hover {
+        transform: rotate(0);
       }
     }
   }
