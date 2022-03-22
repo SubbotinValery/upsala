@@ -88,16 +88,12 @@
     font-size: 1.4rem;
     line-height: 1.9rem;
     color: $dark;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     .main-info {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
       margin-bottom: 3.2rem;
-      & > * {
-        &:last-child {
-          text-align: right;
-        }
-      }
       .type {
         margin-bottom: 0.4rem;
       }
@@ -105,21 +101,24 @@
         margin-bottom: 1.6rem;
         opacity: 0.6;
       }
+    }
 
+    .balance__block {
+      text-align: right;
+      color: $red;
       .balance {
         margin-bottom: 1.4rem;
       }
+    }
 
-      .reject-subscription,
-      .change-date {
-        display: inline-block;
-        cursor: pointer;
-        border-bottom: 0.1rem solid transparent;
-        transition: $fast;
-        &:hover {
-          border-color: $red;
-        }
-      }
+    & > .btn {
+      margin-top: 0;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    & > .descr {
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
     .more {
       cursor: pointer;
@@ -294,20 +293,16 @@
 }
 
 @include tablet {
-  #profile {
+  .profile__section {
     .profile__block {
       grid-template-columns: 1fr;
-      .subscription__block {
-      }
+
       .transaction__block {
         grid-row-start: 3;
       }
       .profile__data {
         grid-row-start: 2;
       }
-    }
-    .tree__block {
-      display: none;
     }
     .dog {
       position: absolute;
@@ -317,16 +312,82 @@
       z-index: -1;
     }
   }
+  .tree__block {
+    display: none;
+  }
 }
 
 @include mobile {
-  #profile {
-    .profile__section {
-      padding-top: 27rem;
-      .container > .title {
-        margin-bottom: 6rem;
-        font-size: 4.8rem;
-        line-height: 4.8rem;
+  .profile__section {
+    padding-top: 27rem;
+    .container > .title {
+      margin-bottom: 6rem;
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+    }
+    .subscription__info {
+      z-index: 10;
+      overflow: hidden;
+      position: relative;
+      padding-top: 14rem;
+      .balance__block {
+        z-index: 11;
+        width: 200%;
+        padding-top: 3.2rem;
+        padding-bottom: 1.3rem;
+        transform: translateX(-25%);
+        position: absolute;
+        text-align: center;
+        top: -14rem;
+        left: 0;
+        background-color: $red;
+        color: #fff;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        .balance {
+          font-size: 2.4rem;
+          line-height: 3.2rem;
+          letter-spacing: 0.2;
+        }
+        .reject-subscription {
+          .link {
+            color: #fff !important;
+            &:hover::after {
+              background-color: #fff !important;
+            }
+          }
+        }
+      }
+      .main-info {
+        margin-top: $space-small;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-bottom: $space-small;
+      }
+    }
+  }
+}
+
+#profilePage {
+  *[class*="modal__content-"] {
+    padding: 0;
+    .profile-modal__wrapper {
+      width: 52rem;
+      background-color: #fff;
+      padding: 2.4rem;
+      padding-top: 3.2rem;
+      border-radius: 2.4rem;
+      border: 0.1rem solid rgb($dark, $opacity-thick);
+      text-align: center;
+      .modal__btn-close {
+        position: static;
+        pointer-events: none;
+        background-image: none;
       }
     }
   }

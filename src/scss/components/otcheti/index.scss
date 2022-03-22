@@ -341,6 +341,7 @@
     justify-content: center;
   }
   .otcheti-slider__item {
+    background-color: $dark;
     position: relative;
     cursor: pointer;
     width: 40rem;
@@ -349,9 +350,12 @@
     display: flex;
     flex-direction: column-reverse;
     .slider__img {
+      overflow: hidden;
       position: absolute;
+      left: 50%;
+      transform: translate(-50%);
       top: -10rem;
-      width: 100%;
+      width: calc(100% - 2px);
       height: 100%;
       object-fit: cover;
       object-position: top;
@@ -369,7 +373,7 @@
       width: 100%;
       height: 20rem;
       color: $grey;
-      background-image: url("../../../img/chto-proishodit-img-bg-item.png");
+      background-image: url("../../../img/otcheti-slider-bg.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: bottom;
