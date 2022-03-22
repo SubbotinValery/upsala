@@ -362,6 +362,7 @@
 }
 
 .photo-slider__item {
+  cursor: pointer;
   height: 56rem;
   width: 100%;
   img {
@@ -411,6 +412,7 @@
 }
 
 .actor-slider__item {
+  cursor: pointer;
   .person {
     display: flex;
     .title {
@@ -460,7 +462,7 @@
       width: 100%;
     }
     &__content {
-      width: 50%;
+      width: 100%;
       margin-right: 0;
     }
     &__title {
@@ -538,6 +540,7 @@
       }
     }
     .star-line {
+      z-index: -1;
       left: 50%;
       transform: translateX(-50%) rotate(90deg);
     }

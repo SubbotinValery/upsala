@@ -58,13 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   }).mount();
 
-  photoSplide.on("move", function () {
-    var slides = document.querySelectorAll(
-      "#afishaPhotoSlider .splide .splide__slide"
-    );
+  // photoSplide.on("move", function () {
+  //   var slides = document.querySelectorAll(
+  //     "#afishaPhotoSlider .splide .splide__slide"
+  //   );
 
-    slides.forEach(function (slide) {
-      slide.classList.add("is-visible");
-    });
-  });
+  //   slides.forEach(function (slide) {
+  //     slide.classList.add("is-visible");
+  //   });
+  // });
 });

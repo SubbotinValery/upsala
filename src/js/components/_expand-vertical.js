@@ -42,6 +42,19 @@ expandVerticalBlocks.forEach((expandBlock) => {
     expandBlock.style.height = `${defaultHeight}px`;
   };
 
+  //resize
+  window.addEventListener(
+    "resize",
+    function (event) {
+      if (expandBlock.className.match(/\bopen\b/)) {
+        show();
+      } else {
+        hide();
+      }
+    },
+    true
+  );
+
   btn.addEventListener("click", function () {
     if (expandBlock.className.match(/\bclose\b/)) {
       expandBlock.classList.remove("close");

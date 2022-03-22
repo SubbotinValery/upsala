@@ -15,7 +15,7 @@ import "./components/_input-mask";
 import "./components/not-found/_not-found";
 
 //afisha
-// import "./components/afisha/_afisha";
+import "./components/afisha/_afisha";
 
 //support
 import "./components/support/support";
