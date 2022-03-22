@@ -278,3 +278,9 @@ body {
     }
   }
 }
+
+@include tablet {
+  .desctop-only {
+    display: none;
+  }
+}

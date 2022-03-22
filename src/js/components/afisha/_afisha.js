@@ -66,3 +66,29 @@ if (afishaPhotoSlider !== null) {
     }).mount();
   });
 }
+
+const afishaFilter = document.querySelectorAll(
+  ".afisha-list__filter .filter__selection"
+);
+
+if (afishaFilter !== null) {
+  const getCurrentId = () => {
+    let currentId = null;
+    for (let i = 0; i < afishaFilter.length; i++) {
+      if (afishaFilter[i].className.match(/\bis-active\b/)) {
+        currentId = i;
+      }
+    }
+    return currentId;
+  };
+
+  for (let i = 0; i < afishaFilter.length; i++) {
+    afishaFilter[i].addEventListener("click", function () {
+      const current = afishaFilter[getCurrentId()];
+      const next = afishaFilter[i];
+
+      current.classList.remove("is-active");
+      next.classList.add("is-active");
+    });
+  }
+}

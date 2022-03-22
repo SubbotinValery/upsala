@@ -43,18 +43,6 @@ const otchetiTypes = document.querySelectorAll(
   ".otcheti__block .otcheti__type"
 );
 
-const otchetiBtn = document.querySelectorAll(".otcheti-btn");
-const otchetiBlock = document.querySelector(".otcheti__block");
-if (otchetiBtn !== null && otchetiBlock !== null) {
-  otchetiBtn.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      otchetiBlock.scrollIntoView({
-        behavior: "smooth",
-      });
-    });
-  });
-}
-
 if (otchetiNav !== null && otchetiTypes !== null) {
   const getCurrentId = () => {
     let currentId = null;
@@ -89,4 +77,16 @@ if (otchetiNav !== null && otchetiTypes !== null) {
       });
     });
   }
+}
+
+const otchetiBtn = document.querySelectorAll(".otcheti-btn");
+const otchetiBlock = document.querySelector(".otcheti__block");
+if (otchetiBtn !== null && otchetiBlock !== null) {
+  otchetiBtn.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      otchetiBlock.scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
 }

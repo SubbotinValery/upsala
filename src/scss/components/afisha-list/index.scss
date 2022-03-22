@@ -36,10 +36,8 @@
     margin-bottom: 3rem;
   }
   .inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 1rem;
   }
 }
 
@@ -51,8 +49,7 @@
   display: flex;
   flex-direction: column;
   padding: 2.5rem 1.8rem 2rem 1.8rem;
-  margin: 0.5rem;
-  width: 24%;
+  width: 100%;
   min-width: 30rem;
   overflow: hidden;
   transition: $fast;
@@ -117,11 +114,147 @@
   }
 
   .date {
+    text-transform: uppercase;
     font-size: 4.8rem;
     line-height: 8.8rem;
   }
 
   .buy-btn {
     margin-top: 0;
+  }
+  .buy__block {
+    display: none;
+  }
+}
+
+@include for-desktop {
+  .afisha-list__section {
+    .afisha-list__block {
+      .inner {
+        grid-template-columns: repeat(2, 1fr) !important;
+        .afisha-list__item {
+          max-width: 50rem !important;
+          justify-self: center;
+        }
+      }
+    }
+  }
+}
+
+@include big-desktop {
+  .afisha-list__section {
+    .afisha-list__block {
+      .inner {
+        grid-template-columns: repeat(4, 1fr) !important;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .afisha-list__section {
+    .afisha-list__filter {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: $space-small;
+      border-bottom: 1px solid rgb($grey, $opacity-thick);
+      max-width: 60rem;
+    }
+    .filter__selection {
+      position: relative;
+      padding: 0;
+      margin-right: 0;
+      border: none !important;
+      background-color: $dark;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1.7rem;
+        width: 0%;
+        height: 2px;
+        left: 0;
+        background-color: $red;
+        transition: $fast;
+      }
+    }
+
+    .filter__selection.is-active {
+      border: none;
+      opacity: 1 !important;
+      &::after {
+        width: 100%;
+      }
+    }
+    .filter__selection:hover {
+      border: none;
+      opacity: 1 !important;
+      &::after {
+        width: 100%;
+      }
+    }
+    .afisha-list__block {
+      .inner {
+        grid-template-columns: repeat(2, 1fr) !important;
+        .afisha-list__item {
+          max-width: 50rem !important;
+          justify-self: center;
+        }
+      }
+    }
+  }
+}
+
+@include small-tablet {
+  .afisha-list__section {
+    .afisha-list__block {
+      & > .title {
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+      }
+      .inner {
+        grid-template-columns: repeat(1, 1fr) !important;
+      }
+      .afisha-list__item {
+        max-width: 50rem;
+        justify-self: center;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .afisha-list__section {
+    .afisha-list__block {
+      .afisha-list__item {
+        & > .date {
+          display: none;
+        }
+        & > .buy-btn {
+          display: none;
+        }
+        & > * {
+          width: 100%;
+        }
+        .buy__block {
+          border-top: 1px solid rgb($dark, $opacity-thick);
+          padding-top: 1rem;
+          display: flex;
+          background-color: transparent;
+          justify-content: space-between;
+          align-items: center;
+          text-transform: uppercase;
+          margin-top: 3.2rem;
+          .buy-btn {
+            color: $red;
+            font-size: 2.4rem;
+            letter-spacing: 0.1rem;
+          }
+          .date {
+            font-size: 2.9rem;
+            line-height: 3.2rem;
+          }
+        }
+      }
+    }
   }
 }
