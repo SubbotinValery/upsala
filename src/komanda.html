@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+    />
     <title>Команда</title>
     <link
       rel="stylesheet"
@@ -16,23 +19,19 @@
     <script defer src="js/main.js"></script>
   </head>
 
-  <body>
+  <body id="komandaPage">
     @include('partials/header.html')
     <section class="komanda-section">
       <div class="container relative">
         <div class="title title-2">Команда</div>
 
         <div class="komanda-info-block">
-          <img
-            class="komanda-info-block__img"
-            src="./img/komanda-info-block-img.png"
-            alt=""
-          />
-          <div class="komanda-info-block__content">
-            <div class="komanda-info-block__title title title-3">
+          <img class="img" src="./img/komanda-info-block-img.png" alt="" />
+          <div class="content">
+            <div class="title title-3">
               Почему в России не любят инициативных? / Редакция
             </div>
-            <div class="komanda-info-block__descr">
+            <div class="descr">
               Этот выпуск «Редакции» про то, с чем в России большая проблема, —
               про инициативу. Мы решили посмотреть, как живут люди, которые
               пытаются сделать что-то хорошее сами, без какой-либо помощи
@@ -45,7 +44,7 @@
       <div class="komanda-block__wrapper">
         <div class="container">
           <div class="komanda-block">
-            <div class="komanda-item">
+            <div class="komanda-item modal__btn-komanda-item">
               <div class="komanda-item__img">
                 <img src="./img/komanda-item-img.png" alt="" />
               </div>
@@ -59,7 +58,7 @@
               </div>
             </div>
 
-            <div class="komanda-item">
+            <div class="komanda-item modal__btn-komanda-item">
               <div class="komanda-item__img">
                 <img src="./img/komanda-item-img.png" alt="" />
               </div>
@@ -73,7 +72,7 @@
               </div>
             </div>
 
-            <div class="komanda-item">
+            <div class="komanda-item modal__btn-komanda-item">
               <div class="komanda-item__img">
                 <img src="./img/komanda-item-img.png" alt="" />
               </div>
@@ -87,7 +86,7 @@
               </div>
             </div>
 
-            <div class="komanda-item">
+            <div class="komanda-item modal__btn-komanda-item">
               <div class="komanda-item__img">
                 <img src="./img/komanda-item-img.png" alt="" />
               </div>
@@ -101,7 +100,7 @@
               </div>
             </div>
 
-            <div class="komanda-item">
+            <div class="komanda-item modal__btn-komanda-item">
               <div class="komanda-item__img">
                 <img src="./img/komanda-item-img.png" alt="" />
               </div>
@@ -115,7 +114,7 @@
               </div>
             </div>
 
-            <div class="komanda-item">
+            <div class="komanda-item modal__btn-komanda-item">
               <div class="komanda-item__img">
                 <img src="./img/komanda-item-img.png" alt="" />
               </div>
@@ -129,7 +128,7 @@
               </div>
             </div>
 
-            <div class="komanda-item">
+            <div class="komanda-item modal__btn-komanda-item">
               <div class="komanda-item__img">
                 <img src="./img/komanda-item-img.png" alt="" />
               </div>
@@ -143,7 +142,21 @@
               </div>
             </div>
 
-            <div class="komanda-item">
+            <div class="komanda-item modal__btn-komanda-item">
+              <div class="komanda-item__img">
+                <img src="./img/komanda-item-img.png" alt="" />
+              </div>
+
+              <div class="komanda-item__content">
+                <div class="komanda-item__name">Имя Фамилия</div>
+                <div class="komanda-item__descr">
+                  Текстовое описание в три строчки.
+                </div>
+                <div class="komanda-item__email">info@upsalacircus.ru</div>
+              </div>
+            </div>
+
+            <div class="komanda-item modal__btn-komanda-item">
               <div class="komanda-item__img">
                 <img src="./img/komanda-item-img.png" alt="" />
               </div>
@@ -167,438 +180,146 @@
               <div class="splide__track">
                 <div class="splide__list">
                   <div class="splide__slide" role="group">
-                    <div>
-                      <div class="komanda-item modal__btn-">
-                        <div class="komanda-item__img">
-                          <img src="./img/komanda-item-img.png" alt="" />
-                        </div>
+                    <div class="komanda-item modal__btn-komanda-item">
+                      <div class="komanda-item__img">
+                        <img src="./img/komanda-item-img.png" alt="" />
+                      </div>
 
-                        <div class="komanda-item__content">
-                          <div class="komanda-item__name">Имя Фамилия</div>
-                          <div class="komanda-item__descr">
-                            Текстовое описание в три строчки.
-                          </div>
-                          <div class="komanda-item__email">
-                            info@upsalacircus.ru
-                          </div>
+                      <div class="komanda-item__content">
+                        <div class="komanda-item__name">Имя Фамилия</div>
+                        <div class="komanda-item__descr">
+                          Текстовое описание в три строчки.
+                        </div>
+                        <div class="komanda-item__email">
+                          info@upsalacircus.ru
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div class="splide__slide" role="group">
-                    <div>
-                      <div class="komanda-item">
-                        <div class="komanda-item__img">
-                          <img src="./img/komanda-item-img.png" alt="" />
-                        </div>
-
-                        <div class="komanda-item__content">
-                          <div class="komanda-item__name">Имя Фамилия</div>
-                          <div class="komanda-item__descr">
-                            Текстовое описание в три строчки.
-                          </div>
-                          <div class="komanda-item__email">
-                            info@upsalacircus.ru
-                          </div>
-                        </div>
+                    <div class="komanda-item modal__btn-komanda-item">
+                      <div class="komanda-item__img">
+                        <img src="./img/komanda-item-img.png" alt="" />
                       </div>
 
-                      <!-- <div class="modal">
-                        <div class="modal-overlay"></div>
-                        <div class="modal-content container">
-                          <div class="komanda-item-info">
-                            <div class="komanda-item-info-bio">
-                              <div>
-                                <div class="komanda-item-info-avatar">
-                                  <img
-                                    src="./img/komanda-item-info-avatar.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="komanda-item-info-name">
-                                  Лариса Афанасьева
-                                </div>
-                                <div class="komanda-item-info-post">
-                                  Со-основатель, режиссёр, директор и
-                                  художественный руководитель АНО «Упсала-Цирк».
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="komanda-item-info-descr">
-                              Так получилось, что в моем восприятии, собственное
-                              детство не имеет ко мне сегодняшней никакого
-                              отношения.
-                            </div>
-                          </div>
-                          <div class="modal-content-close-btn"></div>
+                      <div class="komanda-item__content">
+                        <div class="komanda-item__name">Имя Фамилия</div>
+                        <div class="komanda-item__descr">
+                          Текстовое описание в три строчки.
                         </div>
-                      </div> -->
+                        <div class="komanda-item__email">
+                          info@upsalacircus.ru
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div class="splide__slide" role="group">
-                    <div>
-                      <div class="komanda-item">
-                        <div class="komanda-item__img">
-                          <img src="./img/komanda-item-img.png" alt="" />
-                        </div>
-
-                        <div class="komanda-item__content">
-                          <div class="komanda-item__name">Имя Фамилия</div>
-                          <div class="komanda-item__descr">
-                            Текстовое описание в три строчки.
-                          </div>
-                          <div class="komanda-item__email">
-                            info@upsalacircus.ru
-                          </div>
-                        </div>
+                    <div class="komanda-item modal__btn-komanda-item">
+                      <div class="komanda-item__img">
+                        <img src="./img/komanda-item-img.png" alt="" />
                       </div>
 
-                      <!-- <div class="modal">
-                        <div class="modal-overlay"></div>
-                        <div class="modal-content container">
-                          <div class="komanda-item-info">
-                            <div class="komanda-item-info-bio">
-                              <div>
-                                <div class="komanda-item-info-avatar">
-                                  <img
-                                    src="./img/komanda-item-info-avatar.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="komanda-item-info-name">
-                                  Лариса Афанасьева
-                                </div>
-                                <div class="komanda-item-info-post">
-                                  Со-основатель, режиссёр, директор и
-                                  художественный руководитель АНО «Упсала-Цирк».
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="komanda-item-info-descr">
-                              Так получилось, что в моем восприятии, собственное
-                              детство не имеет ко мне сегодняшней никакого
-                              отношения.
-                            </div>
-                          </div>
-                          <div class="modal-content-close-btn"></div>
+                      <div class="komanda-item__content">
+                        <div class="komanda-item__name">Имя Фамилия</div>
+                        <div class="komanda-item__descr">
+                          Текстовое описание в три строчки.
                         </div>
-                      </div> -->
+                        <div class="komanda-item__email">
+                          info@upsalacircus.ru
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div class="splide__slide" role="group">
-                    <div>
-                      <div class="komanda-item">
-                        <div class="komanda-item__img">
-                          <img src="./img/komanda-item-img.png" alt="" />
-                        </div>
-
-                        <div class="komanda-item__content">
-                          <div class="komanda-item__name">Имя Фамилия</div>
-                          <div class="komanda-item__descr">
-                            Текстовое описание в три строчки.
-                          </div>
-                          <div class="komanda-item__email">
-                            info@upsalacircus.ru
-                          </div>
-                        </div>
+                    <div class="komanda-item modal__btn-komanda-item">
+                      <div class="komanda-item__img">
+                        <img src="./img/komanda-item-img.png" alt="" />
                       </div>
 
-                      <!-- <div class="modal">
-                        <div class="modal-overlay"></div>
-                        <div class="modal-content container">
-                          <div class="komanda-item-info">
-                            <div class="komanda-item-info-bio">
-                              <div>
-                                <div class="komanda-item-info-avatar">
-                                  <img
-                                    src="./img/komanda-item-info-avatar.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="komanda-item-info-name">
-                                  Лариса Афанасьева
-                                </div>
-                                <div class="komanda-item-info-post">
-                                  Со-основатель, режиссёр, директор и
-                                  художественный руководитель АНО «Упсала-Цирк».
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="komanda-item-info-descr">
-                              Так получилось, что в моем восприятии, собственное
-                              детство не имеет ко мне сегодняшней никакого
-                              отношения.
-                            </div>
-                          </div>
-                          <div class="modal-content-close-btn"></div>
+                      <div class="komanda-item__content">
+                        <div class="komanda-item__name">Имя Фамилия</div>
+                        <div class="komanda-item__descr">
+                          Текстовое описание в три строчки.
                         </div>
-                      </div> -->
+                        <div class="komanda-item__email">
+                          info@upsalacircus.ru
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div class="splide__slide" role="group">
-                    <div>
-                      <div class="komanda-item">
-                        <div class="komanda-item__img">
-                          <img src="./img/komanda-item-img.png" alt="" />
-                        </div>
-
-                        <div class="komanda-item__content">
-                          <div class="komanda-item__name">Имя Фамилия</div>
-                          <div class="komanda-item__descr">
-                            Текстовое описание в три строчки.
-                          </div>
-                          <div class="komanda-item__email">
-                            info@upsalacircus.ru
-                          </div>
-                        </div>
+                    <div class="komanda-item modal__btn-komanda-item">
+                      <div class="komanda-item__img">
+                        <img src="./img/komanda-item-img.png" alt="" />
                       </div>
 
-                      <!-- <div class="modal">
-                        <div class="modal-overlay"></div>
-                        <div class="modal-content container">
-                          <div class="komanda-item-info">
-                            <div class="komanda-item-info-bio">
-                              <div>
-                                <div class="komanda-item-info-avatar">
-                                  <img
-                                    src="./img/komanda-item-info-avatar.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="komanda-item-info-name">
-                                  Лариса Афанасьева
-                                </div>
-                                <div class="komanda-item-info-post">
-                                  Со-основатель, режиссёр, директор и
-                                  художественный руководитель АНО «Упсала-Цирк».
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="komanda-item-info-descr">
-                              Так получилось, что в моем восприятии, собственное
-                              детство не имеет ко мне сегодняшней никакого
-                              отношения.
-                            </div>
-                          </div>
-                          <div class="modal-content-close-btn"></div>
+                      <div class="komanda-item__content">
+                        <div class="komanda-item__name">Имя Фамилия</div>
+                        <div class="komanda-item__descr">
+                          Текстовое описание в три строчки.
                         </div>
-                      </div> -->
+                        <div class="komanda-item__email">
+                          info@upsalacircus.ru
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div class="splide__slide" role="group">
-                    <div>
-                      <div class="komanda-item">
-                        <div class="komanda-item__img">
-                          <img src="./img/komanda-item-img.png" alt="" />
-                        </div>
-
-                        <div class="komanda-item__content">
-                          <div class="komanda-item__name">Имя Фамилия</div>
-                          <div class="komanda-item__descr">
-                            Текстовое описание в три строчки.
-                          </div>
-                          <div class="komanda-item__email">
-                            info@upsalacircus.ru
-                          </div>
-                        </div>
+                    <div class="komanda-item modal__btn-komanda-item">
+                      <div class="komanda-item__img">
+                        <img src="./img/komanda-item-img.png" alt="" />
                       </div>
 
-                      <!-- <div class="modal">
-                        <div class="modal-overlay"></div>
-                        <div class="modal-content container">
-                          <div class="komanda-item-info">
-                            <div class="komanda-item-info-bio">
-                              <div>
-                                <div class="komanda-item-info-avatar">
-                                  <img
-                                    src="./img/komanda-item-info-avatar.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="komanda-item-info-name">
-                                  Лариса Афанасьева
-                                </div>
-                                <div class="komanda-item-info-post">
-                                  Со-основатель, режиссёр, директор и
-                                  художественный руководитель АНО «Упсала-Цирк».
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="komanda-item-info-descr">
-                              Так получилось, что в моем восприятии, собственное
-                              детство не имеет ко мне сегодняшней никакого
-                              отношения.
-                            </div>
-                          </div>
-                          <div class="modal-content-close-btn"></div>
+                      <div class="komanda-item__content">
+                        <div class="komanda-item__name">Имя Фамилия</div>
+                        <div class="komanda-item__descr">
+                          Текстовое описание в три строчки.
                         </div>
-                      </div> -->
+                        <div class="komanda-item__email">
+                          info@upsalacircus.ru
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div class="splide__slide" role="group">
-                    <div>
-                      <div class="komanda-item">
-                        <div class="komanda-item__img">
-                          <img src="./img/komanda-item-img.png" alt="" />
-                        </div>
-
-                        <div class="komanda-item__content">
-                          <div class="komanda-item__name">Имя Фамилия</div>
-                          <div class="komanda-item__descr">
-                            Текстовое описание в три строчки.
-                          </div>
-                          <div class="komanda-item__email">
-                            info@upsalacircus.ru
-                          </div>
-                        </div>
+                    <div class="komanda-item modal__btn-komanda-item">
+                      <div class="komanda-item__img">
+                        <img src="./img/komanda-item-img.png" alt="" />
                       </div>
 
-                      <!-- <div class="modal">
-                        <div class="modal-overlay"></div>
-                        <div class="modal-content container">
-                          <div class="komanda-item-info">
-                            <div class="komanda-item-info-bio">
-                              <div>
-                                <div class="komanda-item-info-avatar">
-                                  <img
-                                    src="./img/komanda-item-info-avatar.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="komanda-item-info-name">
-                                  Лариса Афанасьева
-                                </div>
-                                <div class="komanda-item-info-post">
-                                  Со-основатель, режиссёр, директор и
-                                  художественный руководитель АНО «Упсала-Цирк».
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="komanda-item-info-descr">
-                              Так получилось, что в моем восприятии, собственное
-                              детство не имеет ко мне сегодняшней никакого
-                              отношения.
-                            </div>
-                          </div>
-                          <div class="modal-content-close-btn"></div>
+                      <div class="komanda-item__content">
+                        <div class="komanda-item__name">Имя Фамилия</div>
+                        <div class="komanda-item__descr">
+                          Текстовое описание в три строчки.
                         </div>
-                      </div> -->
+                        <div class="komanda-item__email">
+                          info@upsalacircus.ru
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div class="splide__slide" role="group">
-                    <div>
-                      <div class="komanda-item">
-                        <div class="komanda-item__img">
-                          <img src="./img/komanda-item-img.png" alt="" />
-                        </div>
-
-                        <div class="komanda-item__content">
-                          <div class="komanda-item__name">Имя Фамилия</div>
-                          <div class="komanda-item__descr">
-                            Текстовое описание в три строчки.
-                          </div>
-                          <div class="komanda-item__email">
-                            info@upsalacircus.ru
-                          </div>
-                        </div>
+                    <div class="komanda-item modal__btn-komanda-item">
+                      <div class="komanda-item__img">
+                        <img src="./img/komanda-item-img.png" alt="" />
                       </div>
 
-                      <!-- <div class="modal">
-                        <div class="modal-overlay"></div>
-                        <div class="modal-content container">
-                          <div class="komanda-item-info">
-                            <div class="komanda-item-info-bio">
-                              <div>
-                                <div class="komanda-item-info-avatar">
-                                  <img
-                                    src="./img/komanda-item-info-avatar.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="komanda-item-info-name">
-                                  Лариса Афанасьева
-                                </div>
-                                <div class="komanda-item-info-post">
-                                  Со-основатель, режиссёр, директор и
-                                  художественный руководитель АНО «Упсала-Цирк».
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="komanda-item-info-descr">
-                              Так получилось, что в моем восприятии, собственное
-                              детство не имеет ко мне сегодняшней никакого
-                              отношения.
-                            </div>
-                          </div>
-                          <div class="modal-content-close-btn"></div>
+                      <div class="komanda-item__content">
+                        <div class="komanda-item__name">Имя Фамилия</div>
+                        <div class="komanda-item__descr">
+                          Текстовое описание в три строчки.
                         </div>
-                      </div> -->
-                    </div>
-                  </div>
-
-                  <div class="splide__slide" role="group">
-                    <div>
-                      <div class="komanda-item">
-                        <div class="komanda-item__img">
-                          <img src="./img/komanda-item-img.png" alt="" />
-                        </div>
-
-                        <div class="komanda-item__content">
-                          <div class="komanda-item__name">Имя Фамилия</div>
-                          <div class="komanda-item__descr">
-                            Текстовое описание в три строчки.
-                          </div>
-                          <div class="komanda-item__email">
-                            info@upsalacircus.ru
-                          </div>
+                        <div class="komanda-item__email">
+                          info@upsalacircus.ru
                         </div>
                       </div>
-
-                      <!-- <div class="modal">
-                        <div class="modal-overlay"></div>
-                        <div class="modal-content container">
-                          <div class="komanda-item-info">
-                            <div class="komanda-item-info-bio">
-                              <div>
-                                <div class="komanda-item-info-avatar">
-                                  <img
-                                    src="./img/komanda-item-info-avatar.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="komanda-item-info-name">
-                                  Лариса Афанасьева
-                                </div>
-                                <div class="komanda-item-info-post">
-                                  Со-основатель, режиссёр, директор и
-                                  художественный руководитель АНО «Упсала-Цирк».
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="komanda-item-info-descr">
-                              Так получилось, что в моем восприятии, собственное
-                              детство не имеет ко мне сегодняшней никакого
-                              отношения.
-                            </div>
-                          </div>
-                          <div class="modal-content-close-btn"></div>
-                        </div>
-                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -624,6 +345,30 @@
         <img class="star" src="./img/star.png" alt="" />
       </div>
     </section>
+
+    <div class="modal">
+      <div class="modal__content-komanda-item">
+        <div class="komanda-item-info">
+          <div class="komanda-item-info-bio">
+            <div>
+              <div class="komanda-item-info-avatar">
+                <img src="./img/komanda-item-info-avatar.png" alt="" />
+              </div>
+              <div class="komanda-item-info-name">Лариса Афанасьева</div>
+              <div class="komanda-item-info-post">
+                Со-основатель, режиссёр, директор и художественный руководитель
+                АНО «Упсала-Цирк».
+              </div>
+            </div>
+          </div>
+
+          <div class="komanda-item-info-descr">
+            Так получилось, что в моем восприятии, собственное детство не имеет
+            ко мне сегодняшней никакого отношения.
+          </div>
+        </div>
+      </div>
+    </div>
 
     @include('partials/footer.html')
   </body>

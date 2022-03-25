@@ -9,7 +9,7 @@ import "./components/_modal";
 import "./components/_input-mask";
 
 // komanda.html;
-// import "./components/_komanda-slider";
+import "./components/_komanda-slider";
 
 //not-found.html
 import "./components/not-found/_not-found";

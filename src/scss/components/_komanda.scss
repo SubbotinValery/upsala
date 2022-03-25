@@ -27,31 +27,6 @@
   }
 }
 
-.komanda-info-block {
-  margin-top: 9rem;
-  display: flex;
-  &__img {
-    display: block;
-    width: 65rem;
-    height: 35rem;
-    border-radius: 1.6rem;
-    object-fit: cover;
-    object-position: center;
-  }
-  &__content {
-    width: 35%;
-    margin-left: 4rem;
-    margin-right: 10rem;
-  }
-  &__title {
-    margin-bottom: 5.3rem;
-  }
-  &__descr {
-    font-size: 1.4rem;
-    line-height: 1.9rem;
-  }
-}
-
 .komanda-block__wrapper {
   display: flex;
   justify-content: center;
@@ -211,26 +186,6 @@
   .komanda-block {
     display: none;
   }
-
-  .komanda-info-block {
-    flex-direction: column-reverse;
-    &__img {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-    }
-    &__content {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-    }
-    &__title {
-      margin-bottom: 2rem;
-    }
-    &__descr {
-      margin-bottom: 2rem;
-    }
-  }
 }
 
 @include mobile {
@@ -241,5 +196,39 @@
     .star__wrapper {
       display: none;
     }
+  }
+}
+
+.komanda-info-block {
+  margin-top: 9rem;
+  display: flex;
+  padding: 0 !important;
+  .img {
+    display: block;
+    width: 65rem;
+    height: 35rem;
+    border-radius: 1.6rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .content {
+    width: 35%;
+    margin-left: 4rem;
+    margin-right: 10rem;
+  }
+  .title {
+    margin-bottom: 5.3rem;
+  }
+  .descr {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+}
+
+#komandaPage {
+  *[class*="modal__content-"] {
+    padding: 0 !important;
+    background-color: red !important;
+    max-width: 100rem;
   }
 }
