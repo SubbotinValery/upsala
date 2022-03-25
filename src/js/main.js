@@ -27,3 +27,5 @@ import "./components/partner/_partner";
 
 //profile
 import "./components/profile/_profile";
+
+import "./components/_loader";
