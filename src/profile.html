@@ -24,9 +24,9 @@
       <div class="profile-block__wrapper">
         <div class="container">
           <div class="profile__nav">
-            <div class="nav__item is-active">подписка</div>
-            <div class="nav__item">Данные профиля</div>
-            <div class="nav__item">Транзакции</div>
+            <!-- <div class="nav__item is-active">подписка</div> -->
+            <div class="nav__item is-active">Данные профиля</div>
+            <!-- <div class="nav__item">Транзакции</div> -->
           </div>
 
           <div class="profile__block">
@@ -39,7 +39,7 @@
             </div> -->
 
             <!-- с подпиской -->
-            <div class="subscription__block">
+            <!-- <div class="subscription__block">
               <div class="profile__title">подписка</div>
               <div class="subscription__info">
                 <div class="main-info">
@@ -219,7 +219,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <div class="profile__data">
               <div class="profile__title">данные профиля</div>
@@ -253,7 +253,7 @@
 
               <div class="contact">
                 <div>САМЫЕ ЧАСТЫЕ ВОПРОСЫ</div>
-                <div>Задать вопрос</div>
+                <div class="modal__btn-additional-q">Задать вопрос</div>
               </div>
             </div>
           </div>
@@ -288,6 +288,11 @@
             понимаем. Спасибо вам за поддержку!
           </div>
           <div class="btn btn-std">хорошо</div>
+        </div>
+
+        <div class="modal__content-additional-q">
+          @include('./partials/additional-q-block.html')
+          <div class="modal__btn-close"></div>
         </div>
       </div>
     </section>
