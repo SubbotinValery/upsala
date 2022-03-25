@@ -127,6 +127,81 @@
   }
 }
 
+.afisha__contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 20rem;
+  &-form {
+    position: relative;
+    grid-column-start: 2;
+    .title {
+      margin-bottom: 1rem;
+    }
+    .text-tiny {
+      margin-bottom: 2.4rem;
+    }
+    form {
+      width: 80%;
+    }
+    input {
+      background-color: $dark;
+      border-color: rgb($grey, $opacity-thick);
+      color: $grey;
+      &:focus,
+      &:active {
+        border: 1px solid rgb($grey, $opacity-thick) !important;
+      }
+    }
+    .checkbox {
+      label {
+        &::before {
+          border-color: $grey;
+        }
+      }
+    }
+    .cloud__item {
+      position: absolute;
+      &-1 {
+        bottom: -50%;
+        width: 45rem;
+        right: -22%;
+      }
+      &-2 {
+        bottom: -54%;
+        width: 40rem;
+        right: 0%;
+      }
+    }
+  }
+  &-animation {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    .afisha-contact-img {
+      position: absolute;
+      width: 50rem;
+      top: -5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .cloud__item {
+      position: absolute;
+      &-1 {
+        bottom: -50%;
+        width: 45rem;
+        left: -22%;
+      }
+      &-2 {
+        bottom: -54%;
+        width: 40rem;
+        left: 0%;
+      }
+    }
+  }
+}
+
 @include for-desktop {
   .afisha-list__section {
     .afisha-list__block {

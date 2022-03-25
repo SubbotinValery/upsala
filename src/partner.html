@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Партнерам</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
     <link rel="stylesheet" href="css/vendor.css" />
     <link rel="stylesheet" href="css/main.css" />
     <script defer src="js/main.js"></script>
@@ -15,7 +21,7 @@
     @include('partials/header.html')
     <section class="partner__section">
       <div class="container">
-        <div class="title title-2">партнерам</div>
+        <div class="page__title title title-2">партнерам</div>
 
         <div class="descr__block">
           <div class="descr__img">
@@ -58,13 +64,13 @@
           </div>
         </div>
 
-        <div class="title title-2 text-align-center">
-          Если вы ещё думаете, вот несколько причин поддержать Упсала-Цирк:
-        </div>
+        <div class="reason__block__wrapper">
+          <div class="title">
+            Если вы ещё думаете, вот несколько причин поддержать Упсала-Цирк:
+          </div>
 
-        <div class="reason__block flex column">
-          <div class="flex justify-content-end">
-            <div class="reason__item">
+          <div class="reason__block">
+            <div class="reason__item reason__item-1">
               <div class="cifra outline title title-1">1.</div>
               <div class="title title-3">
                 Креативная экспертиза для пользы вашего бизнеса
@@ -77,10 +83,9 @@
                 Например, на 500 эскимо, сброшенные с вертолёта на «Дне сказок»!
               </div>
             </div>
-          </div>
-          <div class="flex justify-content-center">
-            <div class="reason__item">
-              <div class="cifra text-red title title-1">2.</div>
+
+            <div class="reason__item reason__item-2">
+              <div class="cifra outline title title-1">2.</div>
               <div class="title title-3">
                 Креативная экспертиза для пользы вашего бизнеса
               </div>
@@ -92,9 +97,8 @@
                 Например, на 500 эскимо, сброшенные с вертолёта на «Дне сказок»!
               </div>
             </div>
-          </div>
-          <div class="flex justify-content-end">
-            <div class="reason__item">
+
+            <div class="reason__item reason__item-3">
               <div class="cifra outline title title-1">3.</div>
               <div class="title title-3">
                 Креативная экспертиза для пользы вашего бизнеса
@@ -107,64 +111,215 @@
                 Например, на 500 эскимо, сброшенные с вертолёта на «Дне сказок»!
               </div>
             </div>
+
+            <div class="cloud__block cloud__block-1">
+              <div class="cloud__wrapper cloud__wrapper-1">
+                <img
+                  src="./img/cloud.png"
+                  class="cloud__item cloud__item-1"
+                  alt=""
+                />
+              </div>
+              <div class="cloud__wrapper cloud__wrapper-2">
+                <img
+                  src="./img/cloud.png"
+                  class="cloud__item cloud__item-2"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="cloud__block cloud__block-2">
+              <div class="cloud__wrapper cloud__wrapper-1">
+                <img
+                  src="./img/cloud.png"
+                  class="cloud__item cloud__item-1"
+                  alt=""
+                />
+              </div>
+              <div class="cloud__wrapper cloud__wrapper-2">
+                <img
+                  src="./img/cloud.png"
+                  class="cloud__item cloud__item-2"
+                  alt=""
+                />
+              </div>
+
+              <div class="cloud-boy__wrapper">
+                <img
+                  src="./img/partner-cloud-boy.png"
+                  class="cloud-boy"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="partner-slider__block">
+        <div class="running-line">
+          <div class="title title-1 font-Spektra">
+            <span class="italic outline">Наши</span>&nbsp; Кейсы
+            <span class="italic outline">Наши</span>&nbsp; Кейсы
+            <span class="italic outline">Наши</span>&nbsp; Кейсы
           </div>
 
-          <div class="cloud__block cloud__block-1">
-            <div class="cloud__wrapper cloud__wrapper-1">
-              <img
-                src="./img/cloud.png"
-                class="cloud__item cloud__item-1"
-                alt=""
-              />
-            </div>
-            <div class="cloud__wrapper cloud__wrapper-2">
-              <img
-                src="./img/cloud.png"
-                class="cloud__item cloud__item-2"
-                alt=""
-              />
-            </div>
+          <div class="title title-1 font-Spektra">
+            <span class="italic outline">Наши</span>&nbsp; Кейсы
+            <span class="italic outline">Наши</span>&nbsp; Кейсы
+            <span class="italic outline">Наши</span>&nbsp; Кейсы
           </div>
+        </div>
 
-          <div class="cloud__block cloud__block-2">
-            <div class="cloud__wrapper cloud__wrapper-1">
-              <img
-                src="./img/cloud.png"
-                class="cloud__item cloud__item-1"
-                alt=""
-              />
-            </div>
-            <div class="cloud__wrapper cloud__wrapper-2">
-              <img
-                src="./img/cloud.png"
-                class="cloud__item cloud__item-2"
-                alt=""
-              />
-            </div>
+        <div class="container flex justify-content-center">
+          <div class="partner__slider">
+            <div class="carousel relative" id="partnerSlider">
+              <div class="splide">
+                <div class="splide__track">
+                  <div class="splide__list">
+                    <div class="splide__slide" role="group">
+                      <div class="partner-slider__item">
+                        <img
+                          class="slider__img"
+                          src="./img/otcheti-slider-img.jpg"
+                          alt=""
+                        />
+                        <div class="slider__content">
+                          <div class="subtitle">Самокат x Упсала-Цирк</div>
+                          <div class="descr">
+                            В День защиты детей запустили акцию: часть средств
+                            от продажи продуктов Самокат и verlé со специальными
+                            этикетками и стикерами отправилась в Упсала-Цирк на
+                            работу хулиганского проекта.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-            <div class="cloud-boy__wrapper">
-              <img src="./img/partner-cloud-boy.png" class="cloud-boy" alt="" />
+                    <div class="splide__slide" role="group">
+                      <div class="partner-slider__item">
+                        <img
+                          class="slider__img"
+                          src="./img/otcheti-slider-img.jpg"
+                          alt=""
+                        />
+                        <div class="slider__content">
+                          <div class="subtitle">Самокат x Упсала-Цирк</div>
+                          <div class="descr">
+                            В День защиты детей запустили акцию: часть средств
+                            от продажи продуктов Самокат и verlé со специальными
+                            этикетками и стикерами отправилась в Упсала-Цирк на
+                            работу хулиганского проекта.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="splide__slide" role="group">
+                      <div class="partner-slider__item">
+                        <img
+                          class="slider__img"
+                          src="./img/otcheti-slider-img.jpg"
+                          alt=""
+                        />
+                        <div class="slider__content">
+                          <div class="subtitle">Самокат x Упсала-Цирк</div>
+                          <div class="descr">
+                            В День защиты детей запустили акцию: часть средств
+                            от продажи продуктов Самокат и verlé со специальными
+                            этикетками и стикерами отправилась в Упсала-Цирк на
+                            работу хулиганского проекта.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="splide__slide" role="group">
+                      <div class="partner-slider__item">
+                        <img
+                          class="slider__img"
+                          src="./img/otcheti-slider-img.jpg"
+                          alt=""
+                        />
+                        <div class="slider__content">
+                          <div class="subtitle">Самокат x Упсала-Цирк</div>
+                          <div class="descr">
+                            В День защиты детей запустили акцию: часть средств
+                            от продажи продуктов Самокат и verlé со специальными
+                            этикетками и стикерами отправилась в Упсала-Цирк на
+                            работу хулиганского проекта.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="splide__slide" role="group">
+                      <div class="partner-slider__item">
+                        <img
+                          class="slider__img"
+                          src="./img/otcheti-slider-img.jpg"
+                          alt=""
+                        />
+                        <div class="slider__content">
+                          <div class="subtitle">Самокат x Упсала-Цирк</div>
+                          <div class="descr">
+                            В День защиты детей запустили акцию: часть средств
+                            от продажи продуктов Самокат и verlé со специальными
+                            этикетками и стикерами отправилась в Упсала-Цирк на
+                            работу хулиганского проекта.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="splide__slide" role="group">
+                      <div class="partner-slider__item">
+                        <img
+                          class="slider__img"
+                          src="./img/otcheti-slider-img.jpg"
+                          alt=""
+                        />
+                        <div class="slider__content">
+                          <div class="subtitle">Самокат x Упсала-Цирк</div>
+                          <div class="descr">
+                            В День защиты детей запустили акцию: часть средств
+                            от продажи продуктов Самокат и verlé со специальными
+                            этикетками и стикерами отправилась в Упсала-Цирк на
+                            работу хулиганского проекта.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="arrow-wrapper">
+                <div class="previous-button is-control">
+                  <div class="arrow"></div>
+                </div>
+
+                <div class="next-button is-control">
+                  <div class="arrow"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div class="container">
-        <div class="flex justify-content-center">
-          <div class="title title-3 width-50">
+        <div class="partner-type__wrapper">
+          <div class="title title-3">
             Какой ещё формат взаимодействия с бизнесом может быть?
           </div>
-        </div>
 
-        <div class="flex partner-type__block">
-          <div class="width-50">
-            <img
-              class="partner-type__img"
-              src="./img/partner-type.png"
-              alt=""
-            />
+          <div class="partner-type__img">
+            <img src="./img/partner-type.png" alt="" />
           </div>
-          <div class="width-50">
+
+          <div class="partner-type__block">
             <div class="partner-type__item">
               Совместный проект или спецпроект;
             </div>
@@ -187,14 +342,14 @@
         </div>
       </div>
 
-      <div class="bg-white">
+      <div class="contact__block__wrapper">
         <div class="container">
-          <div class="contact__block flex">
-            <div class="descr width-50">
+          <div class="contact__block">
+            <div class="descr">
               Остался вопрос? Вы можете задать его здесь, и мы обязательно
               вернёмся к вам с ответом:
             </div>
-            <form class="contact__form width-50">
+            <form class="contact__form">
               <input type="text" placeholder="Имя" />
               <input type="text" placeholder="example@domain.com*" />
               <input
@@ -218,57 +373,54 @@
               <div class="btn btn-std">отправить</div>
             </form>
           </div>
+        </div>
+      </div>
 
+      <div class="progress__block__wrapper">
+        <div class="container">
           <div class="title title-2">Цирк и партнёрство в цифрах</div>
 
-          <div class="progress__block flex column">
-            <div class="flex justify-content-start">
-              <div class="progress__item">
-                <div class="cifra outline title title-1">100</div>
-                <div class="descr title title-3 text-red">
-                  детей из групп социального риска занимаются в Упсала-Цирке
-                  бесплатно
-                </div>
+          <div class="progress__block">
+            <div class="progress__item progress__item-1">
+              <div class="cifra outline title title-1">100</div>
+              <img class="img" src="./img/otcheti-1.jpg" alt="" />
+              <div class="descr title title-3 text-red">
+                детей из групп социального риска занимаются в Упсала-Цирке
+                бесплатно
               </div>
             </div>
 
-            <div class="flex justify-content-end">
-              <div class="progress__item">
-                <div class="cifra outline title title-1">20%</div>
-                <img class="width-100 end" src="./img/otcheti-1.jpg" alt="" />
-                <div class="descr title title-3 text-red">
-                  от бюджета мы зарабатываем самостоятельно — спектаклями и
-                  коммерческими мероприятиями
-                </div>
+            <div class="progress__item progress__item-2">
+              <div class="cifra outline title title-1">20%</div>
+              <img class="img img-1" src="./img/otcheti-1.jpg" alt="" />
+              <img class="img img-2" src="./img/otcheti-1.jpg" alt="" />
+              <div class="descr title title-3 text-red">
+                от бюджета мы зарабатываем самостоятельно — спектаклями и
+                коммерческими мероприятиями
               </div>
             </div>
 
-            <div class="flex justify-content-center">
-              <div class="progress__item">
-                <div class="cifra outline title title-1">10000</div>
-                <img class="width-70 start" src="./img/otcheti-1.jpg" alt="" />
-                <div class="descr title title-3 text-red">
-                  зрителей увидели наши спектакли в 2020 году
-                </div>
+            <div class="progress__item progress__item-3">
+              <div class="cifra outline title title-1">10000</div>
+              <img class="img" src="./img/otcheti-1.jpg" alt="" />
+              <div class="descr title title-3 text-red">
+                зрителей увидели наши спектакли в 2020 году
               </div>
             </div>
 
-            <div class="flex justify-content-start">
-              <div class="progress__item">
-                <div class="cifra outline title title-1">30</div>
-                <div class="descr title title-3 text-red">
-                  компаний и фондов помогают Упсала-Цирку
-                </div>
+            <div class="progress__item progress__item-4">
+              <div class="cifra outline title title-1">30</div>
+              <img class="img" src="./img/otcheti-1.jpg" alt="" />
+              <div class="descr title title-3 text-red">
+                компаний и фондов помогают Упсала-Цирку
               </div>
             </div>
 
-            <div class="flex justify-content-end">
-              <div class="progress__item">
-                <div class="cifra outline title title-1">0</div>
-                <img class="width-100 end" src="./img/otcheti-1.jpg" alt="" />
-                <div class="descr title title-3 text-red">
-                  рублей в нашем бюджете от государства
-                </div>
+            <div class="progress__item progress__item-5">
+              <div class="cifra outline title title-1">0</div>
+              <img class="img" src="./img/otcheti-1.jpg" alt="" />
+              <div class="descr title title-3 text-red">
+                рублей в нашем бюджете от государства
               </div>
             </div>
           </div>
@@ -276,62 +428,54 @@
       </div>
 
       <div class="container">
-        <div class="flex partner__block">
-          <div class="width-50 flex company__block">
-            <div class="width-40">
-              <div class="title title-4 font-GTWalsheimPro">партнеры</div>
-            </div>
-            <div class="width-60 flex wrap">
-              <div class="company__item-wrapper">
-                <div class="company__item">
-                  <img src="./img/partner-logo.png" alt="" />
-                </div>
-              </div>
-
-              <div class="company__item-wrapper">
-                <div class="company__item">
-                  <img src="./img/partner-logo.png" alt="" />
-                </div>
-              </div>
-
-              <div class="company__item-wrapper">
-                <div class="company__item">
-                  <img src="./img/partner-logo.png" alt="" />
-                </div>
-              </div>
-
-              <div class="company__item-wrapper">
-                <div class="company__item">
-                  <img src="./img/partner-logo.png" alt="" />
-                </div>
-              </div>
-
-              <div class="company__item-wrapper">
-                <div class="company__item">
-                  <img src="./img/partner-logo.png" alt="" />
-                </div>
-              </div>
-              <div class="expand__btn">
-                <div class="title title-3">
-                  200<span class="text-red">+</span>
-                </div>
-              </div>
-            </div>
+        <div class="partner__block__wrapper">
+          <div class="title__wrapper">
+            <div class="title title-3">Наши партнеры</div>
           </div>
 
-          <div class="width-50 people__block">
-            <div class="title title-3">Наши партнёры</div>
-            <ul class="list-reset text-small">
-              <li>Экобалт</li>
-              <li>Валерий Пантелеймонов</li>
-              <li>Валерий Пантелеймонов</li>
-              <li>Валерий Пантелеймонов</li>
-              <li>Валерий Пантелеймонов</li>
-              <li>Валерий Пантелеймонов</li>
-              <li>Валерий Пантелеймонов</li>
-            </ul>
-            <div class="expand__btn link uppercase text-red text-small">
-              все партнеры
+          <div class="partner__block">
+            <div class="company__block__wrapper">
+              <div class="title title-4 font-GTWalsheimPro">партнеры</div>
+
+              <div class="company__block">
+                <a class="company__item">
+                  <img src="./img/partner-logo.png" alt="" />
+                </a>
+                <a class="company__item">
+                  <img src="./img/partner-logo.png" alt="" />
+                </a>
+                <a class="company__item">
+                  <img src="./img/partner-logo.png" alt="" />
+                </a>
+                <a class="company__item">
+                  <img src="./img/partner-logo.png" alt="" />
+                </a>
+                <a class="company__item">
+                  <img src="./img/partner-logo.png" alt="" />
+                </a>
+                <a class="expand__btn__wrapper">
+                  <div class="expand__btn">
+                    <div><span>+</span> 200</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="people__block__wrapper">
+              <div class="people__block">
+                <ul class="list-reset text-small">
+                  <li>Экобалт</li>
+                  <li>Валерий Пантелеймонов</li>
+                  <li>Валерий Пантелеймонов</li>
+                  <li>Валерий Пантелеймонов</li>
+                  <li>Валерий Пантелеймонов</li>
+                  <li>Валерий Пантелеймонов</li>
+                  <li>Валерий Пантелеймонов</li>
+                </ul>
+                <div class="expand__btn link uppercase text-red text-small">
+                  все партнеры
+                </div>
+              </div>
             </div>
           </div>
         </div>

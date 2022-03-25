@@ -23,5 +23,7 @@ import "./components/support/support";
 //otcheti
 import "./components/otcheti/_otcheti";
 
+import "./components/partner/_partner";
+
 //profile
 import "./components/profile/_profile";

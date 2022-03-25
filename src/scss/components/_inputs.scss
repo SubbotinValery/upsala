@@ -96,6 +96,7 @@ textarea {
   font-size: 1.6rem;
   line-height: 1.6rem;
   resize: none;
+  transition: $fast;
   &:focus,
   &:active {
     outline: none;
