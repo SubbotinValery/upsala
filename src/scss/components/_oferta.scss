@@ -1,5 +1,6 @@
 .oferta-section {
   padding-top: calc($header-gap + 3rem);
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -94,6 +95,20 @@
     .title {
       font-size: 4.8rem;
       margin-bottom: 3rem !important;
+    }
+  }
+  .oferta-section {
+    & > .container {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5rem;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: rgb($grey, $opacity-thick);
+      }
     }
   }
 }

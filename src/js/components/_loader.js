@@ -1,13 +1,17 @@
 const body = document.getElementsByTagName("body")[0];
 const loading = document.querySelector("#loading");
 
-if (
-  document.body.readyState === "ready" ||
-  document.body.readyState === "complete"
-) {
+setTimeout(() => {
   loading.style.display = "none";
-  console.log("hah");
-}
+}, 500);
+
+// if (
+//   document.body.readyState === "ready" ||
+//   document.body.readyState === "complete"
+// ) {
+//   loading.style.display = "none";
+//   console.log("hah");
+// }
 
 // function onReady(callback) {
 //   var intervalId = window.setInterval(function () {

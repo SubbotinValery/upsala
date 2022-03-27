@@ -510,6 +510,28 @@
           line-height: 1.9rem;
           margin-bottom: 2.4rem;
         }
+        .people__btn__wrapper {
+          display: block;
+          width: fit-content;
+        }
+        .people__btn__wrapper-mobile {
+          display: none;
+          position: relative;
+          width: fit-content;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 1.6rem;
+            height: 1.6rem;
+            right: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url("../../../img/svg/refresh-ico-red.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+          }
+        }
       }
     }
   }
@@ -888,6 +910,32 @@
         grid-column-start: 1;
         grid-column-end: 2;
       }
+    }
+  }
+}
+
+@include mobile {
+  .partner__section {
+    .qa__block {
+      display: block !important;
+    }
+    .people__btn__wrapper {
+      display: none !important;
+    }
+    .people__btn__wrapper-mobile {
+      display: block !important;
+    }
+  }
+  .partner__section + .footer .container {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -6rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: rgb($grey, $opacity-thick);
     }
   }
 }
