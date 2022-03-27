@@ -5,6 +5,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  .title {
+    letter-spacing: 0.2rem;
+  }
 
   .header__service {
     & > * {
