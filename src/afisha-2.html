@@ -26,15 +26,15 @@
       </div>
 
       <div class="container">
-        <div class="afisha__contact">
-          @include('partials/qa-block.html')
+        <div class="afisha__contact__wrapper">
+          <div class="afisha__contact-img__wrapper">
+            <div class="afisha__contact-img">
+              <img class="img" src="./img/afisha-contact-img.png" alt="" />
+              <div class="star__wrapper">
+                <img class="star" src="./img/star.png" alt="" />
+              </div>
+            </div>
 
-          <div class="afisha__contact-img">
-            <img
-              class="afisha-contact-img"
-              src="./img/afisha-contact-img.png"
-              alt=""
-            />
             <img
               class="cloud__item cloud__item-1"
               src="./img/cloud.png"
@@ -45,6 +45,51 @@
               src="./img/cloud.png"
               alt=""
             />
+            <img
+              class="cloud__item cloud__item-3"
+              src="./img/cloud.png"
+              alt=""
+            />
+            <img
+              class="cloud__item cloud__item-4"
+              src="./img/cloud.png"
+              alt=""
+            />
+          </div>
+
+          <div class="afisha__contact">
+            <div class="content">
+              <div class="title title-3 text-red">
+                Оставьте контакты, и мы пришлём вам информацию о следующей дате
+                показа, как только она появится!
+              </div>
+              <div class="text-tiny">
+                Так вы первым узнаете про наши новости и планы.
+              </div>
+            </div>
+
+            <form class="form" action="post">
+              <input class="name" type="text" placeholder="Имя*" />
+
+              <input
+                class="email"
+                type="text"
+                placeholder="example@domain.com*"
+              />
+
+              <div class="checkbox agree__checkbox">
+                <input type="checkbox" id="agree" />
+                <label for="agree"
+                  >Согласие на обработку персональных данных</label
+                >
+              </div>
+              <div class="btn btn-std">отправить</div>
+
+              <div class="agree__descr">
+                Нажимая кнопку «Обновить данные», я соглашаюсь с условиями и
+                принимаю <a href="" class="link">публичную оферту</a>
+              </div>
+            </form>
           </div>
         </div>
       </div>
