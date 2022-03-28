@@ -62,12 +62,22 @@
   .accordion {
     .accordion__control {
       padding: 1.5rem 0;
+      .accordion__btn {
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url("../../img/plus.png");
+      }
       .title-2 {
         font-size: 4.8rem;
         line-height: 4.8rem;
       }
       .title {
         transform: translateY(0);
+      }
+    }
+    .accordion__item.open {
+      .accordion__btn {
+        background-image: url("../../img/minus.png");
       }
     }
   }
