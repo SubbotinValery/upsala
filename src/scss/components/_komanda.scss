@@ -106,7 +106,7 @@
   color: $dark;
   border-radius: 2.4rem;
   padding: 6rem 7.4rem 7.4rem 4.5rem;
-  max-width: 70rem;
+  max-width: 110rem;
   .komanda-item-info-bio {
     width: 24rem;
     .komanda-item-info-avatar {
@@ -207,9 +207,9 @@
   .img {
     display: block;
     width: 65rem;
-    height: 35rem;
+    height: auto;
     border-radius: 1.6rem;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
   }
   .content {
