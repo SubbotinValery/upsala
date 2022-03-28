@@ -369,13 +369,15 @@
 }
 
 @include tablet {
-  .buy__btn {
-    display: none !important;
-  }
-  .info {
-    display: none !important;
-  }
-  .contact {
-    display: block !important;
+  .repertuar-section {
+    .buy__btn {
+      display: none !important;
+    }
+    .info {
+      display: none !important;
+    }
+    .contact {
+      display: block !important;
+    }
   }
 }
