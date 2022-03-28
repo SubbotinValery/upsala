@@ -106,6 +106,7 @@
   color: $dark;
   border-radius: 2.4rem;
   padding: 6rem 7.4rem 7.4rem 4.5rem;
+  max-width: 70rem;
   .komanda-item-info-bio {
     width: 24rem;
     .komanda-item-info-avatar {
@@ -262,5 +263,11 @@
     .img {
       width: 100% !important;
     }
+  }
+}
+
+#komandaPage {
+  *[class*="modal__content-"] {
+    padding: 0 !important;
   }
 }
