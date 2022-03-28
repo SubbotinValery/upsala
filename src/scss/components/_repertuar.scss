@@ -55,6 +55,7 @@
 }
 
 .repertuar-main-img-block {
+  z-index: -1;
   position: relative;
   margin-bottom: 9.6rem;
   overflow: hidden;
@@ -264,7 +265,7 @@
 
 @include mobile {
   .repertuar-section {
-    padding-top: calc($header-gap + 30rem);
+    padding-top: calc($header-gap + 15rem);
     .title-2 {
       font-size: 4.8rem;
       line-height: 4.8rem;
@@ -275,5 +276,32 @@
     top: 0;
     left: 0;
     width: 100%;
+  }
+}
+
+.repertuar-section {
+  .tickets__block {
+    .contact {
+      display: none;
+      padding: 2rem 0;
+      margin: 2rem 0;
+      border-top: 1px solid rgb($grey, $opacity-thick);
+      border-bottom: 1px solid rgb($grey, $opacity-thick);
+      & > * {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .buy__btn {
+    display: none !important;
+  }
+  .info {
+    display: none !important;
+  }
+  .contact {
+    display: block !important;
   }
 }
