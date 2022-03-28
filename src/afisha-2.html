@@ -16,47 +16,20 @@
   <body>
     @include('partials/header.html')
     <section class="afisha-list__section">
-      <!-- <div class="container">
+      <div class="container">
+        <div class="afisha-list__filter">
+          <div class="filter__selection is-active">все</div>
+          <div class="filter__selection">спектакли</div>
+          <div class="filter__selection">выездные мероприятия</div>
+          <div class="filter__selection desctop-only">внутренние события</div>
+        </div>
+      </div>
+
+      <div class="container">
         <div class="afisha__contact">
-          <div class="afisha__contact-form">
-            <div class="title title-3 text-red">
-              Оставьте контакты, и мы пришлём вам афишу, как только она
-              появится!
-            </div>
-            <div class="text-tiny">
-              Так вы первым узнаете про наши новости и планы.
-            </div>
-            <form action="post">
-              <input class="name" type="text" placeholder="Имя*" />
+          @include('partials/qa-block.html')
 
-              <input
-                class="email"
-                type="text"
-                placeholder="example@domain.com*"
-              />
-
-              <div class="checkbox agree__checkbox">
-                <input type="checkbox" id="agree" />
-                <label for="agree"
-                  >Согласие на обработку персональных данных</label
-                >
-              </div>
-              <div class="btn btn-std">отправить</div>
-            </form>
-
-            <img
-              class="cloud__item cloud__item-1"
-              src="./img/cloud.png"
-              alt=""
-            />
-            <img
-              class="cloud__item cloud__item-2"
-              src="./img/cloud.png"
-              alt=""
-            />
-          </div>
-
-          <div class="afisha__contact-animation">
+          <div class="afisha__contact-img">
             <img
               class="afisha-contact-img"
               src="./img/afisha-contact-img.png"
@@ -74,7 +47,7 @@
             />
           </div>
         </div>
-      </div> -->
+      </div>
 
       @include('partials/qa-block.html')
     </section>

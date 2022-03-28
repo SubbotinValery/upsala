@@ -550,13 +550,14 @@
 
 @include mobile {
   .afisha-section {
-    padding-top: calc($header-gap + 30rem);
+    padding-top: calc($header-gap + 15rem);
     .title-2 {
       font-size: 4.8rem;
       line-height: 4.8rem;
     }
   }
   .afisha-main-img-block {
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
@@ -570,45 +571,178 @@
   }
 }
 
-.afisha-section {
-  .tickets__block {
-    padding-top: 10rem;
-    padding-bottom: 8rem;
-    display: flex;
-    .no-tickets {
+.tickets__block {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  .bg-text {
+    z-index: -1;
+    pointer-events: none;
+  }
+  .tickets__title {
+    position: relative;
+    display: none;
+    margin-bottom: 3rem;
+    .bg-text {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .buy__btn {
+    position: relative;
+    width: fit-content;
+    margin-right: 25rem;
+    margin-bottom: 4rem;
+    .shape {
+      letter-spacing: 0.2rem;
+      cursor: pointer;
       position: relative;
-      width: fit-content;
-      .shape {
-        letter-spacing: 0.1rem;
-        cursor: default;
-        position: relative;
-        color: #fff;
-        letter-spacing: 0.1rem;
-        width: 22rem;
-        height: 10rem;
-        background-image: url("../../img/tickets-shape-red.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        span {
-          pointer-events: none;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-      .bg-text {
+      color: #fff;
+      width: 22rem;
+      height: 10rem;
+      background-image: url("../../img/tickets-shape-red.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      span {
+        white-space: nowrap;
         position: absolute;
-        top: calc(50% - 1rem);
-        right: -50%;
-        transform: translateY(-50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .bg-text {
+      position: absolute;
+      top: calc(50% - 1rem);
+      right: -50%;
+      transform: translateY(-50%);
+    }
+  }
+  .info {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 4rem;
+    & > * {
+      margin-right: 4rem;
+    }
+    .label {
+      color: $grey-dirty;
+    }
+    .title {
+      letter-spacing: 0.2rem;
+    }
+    .date {
+    }
+    .time {
+    }
+    .address {
+    }
+    .bg-text {
+      position: absolute;
+      top: calc(50% + 1rem);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-right: 0;
+    }
+  }
+}
+
+.no-tickets {
+  .tickets__block {
+    .shape {
+      cursor: default;
+      pointer-events: none;
+      background-image: url("../../img/tickets-shape-grey.png");
+      span {
+        pointer-events: none;
       }
     }
   }
-  .tickets__block.no-tickets {
-    .shape {
-      background-image: url("../../img/tickets-shape-grey.png");
+}
+
+@include tablet {
+  .tickets__block {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    flex-direction: column-reverse;
+    .tickets__title {
+      display: block;
+      letter-spacing: 0.1rem;
+    }
+    .info {
+      flex-wrap: wrap;
+      max-width: 40rem;
+      & > * {
+        width: fit-content;
+        margin-top: 2rem;
+      }
+      .bg-text {
+        display: none;
+      }
+    }
+    .buy__btn {
+      .bg-text {
+        display: none;
+      }
+    }
+  }
+}
+
+.afisha-section {
+  .afisha__contact {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8rem;
+    & > * {
+      width: 45%;
+    }
+    .title {
+      letter-spacing: 0.2rem;
+    }
+    .content {
+      .title {
+        margin-bottom: 1rem;
+      }
+    }
+    .form {
+      input {
+        background-color: transparent;
+        border-color: rgb($grey, $opacity-thick);
+        color: #fff;
+        &:focus,
+        &:active {
+          border-color: #fff;
+        }
+      }
+      label {
+        &::before {
+          border-color: #fff !important;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .afisha-section {
+    .afisha__contact {
+      padding-bottom: 4rem;
+      flex-direction: column;
+      .title {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+      }
+      & > * {
+        width: 100%;
+      }
+      .content {
+        margin-bottom: 3rem;
+      }
     }
   }
 }

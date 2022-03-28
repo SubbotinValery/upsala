@@ -1,139 +1,126 @@
 .repertuar-list-section {
-}
+  .repertuar-list-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 4.4rem 0;
+  }
 
-.repertuar-list-block__wrapper {
-  .container {
+  .repertuar-list-top-block {
+    position: relative;
+    .repertuar-list-bg__img {
+      position: absolute;
+      top: 0;
+      height: 52.3rem;
+      min-width: 60%;
+      object-fit: cover;
+    }
+    .title {
+      padding-top: calc($header-gap + 8.8rem);
+      padding-bottom: 14.7rem;
+    }
+  }
+
+  .repertuar-list-item {
+    position: relative;
+    text-decoration: none;
+    background-color: #fff;
+    color: $dark;
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.repertuar-list-block {
-  display: flex;
-  width: auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 4.4rem 0;
-}
-
-.repertuar-list-top-block {
-  position: relative;
-  .repertuar-list-bg__img {
-    position: absolute;
-    top: 0;
-    height: 43rem;
-    min-width: 60%;
-    object-fit: cover;
-  }
-  .title {
-    padding-top: calc($header-gap + 8.8rem);
-    padding-bottom: 14.7rem;
-  }
-}
-
-.repertuar-list-item {
-  position: relative;
-  text-decoration: none;
-  background-color: #fff;
-  color: $dark;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.4rem 1.4rem 3.3rem 1.4rem;
-  margin: 0.5rem;
-  width: 24%;
-  min-width: 38rem;
-  max-height: 47rem;
-  overflow: hidden;
-  background-image: url("../img/repertuar-list-item-bg-img.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover;
-  transition: $fast;
-  * {
-    z-index: 10;
-  }
-
-  &.soon {
-    position: relative;
-    background-image: none;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 1%;
-      right: 1%;
-      z-index: 10;
-      height: 4.5rem;
-      width: 9rem;
-      background-image: url("..//img/skoro-label.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      z-index: 15;
-    }
-  }
-  &__address {
-    width: 70%;
-    display: inline-block;
-    position: relative;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    text-transform: uppercase;
-    margin-bottom: 1.9rem;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -1rem;
-      left: 0;
-      height: 0.1rem;
-      width: 100%;
-      background-color: rgb(19, 19, 19, 0.5);
-    }
-  }
-  &__img {
-    width: 100%;
-  }
-  &__title {
-    font-size: 1.7rem;
-    line-height: 2.6rem;
-    margin-bottom: 1rem;
-  }
-  &__descr {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.4rem 1.4rem 3.3rem 1.4rem;
+    max-width: 55rem;
     overflow: hidden;
-  }
-  &__btn {
-    width: fit-content;
-    justify-self: flex-end;
-    margin-bottom: 0;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../../img/meropriatie-item-bg.png");
+    background-image: url("../img/repertuar-list-item-bg-img.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
     transition: $fast;
-    z-index: 0;
-  }
-  &:hover::before {
-    transform: scale(1.5);
-  }
-}
+    * {
+      z-index: 10;
+    }
 
-.repertuar-list-bg__img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  object-fit: cover;
-  z-index: -1;
+    &.soon {
+      position: relative;
+      background-image: none;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        z-index: 10;
+        height: 4.5rem;
+        width: 9rem;
+        background-image: url("..//img/skoro-label.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        z-index: 15;
+      }
+    }
+    &__address {
+      width: 70%;
+      display: inline-block;
+      position: relative;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      text-transform: uppercase;
+      margin-bottom: 1.9rem;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        height: 0.1rem;
+        width: 100%;
+        background-color: rgb(19, 19, 19, 0.5);
+      }
+    }
+    &__img {
+      width: 100%;
+    }
+    &__title {
+      font-size: 1.7rem;
+      line-height: 2.6rem;
+      margin-bottom: 1rem;
+    }
+    &__descr {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      overflow: hidden;
+    }
+    &__btn {
+      width: fit-content;
+      justify-self: flex-end;
+      margin-bottom: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../img/meropriatie-item-bg.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: cover;
+      transition: $fast;
+      z-index: 0;
+    }
+    &:hover::before {
+      transform: scale(1.5);
+    }
+  }
+
+  .repertuar-list-bg__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
 }
 
 @media screen and (max-width: 930px) {
@@ -147,23 +134,38 @@
   }
 }
 
-@media screen and (max-width: 906px) {
-  .repertuar-list-block {
-    justify-content: center;
+@include tablet {
+  .repertuar-list-section {
+    .repertuar-list-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
-@include mobile {
-  .repertuar-list-bg__img {
-    left: 50%;
-    transform: translateX(-50%);
-    object-position: center;
-  }
-  .repertuar-list-block__wrapper {
-    background-color: #fff;
-  }
-
-  .repertuar-list-item {
-    border: 1px solid rgb(19, 19, 19, 0.5);
+@include small-tablet {
+  .repertuar-list-section {
+    .repertuar-list-block__wrapper {
+      padding-top: 1.5rem;
+      padding-bottom: 3rem;
+    }
+    .repertuar-list-block {
+      margin: 0;
+      grid-template-columns: repeat(1, 1fr);
+      .repertuar-list-item {
+        justify-self: center;
+        border: 1px solid rgb(19, 19, 19, 0.5);
+        &__title {
+          margin-top: 1.6rem;
+        }
+      }
+    }
+    .repertuar-list-bg__img {
+      left: 50%;
+      transform: translateX(-50%);
+      object-position: center;
+    }
+    .repertuar-list-block__wrapper {
+      background-color: #fff;
+    }
   }
 }
