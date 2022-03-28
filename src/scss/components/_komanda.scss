@@ -33,18 +33,17 @@
 }
 
 .komanda-block {
-  display: flex;
-  width: auto;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
   margin: 4.4rem 0;
 }
 
 .komanda-item {
+  width: 100%;
   cursor: pointer;
-  margin: 2.4rem;
   position: relative;
-  width: 35rem;
+  max-width: 35rem;
   height: 43rem;
   border-radius: 1.6rem;
   border: 1px solid rgb(200, 200, 200, 0.5);
@@ -203,6 +202,7 @@
   margin-top: 9rem;
   display: flex;
   padding: 0 !important;
+
   .img {
     display: block;
     width: 65rem;
@@ -212,9 +212,8 @@
     object-position: center;
   }
   .content {
-    width: 35%;
+    width: 100%;
     margin-left: 4rem;
-    margin-right: 10rem;
   }
   .title {
     margin-bottom: 5.3rem;
@@ -222,5 +221,46 @@
   .descr {
     font-size: 1.4rem;
     line-height: 1.9rem;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .komanda-block {
+    grid-template-columns: repeat(3, 1fr);
+    .komanda-item {
+      // justify-self: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .komanda-block {
+    grid-template-columns: repeat(2, 1fr);
+    .komanda-item {
+      justify-self: center;
+    }
+  }
+  .komanda-info-block {
+    flex-direction: column !important;
+    .content {
+      margin: 0;
+      width: 100% !important;
+      margin-top: 3rem !important;
+      margin-bottom: 5rem !important;
+    }
+  }
+}
+
+@include tablet {
+  .komanda__slider {
+    margin-bottom: 0;
+  }
+}
+
+@include small-tablet {
+  .komanda-info-block {
+    .img {
+      width: 100% !important;
+    }
   }
 }
