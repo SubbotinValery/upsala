@@ -7,7 +7,7 @@
       content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Репертуар</title>
+    <title>Афиша</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
@@ -21,51 +21,108 @@
 
   <body>
     @include('partials/header.html')
-    <section class="repertuar-section">
+    <section class="afisha-section">
       <div class="container relative">
         <div class="title title-2">Эффект пинг-понгового шарика</div>
+        <div class="afisha__contact">
+          <div class="afisha__contact-form">
+            <div class="title title-3 text-red">
+              Оставьте контакты, и мы пришлём вам афишу, как только она
+              появится!
+            </div>
+            <div class="text-tiny">
+              Так вы первым узнаете про наши новости и планы.
+            </div>
+            <form action="post">
+              <input class="name" type="text" placeholder="Имя*" />
 
-        <table class="repertuar-timetable">
-          <tr class="repertuar-timetable__row">
-            <td class="repertuar-timetable__title">
+              <input
+                class="email"
+                type="text"
+                placeholder="example@domain.com*"
+              />
+
+              <div class="checkbox agree__checkbox">
+                <input type="checkbox" id="agree" />
+                <label for="agree"
+                  >Согласие на обработку персональных данных</label
+                >
+              </div>
+              <div class="btn btn-std">отправить</div>
+            </form>
+
+            <img
+              class="cloud__item cloud__item-1"
+              src="./img/cloud.png"
+              alt=""
+            />
+            <img
+              class="cloud__item cloud__item-2"
+              src="./img/cloud.png"
+              alt=""
+            />
+          </div>
+
+          <div class="afisha__contact-animation">
+            <img
+              class="afisha-contact-img"
+              src="./img/afisha-contact-img.png"
+              alt=""
+            />
+            <img
+              class="cloud__item cloud__item-1"
+              src="./img/cloud.png"
+              alt=""
+            />
+            <img
+              class="cloud__item cloud__item-2"
+              src="./img/cloud.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div> -->
+        <table class="afisha-timetable">
+          <tr class="afisha-timetable__row">
+            <td class="afisha-timetable__title">
               Эффект пинг-понгового шарика
             </td>
-            <td class="repertuar-timetable__date">22 января 2021</td>
-            <td class="repertuar-timetable__time">19:00 - 20:15</td>
-            <td class="repertuar-timetable__btn">
+            <td class="afisha-timetable__date">22 января 2021</td>
+            <td class="afisha-timetable__time">19:00 - 20:15</td>
+            <td class="afisha-timetable__btn">
               <div class="btn btn-std">купить от 1000 руб.</div>
             </td>
           </tr>
 
-          <tr class="repertuar-timetable__row">
-            <td class="repertuar-timetable__title">
+          <tr class="afisha-timetable__row">
+            <td class="afisha-timetable__title">
               Эффект пинг-понгового шарика
             </td>
-            <td class="repertuar-timetable__date">22 января 2021</td>
-            <td class="repertuar-timetable__time">19:00 - 20:15</td>
-            <td class="repertuar-timetable__btn">
+            <td class="afisha-timetable__date">22 января 2021</td>
+            <td class="afisha-timetable__time">19:00 - 20:15</td>
+            <td class="afisha-timetable__btn">
               <div class="btn btn-std">купить от 1000 руб.</div>
             </td>
           </tr>
 
-          <tr class="repertuar-timetable__row">
-            <td class="repertuar-timetable__title">
+          <tr class="afisha-timetable__row">
+            <td class="afisha-timetable__title">
               Эффект пинг-понгового шарика
             </td>
-            <td class="repertuar-timetable__date">22 января 2021</td>
-            <td class="repertuar-timetable__time">19:00 - 20:15</td>
-            <td class="repertuar-timetable__btn">
+            <td class="afisha-timetable__date">22 января 2021</td>
+            <td class="afisha-timetable__time">19:00 - 20:15</td>
+            <td class="afisha-timetable__btn">
               <div class="btn btn-std">купить от 1000 руб.</div>
             </td>
           </tr>
 
-          <tr class="repertuar-timetable__row">
-            <td class="repertuar-timetable__title">
+          <tr class="afisha-timetable__row">
+            <td class="afisha-timetable__title">
               Эффект пинг-понгового шарика
             </td>
-            <td class="repertuar-timetable__date">22 января 2021</td>
-            <td class="repertuar-timetable__time">19:00 - 20:15</td>
-            <td class="repertuar-timetable__btn">
+            <td class="afisha-timetable__date">22 января 2021</td>
+            <td class="afisha-timetable__time">19:00 - 20:15</td>
+            <td class="afisha-timetable__btn">
               <div class="btn btn-disable">купить от 1000 руб.</div>
             </td>
           </tr>
@@ -173,15 +230,15 @@
         </div>
       </div>
 
-      <div class="repertuar-main-img-block">
+      <div class="afisha-main-img-block">
         <img
-          class="repertuar-main-img"
+          class="afisha-main-img"
           src="./img/repertuar-main-img.png"
           alt=""
         />
       </div>
 
-      <div class="repertuar-main-title-block">
+      <div class="afisha-main-title-block">
         <div class="container">
           <div>
             <div class="title title-2">
@@ -196,7 +253,7 @@
           </div>
 
           <img
-            class="repertuar-main-title-block__img"
+            class="afisha-main-title-block__img"
             src="./img/repertuar-secondary-img.png"
             alt=""
           />
@@ -204,13 +261,13 @@
       </div>
 
       <div class="container">
-        <div class="repertuar-about">
-          <div class="repertuar-about__star">
+        <div class="afisha-about">
+          <div class="afisha-about__star">
             <img src="./img/repertuar-star.png" alt="" />
           </div>
-          <div class="repertuar-about__content">
-            <div class="repertuar-about__title">о спектакле</div>
-            <div class="repertuar-about__descr">
+          <div class="afisha-about__content">
+            <div class="afisha-about__title">о спектакле</div>
+            <div class="afisha-about__descr">
               Память конечна. Мы забываем о людях, которые были до нас, и они
               исчезают. Исчезают вместе со всеми знаниями, любовью и трагедиями,
               которые нужны нам сегодняшним, чтобы помнить, жить и любить,
@@ -588,6 +645,54 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="afisha-komanda-about">
+          <img class="star-line" src="./img/star-line.png" alt="" />
+          <div class="person">
+            <img
+              class="avatar"
+              src="./img/komanda-item-info-avatar.png"
+              alt=""
+            />
+            <div class="person__info">
+              <div class="name">Лариса Афанасьева</div>
+              <div class="post">
+                Со-основатель, режиссёр, директор и художественный руководитель
+                АНО «Упсала-Цирк».
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="content__title">
+              Так получилось, что в моем восприятии, собственное детство не
+              имеет ко мне сегодняшней никакого отношения.
+            </div>
+            <div class="content__descr">
+              Так получилось, что в моем восприятии, собственное детство не
+              имеет ко мне сегодняшней никакого отношения. Как будто я проживала
+              чью-то жизнь. Это не самое приятное чувство, все мы хотим быть
+              целостными. Хотелось бы чувствовать, что детство держит тебя, дает
+              тебе энергию, силу, воспоминания. Не то, чтобы светлых
+              воспоминаний не было, но те, которые сохранились, не дарят сил.
+              <br /><br />
+              Иногда в детстве, если в роду нет никого необычного, пытаешься
+              придумать себе «биографию». Так я, чтобы отличаться от других,
+              рассказывала, что папа служил на стороне немцев. И виделась мне в
+              этом какая-то крутизна. Конечно, он не был немецким солдатом. Он
+              был, наверное, обычным жителем Сибири. Там удивительные люди
+              живут. Приехав в Петербург, я поняла, что не вижу в городе
+              «зеков», которые в Сибири составляют отдельную группу; ты прямо
+              видишь людей, которые отсидели 20-25 лет, и это часть общества.
+              Есть работяги, есть «зеки», есть люди обычные и так далее.
+              <br /><br />
+              Когда я спрашивала о бабушке и о дедушке – никто не говорил ничего
+              вразумительного, информации как-то разнилась. Иногда отвечали, что
+              мой дедушка был солдатом, кто-то говорил, что он охранял
+              военнопленных. Каких военнопленных и где? Об этом мне не
+              рассказывали. Это со стороны мамы.
             </div>
           </div>
         </div>

@@ -569,3 +569,46 @@
     }
   }
 }
+
+.afisha-section {
+  .tickets__block {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    display: flex;
+    .no-tickets {
+      position: relative;
+      width: fit-content;
+      .shape {
+        letter-spacing: 0.1rem;
+        cursor: default;
+        position: relative;
+        color: #fff;
+        letter-spacing: 0.1rem;
+        width: 22rem;
+        height: 10rem;
+        background-image: url("../../img/tickets-shape-red.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        span {
+          pointer-events: none;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .bg-text {
+        position: absolute;
+        top: calc(50% - 1rem);
+        right: -50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .tickets__block.no-tickets {
+    .shape {
+      background-image: url("../../img/tickets-shape-grey.png");
+    }
+  }
+}

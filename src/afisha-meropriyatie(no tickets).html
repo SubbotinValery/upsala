@@ -7,7 +7,7 @@
       content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Репертуар</title>
+    <title>Афиша</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
@@ -21,167 +21,30 @@
 
   <body>
     @include('partials/header.html')
-    <section class="repertuar-section">
+    <section class="afisha-section">
       <div class="container relative">
         <div class="title title-2">Эффект пинг-понгового шарика</div>
+      </div>
 
-        <table class="repertuar-timetable">
-          <tr class="repertuar-timetable__row">
-            <td class="repertuar-timetable__title">
-              Эффект пинг-понгового шарика
-            </td>
-            <td class="repertuar-timetable__date">22 января 2021</td>
-            <td class="repertuar-timetable__time">19:00 - 20:15</td>
-            <td class="repertuar-timetable__btn">
-              <div class="btn btn-std">купить от 1000 руб.</div>
-            </td>
-          </tr>
-
-          <tr class="repertuar-timetable__row">
-            <td class="repertuar-timetable__title">
-              Эффект пинг-понгового шарика
-            </td>
-            <td class="repertuar-timetable__date">22 января 2021</td>
-            <td class="repertuar-timetable__time">19:00 - 20:15</td>
-            <td class="repertuar-timetable__btn">
-              <div class="btn btn-std">купить от 1000 руб.</div>
-            </td>
-          </tr>
-
-          <tr class="repertuar-timetable__row">
-            <td class="repertuar-timetable__title">
-              Эффект пинг-понгового шарика
-            </td>
-            <td class="repertuar-timetable__date">22 января 2021</td>
-            <td class="repertuar-timetable__time">19:00 - 20:15</td>
-            <td class="repertuar-timetable__btn">
-              <div class="btn btn-std">купить от 1000 руб.</div>
-            </td>
-          </tr>
-
-          <tr class="repertuar-timetable__row">
-            <td class="repertuar-timetable__title">
-              Эффект пинг-понгового шарика
-            </td>
-            <td class="repertuar-timetable__date">22 января 2021</td>
-            <td class="repertuar-timetable__time">19:00 - 20:15</td>
-            <td class="repertuar-timetable__btn">
-              <div class="btn btn-disable">купить от 1000 руб.</div>
-            </td>
-          </tr>
-        </table>
-
-        <div class="timetable-mobile">
-          <div class="timetable-mobile-pre">
-            <div class="timetable-mobile-pre__title title title-4">
-              ближайшее мероприятие:
-            </div>
-            <div class="timetable-mobile-pre__outline title title-3 outline">
-              информация
-            </div>
+      <div class="container">
+        <div class="tickets__block no-tickets">
+          <div class="no-tickets">
+            <div class="shape title title-4"><span>Билетов нет</span></div>
+            <div class="bg-text title title-2 outline">Билеты</div>
           </div>
-
-          <div class="expand-vertical-block close">
-            <div class="timetable-mobile-item expand-item">
-              <div class="timetable-mobile-item__title title title-4">
-                Эффект пинг-понгового шарика
-              </div>
-
-              <div class="timetable-mobile-item__info">
-                <div class="timetable-mobile-item__date">
-                  <div class="label">Дата</div>
-                  <div class="title title-4">22 января 2021</div>
-                </div>
-
-                <div class="timetable-mobile-item__time">
-                  <div class="label">Время</div>
-                  <div class="title title-4">19:00 - 20:15</div>
-                </div>
-
-                <div class="timetable-mobile-item__address">
-                  <div class="label">Адрес</div>
-                  <div class="title title-4">Спб, Свердловская наб., 44Ю</div>
-                </div>
-              </div>
-
-              <div class="timetable-mobile-item__btn btn btn-std">
-                купить от 1000 руб.
-              </div>
-            </div>
-
-            <div class="timetable-mobile-item expand-item">
-              <div class="timetable-mobile-item__title title title-4">
-                Эффект пинг-понгового шарика
-              </div>
-
-              <div class="timetable-mobile-item__info">
-                <div class="timetable-mobile-item__date">
-                  <div class="label">Дата</div>
-                  <div class="title title-4">22 января 2021</div>
-                </div>
-
-                <div class="timetable-mobile-item__time">
-                  <div class="label">Время</div>
-                  <div class="title title-4">19:00 - 20:15</div>
-                </div>
-
-                <div class="timetable-mobile-item__address">
-                  <div class="label">Адрес</div>
-                  <div class="title title-4">Спб, Свердловская наб., 44Ю</div>
-                </div>
-              </div>
-
-              <div class="timetable-mobile-item__btn btn btn-std">
-                купить от 1000 руб.
-              </div>
-            </div>
-
-            <div class="timetable-mobile-item expand-item">
-              <div class="timetable-mobile-item__title title title-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
-                quod quibusdam dicta, ducimus incidunt exercitationem architecto
-                dolorum animi adipisci maiores corporis quidem omnis, saepe,
-                fugit dignissimos officiis. Alias, architecto harum dolores
-                debitis reiciendis eius corporis qui dolore facere magnam
-                quidem?
-              </div>
-
-              <div class="timetable-mobile-item__info">
-                <div class="timetable-mobile-item__date">
-                  <div class="label">Дата</div>
-                  <div class="title title-4">22 января 2021</div>
-                </div>
-
-                <div class="timetable-mobile-item__time">
-                  <div class="label">Время</div>
-                  <div class="title title-4">19:00 - 20:15</div>
-                </div>
-
-                <div class="timetable-mobile-item__address">
-                  <div class="label">Адрес</div>
-                  <div class="title title-4">Спб, Свердловская наб., 44Ю</div>
-                </div>
-              </div>
-
-              <div class="timetable-mobile-item__btn btn btn-std">
-                купить от 1000 руб.
-              </div>
-            </div>
-
-            <div class="expand-btn">Показать еще</div>
-          </div>
+          <div class="info"></div>
         </div>
       </div>
 
-      <div class="repertuar-main-img-block">
+      <div class="afisha-main-img-block">
         <img
-          class="repertuar-main-img"
+          class="afisha-main-img"
           src="./img/repertuar-main-img.png"
           alt=""
         />
       </div>
 
-      <div class="repertuar-main-title-block">
+      <div class="afisha-main-title-block">
         <div class="container">
           <div>
             <div class="title title-2">
@@ -196,7 +59,7 @@
           </div>
 
           <img
-            class="repertuar-main-title-block__img"
+            class="afisha-main-title-block__img"
             src="./img/repertuar-secondary-img.png"
             alt=""
           />
@@ -204,13 +67,13 @@
       </div>
 
       <div class="container">
-        <div class="repertuar-about">
-          <div class="repertuar-about__star">
+        <div class="afisha-about">
+          <div class="afisha-about__star">
             <img src="./img/repertuar-star.png" alt="" />
           </div>
-          <div class="repertuar-about__content">
-            <div class="repertuar-about__title">о спектакле</div>
-            <div class="repertuar-about__descr">
+          <div class="afisha-about__content">
+            <div class="afisha-about__title">о спектакле</div>
+            <div class="afisha-about__descr">
               Память конечна. Мы забываем о людях, которые были до нас, и они
               исчезают. Исчезают вместе со всеми знаниями, любовью и трагедиями,
               которые нужны нам сегодняшним, чтобы помнить, жить и любить,
@@ -588,6 +451,54 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="afisha-komanda-about">
+          <img class="star-line" src="./img/star-line.png" alt="" />
+          <div class="person">
+            <img
+              class="avatar"
+              src="./img/komanda-item-info-avatar.png"
+              alt=""
+            />
+            <div class="person__info">
+              <div class="name">Лариса Афанасьева</div>
+              <div class="post">
+                Со-основатель, режиссёр, директор и художественный руководитель
+                АНО «Упсала-Цирк».
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="content__title">
+              Так получилось, что в моем восприятии, собственное детство не
+              имеет ко мне сегодняшней никакого отношения.
+            </div>
+            <div class="content__descr">
+              Так получилось, что в моем восприятии, собственное детство не
+              имеет ко мне сегодняшней никакого отношения. Как будто я проживала
+              чью-то жизнь. Это не самое приятное чувство, все мы хотим быть
+              целостными. Хотелось бы чувствовать, что детство держит тебя, дает
+              тебе энергию, силу, воспоминания. Не то, чтобы светлых
+              воспоминаний не было, но те, которые сохранились, не дарят сил.
+              <br /><br />
+              Иногда в детстве, если в роду нет никого необычного, пытаешься
+              придумать себе «биографию». Так я, чтобы отличаться от других,
+              рассказывала, что папа служил на стороне немцев. И виделась мне в
+              этом какая-то крутизна. Конечно, он не был немецким солдатом. Он
+              был, наверное, обычным жителем Сибири. Там удивительные люди
+              живут. Приехав в Петербург, я поняла, что не вижу в городе
+              «зеков», которые в Сибири составляют отдельную группу; ты прямо
+              видишь людей, которые отсидели 20-25 лет, и это часть общества.
+              Есть работяги, есть «зеки», есть люди обычные и так далее.
+              <br /><br />
+              Когда я спрашивала о бабушке и о дедушке – никто не говорил ничего
+              вразумительного, информации как-то разнилась. Иногда отвечали, что
+              мой дедушка был солдатом, кто-то говорил, что он охранял
+              военнопленных. Каких военнопленных и где? Об этом мне не
+              рассказывали. Это со стороны мамы.
             </div>
           </div>
         </div>
