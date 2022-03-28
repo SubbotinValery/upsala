@@ -126,6 +126,11 @@
   &__content {
     width: 50%;
     margin-right: 10rem;
+    & > .btn {
+      white-space: nowrap;
+      display: none;
+      width: 22rem;
+    }
   }
   &__title {
     font-size: 2.4;
@@ -271,6 +276,7 @@
     position: relative;
     margin-bottom: 12.8rem;
     .content-main {
+      width: 50%;
       font-size: 1.7rem;
       line-height: 2.6rem;
       margin-top: -30vw;
@@ -548,6 +554,14 @@
   }
 }
 
+@include tablet {
+  .spectacl-about {
+    .content-main {
+      width: 100% !important;
+    }
+  }
+}
+
 @include mobile {
   .afisha-section {
     padding-top: calc($header-gap + 15rem);
@@ -563,10 +577,24 @@
     left: 0;
     width: 100%;
   }
+  .afisha-main-title-block {
+    .title-3 {
+      letter-spacing: 0.2rem;
+      font-size: 2.4rem !important;
+      line-height: 3.2rem !important;
+    }
+  }
 
   .spectacl-about {
     .content-main {
       margin-top: 10vw !important;
+    }
+  }
+  .afisha-about {
+    &__content {
+      & > .btn {
+        display: block !important;
+      }
     }
   }
 }

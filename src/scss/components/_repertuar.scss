@@ -130,6 +130,11 @@
   &__content {
     width: 50%;
     margin-right: 10rem;
+    & > .btn {
+      white-space: nowrap;
+      display: none;
+      width: 22rem;
+    }
   }
   &__title {
     font-size: 2.4;
@@ -277,6 +282,21 @@
     left: 0;
     width: 100%;
   }
+  .repertuar-about {
+    &__content {
+      & > .btn {
+        display: block !important;
+      }
+    }
+  }
+
+  .repertuar-main-title-block {
+    .title-3 {
+      letter-spacing: 0.2rem;
+      font-size: 2.4rem !important;
+      line-height: 3.2rem !important;
+    }
+  }
 }
 
 .repertuar-section {
@@ -289,6 +309,60 @@
       border-bottom: 1px solid rgb($grey, $opacity-thick);
       & > * {
         margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.repertuar-section {
+  .repertuar__contact {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8rem;
+    & > * {
+      width: 45%;
+    }
+    .title {
+      letter-spacing: 0.2rem;
+    }
+    .content {
+      .title {
+        margin-bottom: 1rem;
+      }
+    }
+    .form {
+      input {
+        background-color: transparent;
+        border-color: rgb($grey, $opacity-thick);
+        color: #fff;
+        &:focus,
+        &:active {
+          border-color: #fff;
+        }
+      }
+      label {
+        &::before {
+          border-color: #fff !important;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .repertuar-section {
+    .repertuar__contact {
+      padding-bottom: 4rem;
+      flex-direction: column;
+      .title {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+      }
+      & > * {
+        width: 100%;
+      }
+      .content {
+        margin-bottom: 3rem;
       }
     }
   }
