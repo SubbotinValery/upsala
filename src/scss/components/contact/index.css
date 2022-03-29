@@ -1,0 +1,115 @@
+.contact__section {
+  padding-top: 15rem;
+}
+
+.contact__section .info__block__wrapper {
+  margin-top: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact__section .info__block {
+  display: -ms-grid;
+  display: grid;
+  max-width: 98rem;
+}
+
+.contact__section .info__block .map {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  width: 100%;
+}
+
+.contact__section .info__block .info {
+  margin-top: -5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact__section .info__block .info__title {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.contact__section .info__block .info__descr {
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+
+.contact__section .additional-q__block {
+  width: 100% !important;
+  max-width: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  border-radius: 2.4rem;
+  padding: 5rem 5.5rem;
+  margin-bottom: 11rem;
+}
+
+.contact__section .additional-q__title {
+  width: 50%;
+}
+
+.contact__section .additional-q__form {
+  width: 50%;
+}
+
+.contact__section .komanda__block {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact__section .komanda__block .komanda-item {
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+}
+
+.contact__section .komanda__link__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact__section .komanda__link__wrapper .komanda__link {
+  margin-right: 5rem;
+}
+
+#contactPage *[class*="modal__content-"] {
+  padding: 0 !important;
+}
+/*# sourceMappingURL=index.css.map */
