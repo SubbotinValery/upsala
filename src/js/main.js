@@ -8,24 +8,14 @@ import "./components/_expand-vertical";
 import "./components/_modal";
 import "./components/_input-mask";
 
-// komanda.html;
 import "./components/_komanda-slider";
-
-//not-found.html
 import "./components/not-found/_not-found";
-
-//afisha
 import "./components/afisha/_afisha";
-
-//support
 import "./components/support/support";
-
-//otcheti
 import "./components/otcheti/_otcheti";
-
 import "./components/partner/_partner";
-
-//profile
 import "./components/profile/_profile";
 
 import "./components/_loader";
+
+import "./components/glavnaya";

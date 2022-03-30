@@ -1,0 +1,16 @@
+@import "./section-8";
+@import "./section-9";
+
+#indexPage {
+  section[class^="section-"] {
+    position: relative;
+    margin-top: min(15rem, 10vw);
+  }
+  .section__title {
+    white-space: nowrap;
+  }
+  .content {
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+  }
+}
