@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       768: {
         perPage: 1,
+        gap: "0",
       },
     },
   }).mount();
