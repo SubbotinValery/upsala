@@ -1,0 +1,198 @@
+.section-12 {
+  background-color: $grey;
+  color: $dark;
+  min-height: 100vh;
+  padding-top: min(15rem, 10vw);
+  padding-bottom: min(10rem, 6vw);
+  .slider__wrapper {
+    .arrow-wrapper {
+      display: none;
+    }
+  }
+  .slider__item {
+    cursor: pointer;
+    padding: 0 3.5rem;
+    display: flex;
+    & > * {
+      width: 50%;
+    }
+    .img__wrapper {
+      margin-right: 4rem;
+      .img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .subtitle {
+        display: none;
+      }
+    }
+    .content__wrapper {
+      .subtitle {
+        margin-bottom: 1.6rem;
+      }
+      .descr {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+      }
+    }
+  }
+  .section__title {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .section-12 {
+    .slider__wrapper {
+      margin-top: 10rem;
+      padding-bottom: 30rem;
+      width: 100%;
+      .splide__pagination {
+        width: 100%;
+        bottom: -24rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100vw;
+          height: 0.1rem;
+          background-color: rgb(19, 19, 19, 0.5);
+        }
+      }
+      .splide__pagination li {
+        display: flex;
+        align-items: center;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .splide__pagination li button {
+        cursor: pointer;
+        width: 0.8rem;
+        height: 0.8rem;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        border: 1px solid $dark;
+        border-radius: 50%;
+        opacity: 1;
+        z-index: 10;
+      }
+
+      .splide__pagination li button[aria-current="true"] {
+        position: relative;
+        width: 13rem;
+        height: 13rem;
+        background-color: transparent;
+        border: none;
+        background-image: url("../img/svg/nasha-istoria-controls-img.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 10;
+        transform-style: preserve-3d;
+        &::before {
+          position: absolute;
+          content: "";
+          cursor: default;
+          top: 0;
+          left: -6.4rem;
+          right: -6.4rem;
+          height: 14rem;
+          background-color: $grey;
+          transform: translateZ(-1px);
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 0.6rem;
+          height: 0.6rem;
+          margin: 0;
+          padding: 0;
+          background-color: #fff;
+          border: 1px solid $dark;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .section-12 {
+    .running-line {
+      display: none;
+    }
+    .section__title {
+      display: block;
+      .outline {
+        -webkit-text-stroke: 0.1rem rgba($dark, $opacity-thick);
+        color: rgba(200, 200, 200, 0);
+      }
+    }
+    .splide__slide {
+      display: flex;
+      justify-content: center;
+    }
+    .slider__wrapper {
+      margin-top: 4rem;
+      .arrow-wrapper {
+        display: flex;
+      }
+    }
+    .slider__item {
+      width: max(60rem, 60%);
+      & > * {
+        width: 100%;
+      }
+      flex-direction: column-reverse;
+      .content__wrapper {
+        margin-bottom: 3rem;
+        .subtitle {
+          font-family: "GTWalsheimPro";
+          font-weight: normal;
+          span {
+            color: $red;
+          }
+        }
+      }
+      .img__wrapper {
+        position: relative;
+        margin: 0;
+        height: 43rem;
+        border-radius: 1.6rem;
+        overflow: hidden;
+        .img {
+          width: 100%;
+          height: 100%;
+          object-position: left;
+        }
+        .subtitle {
+          color: #fff;
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 12rem;
+          padding: 3rem;
+          padding-top: 5rem;
+          background-image: url("../../../img/chto-proishodit-img-bg-item.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: top;
+        }
+      }
+    }
+  }
+}
