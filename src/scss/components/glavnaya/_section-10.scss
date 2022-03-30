@@ -110,7 +110,9 @@
       justify-content: center;
     }
     .yt__block {
+      align-self: center;
       width: 100%;
+      max-width: 60rem;
       margin-right: 0;
     }
     .yt {
