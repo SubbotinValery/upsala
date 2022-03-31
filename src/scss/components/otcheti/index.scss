@@ -180,6 +180,36 @@
   }
 }
 
+.otcheti__section {
+  .star__wrapper {
+    position: absolute;
+    top: 0;
+    right: calc(10% - 6rem);
+    width: 51rem;
+    .star {
+      width: 100%;
+    }
+  }
+  .cloud__item {
+    position: absolute;
+    &-1 {
+      width: 14rem;
+      top: 22rem;
+      right: min(44%, 32rem);
+    }
+    &-2 {
+      width: 18rem;
+      top: 10rem;
+      right: calc(10% + 18rem);
+    }
+    &-3 {
+      width: 12rem;
+      top: 47rem;
+      right: min(30%, 26rem);
+    }
+  }
+}
+
 @include tablet {
   .progress__block {
     & > * {
@@ -327,6 +357,12 @@
       .star__wrapper {
         display: none;
       }
+    }
+    .star__wrapper {
+      display: none;
+    }
+    .cloud__item {
+      display: none;
     }
   }
 }
