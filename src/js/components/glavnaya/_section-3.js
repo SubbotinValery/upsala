@@ -28,7 +28,9 @@ const aboutTimeline = anime
     {
       targets: jugglerWrapper,
       bottom: ["-100%", "30%"],
-      left: ["25%", "25%"],
+      left: () => {
+        return window.innerWidth > 1024 ? ["25%", "25%"] : ["50%", "50%"];
+      },
       translateX: ["-50%", "-50%"],
       translateY: ["50%", "50%"],
       duration: 500,
@@ -38,8 +40,12 @@ const aboutTimeline = anime
   )
   .add({
     targets: starWrapper,
-    bottom: ["-100%", "50%"],
-    left: ["25%", "25%"],
+    bottom: () => {
+      return window.innerWidth > 1024 ? ["-100%", "50%"] : ["-100%", "30%"];
+    },
+    left: () => {
+      return window.innerWidth > 1024 ? ["25%", "25%"] : ["50%", "50%"];
+    },
     translateX: ["-50%", "-50%"],
     translateY: ["50%", "50%"],
     duration: 500,

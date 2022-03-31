@@ -79,8 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       1170: {
         perPage: 2,
+        gap: "2rem",
       },
-      768: {
+      790: {
         perPage: 1,
         gap: "0",
       },

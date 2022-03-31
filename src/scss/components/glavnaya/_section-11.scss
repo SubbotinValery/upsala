@@ -146,18 +146,11 @@
       }
     }
   }
-}
 
-@media screen and (max-width: 1170px) {
-  .section-11 {
-    .splide__slide {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-    .slider__item {
-      width: 100%;
-    }
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
 

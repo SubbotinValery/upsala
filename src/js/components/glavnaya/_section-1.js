@@ -33,18 +33,15 @@ const neCirkTimeline = anime
     },
     "-=100"
   )
-  .add(
-    {
-      targets: handWrapper,
-      top: ["150%", "78%"],
-      left: ["53%", "53%"],
-      translateX: ["-50%", "-50%"],
-      translateY: ["-50%", "-50%"],
-      duration: 300,
-      easing: "linear",
-    }
-    // "-=100"
-  )
+  .add({
+    targets: handWrapper,
+    top: ["150%", "78%"],
+    left: ["53%", "53%"],
+    translateX: ["-50%", "-50%"],
+    translateY: ["-50%", "-50%"],
+    duration: 300,
+    easing: "linear",
+  })
   .add(
     {
       targets: girlWrapper,
@@ -70,7 +67,7 @@ const neCirkTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    "-=300"
+    "-=200"
   );
 document.addEventListener("DOMContentLoaded", function () {
   const girlRotate = anime({

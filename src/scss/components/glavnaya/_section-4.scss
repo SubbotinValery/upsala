@@ -26,9 +26,10 @@
     .nav__item {
       cursor: pointer;
       position: relative;
-      border-bottom: 0.1rem solid #9c8c8c;
+      border-bottom: 0.1rem solid $grey-dirty;
       padding-bottom: 2.4rem;
       padding-top: 1em;
+
       &::before {
         position: absolute;
         content: "";
@@ -36,12 +37,23 @@
         left: 0;
         height: 0.2rem;
         width: 0;
-        transition: medium;
+        transition: $medium;
         background-color: $red;
       }
       &:hover::before {
         width: 100%;
       }
+    }
+  }
+}
+
+@include small-tablet {
+  .section-4 {
+    .preview__block {
+      display: none;
+    }
+    .nav__list {
+      width: 100%;
     }
   }
 }
