@@ -15,6 +15,12 @@
     position: fixed;
     transition: medium;
     z-index: -20;
+    min-width: 23rem;
+    max-width: 42rem;
+    width: 45vw;
+    .hand {
+      width: 100%;
+    }
   }
   .section__title {
     .italic {
@@ -62,6 +68,58 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .section-1 {
+    .section__title {
+      font-size: 9.6rem !important;
+      line-height: 8.8rem !important;
+    }
+    .content__wrapper {
+      height: calc(100vh - 37rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .down__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .btn {
+        display: block;
+        max-width: 30rem;
+        margin: 1rem 0;
+        &-outline {
+          color: #fff;
+          border-color: $red;
+          background-color: transparent;
+          &:hover {
+            background-color: darken($red, 10%);
+            border-color: darken($red, 10%);
+          }
+        }
+      }
+      .down__btn {
+        margin-top: 3rem;
+        margin-left: 0;
+        margin-right: 0;
+        &::before {
+          top: calc(100% + 2rem);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &::after {
+          top: calc(100% + 4.5rem);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &:hover::before {
+          transform: translateX(-50%) rotate(180deg);
+        }
       }
     }
   }

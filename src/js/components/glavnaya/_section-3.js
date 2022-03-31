@@ -1,74 +1,58 @@
-import anime from "../../vendor/anime.min";
-
-const section = document.querySelector(".about-section");
+const section = document.querySelector(".section-3");
 
 const jugglerWrapper = section.querySelector(".juggler__wrapper");
 
 const jumper1 = section.querySelector(".jumper__wrapper-1");
-
 const jumper2 = section.querySelector(".jumper__wrapper-2");
 const cloud = section.querySelector(".cloud__wrapper");
 
-const aboutContent1 = section.querySelector(".about-content-1");
-const aboutContent2 = section.querySelector(".about-content-2");
-const aboutContent3 = section.querySelector(".about-content-3");
+const aboutContent1 = section.querySelector(".content-1");
+const aboutContent2 = section.querySelector(".content-2");
+const aboutContent3 = section.querySelector(".content-3");
 
-const pin = document.querySelector(".pin");
-
-function numberRange(start, end) {
-  return new Array(end - start).fill().map((d, i) => i + start);
-}
-const jumperBlockRangeStart = numberRange(4500, 4550);
-const jumperBlockRangeEnd = numberRange(5150, 5200);
+const starWrapper = document.querySelector("#indexPage > .star__wrapper");
+const clouds = document.querySelectorAll("#indexPage > .cloud__item");
 
 const aboutTimeline = anime
   .timeline({ autoplay: false })
-  .add({
-    delay: 2500,
-    targets: jugglerWrapper,
-    bottom: ["-50%", "40%"],
-    left: ["25%", "25%"],
-    translateX: ["-50%", "-50%"],
-    translateY: ["50%", "50%"],
-    scale: [0.8, 0.8],
-    duration: 500,
-    easing: "linear",
-  })
-  .add({
-    targets: pin,
-    opacity: 0,
-    visability: "hidden",
-    duration: 100,
-    easing: "linear",
-  })
   .add(
     {
-      targets: aboutContent1,
-      opacity: [0, 1],
-      translateX: ["100%", "0%"],
-      duration: 100,
+      targets: clouds,
+      bottom: "-2%",
+      duration: 300,
       easing: "linear",
     },
-    "-=300"
-  )
-  .add(
-    {
-      targets: aboutContent2,
-      opacity: [0, 1],
-      translateX: ["100%", "0%"],
-      duration: 100,
-      easing: "linear",
-    },
-    "+=500"
+    "+=2300"
   )
   .add(
     {
       targets: jugglerWrapper,
-      bottom: "-50%",
+      bottom: ["-100%", "30%"],
+      left: ["25%", "25%"],
+      translateX: ["-50%", "-50%"],
+      translateY: ["50%", "50%"],
       duration: 500,
       easing: "linear",
     },
-    4100
+    "-=300"
+  )
+  .add({
+    targets: starWrapper,
+    bottom: ["-100%", "50%"],
+    left: ["25%", "25%"],
+    translateX: ["-50%", "-50%"],
+    translateY: ["50%", "50%"],
+    duration: 500,
+    easing: "linear",
+  })
+  .add(
+    {
+      targets: jugglerWrapper,
+      bottom: "-100%",
+      duration: 500,
+      easing: "linear",
+    },
+    "+=100"
   )
   .add(
     {
@@ -77,92 +61,110 @@ const aboutTimeline = anime
         value: [0, 1],
         duration: 100,
       },
-      bottom: ["50%", "-50%"],
+      bottom: ["70%", "-50%"],
       right: ["60%", "60%"],
       translateX: ["50%", "50%"],
       translateY: ["50%", "50%"],
-      scale: [0.15, 0.15],
-      duration: 600,
+      duration: 500,
       easing: "linear",
     },
-    5400
+    "+=400"
   )
   .add(
     {
-      targets: aboutContent3,
-      opacity: [0, 1],
-      translateX: ["100%", "0%"],
-      duration: 100,
+      targets: starWrapper,
+      bottom: "-100%",
+      duration: 400,
       easing: "linear",
     },
-    "-=700"
-  );
+    "-=300"
+  )
+  .add({
+    targets: clouds,
+    bottom: "-50%",
+    duration: 300,
+    easing: "linear",
+  });
 
 document.addEventListener("DOMContentLoaded", function () {
-  let jumperBlockTimeline = anime
-    .timeline({ loop: true, autoplay: false, direction: "normal" })
-    .add(
-      {
-        targets: jumper2,
-        scale: [0.1, 0.1],
-        translateX: ["50%", "50%"],
-        translateY: ["-50%", "-50%"],
-        top: ["-210%", "-140%"],
-        right: ["-40%", "-20%"],
-        duration: 1500,
-        easing: "easeInSine",
-      },
-      0
-    )
-    .add({
-      targets: jumper2,
-      top: "-150%",
-      right: "-10%",
-      duration: 500,
-      easing: "easeOutSine",
-    })
-    .add({
-      targets: jumper2,
-      top: "-80%",
-      right: "5%",
-      easing: "easeOutSine",
-    });
+  // let topBorder = jumper2.getBoundingClientRect().top;
+  // let bottomBorder = jumper2.getBoundingClientRect().bottom;
 
-  const jumperBlockCloudTimeline = anime
-    .timeline({ autoplay: false, loop: false })
-    .add({
-      targets: cloud,
-      scale: [0.5, 0.5],
-      translateX: ["50%", "50%"],
-      translateY: ["-50%", "-50%"],
-      top: ["50%", "50%"],
-      right: ["-30%", "12%"],
-      easing: "easeInSine",
-      duration: 1000,
-      loop: false,
-    });
+  // window.addEventListener("resize", function (event) {
+  //   topBorder = jumper2.getBoundingClientRect().top;
+  //   bottomBorder = jumper2.getBoundingClientRect().bottom;
+  // });
+
+  // const jumperBlockTimeline = anime
+  //   .timeline({ loop: true, autoplay: false, direction: "normal" })
+  //   .add({
+  //     targets: jumper2,
+  //     scale: [0.1, 0.1],
+  //     translateX: ["50%", "50%"],
+  //     translateY: ["-50%", "-50%"],
+  //     top: ["-210%", "-140%"],
+  //     right: ["-40%", "-20%"],
+  //     duration: 1500,
+  //     easing: "easeInSine",
+  //   })
+  //   .add({
+  //     targets: jumper2,
+  //     top: "-150%",
+  //     right: "-10%",
+  //     duration: 500,
+  //     easing: "easeOutSine",
+  //   })
+  //   .add({
+  //     targets: jumper2,
+  //     top: "-80%",
+  //     right: "5%",
+  //     easing: "easeOutSine",
+  //   });
+
+  // const jumperBlockCloudTimeline = anime
+  //   .timeline({ autoplay: false, loop: false })
+  //   .add({
+  //     targets: cloud,
+  //     scale: [0.5, 0.5],
+  //     translateX: ["50%", "50%"],
+  //     translateY: ["-50%", "-50%"],
+  //     top: ["50%", "50%"],
+  //     right: ["-30%", "12%"],
+  //     easing: "easeInSine",
+  //     duration: 1000,
+  //     loop: false,
+  //   });
 
   window.addEventListener("scroll", () => {
-    if (window.pageYOffset < 4500) {
-      jumperBlockTimeline.restart();
-      jumperBlockTimeline.pause();
-      jumperBlockCloudTimeline.restart();
-      jumperBlockCloudTimeline.pause();
-    }
-    if (jumperBlockRangeStart.some((value) => value === window.pageYOffset)) {
-      jumperBlockTimeline.play();
-      jumperBlockCloudTimeline.play();
-    }
-    if (jumperBlockRangeEnd.some((value) => value === window.pageYOffset)) {
-      jumperBlockTimeline.play();
-      jumperBlockCloudTimeline.play();
-    }
-    if (window.pageYOffset > 5200) {
-      jumperBlockTimeline.restart();
-      jumperBlockTimeline.pause();
-      jumperBlockCloudTimeline.restart();
-      jumperBlockCloudTimeline.pause();
-    }
+    // function numberRange(start, end) {
+    //   return new Array(end - start).fill().map((d, i) => i + start);
+    // }
+
+    // console.log(topBorder);
+
+    // let jumperBlockRangeStart = numberRange(topBorder, topBorder + 50);
+    // let jumperBlockRangeEnd = numberRange(bottomBorder, bottomBorder + 50);
+
+    // if (window.pageYOffset < topBorder) {
+    //   jumperBlockTimeline.restart();
+    //   jumperBlockTimeline.pause();
+    //   jumperBlockCloudTimeline.restart();
+    //   jumperBlockCloudTimeline.pause();
+    // }
+    // if (jumperBlockRangeStart.some((value) => value === window.pageYOffset)) {
+    //   jumperBlockTimeline.play();
+    //   jumperBlockCloudTimeline.play();
+    // }
+    // if (jumperBlockRangeEnd.some((value) => value === window.pageYOffset)) {
+    //   jumperBlockTimeline.play();
+    //   jumperBlockCloudTimeline.play();
+    // }
+    // if (window.pageYOffset > bottomBorder + 50) {
+    //   jumperBlockTimeline.restart();
+    //   jumperBlockTimeline.pause();
+    //   jumperBlockCloudTimeline.restart();
+    //   jumperBlockCloudTimeline.pause();
+    // }
     aboutTimeline.seek(window.pageYOffset);
   });
 });

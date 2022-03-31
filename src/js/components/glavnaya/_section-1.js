@@ -4,7 +4,7 @@ const girlWrapper = section.querySelector(".girl__wrapper");
 const girl = section.querySelector(".girl");
 const handWrapper = section.querySelector(".hand__wrapper");
 
-const cloudBlock = document.querySelector(".cloud__block");
+const clouds = document.querySelectorAll("#indexPage > .cloud__item");
 
 const neCirkTimeline = anime
   .timeline({ autoplay: false })
@@ -26,8 +26,8 @@ const neCirkTimeline = anime
   })
   .add(
     {
-      targets: cloudBlock,
-      bottom: 0,
+      targets: clouds,
+      bottom: ["-50%", "-2%"],
       duration: 200,
       easing: "linear",
     },
@@ -40,7 +40,6 @@ const neCirkTimeline = anime
       left: ["53%", "53%"],
       translateX: ["-50%", "-50%"],
       translateY: ["-50%", "-50%"],
-      scale: [0.65, 0.65],
       duration: 300,
       easing: "linear",
     }
@@ -66,12 +65,12 @@ const neCirkTimeline = anime
   )
   .add(
     {
-      targets: cloudBlock,
+      targets: clouds,
       bottom: "-50%",
-      duration: 200,
+      duration: 300,
       easing: "linear",
     },
-    "+=100"
+    "-=300"
   );
 document.addEventListener("DOMContentLoaded", function () {
   const girlRotate = anime({
