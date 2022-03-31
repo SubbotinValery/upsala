@@ -165,7 +165,7 @@ const resources = () => {
 };
 
 const images = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif}`])
+  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif,mp4}`])
     .pipe(
       gulpif(
         isProd,
@@ -212,12 +212,12 @@ const watchFiles = () => {
   watch(`${paths.srcPartialsFolder}/**/**.html`, htmlInclude);
   watch(`${srcFolder}/**/**.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif}`, images);
+  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif,mp4}`, images);
   watch(paths.srcSvg, svgSprites);
 };
 
 const cache = () => {
-  return src(`${buildFolder}/**/*.{css,js,svg,gif,png,jpg,jpeg,woff2}`, {
+  return src(`${buildFolder}/**/*.{css,js,svg,gif,png,jpg,jpeg,woff2,mp4}`, {
     base: buildFolder,
   })
     .pipe(rev())

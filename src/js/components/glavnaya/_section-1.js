@@ -19,45 +19,22 @@ const getpercent = (value, precent) => {
 
 const neCirkTimeline = anime
   .timeline({ autoplay: false })
-  .add(
-    {
-      targets: girlWrapper,
-      top: () => {
-        return window.innerWidth > 1024 ? ["60%", "50%"] : ["50%", "50%"];
-      },
-      left: () => {
-        return window.innerWidth > 1024 ? ["70%", "50%"] : ["50%", "50%"];
-      },
-      translateX: ["-50%", "-50%"],
-      translateY: ["-50%", "-50%"],
-      width: () => {
-        return window.innerWidth > 1024
-          ? ["200rem", "26rem"]
-          : ["50%", "26rem"];
-      },
-      duration: 600,
-      easing: "linear",
+  .add({
+    targets: girlWrapper,
+    top: () => {
+      return window.innerWidth > 1024 ? ["60%", "50%"] : ["50%", "50%"];
     },
-    0
-  )
-  .add(
-    {
-      targets: titleRegular,
-      translateX: [0, "-100vw"],
-      duration: 400,
-      easing: "linear",
+    left: () => {
+      return window.innerWidth > 1024 ? ["70%", "50%"] : ["50%", "50%"];
     },
-    200
-  )
-  .add(
-    {
-      targets: titleOutline,
-      translateX: [0, "100vw"],
-      duration: 400,
-      easing: "linear",
+    translateX: ["-50%", "-50%"],
+    translateY: ["-50%", "-50%"],
+    width: () => {
+      return window.innerWidth > 1024 ? ["200rem", "26rem"] : ["50%", "26rem"];
     },
-    200
-  )
+    duration: 600,
+    easing: "linear",
+  })
   .add(
     {
       targets: handWrapper,
@@ -69,7 +46,7 @@ const neCirkTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    500
+    "-=100"
   )
   .add(
     {
@@ -78,7 +55,7 @@ const neCirkTimeline = anime
       duration: 200,
       easing: "linear",
     },
-    1000
+    "+=100"
   )
   .add(
     {
@@ -87,7 +64,7 @@ const neCirkTimeline = anime
       duration: 200,
       easing: "linear",
     },
-    1000
+    "-=100"
   );
 
 document.addEventListener("DOMContentLoaded", function () {
