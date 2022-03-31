@@ -1,6 +1,6 @@
 import "./_section-1";
 import "./_section-2";
-import "./_section-3";
+// import "./_section-3";
 // import "./_iz-chego-sostoit-section";
 // import "./_huliganskii-proekt-section";
 // import "./_proftruppa-section";

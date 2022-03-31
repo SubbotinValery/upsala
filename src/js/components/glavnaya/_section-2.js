@@ -46,13 +46,13 @@ const videoTimeline = anime
   })
   .add({
     targets: videoWrapper,
-    bottom: "150%",
+    bottom: "200%",
     duration: 600,
     easing: "linear",
   })
   .add({
     targets: videoText,
-    bottom: "150%",
+    bottom: "200%",
     duration: 600,
     easing: "linear",
   });
