@@ -1,21 +1,10 @@
 const section = document.querySelector(".section-1");
 
-const sectionInfo = section.getBoundingClientRect();
-
 const girlWrapper = section.querySelector(".girl__wrapper");
 const girl = section.querySelector(".girl");
 const handWrapper = section.querySelector(".hand__wrapper");
 
-const titleRegular = document.querySelectorAll(
-  ".ne-cirk__title > * > *:not(.outline)"
-);
-const titleOutline = document.querySelectorAll(
-  ".ne-cirk__title > * > .outline"
-);
-
-const getpercent = (value, precent) => {
-  return (value / 100) * precent;
-};
+const cloudBlock = document.querySelector(".cloud__block");
 
 const neCirkTimeline = anime
   .timeline({ autoplay: false })
@@ -37,6 +26,15 @@ const neCirkTimeline = anime
   })
   .add(
     {
+      targets: cloudBlock,
+      bottom: 0,
+      duration: 200,
+      easing: "linear",
+    },
+    "-=100"
+  )
+  .add(
+    {
       targets: handWrapper,
       top: ["150%", "78%"],
       left: ["53%", "53%"],
@@ -45,8 +43,8 @@ const neCirkTimeline = anime
       scale: [0.65, 0.65],
       duration: 300,
       easing: "linear",
-    },
-    "-=100"
+    }
+    // "-=100"
   )
   .add(
     {
@@ -65,8 +63,16 @@ const neCirkTimeline = anime
       easing: "linear",
     },
     "-=100"
+  )
+  .add(
+    {
+      targets: cloudBlock,
+      bottom: "-50%",
+      duration: 200,
+      easing: "linear",
+    },
+    "+=100"
   );
-
 document.addEventListener("DOMContentLoaded", function () {
   const girlRotate = anime({
     targets: girl,

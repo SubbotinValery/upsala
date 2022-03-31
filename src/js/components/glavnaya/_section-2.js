@@ -34,7 +34,7 @@ const videoTimeline = anime
       duration: 600,
       easing: "linear",
     },
-    "+=800"
+    "+=1000"
   )
   .add({
     targets: videoText,
