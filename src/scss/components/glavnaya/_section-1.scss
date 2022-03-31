@@ -1,0 +1,68 @@
+.section-1 {
+  padding-top: 15rem;
+
+  .girl__wrapper {
+    position: fixed;
+    transition: medium;
+    z-index: -10;
+    max-width: 200rem;
+    min-width: 26rem;
+    .girl {
+      width: 100%;
+    }
+  }
+  .hand__wrapper {
+    position: fixed;
+    transition: medium;
+    z-index: -20;
+  }
+  .section__title {
+    .italic {
+      display: flex;
+    }
+  }
+  .down__wrapper {
+    margin-top: 6rem;
+    .btn {
+      display: none;
+    }
+    .down__btn {
+      cursor: pointer;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      position: relative;
+      margin-left: 8.4rem;
+      &:hover::before {
+        transform: translateY(-50%) rotate(180deg);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: -8.4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6.4rem;
+        height: 6.4rem;
+        transition: $medium;
+        background-image: url("../../../img/svg/down-btn.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -5.2rem;
+        transform: translateY(-50%) translateX(-50%);
+        width: 1.6rem;
+        height: 1.6rem;
+        transition: $medium;
+        background-image: url("../../../img/svg/down-btn-arrow.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

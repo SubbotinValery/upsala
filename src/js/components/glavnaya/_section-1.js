@@ -1,6 +1,4 @@
-import anime from "../../vendor/anime.min";
-
-const section = document.querySelector(".ne-cirk-section");
+const section = document.querySelector(".section-1");
 
 const sectionInfo = section.getBoundingClientRect();
 
@@ -24,11 +22,19 @@ const neCirkTimeline = anime
   .add(
     {
       targets: girlWrapper,
-      top: ["60%", "50%"],
-      left: ["70%", "50%"],
+      top: () => {
+        return window.innerWidth > 1024 ? ["60%", "50%"] : ["50%", "50%"];
+      },
+      left: () => {
+        return window.innerWidth > 1024 ? ["70%", "50%"] : ["50%", "50%"];
+      },
       translateX: ["-50%", "-50%"],
       translateY: ["-50%", "-50%"],
-      scale: [1.5, 0.25],
+      width: () => {
+        return window.innerWidth > 1024
+          ? ["200rem", "26rem"]
+          : ["50%", "26rem"];
+      },
       duration: 600,
       easing: "linear",
     },
@@ -69,7 +75,7 @@ const neCirkTimeline = anime
     {
       targets: girlWrapper,
       top: "-50%",
-      duration: 100,
+      duration: 200,
       easing: "linear",
     },
     1000
@@ -78,7 +84,7 @@ const neCirkTimeline = anime
     {
       targets: handWrapper,
       top: "150%",
-      duration: 100,
+      duration: 200,
       easing: "linear",
     },
     1000
@@ -94,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     direction: "alternate",
     easing: "easeInOutQuad",
   });
+
   window.addEventListener("scroll", () => {
     neCirkTimeline.seek(window.pageYOffset);
   });

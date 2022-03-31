@@ -1,3 +1,10 @@
+import "./_section-1";
+import "./_video-section";
+import "./_about-section";
+// import "./_iz-chego-sostoit-section";
+// import "./_huliganskii-proekt-section";
+// import "./_proftruppa-section";
+// import "./_incluzivnii-proekt-section";
 import "./_section-8";
 import "./_section-9";
 import "./_section-10";
