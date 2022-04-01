@@ -124,3 +124,9 @@
     }
   }
 }
+
+@include small-tablet {
+  .section-1 {
+    height: 230vh;
+  }
+}

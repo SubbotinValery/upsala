@@ -7,7 +7,6 @@ const video = section.querySelector(".video");
 
 if (videoWrapper !== null) {
   videoWrapper.addEventListener("click", () => {
-    console.log("test");
     if (videoWrapper.className.match(/\bpause\b/)) {
       videoWrapper.classList.remove("pause");
       video.controls = true;
@@ -58,7 +57,9 @@ const videoTimeline = anime
   });
 
 document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", () => {
-    videoTimeline.seek(window.pageYOffset);
-  });
+  if (window.innerWidth > 768) {
+    window.addEventListener("scroll", () => {
+      videoTimeline.seek(window.pageYOffset);
+    });
+  }
 });

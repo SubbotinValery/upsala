@@ -13,6 +13,8 @@ const aboutContent3 = section.querySelector(".content-3");
 const starWrapper = document.querySelector("#indexPage > .star__wrapper");
 const clouds = document.querySelectorAll("#indexPage > .cloud__item");
 
+const whenstartJuggler = window.innerWidth > 1024 ? "+=2300" : "+=1800";
+
 const aboutTimeline = anime
   .timeline({ autoplay: false })
   .add(
@@ -22,7 +24,7 @@ const aboutTimeline = anime
       duration: 300,
       easing: "linear",
     },
-    "+=2300"
+    whenstartJuggler
   )
   .add(
     {

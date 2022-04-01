@@ -85,9 +85,9 @@
       .content {
         margin-right: 0;
 
-        &-1 {
-          margin-bottom: 50vh !important;
-        }
+        // &-1 {
+        //   margin-bottom: 50vh !important;
+        // }
 
         & > .title {
           width: 100%;
@@ -102,10 +102,11 @@
 
 @include small-tablet {
   .section-3 {
-    .content {
-      &-1 {
-        margin-bottom: 50vh !important;
-      }
+    margin-top: 5rem !important;
+  }
+  .jumper__wrapper {
+    &-1 {
+      display: none;
     }
   }
 }
