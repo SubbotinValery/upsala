@@ -485,7 +485,9 @@ document.addEventListener("DOMContentLoaded", function () {
         window.pageYOffset + section.getBoundingClientRect().bottom;
     } else {
       topBorder =
-        window.pageYOffset + artistDropWrapper.getBoundingClientRect().top;
+        window.pageYOffset +
+        artistDropWrapper.getBoundingClientRect().top -
+        200;
       bottomBorder =
         window.pageYOffset + artistDropWrapper.getBoundingClientRect().bottom;
     }

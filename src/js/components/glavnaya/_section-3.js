@@ -13,7 +13,7 @@ const aboutContent3 = section.querySelector(".content-3");
 const starWrapper = document.querySelector("#indexPage > .star__wrapper");
 const clouds = document.querySelectorAll("#indexPage > .cloud__item");
 
-const whenstartJuggler = window.innerWidth > 1024 ? "+=2300" : "+=1800";
+const whenstartJuggler = window.innerWidth > 1024 ? "+=2300" : "+=2100";
 
 const aboutTimeline = anime
   .timeline({ autoplay: false })

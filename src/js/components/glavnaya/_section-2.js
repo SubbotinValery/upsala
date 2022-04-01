@@ -5,6 +5,8 @@ const videoWrapper = section.querySelector(".video__wrapper");
 const videoText = section.querySelector(".video__text");
 const video = section.querySelector(".video");
 
+const pin = document.querySelectorAll("#indexPage > .pin");
+
 if (videoWrapper !== null) {
   videoWrapper.addEventListener("click", () => {
     if (videoWrapper.className.match(/\bpause\b/)) {

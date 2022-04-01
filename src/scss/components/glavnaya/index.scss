@@ -84,6 +84,23 @@
       width: 100%;
     }
   }
+
+  & > .pin {
+    cursor: pointer;
+    position: fixed;
+    bottom: min(3vw, 3rem);
+    right: min(3vw, 3rem);
+    width: 13rem;
+    height: 13rem;
+    background-image: url("../../../img/pin.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: $fast;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 
 @include big-desktop {
@@ -92,6 +109,14 @@
       &-2 {
         z-index: -2 !important;
       }
+    }
+  }
+}
+
+@include small-tablet {
+  #indexPage {
+    & > .pin {
+      display: none;
     }
   }
 }

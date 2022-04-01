@@ -5,6 +5,7 @@ const girl = section.querySelector(".girl");
 const handWrapper = section.querySelector(".hand__wrapper");
 
 const clouds = document.querySelectorAll("#indexPage > .cloud__item");
+const pin = document.querySelector("#indexPage > .pin");
 
 const neCirkTimeline = anime
   .timeline({ autoplay: false })
@@ -23,6 +24,13 @@ const neCirkTimeline = anime
     },
     duration: 600,
     easing: "linear",
+  })
+  .add({
+    targets: pin,
+    opacity: [1, 0],
+    duration: 200,
+    easing: "linear",
+    pointerEvents: "none",
   })
   .add(
     {
@@ -79,6 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
     direction: "alternate",
     easing: "easeInOutQuad",
   });
+
+  // if (pin.style.opacity === 0) {
+  //   pin.style.visability = "hidden";
+  //   pin.style.zIndex = -1;
+  // }
 
   window.addEventListener("scroll", () => {
     neCirkTimeline.seek(window.pageYOffset);
