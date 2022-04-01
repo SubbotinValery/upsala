@@ -4,6 +4,9 @@ const girlWrapper = section.querySelector(".girl__wrapper");
 const girl = section.querySelector(".girl");
 const handWrapper = section.querySelector(".hand__wrapper");
 
+const downBtn = section.querySelector(".down__btn");
+const section2 = document.querySelector(".section-2").offsetTop;
+
 const clouds = document.querySelectorAll("#indexPage > .cloud__item");
 const pin = document.querySelector("#indexPage > .pin");
 
@@ -95,6 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: true,
     direction: "alternate",
     easing: "easeInOutQuad",
+  });
+
+  downBtn.addEventListener("click", () => {
+    window.scroll({ top: section2, behavior: "smooth" });
   });
 
   window.addEventListener("scroll", () => {
