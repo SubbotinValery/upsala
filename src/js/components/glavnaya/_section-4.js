@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const section6 = document.querySelector(".section-6").offsetTop;
   const section8 = document.querySelector(".section-8").offsetTop;
   const section9 = document.querySelector(".section-9").offsetTop;
   const section10 = document.querySelector(".section-10").offsetTop;
@@ -32,11 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
       //     window.scroll({ top: huliganskiiProektSection, behavior: "smooth" });
       //   });
       //   break;
-      // case "профтруппа":
-      //   element.addEventListener("click", function () {
-      //     window.scroll({ top: proftruppaSection, behavior: "smooth" });
-      //   });
-      //   break;
+      case "профтруппа":
+        element.addEventListener("click", function () {
+          window.scroll({ top: section6, behavior: "smooth" });
+        });
+        break;
       // case "инклюзивныйпроект":
       //   element.addEventListener("click", function () {
       //     window.scroll({ top: incluzivniiProektSection, behavior: "smooth" });
