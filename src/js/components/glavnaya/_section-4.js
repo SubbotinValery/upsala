@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   list.forEach((element) => {
     const title = element.textContent.toLowerCase().split(" ").join("");
-    console.log(title);
     switch (title) {
       // case "хулиганскийпроект":
       //   element.addEventListener("click", function () {

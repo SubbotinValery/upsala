@@ -9,6 +9,9 @@ const section2 = document.querySelector(".section-2").offsetTop;
 
 const clouds = document.querySelectorAll("#indexPage > .cloud__item");
 const pin = document.querySelector("#indexPage > .pin");
+const section9 = document.querySelector(".section-9");
+const distanceSection9 =
+  section9.getBoundingClientRect().top - section9.clientHeight;
 
 const neCirkTimeline = anime
   .timeline({ autoplay: false })
@@ -27,22 +30,6 @@ const neCirkTimeline = anime
     },
     duration: 600,
     easing: "linear",
-  })
-  .add({
-    targets: pin,
-    opacity: [1, 0],
-    duration: 200,
-    easing: "linear",
-    pointerEvents: "none",
-    update: () => {
-      if (pin.style.opacity === "0") {
-        pin.style.visability = "hidden";
-        pin.style.zIndex = -1;
-      } else {
-        pin.style.visability = "visible";
-        pin.style.zIndex = 1;
-      }
-    },
   })
   .add(
     {
@@ -89,6 +76,57 @@ const neCirkTimeline = anime
     },
     "-=200"
   );
+
+const pinTimeLine = anime
+  .timeline({ autoplay: false })
+  .add({
+    targets: pin,
+    opacity: 0,
+    duration: 200,
+    easing: "linear",
+    delay: 500,
+    update: () => {
+      if (pin.style.opacity === "0") {
+        pin.style.visability = "hidden";
+        pin.style.zIndex = -1;
+      } else {
+        pin.style.visability = "visible";
+        pin.style.zIndex = 1;
+      }
+    },
+  })
+  .add({
+    targets: pin,
+    opacity: 1,
+    duration: 200,
+    easing: "linear",
+    delay: distanceSection9,
+    update: () => {
+      if (pin.style.opacity === "0") {
+        pin.style.visability = "hidden";
+        pin.style.zIndex = -1;
+      } else {
+        pin.style.visability = "visible";
+        pin.style.zIndex = 1;
+      }
+    },
+  })
+  .add({
+    targets: pin,
+    opacity: 0,
+    duration: 200,
+    easing: "linear",
+    delay: 800,
+    update: () => {
+      if (pin.style.opacity === "0") {
+        pin.style.visability = "hidden";
+        pin.style.zIndex = -1;
+      } else {
+        pin.style.visability = "visible";
+        pin.style.zIndex = 1;
+      }
+    },
+  });
 document.addEventListener("DOMContentLoaded", function () {
   const girlRotate = anime({
     targets: girl,
@@ -106,5 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", () => {
     neCirkTimeline.seek(window.pageYOffset);
+    pinTimeLine.seek(window.pageYOffset);
   });
 });

@@ -86,6 +86,7 @@
   }
 
   & > .pin {
+    opacity: 1;
     cursor: pointer;
     position: fixed;
     bottom: min(3vw, 3rem);
