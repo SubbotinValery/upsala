@@ -31,6 +31,15 @@ const neCirkTimeline = anime
     duration: 200,
     easing: "linear",
     pointerEvents: "none",
+    update: () => {
+      if (pin.style.opacity === "0") {
+        pin.style.visability = "hidden";
+        pin.style.zIndex = -1;
+      } else {
+        pin.style.visability = "visible";
+        pin.style.zIndex = 1;
+      }
+    },
   })
   .add(
     {
@@ -87,11 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     direction: "alternate",
     easing: "easeInOutQuad",
   });
-
-  // if (pin.style.opacity === 0) {
-  //   pin.style.visability = "hidden";
-  //   pin.style.zIndex = -1;
-  // }
 
   window.addEventListener("scroll", () => {
     neCirkTimeline.seek(window.pageYOffset);
