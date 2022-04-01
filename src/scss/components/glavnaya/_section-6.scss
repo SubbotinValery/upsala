@@ -108,6 +108,22 @@
         left: 85%;
         bottom: 46%;
       }
+      .cloud__item {
+        &-1 {
+          top: 15%;
+          left: -40%;
+          width: 75%;
+          max-width: 35rem;
+          min-width: 25rem;
+        }
+        &-2 {
+          top: 50%;
+          right: -50%;
+          width: 90%;
+          max-width: 40rem;
+          min-width: 30rem;
+        }
+      }
     }
   }
 

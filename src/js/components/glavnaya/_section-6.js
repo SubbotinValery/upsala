@@ -83,7 +83,7 @@ const proftruppaTimeline = anime
       duration: 500,
       easing: "linear",
     },
-    "+=400"
+    "+=700"
   )
   .add(
     {
