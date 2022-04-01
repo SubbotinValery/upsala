@@ -538,6 +538,12 @@
   .partner__img__wrapper {
     display: none;
   }
+  .partner-slider__block,
+  .progress__block__wrapper{
+    .outline{
+      -webkit-text-stroke: 0.1rem rgba($dark, $opacity-thick) !important;
+    }
+  }
 }
 
 .partner-slider__block {
