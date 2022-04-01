@@ -3,7 +3,7 @@ import "./_section-2";
 import "./_section-3";
 import "./_section-4";
 // import "./_huliganskii-proekt-section";
-// import "./_proftruppa-section";
+import "./_section-6";
 // import "./_incluzivnii-proekt-section";
 import "./_section-8";
 import "./_section-9";

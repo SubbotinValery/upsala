@@ -3,7 +3,7 @@
 @import "./section-3";
 @import "./section-4";
 // @import "./huliganskii-proekt-section";
-// @import "./proftruppa-section";
+@import "./section-6";
 // @import "./incluzivnii-proekt-section";
 @import "./section-8";
 @import "./section-9";
@@ -23,6 +23,11 @@
   .content {
     font-size: 1.7rem;
     line-height: 2.6rem;
+  }
+  & > .tree__block {
+    position: fixed;
+    width: 100vw;
+    height: 30vw;
   }
   // .cloud__block {
   //   position: fixed;

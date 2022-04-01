@@ -1,0 +1,234 @@
+.section-6 {
+  margin-bottom: min(50vw, 70rem);
+  .section__title {
+    margin-bottom: min(20rem, 10vw);
+  }
+  .content__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .content {
+      font-size: 1.7rem;
+      line-height: 2.6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: max(20vw, 10rem);
+      margin-right: min(10rem, 10vw);
+      &-1 {
+        margin-bottom: 30vw;
+      }
+      &:last-child {
+        margin-bottom: 10rem;
+      }
+      & > .title {
+        width: 70%;
+        margin-bottom: 6rem;
+      }
+
+      & > .content__text {
+        width: 50%;
+      }
+    }
+  }
+
+  .cirkcler__wrapper {
+    position: fixed;
+    width: 40vw !important;
+    min-width: 45rem;
+    max-width: 80rem;
+    .cirkcler {
+      width: 100%;
+    }
+    .cirkcler__cloud {
+      position: absolute;
+      &-1 {
+        bottom: 10%;
+        left: 25%;
+        max-width: 42rem;
+        min-width: 32rem;
+        width: 30vw;
+        z-index: -1;
+      }
+      &-2 {
+        bottom: 20%;
+        right: 10%;
+        width: 10vw;
+        z-index: 1;
+      }
+    }
+  }
+
+  .kacheli__wrapper {
+    margin-top: max(10rem, 5vw);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: min(30rem, 10vw);
+    .kacheli {
+      position: relative;
+      max-width: 47rem;
+      min-width: 31rem;
+      width: 30vw !important;
+      max-height: 80rem;
+      min-height: 52rem;
+      height: calc(30vw * 1.6);
+      & > * {
+        position: absolute;
+      }
+      .moon {
+        bottom: 0;
+        left: 0;
+        width: 117%;
+      }
+      .brevno-right {
+        width: 17%;
+        left: 58%;
+        transform: translateX(-50%);
+        bottom: 35%;
+      }
+      .brevno {
+        width: 80%;
+        left: 50%;
+        bottom: 40%;
+      }
+      .brevno-left {
+        width: 20%;
+        left: 46%;
+        transform: translateX(-50%);
+        bottom: 35%;
+      }
+      .actor-left {
+        width: 17%;
+        left: 15%;
+        bottom: 72%;
+      }
+      .actor-right {
+        width: 35%;
+        left: 85%;
+        bottom: 46%;
+      }
+    }
+  }
+
+  .artist-drop__wrapper {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    & > * {
+      position: fixed;
+    }
+    .artist__wrapper {
+      width: 25vw !important;
+      max-width: 35rem;
+      min-width: 20rem;
+      .artist {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .section-6 {
+    .cirkcler__wrapper {
+      display: none;
+    }
+    .content__wrapper {
+      .content {
+        &-1 {
+          margin-bottom: 0;
+        }
+        margin-right: 0;
+        & > .content__text {
+          width: 100%;
+        }
+      }
+    }
+    .artist-drop__wrapper {
+      display: block;
+      position: static;
+      width: 100%;
+      height: 70vh;
+    }
+  }
+}
+
+// .proftruppa-section {
+//   margin-bottom: 40vh;
+//   .cirkcler__wrapper {
+//     position: fixed;
+//     transition: medium;
+//   }
+//   .kacheli__wrapper {
+//     margin-top: 30vh;
+//     width: 100%;
+//     height: 60vh;
+//     display: flex;
+//     justify-content: center;
+//     margin-bottom: 90vh;
+//     .kacheli__inner {
+//       position: relative;
+//       width: 47rem;
+//       background-image: url("..//../img/kacheli-moon.png");
+//       background-repeat: no-repeat;
+//       background-position: bottom;
+//       background-size: contain;
+//       transform: translateX(6rem);
+
+//       & > * {
+//         position: absolute;
+//       }
+//       .brevno-right {
+//         left: 50%;
+//         transform: translateX(-50%);
+//         bottom: 44%;
+//       }
+//       .brevno {
+//         left: 44%;
+//         bottom: 45%;
+//       }
+//       .brevno-left {
+//         left: 40%;
+//         transform: translateX(-50%);
+//         bottom: 44%;
+//       }
+//       .actor-left {
+//         left: 20%;
+//         bottom: 85%;
+//       }
+//       .actor-right {
+//         left: 70%;
+//         bottom: 52%;
+//       }
+//     }
+//   }
+//   .cloud__wrapper {
+//     position: fixed;
+//     z-index: -10;
+//     transition: medium;
+//   }
+//   .yellow-bg__wrapper {
+//     position: fixed;
+//   }
+//   .tree__wrapper {
+//     position: fixed;
+//   }
+
+//   .artist-drop-block {
+//     .artist-drop__wrapper {
+//       position: fixed;
+//       z-index: -1;
+//     }
+//   }
+// }
+
+// .proftruppa-content {
+//   width: 70%;
+//   margin-top: 10rem;
+//   font-size: 1.7rem;
+//   line-height: 2.6rem;
+// }
