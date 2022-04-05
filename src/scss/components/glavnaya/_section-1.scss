@@ -1,6 +1,7 @@
 .section-1 {
   padding-top: 15rem;
   height: 150vh;
+  min-height: 220rem;
   .girl__wrapper {
     position: fixed;
     transition: medium;
@@ -169,7 +170,6 @@
 @include small-tablet {
   .section-1 {
     height: 210vh;
-    min-height: 220rem;
   }
 }
 
