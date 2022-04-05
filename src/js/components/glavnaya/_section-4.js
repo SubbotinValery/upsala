@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
       preview[i].style.opacity = 0;
     });
   }
-
+  const section5 = document.querySelector(".section-5").offsetTop;
   const section6 = document.querySelector(".section-6").offsetTop;
+  const section7 = document.querySelector(".section-7").offsetTop;
   const section8 = document.querySelector(".section-8").offsetTop;
   const section9 = document.querySelector(".section-9").offsetTop;
   const section10 = document.querySelector(".section-10").offsetTop;
@@ -26,22 +27,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   list.forEach((element) => {
     const title = element.textContent.toLowerCase().split(" ").join("");
+    console.log(title);
     switch (title) {
-      // case "хулиганскийпроект":
-      //   element.addEventListener("click", function () {
-      //     window.scroll({ top: huliganskiiProektSection, behavior: "smooth" });
-      //   });
-      //   break;
+      case "хулиганскийпроект":
+        element.addEventListener("click", function () {
+          window.scroll({ top: section5, behavior: "smooth" });
+        });
+        break;
       case "профтруппа":
         element.addEventListener("click", function () {
           window.scroll({ top: section6, behavior: "smooth" });
         });
         break;
-      // case "инклюзивныйпроект":
-      //   element.addEventListener("click", function () {
-      //     window.scroll({ top: incluzivniiProektSection, behavior: "smooth" });
-      //   });
-      //   break;
+      case "инклюзивныйпроект":
+        element.addEventListener("click", function () {
+          window.scroll({ top: section7, behavior: "smooth" });
+        });
+        break;
       case "чтов результате?":
         element.addEventListener("click", function () {
           window.scroll({ top: section8, behavior: "smooth" });
