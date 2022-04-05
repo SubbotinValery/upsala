@@ -79,7 +79,7 @@ const proftruppaTimeline = anime
   .add(
     {
       targets: treeBlock,
-      bottom: ["-100%", "-3%"],
+      bottom: "-3%",
       duration: 500,
       easing: "linear",
     },

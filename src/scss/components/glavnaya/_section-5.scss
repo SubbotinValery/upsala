@@ -1,0 +1,192 @@
+.section-5{
+  .content__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .content{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 1.7rem;
+      line-height: 2.6rem;
+      margin-bottom: max(20vw, 10rem);
+      margin-right: min(10rem, 10vw);
+      &:last-child {
+        margin-bottom: 10rem;
+      }
+      &-1{
+        position: relative;
+        margin-bottom: max(30vw, 20rem);
+        .cloud__item{
+          position: absolute;
+          &-1{
+            bottom: max(-120%, -18rem);
+            left: 20%;
+            max-width: 44rem;
+            width: min(44rem, 20vw);
+          }
+          &-2{
+            bottom: max(-100%, -15rem);
+            left:80%;
+            max-width: 33rem;
+            width: min(33rem, 15vw);
+          }
+
+        }
+      }
+      &-2{
+        margin-bottom: 100vh;
+      }
+      .content__text{
+        width: 50%;
+      }
+    }
+  }
+
+  .unicycle__wrapper{
+    position: fixed;
+    max-width: 55rem;
+    min-width: 40rem;
+    width: 15vw;
+    .unicycle{
+      width: 100%
+    }
+  }
+  .panelka__wrapper-left{
+    position: fixed;
+    width: 30vw;
+    .panelka-left{
+      width: 100%;
+    }
+  }
+  .panelka__wrapper-right{
+    position: fixed;
+    width: 35vw;
+    .panelka-right{
+      width: 100%;
+    }
+  }
+
+  .yellow-bg__wrapper{
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .unicycle-profile-girl__wrapper{
+    position: fixed;
+    width: 10vw;
+    max-width: 16rem;
+    min-width: 12rem;
+    .unicycle-profile-girl{
+      width: 100%;
+    }
+  }
+
+  .unicycle-profile-boy__wrapper{
+    position: fixed;
+    width: 8vw;
+    max-width: 12rem;
+    min-width: 8rem;
+    .unicycle-profile-boy{
+      width: 100%;
+    }
+  }
+}
+
+
+// .huliganskii-proekt-section {
+//   margin-top: 20vh;
+//   .unicycle__wrapper {
+//     position: fixed;
+//     transition: medium;
+//   }
+
+//   .unicycle-profile-girl__wrapper {
+//     position: fixed;
+//     transition: medium;
+//   }
+
+//   .unicycle-profile-boy__wrapper {
+//     position: fixed;
+//     transition: medium;
+//   }
+
+//   .panelka__wrapper-left {
+//     position: fixed;
+//     z-index: -10;
+//     transition: medium;
+//   }
+
+//   .panelka__wrapper-right {
+//     position: fixed;
+//     z-index: -10;
+//     transition: medium;
+//   }
+
+//   .elephant__wrapper {
+//     position: fixed;
+//     transition: medium;
+//   }
+
+//   .childrens__wrapper {
+//     position: fixed;
+//     transition: medium;
+//   }
+
+//   .yellow-bg__wrapper {
+//     z-index: -20;
+//     position: fixed;
+//     transition: medium;
+//   }
+
+//   .rope__wrapper {
+//     position: fixed;
+//     bottom: 47%;
+//     left: 24%;
+//     right: 31%;
+//     height: 5rem;
+//     transform: translateY(50%);
+//     transition: medium;
+//     background-image: url("..//../img/rope.png");
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: contain;
+//   }
+
+//   .cloud__wrapper {
+//     position: fixed;
+//   }
+
+//   .tree__wrapper {
+//     position: fixed;
+//     &-1 {
+//     }
+//     &-2 {
+//       z-index: 1;
+//     }
+//     &-3 {
+//     }
+//     &-4 {
+//       z-index: 1;
+//     }
+//     &-5 {
+//     }
+//     &-6 {
+//       z-index: 1;
+//     }
+//     &-7 {
+//     }
+//   }
+// }
+
+// .huliganskii-proekt-content {
+//   height: 500vh;
+//   width: 70%;
+//   font-size: 1.7rem;
+//   line-height: 2.6rem;
+//   margin-top: 10vh;
+//   &:first-child {
+//     margin-top: 0;
+//   }
+// }

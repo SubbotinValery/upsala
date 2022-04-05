@@ -2,7 +2,7 @@
 @import "./section-2";
 @import "./section-3";
 @import "./section-4";
-// @import "./huliganskii-proekt-section";
+@import "./section-5";
 @import "./section-6";
 // @import "./incluzivnii-proekt-section";
 @import "./section-8";
@@ -28,6 +28,7 @@
     position: fixed;
     width: 100vw;
     height: 50vw;
+    bottom: -100rem;
   }
   // .cloud__block {
   //   position: fixed;
