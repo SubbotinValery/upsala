@@ -1,0 +1,249 @@
+.section-7{
+  .content__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .content{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 1.7rem;
+      line-height: 2.6rem;
+      margin-bottom: 6rem;
+      margin-right: min(10rem, 10vw);
+      &-1{
+        margin-top: 6rem;
+      }
+      &:last-child {
+        margin-bottom: 10rem;
+      }
+      .content__text{
+        width: 50%;
+      }
+    }
+  }
+
+  .img__block-1{
+    position: fixed;
+    .boy-on-ball__wrapper{
+      position: absolute;
+      width: 20vw;
+      max-width: 25rem;
+      min-width: 12rem;
+      top: 0;
+      left: 0;
+      animation: boy-on-ball__wrapper__animation 2s infinite alternate ease-in-out;
+      .boy-on-ball{
+        width: 100%;
+      }
+    }
+
+    .giraffe__wrapper{
+      z-index: -1;
+      position: absolute;
+      width: 20vw;
+      max-width: 25rem;
+      min-width: 12rem;
+      top: max(12rem, min(20vw, 30rem));
+      left: min(10rem, 10vw);
+      animation: giraffe__wrapper__animation 2s infinite alternate ease-in-out;
+      .giraffe{
+        width: 100%;
+      }
+    }
+  }
+
+  .img__block-2{
+    z-index: -1;
+    position: relative;
+    width: 100%;
+    height: 30vw;
+    margin-bottom: min(20rem, 15vw);
+    & > * {
+      position: absolute;
+    }
+    .mountain__wrapper{
+      max-width: 85rem;
+      left: 40%;
+      .mountain{
+        width: 100%;
+      }
+    }
+    .yellow-bg__wrapper{
+      max-width: 80rem;
+      bottom: 35%;
+      left: 35%;
+      animation: yellow-bg__wrapper__animation 3s infinite alternate linear;
+      .yellow-bg{
+        width: 100%;
+      }
+    }
+    .panelka-1__wrapper{
+      left: 50%;
+      bottom: 0%;
+      max-width: 80rem;
+      .panelka-1{
+        width: 100%;
+      }
+    }
+    .panelka-2__wrapper{
+      left: 40%;
+      bottom: -20%;
+      max-width: 90rem;
+      z-index: 2;
+      .panelka-2{
+        width: 100%;
+      }
+    }
+    .girl-on-hoduli__wrapper{
+      max-width: 80rem;
+      bottom: 10%;
+      left: 75%;
+      width: 10vw;
+      animation: girl-on-hoduli__wrapper__animation 1.5s infinite alternate ease-in-out;
+      transform-origin: 50% 100%;
+      .girl-on-hoduli{
+        width: 100%;
+      }
+    }
+  }
+}
+
+// .incluzivnii-proekt-section {
+//   height: 400vh;
+//   margin-top: 20vh;
+//   .mountain__wrapper {
+//     z-index: 10;
+//     position: fixed;
+//     transition: medium;
+//   }
+//   .boy-on-ball__wrapper {
+//     z-index: 50;
+//     position: fixed;
+//     transition: medium;
+//   }
+//   .giraffe__wrapper {
+//     z-index: 40;
+//     position: fixed;
+//     transition: medium;
+//   }
+//   .panelka-block__wrapper {
+//     z-index: 50;
+//     position: fixed;
+//     transition: medium;
+//   }
+//   .panelka-back__wrapper {
+//     z-index: 40;
+//     position: fixed;
+//     transition: medium;
+//   }
+//   .girl-on-hoduli__wrapper {
+//     z-index: 45;
+//     position: fixed;
+//     transition: medium;
+//   }
+
+//   .cloud__wrapper {
+//     position: fixed;
+//   }
+
+//   .yellow-bg__wrapper {
+//     z-index: 35;
+//     position: fixed;
+//     transition: medium;
+//   }
+// }
+
+// .incluzivnii-proekt-content {
+//   font-size: 1.7rem;
+//   line-height: 2.6rem;
+//   margin-top: 20vh;
+//   width: 70%;
+//   &-1 {
+//   }
+//   &-2 {
+//     margin-top: 120vh;
+//   }
+//   &-3 {
+//     margin-top: 40vh;
+//     font-size: 1.6rem;
+//     line-height: 2.4rem;
+//     text-transform: uppercase;
+//     .primary-btn {
+//       margin-top: 2rem;
+//       text-transform: none;
+//     }
+//   }
+// }
+
+@keyframes giraffe__wrapper__animation{
+  from{
+    transform: rotate(-10deg) translateX(2rem);
+
+  }
+  to{
+    transform: rotate(10deg) translateX(-2rem);
+  }
+}
+
+@keyframes boy-on-ball__wrapper__animation{
+  from{
+    transform: rotate(-5deg);
+
+  }
+  to{
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes girl-on-hoduli__wrapper__animation{
+  from{
+    transform: rotate(-3deg);
+  }
+  to{
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes yellow-bg__wrapper__animation{
+  from{
+    transform: translateX(-3%);
+  }
+  to{
+    transform: translateX(3%);
+  }
+}
+
+@include tablet{
+  .section-7{
+    .content{
+      margin-right: 0 !important;
+      .content__text{
+        width: 100% !important;
+      }
+    }
+    .img__block-1{
+      display: none;
+    }
+    .img__block-2{
+      margin-top: 10rem;
+      .mountain__wrapper{
+        left: 0 !important;
+        bottom: -20% !important;
+      }
+      .yellow-bg__wrapper{
+        bottom: 50% !important;
+        left: 15% !important;
+      }
+      .panelka-1__wrapper{
+        left: 25% !important;
+      }
+      .panelka-2__wrapper{
+        left: 25% !important;
+      }
+      .girl-on-hoduli__wrapper{
+        bottom: 15% !important;
+      }
+    }
+  }
+}

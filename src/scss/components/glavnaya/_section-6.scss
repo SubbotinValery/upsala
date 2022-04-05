@@ -1,5 +1,4 @@
 .section-6 {
-  margin-bottom: min(50vw, 70rem);
   .section__title {
     margin-bottom: min(20rem, 10vw);
   }
@@ -13,14 +12,8 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      margin-bottom: max(20vw, 10rem);
+      margin-bottom: 10vw;
       margin-right: min(10rem, 10vw);
-      &-1 {
-        margin-bottom: 30vw;
-      }
-      &:last-child {
-        margin-bottom: 10rem;
-      }
       & > .title {
         width: 70%;
         margin-bottom: 6rem;
@@ -68,11 +61,11 @@
     .kacheli {
       position: relative;
       max-width: 47rem;
-      min-width: 31rem;
-      width: 30vw !important;
+      min-width: 20rem;
+      width: 40vw !important;
       max-height: 80rem;
-      min-height: 52rem;
-      height: calc(30vw * 1.6);
+      min-height: 33rem;
+      height: 64vw;
       & > * {
         position: absolute;
       }
@@ -114,14 +107,14 @@
           left: -40%;
           width: 75%;
           max-width: 35rem;
-          min-width: 25rem;
+          min-width: 10rem;
         }
         &-2 {
           top: 50%;
           right: -50%;
           width: 90%;
           max-width: 40rem;
-          min-width: 30rem;
+          min-width: 15rem;
         }
       }
     }
@@ -140,7 +133,7 @@
     .artist__wrapper {
       width: 25vw !important;
       max-width: 35rem;
-      min-width: 20rem;
+      min-width: 10rem;
       .artist {
         width: 100%;
       }
@@ -155,20 +148,12 @@
     }
     .content__wrapper {
       .content {
-        &-1 {
-          margin-bottom: 0;
-        }
+        margin-bottom: 6rem;
         margin-right: 0;
         & > .content__text {
           width: 100%;
         }
       }
-    }
-    .artist-drop__wrapper {
-      display: block;
-      position: static;
-      width: 100%;
-      height: 70vh;
     }
   }
 }

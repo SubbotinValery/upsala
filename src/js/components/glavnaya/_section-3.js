@@ -1,35 +1,41 @@
-const section = document.querySelector(".section-3");
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.querySelector(".section-3");
 
-const jugglerWrapper = section.querySelector(".juggler__wrapper");
+  const content3 = section.querySelector(".content-3");
 
-const jumper1 = section.querySelector(".jumper__wrapper-1");
-const jumper2 = section.querySelector(".jumper__wrapper-2");
-const cloud = section.querySelector(".cloud__wrapper");
+  const jugglerWrapper = section.querySelector(".juggler__wrapper");
+  const jumper1 = section.querySelector(".jumper__wrapper-1");
+  const starWrapper = document.querySelector("#indexPage > .star__wrapper");
+  const clouds = section.querySelectorAll(".cloud__item");
 
-const aboutContent1 = section.querySelector(".content-1");
-const aboutContent2 = section.querySelector(".content-2");
-const aboutContent3 = section.querySelector(".content-3");
-
-const starWrapper = document.querySelector("#indexPage > .star__wrapper");
-const clouds = document.querySelectorAll("#indexPage > .cloud__item");
-
-const whenstartJuggler = window.innerWidth > 1024 ? "+=2300" : "+=2100";
-
-const aboutTimeline = anime
-  .timeline({ autoplay: false })
-  .add(
-    {
+  const aboutTimeline = anime
+    .timeline({ autoplay: false })
+    .add({
+      delay: window.pageYOffset + section.getBoundingClientRect().top - 500,
       targets: clouds,
       bottom: "-2%",
       duration: 300,
       easing: "linear",
-    },
-    whenstartJuggler
-  )
-  .add(
-    {
-      targets: jugglerWrapper,
-      bottom: ["-100%", "30%"],
+    })
+    .add(
+      {
+        targets: jugglerWrapper,
+        bottom: ["-100%", "30%"],
+        left: () => {
+          return window.innerWidth > 1024 ? ["25%", "25%"] : ["50%", "50%"];
+        },
+        translateX: ["-50%", "-50%"],
+        translateY: ["50%", "50%"],
+        duration: 500,
+        easing: "linear",
+      },
+      "-=300"
+    )
+    .add({
+      targets: starWrapper,
+      bottom: () => {
+        return window.innerWidth > 1024 ? ["-100%", "50%"] : ["-100%", "30%"];
+      },
       left: () => {
         return window.innerWidth > 1024 ? ["25%", "25%"] : ["50%", "50%"];
       },
@@ -37,64 +43,39 @@ const aboutTimeline = anime
       translateY: ["50%", "50%"],
       duration: 500,
       easing: "linear",
-    },
-    "-=300"
-  )
-  .add({
-    targets: starWrapper,
-    bottom: () => {
-      return window.innerWidth > 1024 ? ["-100%", "50%"] : ["-100%", "30%"];
-    },
-    left: () => {
-      return window.innerWidth > 1024 ? ["25%", "25%"] : ["50%", "50%"];
-    },
-    translateX: ["-50%", "-50%"],
-    translateY: ["50%", "50%"],
-    duration: 500,
-    easing: "linear",
-  })
-  .add(
-    {
-      targets: jugglerWrapper,
-      bottom: "-100%",
-      duration: 500,
-      easing: "linear",
-    },
-    "+=100"
-  )
-  .add(
-    {
-      targets: jumper1,
-      opacity: {
-        value: [0, 1],
-        duration: 100,
+    })
+    .add(
+      {
+        targets: jugglerWrapper,
+        bottom: "-100%",
+        duration: 500,
+        easing: "linear",
       },
-      bottom: ["70%", "-50%"],
-      right: ["60%", "60%"],
-      translateX: ["50%", "50%"],
-      translateY: ["50%", "50%"],
-      duration: 500,
+      "+=100"
+    )
+    .add(
+      {
+        targets: jumper1,
+        opacity: {
+          value: [0, 1],
+          duration: 100,
+        },
+        bottom: ["70%", "-50%"],
+        right: ["60%", "60%"],
+        translateX: ["50%", "50%"],
+        translateY: ["50%", "50%"],
+        duration: 500,
+        easing: "linear",
+      },
+      window.pageYOffset + content3.getBoundingClientRect().top - 200
+    )
+    .add({
+      targets: clouds,
+      bottom: "-50%",
+      duration: 300,
       easing: "linear",
-    },
-    "+=400"
-  )
-  .add(
-    {
-      targets: starWrapper,
-      bottom: "-100%",
-      duration: 400,
-      easing: "linear",
-    },
-    "-=300"
-  )
-  .add({
-    targets: clouds,
-    bottom: "-50%",
-    duration: 300,
-    easing: "linear",
-  });
+    });
 
-document.addEventListener("DOMContentLoaded", function () {
   // let topBorder = jumper2.getBoundingClientRect().top;
   // let bottomBorder = jumper2.getBoundingClientRect().bottom;
 
