@@ -44,7 +44,7 @@ const starWrapper = document.querySelector("#indexPage > .star__wrapper");
 const proftruppaTimeline = anime
   .timeline({ autoplay: false })
   .add({
-    delay: 6000,
+    delay: window.pageYOffset + section.getBoundingClientRect().top,
     targets: cirkclerWrapper,
     bottom: ["-50%", "60%"],
     left: ["25%", "25%"],

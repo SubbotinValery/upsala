@@ -1,87 +1,3 @@
-const section = document.querySelector(".section-5");
-
-const unicycleWrapper = section.querySelector(".unicycle__wrapper");
-const unicycleInner = section.querySelector(".unicycle__inner");
-const unicycle = section.querySelector(".unicycle");
-
-const treeBlock = document.querySelector("#indexPage > .tree__block");
-
-const unicycleProfileGirlWrapper = section.querySelector(
-  ".unicycle-profile-girl__wrapper"
-);
-const unicycleProfileBoyWrapper = section.querySelector(
-  ".unicycle-profile-boy__wrapper"
-);
-
-const panelkaWrapperLeft = section.querySelector(".panelka__wrapper-left");
-const panelkaWrapperRight = section.querySelector(".panelka__wrapper-right");
-
-const ropeWrapper = section.querySelector(".rope__wrapper");
-const elephantWrapper = section.querySelector(".elephant__wrapper");
-const childrensWrapper = section.querySelector(".childrens__wrapper");
-const yellowBgWrapper = section.querySelector(".yellow-bg__wrapper");
-const yellowBg = section.querySelector(".yellow-bg");
-
-const treeWrapper1 = section.querySelector(".tree__wrapper-1");
-const treeWrapper2 = section.querySelector(".tree__wrapper-2");
-const treeWrapper3 = section.querySelector(".tree__wrapper-3");
-const treeWrapper4 = section.querySelector(".tree__wrapper-4");
-const treeWrapper5 = section.querySelector(".tree__wrapper-5");
-const treeWrapper6 = section.querySelector(".tree__wrapper-6");
-const treeWrapper7 = section.querySelector(".tree__wrapper-7");
-
-const treeWrapperAll = document.querySelectorAll(
-  ".huliganskii-proekt-section > .tree__wrapper"
-);
-
-const titleRegular = document.querySelector(
-  ".huliganskii-proekt__title > *:not(.italic)"
-);
-const titleOutline = document.querySelector(
-  ".huliganskii-proekt__title  > .italic"
-);
-
-console.log(panelkaWrapperLeft.offsetHeight);
-
-const neCirkTimeline = anime
-  .timeline({ autoplay: false })
-  .add({
-    delay: 6000,
-    targets: unicycleWrapper,
-    bottom: ["-50%", "60%"],
-    left: ["25%", "25%"],
-    translateX: ["-50%", "-50%"],
-    translateY: ["50%", "50%"],
-    duration: 500,
-    easing: "linear",
-  })
-  .add(
-    {
-      targets: treeBlock,
-      bottom: "-20%",
-      duration: 300,
-      easing: "linear",
-    },
-    "-=500"
-  )
-  .add(
-    {
-      targets: unicycleWrapper,
-      left: "-50%",
-      duration: 600,
-      easing: "linear",
-    },
-    "+=300"
-  )
-  .add(
-    {
-      targets: treeBlock,
-      bottom: "-100rem",
-      duration: 300,
-      easing: "linear",
-    },
-    "-=500"
-  );
 // .add(
 //   {
 //     targets: panelkaWrapperLeft,
@@ -451,6 +367,43 @@ const neCirkTimeline = anime
 // );
 
 document.addEventListener("DOMContentLoaded", function () {
+  const section = document.querySelector(".section-5");
+
+  const unicycleWrapper = section.querySelector(".unicycle__wrapper");
+  const unicycleInner = section.querySelector(".unicycle__inner");
+  const unicycle = section.querySelector(".unicycle");
+
+  const treeBlock = document.querySelector("#indexPage > .tree__block");
+
+  const unicycleProfileGirlWrapper = section.querySelector(
+    ".unicycle-profile-girl__wrapper"
+  );
+  const unicycleProfileBoyWrapper = section.querySelector(
+    ".unicycle-profile-boy__wrapper"
+  );
+
+  const neCirkTimeline = anime
+    .timeline({ autoplay: false })
+    .add({
+      delay: window.pageYOffset + section.getBoundingClientRect().top - 500,
+      targets: unicycleWrapper,
+      bottom: ["-50%", "60%"],
+      left: ["25%", "25%"],
+      translateX: ["-50%", "-50%"],
+      translateY: ["50%", "50%"],
+      duration: 500,
+      easing: "linear",
+    })
+    .add(
+      {
+        targets: unicycleWrapper,
+        left: "-50%",
+        duration: 300,
+        easing: "linear",
+      },
+      "+=400"
+    );
+
   anime({
     targets: unicycle,
     translateX: ["20%", "-15%"],
@@ -469,15 +422,15 @@ document.addEventListener("DOMContentLoaded", function () {
     direction: "alternate",
     easing: "easeInOutQuad",
   });
-  anime({
-    targets: yellowBg,
+  // anime({
+  //   targets: yellowBg,
 
-    translateY: ["5%", "-5%"],
-    duration: 2000,
-    loop: true,
-    direction: "alternate",
-    easing: "easeInOutQuad",
-  });
+  //   translateY: ["5%", "-5%"],
+  //   duration: 2000,
+  //   loop: true,
+  //   direction: "alternate",
+  //   easing: "easeInOutQuad",
+  // });
   window.addEventListener("scroll", () => {
     neCirkTimeline.seek(window.pageYOffset);
   });

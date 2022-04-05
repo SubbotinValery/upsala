@@ -9,14 +9,14 @@
       align-items: flex-end;
       font-size: 1.7rem;
       line-height: 2.6rem;
-      margin-bottom: max(20vw, 10rem);
       margin-right: min(10rem, 10vw);
+      margin-bottom: 6rem;
       &:last-child {
         margin-bottom: 10rem;
       }
       &-1{
         position: relative;
-        margin-bottom: max(30vw, 20rem);
+        margin-bottom: max(20vw, 20rem);
         .cloud__item{
           position: absolute;
           &-1{
@@ -34,9 +34,6 @@
 
         }
       }
-      &-2{
-        margin-bottom: 100vh;
-      }
       .content__text{
         width: 50%;
       }
@@ -52,45 +49,103 @@
       width: 100%
     }
   }
-  .panelka__wrapper-left{
-    position: fixed;
-    width: 30vw;
-    .panelka-left{
-      width: 100%;
-    }
-  }
-  .panelka__wrapper-right{
-    position: fixed;
-    width: 35vw;
-    .panelka-right{
-      width: 100%;
-    }
-  }
 
-  .yellow-bg__wrapper{
-    position: fixed;
+  .img__block{
+    margin-top: max(20vw, 10rem);
+    pointer-events: none;
+    position: relative;
+    height: 30vw;
     width: 100%;
-    z-index: -1;
-  }
-
-  .unicycle-profile-girl__wrapper{
-    position: fixed;
-    width: 10vw;
-    max-width: 16rem;
-    min-width: 12rem;
-    .unicycle-profile-girl{
+    & > * {
+      position: absolute;
+    }
+    .bg__wrapper{
+      bottom: 0;
+      left: 0;
       width: 100%;
+      .bg{
+        width: 100%;
+      }
+    }
+    .yellow-bg__wrapper{
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+      animation: yellow-bg__animation 3s infinite alternate linear;
+      .yellow-bg{
+        width: 100%;
+      }
+    }
+
+    .unicycle-profile-girl__wrapper{
+      bottom: calc(100% + 1vw);
+      left: 35%;
+      width: 10vw;
+      max-width: 16rem;
+      animation: unicycle__wrapper__animation 2.5s infinite alternate ease-in-out;
+      .unicycle-profile-girl{
+        width: 100%;
+        animation: unicycle__animation 1.5s infinite alternate ease-in-out;
+      }
+    }
+
+    .unicycle-profile-boy__wrapper{
+      bottom: calc(100% + 1vw);
+      left: 55%;
+      width: 8vw;
+      max-width: 12rem;
+      // transform: translateX(-50%);
+      animation: unicycle__wrapper__animation 2s infinite alternate ease-in-out;
+      .unicycle-profile-boy{
+        width: 100%;
+        animation: unicycle__animation 1.5s infinite alternate ease-in-out;
+      }
     }
   }
+  // .panelka__wrapper-left{
+  //   position: fixed;
+  //   width: 30vw;
+  //   .panelka-left{
+  //     width: 100%;
+  //   }
+  // }
+  // .panelka__wrapper-right{
+  //   position: fixed;
+  //   width: 35vw;
+  //   .panelka-right{
+  //     width: 100%;
+  //   }
+  // }
 
-  .unicycle-profile-boy__wrapper{
-    position: fixed;
-    width: 8vw;
-    max-width: 12rem;
-    min-width: 8rem;
-    .unicycle-profile-boy{
-      width: 100%;
-    }
+  // .yellow-bg__wrapper{
+  //   position: fixed;
+  //   width: 100%;
+  //   z-index: -1;
+  // }
+
+  // .unicycle-profile-girl__wrapper{
+  //   position: fixed;
+  //   width: 10vw;
+  //   max-width: 16rem;
+  //   min-width: 12rem;
+  //   .unicycle-profile-girl{
+  //     width: 100%;
+  //   }
+  // }
+
+  // .unicycle-profile-boy__wrapper{
+  //   position: fixed;
+  //   width: 8vw;
+  //   max-width: 12rem;
+  //   min-width: 8rem;
+  //   .unicycle-profile-boy{
+  //     width: 100%;
+  //   }
+  // }
+
+  .animation__block{
+
   }
 }
 
@@ -190,3 +245,63 @@
 //     margin-top: 0;
 //   }
 // }
+
+
+@keyframes yellow-bg__animation{
+  from{
+    transform: translateX(-3%);
+  }
+  to{
+    transform: translateX(3%);
+  }
+}
+
+@keyframes unicycle__wrapper__animation{
+  from{
+    transform: translateX(-15%);
+  }
+  to{
+    transform: translateX(15%);
+  }
+}
+
+
+@keyframes unicycle__animation{
+  from{
+    transform: rotate(-3deg);
+  }
+  to{
+    transform: rotate(3deg);
+
+  }
+}
+
+@include tablet{
+  .section-5{
+    .content{
+      margin-right: 0;
+      &-1{
+        margin-top: 6rem;
+      }
+      .content__text{
+        width: 100% !important;
+      }
+    }
+    .unicycle__wrapper{
+      display: none;
+    }
+  }
+}
+
+@include small-tablet{
+  .section-5{
+    .content{
+      &-1{
+        margin-bottom: 6rem !important;
+      }
+    }
+    .cloud__item{
+      display: none;
+    }
+  }
+}
