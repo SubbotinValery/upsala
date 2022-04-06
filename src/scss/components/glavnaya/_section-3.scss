@@ -1,11 +1,11 @@
 .section-3 {
-  margin-top: 100rem !important;
+  margin-top: max(60rem, min(40vw, 80vh)) !important;
   .jumper__wrapper {
     position: fixed;
     &-1 {
       transition: medium;
       z-index: -1;
-      max-width: 28rem;
+      max-width: 22rem;
       min-width: 14rem;
       width: 15vw;
       .jumper {
@@ -96,7 +96,7 @@
       margin-bottom: max(20vw, 10rem);
       margin-right: min(10rem, 10vw);
       &:last-child {
-        margin-bottom: 10rem;
+        margin-bottom: min(50rem, 50vw);
       }
       &-1 {
         font-size: 2.4rem;
@@ -104,6 +104,14 @@
         text-transform: uppercase;
         .text-blue {
           white-space: nowrap;
+        }
+      }
+      &-2{
+        .desctop{
+          display: block;
+        }
+        .mobile{
+          display: none;
         }
       }
       & > .title {
@@ -122,12 +130,25 @@
   .section-3 {
     .content__wrapper {
       .content {
+        &-2{
+          .desctop{
+            display: none !important;
+          }
+          .mobile{
+            display: block !important;
+            &.uppercase{
+              font-size: 2.4rem;
+              line-height: 2.4rem;
+              margin-bottom: 6rem;
+              .text-blue{
+                letter-spacing: 0.2rem;
+                font-size: 3.2rem;
+                margin-top: 2rem;
+              }
+            }
+          }
+        }
         margin-right: 0;
-
-        // &-1 {
-        //   margin-bottom: 50vh !important;
-        // }
-
         & > .title {
           width: 100%;
         }
