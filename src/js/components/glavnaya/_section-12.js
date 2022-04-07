@@ -22,38 +22,41 @@
 //   });
 // });
 
-let splide;
-let prev, next;
-
 document.addEventListener("DOMContentLoaded", function () {
-  prev = document.querySelector("#section12__slider .previous-button");
-  next = document.querySelector("#section12__slider .next-button");
+  let splide;
+  let prev, next;
+  const section12Slider = document.querySelector("#section12__slider");
 
-  splide = new Splide("#section12__slider .splide", {
-    arrows: false,
-    gap: "3rem",
-    perPage: 1,
-    type: "false",
-    pagination: true,
-    keyboard: false,
-    slideFocus: false,
-  }).mount();
+  if (section12Slider != null) {
+    prev = document.querySelector("#section12__slider .previous-button");
+    next = document.querySelector("#section12__slider .next-button");
 
-  splide.on("move", function () {
-    var slides = document.querySelectorAll(
-      "#section12__slider .splide .splide__slide"
-    );
+    splide = new Splide("#section12__slider .splide", {
+      arrows: false,
+      gap: "3rem",
+      perPage: 1,
+      type: "false",
+      pagination: true,
+      keyboard: false,
+      slideFocus: false,
+    }).mount();
 
-    slides.forEach(function (slide) {
-      slide.classList.add("is-visible");
+    splide.on("move", function () {
+      var slides = document.querySelectorAll(
+        "#section12__slider .splide .splide__slide"
+      );
+
+      slides.forEach(function (slide) {
+        slide.classList.add("is-visible");
+      });
     });
-  });
 
-  prev.addEventListener("click", function (e) {
-    splide.go("<");
-  });
+    prev.addEventListener("click", function (e) {
+      splide.go("<");
+    });
 
-  next.addEventListener("click", function (e) {
-    splide.go(">");
-  });
+    next.addEventListener("click", function (e) {
+      splide.go(">");
+    });
+  }
 });

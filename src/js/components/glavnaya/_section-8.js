@@ -34,44 +34,47 @@
 //   });
 // });
 
-let splide;
-let prev, next;
-
 document.addEventListener("DOMContentLoaded", function () {
-  prev = document.querySelector("#section8__slider .previous-button");
-  next = document.querySelector("#section8__slider .next-button");
+  let splide;
+  let prev, next;
+  const section8Slider = document.querySelector("#section8__slider");
 
-  splide = new Splide("#section8__slider .splide", {
-    arrows: false,
-    gap: "5rem",
-    perPage: 2,
-    type: "loop",
-    pagination: true,
-    keyboard: false,
-    slideFocus: false,
-    breakpoints: {
-      768: {
-        perPage: 1,
-        gap: "0rem",
+  if (section8Slider != null) {
+    prev = document.querySelector("#section8__slider .previous-button");
+    next = document.querySelector("#section8__slider .next-button");
+
+    splide = new Splide("#section8__slider .splide", {
+      arrows: false,
+      gap: "5rem",
+      perPage: 2,
+      type: "loop",
+      pagination: true,
+      keyboard: false,
+      slideFocus: false,
+      breakpoints: {
+        768: {
+          perPage: 1,
+          gap: "0rem",
+        },
       },
-    },
-  }).mount();
+    }).mount();
 
-  splide.on("move", function () {
-    var slides = document.querySelectorAll(
-      "#section8__slider .splide .splide__slide"
-    );
+    splide.on("move", function () {
+      var slides = document.querySelectorAll(
+        "#section8__slider .splide .splide__slide"
+      );
 
-    slides.forEach(function (slide) {
-      slide.classList.add("is-visible");
+      slides.forEach(function (slide) {
+        slide.classList.add("is-visible");
+      });
     });
-  });
 
-  prev.addEventListener("click", function (e) {
-    splide.go("<");
-  });
+    prev.addEventListener("click", function (e) {
+      splide.go("<");
+    });
 
-  next.addEventListener("click", function (e) {
-    splide.go(">");
-  });
+    next.addEventListener("click", function (e) {
+      splide.go(">");
+    });
+  }
 });

@@ -27,6 +27,10 @@
       justify-content: flex-start;
       margin-bottom: 5rem;
     }
+    .avatar{
+      width: 16rem;
+      height: 16rem;
+    }
     .name {
       margin-top: 3rem;
       margin-left: 3rem;
@@ -42,18 +46,6 @@
     .descr {
       font-size: 1.4rem;
       line-height: 1.9rem;
-    }
-  }
-  .star__wrapper {
-    position: absolute;
-    top: 0rem;
-    left: 15rem;
-    max-width: 51rem;
-    min-width: 26rem;
-    width: 35vw;
-    .star {
-      width: 100%;
-      height: 100%;
     }
   }
   .section-8__img__wrapper {
@@ -92,6 +84,12 @@
 
 @include tablet {
   .section-8 {
+    .slider__item{
+      .avatar{
+        width: 14.8rem;
+        height: 14.8rem;
+      }
+    }
     .content__wrapper {
       flex-direction: column-reverse;
       margin-bottom: 30rem;

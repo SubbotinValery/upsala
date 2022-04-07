@@ -369,54 +369,56 @@
 document.addEventListener("DOMContentLoaded", function () {
   const section = document.querySelector(".section-5");
 
-  const unicycleWrapper = section.querySelector(".unicycle__wrapper");
-  const unicycleInner = section.querySelector(".unicycle__inner");
-  const unicycle = section.querySelector(".unicycle");
+  if (section != null) {
+    const unicycleWrapper = section.querySelector(".unicycle__wrapper");
+    const unicycleInner = section.querySelector(".unicycle__inner");
+    const unicycle = section.querySelector(".unicycle");
 
-  const treeBlock = document.querySelector("#indexPage > .tree__block");
+    const treeBlock = document.querySelector("#indexPage > .tree__block");
 
-  const neCirkTimeline = anime
-    .timeline({ autoplay: false })
-    .add({
-      delay: window.pageYOffset + section.getBoundingClientRect().top - 500,
-      targets: unicycleWrapper,
-      bottom: ["-50%", "60%"],
-      left: ["25%", "25%"],
-      translateX: ["-50%", "-50%"],
-      translateY: ["50%", "50%"],
-      duration: 500,
-      easing: "linear",
-    })
-    .add(
-      {
+    const neCirkTimeline = anime
+      .timeline({ autoplay: false })
+      .add({
+        delay: window.pageYOffset + section.getBoundingClientRect().top - 500,
         targets: unicycleWrapper,
-        left: "-50%",
-        duration: 300,
+        bottom: ["-50%", "60%"],
+        left: ["25%", "25%"],
+        translateX: ["-50%", "-50%"],
+        translateY: ["50%", "50%"],
+        duration: 500,
         easing: "linear",
-      },
-      "+=400"
-    );
+      })
+      .add(
+        {
+          targets: unicycleWrapper,
+          left: "-50%",
+          duration: 300,
+          easing: "linear",
+        },
+        "+=400"
+      );
 
-  anime({
-    targets: unicycle,
-    translateX: ["20%", "-15%"],
-    translateY: ["-3%", "3%"],
-    duration: 4000,
-    loop: true,
-    direction: "alternate",
-    easing: "easeInOutQuad",
-  });
-  anime({
-    targets: unicycleInner,
-    rotate: [-5, 10],
-    translateX: ["-3%", "3%"],
-    duration: 1500,
-    loop: true,
-    direction: "alternate",
-    easing: "easeInOutQuad",
-  });
+    anime({
+      targets: unicycle,
+      translateX: ["20%", "-15%"],
+      translateY: ["-3%", "3%"],
+      duration: 4000,
+      loop: true,
+      direction: "alternate",
+      easing: "easeInOutQuad",
+    });
+    anime({
+      targets: unicycleInner,
+      rotate: [-5, 10],
+      translateX: ["-3%", "3%"],
+      duration: 1500,
+      loop: true,
+      direction: "alternate",
+      easing: "easeInOutQuad",
+    });
 
-  window.addEventListener("scroll", () => {
-    neCirkTimeline.seek(window.pageYOffset);
-  });
+    window.addEventListener("scroll", () => {
+      neCirkTimeline.seek(window.pageYOffset);
+    });
+  }
 });

@@ -44,8 +44,8 @@
   width: 100%;
   cursor: pointer;
   position: relative;
-  max-width: 35rem;
-  height: 43rem;
+  width: 35.4rem;
+  height: 43.2rem;
   border-radius: 1.6rem;
   border: 1px solid rgb(200, 200, 200, 0.5);
   transition: $fast;
@@ -250,7 +250,7 @@
   }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1650px) {
   .komanda-block {
     grid-template-columns: repeat(3, 1fr);
     .komanda-item {
@@ -259,7 +259,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1240px) {
   .komanda-block {
     grid-template-columns: repeat(2, 1fr);
     .komanda-item {

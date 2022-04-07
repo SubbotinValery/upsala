@@ -36,38 +36,59 @@
 //   });
 // });
 
-let splide;
-let prev, next;
-
 document.addEventListener("DOMContentLoaded", function () {
-  prev = document.querySelector("#section9__slider .previous-button");
-  next = document.querySelector("#section9__slider .next-button");
+  let splide;
+  let prev, next;
+  const section9Slider = document.querySelector("#section9__slider");
 
-  splide = new Splide("#section9__slider .splide", {
-    arrows: false,
-    gap: "3rem",
-    perPage: 1,
-    type: "loop",
-    pagination: true,
-    keyboard: false,
-    slideFocus: false,
-  }).mount();
+  const section = document.querySelector(".section-9");
+  const nextSection = document.querySelector(".section-10");
+  const starWrapper = document.querySelector("#indexPage > .star__wrapper");
 
-  splide.on("move", function () {
-    var slides = document.querySelectorAll(
-      "#section9__slider .splide .splide__slide"
-    );
+  if (section9Slider != null) {
+    prev = document.querySelector("#section9__slider .previous-button");
+    next = document.querySelector("#section9__slider .next-button");
 
-    slides.forEach(function (slide) {
-      slide.classList.add("is-visible");
+    splide = new Splide("#section9__slider .splide", {
+      arrows: false,
+      gap: "3rem",
+      perPage: 1,
+      type: "loop",
+      pagination: true,
+      keyboard: false,
+      slideFocus: false,
+    }).mount();
+
+    splide.on("move", function () {
+      var slides = document.querySelectorAll(
+        "#section9__slider .splide .splide__slide"
+      );
+
+      slides.forEach(function (slide) {
+        slide.classList.add("is-visible");
+      });
     });
-  });
 
-  prev.addEventListener("click", function (e) {
-    splide.go("<");
-  });
+    prev.addEventListener("click", function (e) {
+      splide.go("<");
+    });
 
-  next.addEventListener("click", function (e) {
-    splide.go(">");
-  });
+    next.addEventListener("click", function (e) {
+      splide.go(">");
+    });
+  }
+
+  if (section != null) {
+    const section9Timeline = anime.timeline({ autoplay: false }).add({
+      delay: window.pageYOffset + nextSection.getBoundingClientRect().top - 500,
+      targets: starWrapper,
+      opacity: 0,
+      duration: 300,
+      easing: "linear",
+    });
+
+    window.addEventListener("scroll", () => {
+      section9Timeline.seek(window.pageYOffset);
+    });
+  }
 });

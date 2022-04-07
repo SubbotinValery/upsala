@@ -1,35 +1,38 @@
-let komandaSplide;
-let komandaPrev, komandaNext;
-
 document.addEventListener("DOMContentLoaded", function () {
-  komandaPrev = document.querySelector("#licaCirkaSlider .previous-button");
-  komandaNext = document.querySelector("#licaCirkaSlider .next-button");
+  let komandaSplide;
+  let komandaPrev, komandaNext;
 
-  komandaSplide = new Splide("#licaCirkaSlider .splide", {
-    gap: "3rem",
-    arrows: false,
-    perPage: 1,
-    type: "loop",
-    pagination: true,
-    keyboard: false,
-    slideFocus: false,
-  }).mount();
+  const licaCirkaSlider = document.querySelector("#licaCirkaSlider");
+  if (licaCirkaSlider != null) {
+    komandaPrev = document.querySelector("#licaCirkaSlider .previous-button");
+    komandaNext = document.querySelector("#licaCirkaSlider .next-button");
 
-  komandaSplide.on("move", function () {
-    var slides = document.querySelectorAll(
-      "#licaCirkaSlider .splide .splide__slide"
-    );
+    komandaSplide = new Splide("#licaCirkaSlider .splide", {
+      gap: "3rem",
+      arrows: false,
+      perPage: 1,
+      type: "loop",
+      pagination: true,
+      keyboard: false,
+      slideFocus: false,
+    }).mount();
 
-    slides.forEach(function (slide) {
-      slide.classList.add("is-visible");
+    komandaSplide.on("move", function () {
+      var slides = document.querySelectorAll(
+        "#licaCirkaSlider .splide .splide__slide"
+      );
+
+      slides.forEach(function (slide) {
+        slide.classList.add("is-visible");
+      });
     });
-  });
 
-  komandaPrev.addEventListener("click", function (e) {
-    komandaSplide.go("<");
-  });
+    komandaPrev.addEventListener("click", function (e) {
+      komandaSplide.go("<");
+    });
 
-  komandaNext.addEventListener("click", function (e) {
-    komandaSplide.go(">");
-  });
+    komandaNext.addEventListener("click", function (e) {
+      komandaSplide.go(">");
+    });
+  }
 });

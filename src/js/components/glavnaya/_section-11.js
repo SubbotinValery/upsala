@@ -61,48 +61,51 @@
 //   });
 // });
 
-let splide;
-let prev, next;
-
 document.addEventListener("DOMContentLoaded", function () {
-  prev = document.querySelector("#section11__slider .previous-button");
-  next = document.querySelector("#section11__slider .next-button");
+  let splide;
+  let prev, next;
+  const section11Slider = document.querySelector("#section11__slider");
 
-  splide = new Splide("#section11__slider .splide", {
-    gap: "2rem",
-    arrows: false,
-    perPage: 3,
-    type: "loop",
-    pagination: true,
-    keyboard: false,
-    slideFocus: false,
-    breakpoints: {
-      1170: {
-        perPage: 2,
-        gap: "2rem",
+  if (section11Slider != null) {
+    prev = document.querySelector("#section11__slider .previous-button");
+    next = document.querySelector("#section11__slider .next-button");
+
+    splide = new Splide("#section11__slider .splide", {
+      gap: "2rem",
+      arrows: false,
+      perPage: 3,
+      type: "loop",
+      pagination: true,
+      keyboard: false,
+      slideFocus: false,
+      breakpoints: {
+        1290: {
+          perPage: 2,
+          gap: "2rem",
+        },
+        880: {
+          perPage: 1,
+          gap: "0",
+        },
       },
-      790: {
-        perPage: 1,
-        gap: "0",
-      },
-    },
-  }).mount();
+    }).mount();
 
-  splide.on("move", function () {
-    var slides = document.querySelectorAll(
-      "#section11__slider .splide .splide__slide"
-    );
+    splide.on("move", function () {
+      var slides = document.querySelectorAll(
+        "#section11__slider .splide .splide__slide"
+      );
 
-    slides.forEach(function (slide) {
-      slide.classList.add("is-visible");
+      slides.forEach(function (slide) {
+        slide.classList.add("is-visible");
+      });
     });
-  });
 
-  prev.addEventListener("click", function (e) {
-    splide.go("<");
-  });
+    prev.addEventListener("click", function (e) {
+      splide.go("<");
+    });
 
-  next.addEventListener("click", function (e) {
-    splide.go(">");
-  });
+    next.addEventListener("click", function (e) {
+      splide.go(">");
+    });
+  }
 });

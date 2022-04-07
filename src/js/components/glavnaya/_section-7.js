@@ -653,33 +653,36 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const section = document.querySelector(".section-7");
-  const nextSection = document.querySelector(".section-8");
 
-  const boyOnBallWrapper = section.querySelector(".img__block-1");
+  if (section != null) {
+    const nextSection = document.querySelector(".section-8");
 
-  const section7Timeline = anime
-    .timeline({ autoplay: false })
-    .add({
-      delay: window.pageYOffset + section.getBoundingClientRect().top - 500,
-      targets: boyOnBallWrapper,
-      bottom: ["-50%", "80%"],
-      left: ["20%", "20%"],
-      translateX: ["-50%", "-50%"],
-      translateY: ["50%", "50%"],
-      duration: 500,
-      easing: "linear",
-    })
-    .add(
-      {
+    const boyOnBallWrapper = section.querySelector(".img__block-1");
+
+    const section7Timeline = anime
+      .timeline({ autoplay: false })
+      .add({
+        delay: window.pageYOffset + section.getBoundingClientRect().top - 500,
         targets: boyOnBallWrapper,
-        left: "-50%",
-        duration: 300,
+        bottom: ["-50%", "80%"],
+        left: ["20%", "20%"],
+        translateX: ["-50%", "-50%"],
+        translateY: ["50%", "50%"],
+        duration: 500,
         easing: "linear",
-      },
-      window.pageYOffset + nextSection.getBoundingClientRect().top - 1000
-    );
+      })
+      .add(
+        {
+          targets: boyOnBallWrapper,
+          left: "-50%",
+          duration: 300,
+          easing: "linear",
+        },
+        window.pageYOffset + nextSection.getBoundingClientRect().top - 1000
+      );
 
-  window.addEventListener("scroll", () => {
-    section7Timeline.seek(window.pageYOffset);
-  });
+    window.addEventListener("scroll", () => {
+      section7Timeline.seek(window.pageYOffset);
+    });
+  }
 });
