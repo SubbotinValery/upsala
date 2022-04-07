@@ -112,9 +112,24 @@
   .komanda-item-info-bio {
     width: 24rem;
     .komanda-item-info-avatar {
+      position: relative;
       width: 24rem;
-      height: 23rem;
+      height: 24rem;
       margin-bottom: 1.8rem;
+      overflow: hidden;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../../img/img-wrapper-grey.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+      }
       img {
         width: 100%;
         height: 100%;
