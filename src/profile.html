@@ -39,7 +39,7 @@
             </div> -->
 
             <!-- с подпиской -->
-            <!-- <div class="subscription__block">
+            <div class="subscription__block">
               <div class="profile__title">подписка</div>
               <div class="subscription__info">
                 <div class="main-info">
@@ -48,7 +48,9 @@
                     <div class="next-date">следующий: 29.02.2021</div>
                   </div>
 
-                  <div class="change-date text-red link">Изменить дату</div>
+                  <div class="change-date text-red link modal__btn-change-date">
+                    Изменить дату
+                  </div>
                 </div>
 
                 <div class="balance__block">
@@ -62,7 +64,9 @@
                   </div>
                 </div>
 
-                <div class="btn btn-outline">Изменить сумму</div>
+                <div class="btn btn-outline modal__btn-change-amount">
+                  Изменить сумму
+                </div>
 
                 <div class="descr">
                   Часть пожертвованных денег можно вернуть как налоговый вычет.
@@ -219,7 +223,7 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
 
             <div class="profile__data">
               <div class="profile__title">данные профиля</div>
@@ -286,6 +290,65 @@
           <div class="text-big">
             Ежемесячная подписка отменена. Времена бывают разные, мы всё
             понимаем. Спасибо вам за поддержку!
+          </div>
+          <div class="btn btn-std">хорошо</div>
+        </div>
+
+        <div class="modal__content-change-date">
+          <div class="text-big">Введите сумму и дату следующего списания:</div>
+          <form class="form" action="post">
+            <input id="amount1" type="text" />
+            <input
+              type="text"
+              id="date1"
+              placeholder="дд.мм.гггг"
+              maxlength="10"
+            />
+          </form>
+
+          <div class="btn__group">
+            <div class="modal__btn-change-amount-success pointer">
+              Сохранить
+            </div>
+            <div class="modal__btn-close pointer disabled">Отмена</div>
+          </div>
+        </div>
+
+        <div class="modal__content-change-date-success">
+          <div class="text-big">
+            Всё прошло успешно, вы перенесли день списания ежемесячной подписки.
+            Большое спасибо, что продолжаете поддерживать нас!
+          </div>
+          <div class="btn btn-std">хорошо</div>
+        </div>
+
+        <div class="modal__content-change-amount">
+          <div class="text-small">
+            Введите сумму и дату следующего списания:
+          </div>
+
+          <form class="form" action="post">
+            <input id="amount2" type="text" />
+            <input
+              type="text"
+              id="date2"
+              placeholder="дд.мм.гггг"
+              maxlength="10"
+            />
+          </form>
+
+          <div class="btn__group">
+            <div class="modal__btn-change-amount-success pointer">
+              Сохранить
+            </div>
+            <div class="modal__btn-close pointer disabled">Отмена</div>
+          </div>
+        </div>
+
+        <div class="modal__content-change-amount-success">
+          <div class="text-big">
+            Всё прошло успешно, вы изменили сумму ежемесячного пожертвования.
+            Большое спасибо, что продолжаете поддерживать нас!
           </div>
           <div class="btn btn-std">хорошо</div>
         </div>

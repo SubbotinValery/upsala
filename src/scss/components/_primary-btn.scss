@@ -1,12 +1,12 @@
 .primary-btn {
+  color: #fff !important;
   cursor: pointer;
   position: relative;
   display: inline-block;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  transition: fast;
-  color: #fff;
+  transition: $fast;
   &::before {
     content: "";
     position: absolute;
