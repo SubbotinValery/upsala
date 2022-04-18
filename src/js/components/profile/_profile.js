@@ -52,7 +52,9 @@ if (profileNav !== null && profileBlock !== null) {
     });
   }
 
-  const date = document.getElementById("date");
+  const dates = document.querySelectorAll(".profile__section input.date");
+  const amounts = document.querySelectorAll(".profile__section input.amount");
+  const curentYear = new Date().getFullYear().toString();
 
   function maskForDate(value) {
     if (value.length > 10) {
@@ -89,18 +91,67 @@ if (profileNav !== null && profileBlock !== null) {
         if (value[5] !== ".") {
           value = value.substr(0, 5) + "." + value[5];
         }
-        if (value[6] < 1) {
-          value = value.substr(0, 6) + "1";
+
+        value = value.substr(0, 6) + curentYear[0];
+        break;
+
+      case 8:
+        value = value.substr(0, 7) + curentYear[1];
+
+        break;
+      case 9:
+        value = value.substr(0, 8) + curentYear[2];
+
+        break;
+      case 10:
+        if (value[9] > curentYear[3]) {
+          value = value.substr(0, 9) + (parseInt(curentYear[3]) + 1);
+        } else {
+          value = value.substr(0, 9) + curentYear[3];
         }
         break;
       default:
         break;
     }
 
-    return value;
+    return value.replace(/[^\d.-]/g, "");
   }
 
-  date.addEventListener("keyup", () => {
-    date.value = maskForDate(date.value);
+  function chunk(str, n) {
+    var ret = [];
+    var i;
+    var len;
+
+    for (i = 0, len = str.length; i < len; i += n) {
+      ret.push(str.substr(i, n));
+    }
+
+    return ret;
+  }
+
+  function maskForAmount(value) {
+    value.replace(/\D/g, "");
+
+    const valuePattern = value;
+    console.log("022-----2-2-1".replace(/\D/g, ""));
+    console.log(valuePattern);
+    const valuePatternNext = chunk(valuePattern, 3);
+
+    return (value = valuePatternNext.join("-"));
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    dates.forEach((date) => {
+      date.addEventListener("input", () => {
+        date.value = maskForDate(date.value);
+      });
+    });
+
+    amounts.forEach((amount) => {
+      amount.value = "0";
+      amount.addEventListener("keyup", () => {
+        amount.value = maskForAmount(amount.value);
+      });
+    });
   });
 }

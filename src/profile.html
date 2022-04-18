@@ -48,7 +48,7 @@
                     <div class="next-date">следующий: 29.02.2021</div>
                   </div>
 
-                  <div class="change-date text-red link modal__btn-change-date">
+                  <div class="change-date text-red link modal__btn-change-data">
                     Изменить дату
                   </div>
                 </div>
@@ -64,7 +64,7 @@
                   </div>
                 </div>
 
-                <div class="btn btn-outline modal__btn-change-amount">
+                <div class="btn btn-outline modal__btn-change-data">
                   Изменить сумму
                 </div>
 
@@ -277,7 +277,9 @@
             Вы можете уменьшить сумму или отложить следующий платеж на удобное
             время. Спасибо вам за поддержку!
           </div>
-          <div class="btn btn-outline">изменить сумму или дату списания</div>
+          <div class="btn btn-outline modal__btn-change-data">
+            изменить сумму или дату списания
+          </div>
           <div class="text-red flex justify-content-center">
             <div class="modal__btn-reject-subscription-result pointer">
               Отписаться
@@ -294,16 +296,23 @@
           <div class="btn btn-std">хорошо</div>
         </div>
 
-        <div class="modal__content-change-date">
+        <div class="modal__content-change-data">
           <div class="text-big">Введите сумму и дату следующего списания:</div>
-          <form class="form" action="post">
-            <input id="amount1" type="text" />
-            <input
-              type="text"
-              id="date1"
-              placeholder="дд.мм.гггг"
-              maxlength="10"
-            />
+          <form autocomplete="off" class="form" action="post">
+            <div class="amount__wrapper">
+              <input type="text" id="amount" class="amount" maxlength="9" />
+              <span class="currency">руб</span>
+            </div>
+
+            <div class="date__wrapper">
+              <input
+                type="text"
+                id="date"
+                class="date"
+                placeholder="дд.мм.гггг"
+                maxlength="10"
+              />
+            </div>
           </form>
 
           <div class="btn__group">
@@ -320,29 +329,6 @@
             Большое спасибо, что продолжаете поддерживать нас!
           </div>
           <div class="btn btn-std">хорошо</div>
-        </div>
-
-        <div class="modal__content-change-amount">
-          <div class="text-small">
-            Введите сумму и дату следующего списания:
-          </div>
-
-          <form class="form" action="post">
-            <input id="amount2" type="text" />
-            <input
-              type="text"
-              id="date2"
-              placeholder="дд.мм.гггг"
-              maxlength="10"
-            />
-          </form>
-
-          <div class="btn__group">
-            <div class="modal__btn-change-amount-success pointer">
-              Сохранить
-            </div>
-            <div class="modal__btn-close pointer disabled">Отмена</div>
-          </div>
         </div>
 
         <div class="modal__content-change-amount-success">
