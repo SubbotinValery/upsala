@@ -529,50 +529,27 @@
       </div>
 
       @include('./partials/qa-block.html')
-    </section>
-    @include('partials/footer.html')
-
-    <div class="modal">
-      <div class="modal__content-support-success">
-        <div class="support-ty">
-          <div class="title title-3">Вжух!</div>
-          <div class="text-tiny">
-            Ваше письмо улетело в цирк, скоро мы вернёмся с ответом!
-          </div>
-          <div class="img__wrapper">
-            <img class="juggler" src="../img/juggler.png" alt="" />
-            <div class="cloud__wrapper cloud__wrapper-1">
-              <img
-                class="cloud__item cloud__item-1"
-                src="../img/cloud.png"
-                alt=""
-              />
+      <div class="modal">
+        <div class="modal__content-support-success">
+          <div class="support-ty">
+            <div class="title title-3">Вжух!</div>
+            <div class="text-tiny">
+              Ваше письмо улетело в цирк, скоро мы вернёмся с ответом!
             </div>
-            <div class="cloud__wrapper cloud__wrapper-2">
-              <img
-                class="cloud__item cloud__item-2"
-                src="../img/cloud.png"
-                alt=""
-              />
+            <div class="img__wrapper">
+              <img class="keglya" src="./img/keglya.png" alt="" />
             </div>
 
-            <div
-              class="exclamation__symbol title title-1 exclamation__symbol-1"
-            >
-              !
-            </div>
-            <div
-              class="exclamation__symbol title title-1 exclamation__symbol-2"
-            >
-              !
-            </div>
+            <div class="exclamation__symbol title exclamation__symbol-1">!</div>
+            <div class="exclamation__symbol title exclamation__symbol-2">!</div>
             <div class="star__wrapper">
               <img class="star" src="../img/star.png" alt="" />
             </div>
           </div>
+          <div class="modal__btn-close"></div>
         </div>
-        <div class="modal__btn-close"></div>
       </div>
-    </div>
+    </section>
+    @include('partials/footer.html')
   </body>
 </html>

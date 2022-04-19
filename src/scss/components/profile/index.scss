@@ -525,4 +525,11 @@
       }
     }
   }
+  .modal__content-additional-q{
+    .modal__btn-close{
+      width: 3rem;
+      position: absolute;
+      background-image: url('../../../img/svg/modal-close-btn.svg');
+    }
+  }
 }

@@ -1,10 +1,10 @@
-let actorSplide;
-let actorPrev, actorNext;
+document.addEventListener("DOMContentLoaded", function () {
+  let actorSplide;
+  let actorPrev, actorNext;
 
-const afishaActorSlider = document.querySelector("#afishaActorSlider");
+  const afishaActorSlider = document.querySelector("#afishaActorSlider");
 
-if (afishaActorSlider !== null) {
-  document.addEventListener("DOMContentLoaded", function () {
+  if (afishaActorSlider !== null) {
     actorPrev = document.querySelector("#afishaActorSlider .previous-button");
     actorNext = document.querySelector("#afishaActorSlider .next-button");
 
@@ -43,15 +43,13 @@ if (afishaActorSlider !== null) {
     const visibles = document.querySelectorAll(
       "#afishaActorSlider .splide .splide__slide.is-visible"
     );
-  });
-}
+  }
 
-let photoSplide;
+  let photoSplide;
 
-const afishaPhotoSlider = document.querySelector("#afishaPhotoSlider ");
+  const afishaPhotoSlider = document.querySelector("#afishaPhotoSlider ");
 
-if (afishaPhotoSlider !== null) {
-  document.addEventListener("DOMContentLoaded", function () {
+  if (afishaPhotoSlider !== null) {
     splide = new Splide("#afishaPhotoSlider .splide", {
       arrows: false,
       perPage: 2,
@@ -64,31 +62,63 @@ if (afishaPhotoSlider !== null) {
         },
       },
     }).mount();
-  });
-}
+  }
 
-const afishaFilter = document.querySelectorAll(
-  ".afisha-list__filter .filter__selection"
-);
+  const afishaFilter = document.querySelectorAll(
+    ".afisha-list__filter .filter__selection"
+  );
 
-if (afishaFilter !== null) {
-  const getCurrentId = () => {
-    let currentId = null;
-    for (let i = 0; i < afishaFilter.length; i++) {
-      if (afishaFilter[i].className.match(/\bis-active\b/)) {
-        currentId = i;
+  if (afishaFilter !== null) {
+    const getCurrentId = () => {
+      let currentId = null;
+      for (let i = 0; i < afishaFilter.length; i++) {
+        if (afishaFilter[i].className.match(/\bis-active\b/)) {
+          currentId = i;
+        }
       }
+      return currentId;
+    };
+
+    for (let i = 0; i < afishaFilter.length; i++) {
+      afishaFilter[i].addEventListener("click", function () {
+        const current = afishaFilter[getCurrentId()];
+        const next = afishaFilter[i];
+
+        current.classList.remove("is-active");
+        next.classList.add("is-active");
+      });
     }
-    return currentId;
-  };
+  }
 
-  for (let i = 0; i < afishaFilter.length; i++) {
-    afishaFilter[i].addEventListener("click", function () {
-      const current = afishaFilter[getCurrentId()];
-      const next = afishaFilter[i];
+  const header = document.querySelector(".header");
+  const afishaKomandaAbout = document.querySelector(".afisha-komanda-about");
 
-      current.classList.remove("is-active");
-      next.classList.add("is-active");
+  if (afishaKomandaAbout != null) {
+    const headerTimeline = anime
+      .timeline({ autoplay: false })
+      .add(
+        {
+          targets: header,
+          backgroundColor: ["rgb(19, 19, 19, 0)", "rgb(19, 19, 19, 0.25)"],
+          duration: 300,
+        },
+        window.pageYOffset +
+          afishaKomandaAbout.getBoundingClientRect().top -
+          150
+      )
+      .add(
+        {
+          targets: header,
+          backgroundColor: "rgb(19, 19, 19, 0)",
+          duration: 300,
+        },
+        window.pageYOffset +
+          afishaKomandaAbout.getBoundingClientRect().bottom -
+          50
+      );
+
+    window.addEventListener("scroll", () => {
+      headerTimeline.seek(window.pageYOffset);
     });
   }
-}
+});

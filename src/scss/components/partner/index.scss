@@ -1007,6 +1007,61 @@
   }
 }
 
+.partner__section{
+  .modal__content-support-success{
+    overflow: hidden !important;
+    position: relative;
+
+    .support-ty{
+      height: 40rem !important;
+      min-height: auto !important;
+      .img__wrapper{
+        height: 100%;
+      }
+      .keglya{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 32rem;
+        transform: translateX(-50%);
+      }
+      .star__wrapper{
+        position: absolute;
+        width: 40rem;
+        bottom: -35%;
+        left: 50%;
+        transform: translateX(-50%);
+        .star{
+          width: 100%;
+        }
+      }
+      .exclamation__symbol{
+        position: absolute;
+        color: $red;
+        &-1{
+          font-size: 15rem;
+          bottom: 40%;
+          transform: rotate(-25deg);
+        }
+        &-2{
+          font-size: 13rem;
+          left: 70%;
+          bottom: 45%;
+          transform: rotate(210deg);
+        }
+      }
+    }
+    // .modal__btn-close{
+    //   top: 0 !important;
+    //   right: 0 !important;
+    //   position: absolute !important;
+    //   width: 3rem;
+    //   height: 3rem;
+    //   background-image: url('../../../img/svg/modal-close-btn.svg');
+    // }
+  }
+}
+
 @include small-tablet {
   .partner__section {
     .partner__slider {
@@ -1068,6 +1123,8 @@
     }
   }
 }
+
+
 
 @keyframes women-with-case-animation {
   from {

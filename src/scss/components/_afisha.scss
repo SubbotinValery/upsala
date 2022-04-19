@@ -818,3 +818,18 @@
     }
   }
 }
+
+@include small-tablet{
+  .content-history{
+    &__title{
+      color:  $grey-dirty;
+    }
+  }
+  .afisha-komanda-about{
+    padding: 1.4rem;
+  }
+}
+
+.afisha-komanda-about{
+  margin-bottom: 0;
+}
