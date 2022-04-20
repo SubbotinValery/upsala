@@ -4,37 +4,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const otchetiSlider = document.querySelector("#otchetiSlider");
 
   if (otchetiSlider !== null) {
-    document.addEventListener("DOMContentLoaded", function () {
-      otchetiPrev = document.querySelector("#otchetiSlider .previous-button");
-      otchetiNext = document.querySelector("#otchetiSlider .next-button");
+    otchetiPrev = document.querySelector("#otchetiSlider .previous-button");
+    otchetiNext = document.querySelector("#otchetiSlider .next-button");
 
-      otchetiSplide = new Splide("#otchetiSlider .splide", {
-        gap: "3rem",
-        arrows: false,
-        perPage: 1,
-        type: "loop",
-        pagination: true,
-        keyboard: false,
-        slideFocus: false,
-      }).mount();
+    otchetiSplide = new Splide("#otchetiSlider .splide", {
+      gap: "3rem",
+      arrows: false,
+      perPage: 1,
+      type: "loop",
+      pagination: true,
+      keyboard: false,
+      slideFocus: false,
+    }).mount();
 
-      otchetiSplide.on("move", function () {
-        var slides = document.querySelectorAll(
-          "#otchetiSlider .splide .splide__slide"
-        );
+    otchetiSplide.on("move", function () {
+      var slides = document.querySelectorAll(
+        "#otchetiSlider .splide .splide__slide"
+      );
 
-        slides.forEach(function (slide) {
-          slide.classList.add("is-visible");
-        });
+      slides.forEach(function (slide) {
+        slide.classList.add("is-visible");
       });
+    });
 
-      otchetiPrev.addEventListener("click", function (e) {
-        otchetiSplide.go("<");
-      });
+    otchetiPrev.addEventListener("click", function (e) {
+      otchetiSplide.go("<");
+    });
 
-      otchetiNext.addEventListener("click", function (e) {
-        otchetiSplide.go(">");
-      });
+    otchetiNext.addEventListener("click", function (e) {
+      otchetiSplide.go(">");
     });
   }
 
