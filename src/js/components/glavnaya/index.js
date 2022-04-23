@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header");
   const section8Slider = document.querySelector(".section-8 .slider__wrapper");
   const section9Slider = document.querySelector(".section-9 .slider__wrapper");
+  const section10Content = document.querySelector(
+    ".section-10 .content__block"
+  );
   const section12 = document.querySelector(".section-12");
 
   if (indexPage != null) {
@@ -52,6 +55,24 @@ document.addEventListener("DOMContentLoaded", function () {
           duration: 300,
         },
         window.pageYOffset + section9Slider.getBoundingClientRect().bottom - 50
+      )
+      .add(
+        {
+          targets: header,
+          backgroundColor: "rgb(19, 19, 19, 0.25)",
+          duration: 300,
+        },
+        window.pageYOffset + section10Content.getBoundingClientRect().top - 150
+      )
+      .add(
+        {
+          targets: header,
+          backgroundColor: "rgb(19, 19, 19, 0)",
+          duration: 300,
+        },
+        window.pageYOffset +
+          section10Content.getBoundingClientRect().bottom -
+          50
       )
       .add(
         {
